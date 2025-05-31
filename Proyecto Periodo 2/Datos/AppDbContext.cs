@@ -14,6 +14,8 @@ namespace Proyecto_Periodo_2.Datos
         public DbSet<Libro> Libros { get; set; }
         public DbSet<CopiaLibro> CopiasLibros { get; set; }
         public DbSet<Stock> Stocks { get; set; }
+        public DbSet<EstadoCopiaLibro> EstadoCopiaLibro { get; set; }
+        public DbSet<Prestamo> Prestamo { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Usuario>().ToTable("Usuarios");
@@ -22,6 +24,9 @@ namespace Proyecto_Periodo_2.Datos
             modelBuilder.Entity<Libro>().ToTable("Libros");
             modelBuilder.Entity<CopiaLibro>().ToTable("CopiaLibros");
             modelBuilder.Entity<Stock>().ToTable("Stocks");
+            modelBuilder.Entity<Prestamo>().ToTable("Prestamo");
+            modelBuilder.Entity<EstadoCopiaLibro>().ToTable("EstadoCopiaLibro");
+
         }
     }
 }
