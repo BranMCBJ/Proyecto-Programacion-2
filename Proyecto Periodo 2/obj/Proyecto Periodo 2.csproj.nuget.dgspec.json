@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cecil\\Desktop\\ProyectoProgra2\\Proyecto Periodo 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {}
+    "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cecil\\Desktop\\ProyectoProgra2\\Proyecto Periodo 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {
+    "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cecil\\Desktop\\ProyectoProgra2\\Proyecto Periodo 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+        "projectUniqueName": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
         "projectName": "Proyecto Periodo 2",
-        "projectPath": "C:\\Users\\cecil\\Desktop\\ProyectoProgra2\\Proyecto Periodo 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-        "packagesPath": "C:\\Users\\cecil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cecil\\Desktop\\ProyectoProgra2\\Proyecto Periodo 2\\Proyecto Periodo 2\\obj\\",
+        "projectPath": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+        "packagesPath": "C:\\Users\\robox\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\cecil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\robox\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -49,6 +49,26 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[6.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
