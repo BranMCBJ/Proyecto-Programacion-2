@@ -4055,23 +4055,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\robox\\.nuget\\packages\\": {},
+    "C:\\Users\\cecil\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
       "projectName": "Proyecto Periodo 2",
-      "projectPath": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-      "packagesPath": "C:\\Users\\robox\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\robox\\OneDrive\\Escritorio\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
+      "projectPath": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "packagesPath": "C:\\Users\\cecil\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\robox\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cecil\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
