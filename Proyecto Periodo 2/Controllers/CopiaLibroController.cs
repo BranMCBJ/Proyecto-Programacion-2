@@ -16,7 +16,7 @@ namespace Proyecto_Periodo_2.Controllers
         // GET: CopiaLibroController
         public ActionResult Index()
         {
-            IEnumerable<Libro> listaLibros = _db.Libros;
+            IEnumerable<CopiaLibro> listaLibros = _db.CopiasLibros.Where(c => c.Activo == true);
             return View(listaLibros);
         }
 

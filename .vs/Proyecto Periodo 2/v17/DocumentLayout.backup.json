@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\stockcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\controllers\\copialibrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\copialibrocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\migrations\\20250531225907_migracion1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\migrations\\20250531225907_migracion1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\models\\copialibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\models\\copialibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\models\\libro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\models\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto2\\proyecto-programacion-2\\proyecto periodo 2\\migrations\\20250619032342_migracion4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\migrations\\20250619032342_migracion4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,92 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CopiaLibroController.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAowF4AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T03:26:03.428Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20250619032342_migracion4.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250619032342_migracion4.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Migrations\\20250619032342_migracion4.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250619032342_migracion4.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Migrations\\20250619032342_migracion4.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T03:23:42.5Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20250531225907_Migracion1.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250531225907_Migracion1.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Migrations\\20250531225907_Migracion1.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250531225907_Migracion1.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Migrations\\20250531225907_Migracion1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T02:32:01.982Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\appsettings.json",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeToolTip": "Proyecto Periodo 2\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-19T02:29:25.538Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CopiaLibro.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\CopiaLibro.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Models\\CopiaLibro.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\CopiaLibro.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Models\\CopiaLibro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-19T01:58:59.089Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Libro.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\Libro.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Models\\Libro.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\Libro.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Models\\Libro.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T23:13:52.513Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\Stock.cs",
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\Models\\Stock.cs",
               "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Models\\Stock.cs",
               "RelativeToolTip": "Proyecto Periodo 2\\Models\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-31T23:13:50.223Z"
+              "WhenOpened": "2025-06-22T03:27:14.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "StockController.cs",
+              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\StockController.cs",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\StockController.cs",
+              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\StockController.cs",
+              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\StockController.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAIUAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T03:25:34.422Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CopiaLibroController.cs",
+              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
+              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
+              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\CopiaLibroController.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T03:23:09.668Z",
+              "EditorCaption": ""
             }
           ]
         }
