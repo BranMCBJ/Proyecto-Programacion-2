@@ -535,3 +535,16 @@ C:\Users\02rac\OneDrive\Escritorio\PROGRA PROYECTO 2\YO\proyecto\Proyecto-Progra
 C:\Users\02rac\OneDrive\Escritorio\PROGRA PROYECTO 2\YO\proyecto\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
 C:\Users\02rac\OneDrive\Escritorio\PROGRA PROYECTO 2\YO\proyecto\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.genruntimeconfig.cache
 C:\Users\02rac\OneDrive\Escritorio\PROGRA PROYECTO 2\YO\proyecto\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\ref\Proyecto Periodo 2.dll
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.csproj.AssemblyReference.cache
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\rpswa.dswa.cache.json
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.AssemblyInfoInputs.cache
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.AssemblyInfo.cs
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.csproj.CoreCompileInputs.cache
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.RazorAssemblyInfo.cache
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.RazorAssemblyInfo.cs
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.sourcelink.json
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.dll
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\refint\Proyecto Periodo 2.dll
+C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
