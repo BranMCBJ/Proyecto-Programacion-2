@@ -4055,23 +4055,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Estudiante-07\\.nuget\\packages\\": {},
+    "C:\\Users\\Estudiante-04\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Estudiante-07\\Desktop\\Nueva carpeta\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "projectUniqueName": "C:\\Users\\Estudiante-04\\Downloads\\BOMBOCLAT\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
       "projectName": "Proyecto Periodo 2",
-      "projectPath": "C:\\Users\\Estudiante-07\\Desktop\\Nueva carpeta\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-      "packagesPath": "C:\\Users\\Estudiante-07\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Estudiante-07\\Desktop\\Nueva carpeta\\Proyecto Periodo 2\\obj\\",
+      "projectPath": "C:\\Users\\Estudiante-04\\Downloads\\BOMBOCLAT\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "packagesPath": "C:\\Users\\Estudiante-04\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Estudiante-04\\Downloads\\BOMBOCLAT\\Proyecto Periodo 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Estudiante-07\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Estudiante-04\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
