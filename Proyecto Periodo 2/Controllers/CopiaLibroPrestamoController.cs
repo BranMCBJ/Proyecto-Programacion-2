@@ -17,16 +17,17 @@ namespace Proyecto_Periodo_2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
-            CopiaLibroPrestamo? registro = db.CopiasLibrosPrestamos.FirstOrDefault(c => c.IdRelacion == id);
+            CopiaLibroPrestamo? registro = db.CopiasLibrosPrestamos.FirstOrDefault(c => c.IdRelacion == id && c.Activo);
             if (registro != null)
             {
-                db.Remove(registro);
+                registro.Activo = false;
+                db.Update(registro);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
             else
             {
-                return NotFound();
+                return NotFound(); //Error
             }
         }
 
@@ -34,7 +35,27 @@ namespace Proyecto_Periodo_2.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(CopiaLibroPrestamo registro)
         {
-            bool disponible = db.CopiasLibrosPrestamos.Where(c => c.IdCopiaLibro == registro.IdCopiaLibro).IsNullOrEmpty();
+            bool disponible = db.CopiasLibrosPrestamos.Where(c => c.IdCopiaLibro == registro.IdCopiaLibro && c.Activo).IsNullOrEmpty();
+            if (disponible)
+            {
+                db.Add(registro);
+                db.SaveChanges();   
+                return RedirectToAction("Index");
+            }
+            else 
+            { 
+                return NotFound(); //Error 
+            }
         }
+
+        /*[HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Update(CopiaLibroPrestamo clp)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+        }*/
     }
 }

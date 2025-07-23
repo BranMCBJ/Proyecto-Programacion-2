@@ -12,5 +12,6 @@ namespace Proyecto_Periodo_2.Models
         [Required]
         public int? IdPrestamo { get; set; }
         public Prestamo? Prestamo { get; set; }
+        public bool Activo {  get; set; } = true;
     }
 }
