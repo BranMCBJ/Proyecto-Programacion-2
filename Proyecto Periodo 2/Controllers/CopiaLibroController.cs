@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Proyecto_Periodo_2.Datos;
 using Proyecto_Periodo_2.Models;
+using System.Runtime.InteropServices;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -11,7 +12,7 @@ namespace Proyecto_Periodo_2.Controllers
         private readonly AppDbContext _db;
         public CopiaLibroController(AppDbContext db)
         {
-            _db = db;  
+            _db = db;
         }
         // GET: CopiaLibroController
         public ActionResult Index()
@@ -23,7 +24,12 @@ namespace Proyecto_Periodo_2.Controllers
         // GET: CopiaLibroController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var libro = _db.CopiasLibros.Find(id);
+            return View(libro);
         }
 
         // GET: CopiaLibroController/Create
@@ -35,13 +41,13 @@ namespace Proyecto_Periodo_2.Controllers
         // POST: CopiaLibroController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Libro libro)
+        public ActionResult Create(CopiaLibro libro)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _db.Libros.Add(libro);
+                    _db.CopiasLibros.Add(libro);
                     _db.SaveChanges();
                     return RedirectToAction(nameof(Index));
                 }
@@ -59,14 +65,14 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                if(id == null || id == 0)
+                if (id == null || id == 0)
                 {
                     return NotFound();
                 }
 
-                var libro = _db.Libros.Find(id);
+                var libro = _db.CopiasLibros.Find(id);
 
-                if(libro == null)
+                if (libro == null)
                 {
                     return NotFound();
                 }
@@ -82,13 +88,13 @@ namespace Proyecto_Periodo_2.Controllers
         // POST: CopiaLibroController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Libro libro)
+        public ActionResult Edit(CopiaLibro libro)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    _db.Libros.Update(libro);
+                    _db.CopiasLibros.Update(libro);
                     _db.SaveChanges();
                     return RedirectToAction("Index");
                 }
@@ -101,23 +107,49 @@ namespace Proyecto_Periodo_2.Controllers
         }
 
         // GET: CopiaLibroController/Delete/5
-        public ActionResult Delete(int id)
+        public ActionResult Delete(int? id)
         {
-            return View();
+            try
+            {
+                if (id == 0 || id == null)
+                {
+                    return NotFound();
+                }
+                var libro = _db.CopiasLibros.Find(id);
+                if (libro == null)
+                {
+                    return NotFound();
+                }
+                return View(libro);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         // POST: CopiaLibroController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id)
         {
             try
             {
-                return RedirectToAction(nameof(Index));
+                if (id == null || id == 0)
+                {
+                    return NotFound();
+                }
+                var libro = _db.CopiasLibros.Find(id);
+
+                libro.Activo = false;
+
+                _db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch
+            catch (Exception)
             {
-                return View();
+                throw;
             }
         }
     }
