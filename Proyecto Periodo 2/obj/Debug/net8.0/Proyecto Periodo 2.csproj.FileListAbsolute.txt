@@ -548,3 +548,15 @@ C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Progr
 C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.dll
 C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\refint\Proyecto Periodo 2.dll
 C:\Users\Oscar Sibaja Alvarad\Desktop\Nueva carpeta\Nueva carpeta\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.csproj.AssemblyReference.cache
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.AssemblyInfoInputs.cache
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.AssemblyInfo.cs
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.RazorAssemblyInfo.cache
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.RazorAssemblyInfo.cs
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.sourcelink.json
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.dll
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\refint\Proyecto Periodo 2.dll
+C:\Users\Estudiante-03\Desktop\a\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
