@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TPec6+iRy/f2cPW7Wkg/WoZKVu2UJVl4oBnxb4XmKb0=",
+  "Hash": "ggbNzO2rDo9BkEpqtOH+kQcyd+wc1cMJWLp4LEVIIAM=",
   "Source": "Proyecto Periodo 2",
   "BasePath": "_content/Proyecto Periodo 2",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Proyecto Periodo 2\\wwwroot",
       "Source": "Proyecto Periodo 2",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "Proyecto Periodo 2#[.{fingerprint}]?.styles.css",
       "AssetKind": "All",
@@ -35,13 +35,13 @@
       "Integrity": "Z+Xg180maR1hI0d51ELqevHRciFrMd+crfeH4lRuu5k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css"
+      "OriginalItemSpec": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "Proyecto Periodo 2#[.{fingerprint}]!.bundle.scp.css",
       "AssetKind": "All",
@@ -56,13 +56,13 @@
       "Integrity": "Z+Xg180maR1hI0d51ELqevHRciFrMd+crfeH4lRuu5k=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "css/site#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -80,10 +80,31 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\Usuarios\\UsuariosIndex.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "css/Usuarios/UsuariosIndex#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "oysh7amd7q",
+      "Integrity": "4BsemEms/rhmqrpNTrfKQVsKkzUN2gzAmst2gBIGZ7w=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Usuarios\\UsuariosIndex.css"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "favicon#[.{fingerprint}]?.ico",
       "AssetKind": "All",
@@ -101,10 +122,178 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Agregar usuario.png",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Agregar usuario#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "leetkq6dk9",
+      "Integrity": "Lcrlfjy8OBptSJSxypi1KzJ/TGe2hsC0uzOkGiHHkrg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Agregar usuario.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Foto perfil.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Foto perfil#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "1uin7kvsx6",
+      "Integrity": "GeYTFGoUWt1HT7Ol1/1wRSGMH7avIihzxrjrdwYpmPw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Foto perfil.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Gear.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Gear#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fyqzlkc19d",
+      "Integrity": "N3hoIfFGySxr6C6byWVJkultIKKtcCxpt5n91Z13R0Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Gear.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Logo.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ngge9htigj",
+      "Integrity": "Kdh4Gr8Cso7fjRsvlTIzTUxNOVIdXJ1JJUKdO44lzlY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Lupita.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Lupita#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nlbuc5mptv",
+      "Integrity": "O/YWapRRSKM4n2kT0h5oxT8adwoJohSNpZldBRBdriQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Lupita.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\S&C logo.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/S&C logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6y1poqr8pv",
+      "Integrity": "HkbriVXeCKULfQRc4mGHuGN9+qhUPPlPp8hyvVkkPY8=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\S&C logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuario icono.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Usuario icono#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "n48bjlwagm",
+      "Integrity": "5+Qm0+fbO0sz1b2Ok18yFbKTi+p8gifBEplGmb7urDs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Usuario icono.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuarios icono.png",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "BasePath": "_content/Proyecto Periodo 2",
+      "RelativePath": "imagenes/Usuarios/Usuarios icono#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "f5t8tjhqvj",
+      "Integrity": "kz51HZ+ppl4IO5Cwyot/R9HpSkYJ83eFfrBb6srwhag=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\imagenes\\Usuarios\\Usuarios icono.png"
+    },
+    {
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
+      "SourceId": "Proyecto Periodo 2",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "js/site#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -122,10 +311,10 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -143,10 +332,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -164,10 +353,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -185,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -206,10 +395,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -227,10 +416,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -248,10 +437,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -269,10 +458,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -290,10 +479,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -311,10 +500,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -332,10 +521,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -353,10 +542,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -374,10 +563,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -395,10 +584,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -416,10 +605,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -437,10 +626,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -458,10 +647,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -479,10 +668,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -500,10 +689,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -521,10 +710,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -542,10 +731,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -563,10 +752,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -584,10 +773,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -605,10 +794,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -626,10 +815,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -647,10 +836,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -668,10 +857,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -689,10 +878,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -710,10 +899,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -731,10 +920,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -752,10 +941,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min#[.{fingerprint}]?.css",
       "AssetKind": "All",
@@ -773,10 +962,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -794,10 +983,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -815,10 +1004,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -836,10 +1025,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -857,10 +1046,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -878,10 +1067,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -899,10 +1088,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -920,10 +1109,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -941,10 +1130,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -962,10 +1151,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -983,10 +1172,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1004,10 +1193,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1025,10 +1214,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1046,10 +1235,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/bootstrap/LICENSE#[.{fingerprint}]?",
       "AssetKind": "All",
@@ -1067,10 +1256,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery/dist/jquery#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1088,10 +1277,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1109,10 +1298,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery/dist/jquery.min#[.{fingerprint}]?.map",
       "AssetKind": "All",
@@ -1130,10 +1319,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1151,10 +1340,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation/dist/additional-methods#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1172,10 +1361,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation/dist/additional-methods.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1193,10 +1382,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1214,10 +1403,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation/dist/jquery.validate.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1235,10 +1424,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation/LICENSE#[.{fingerprint}]?.md",
       "AssetKind": "All",
@@ -1256,10 +1445,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1277,10 +1466,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min#[.{fingerprint}]?.js",
       "AssetKind": "All",
@@ -1298,10 +1487,10 @@
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Identity": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
       "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE#[.{fingerprint}]?.txt",
       "AssetKind": "All",
@@ -1322,7 +1511,7 @@
   "Endpoints": [
     {
       "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1343,7 +1532,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1367,7 +1556,7 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1388,7 +1577,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1403,8 +1592,90 @@
       ]
     },
     {
+      "Route": "css/Usuarios/UsuariosIndex.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\Usuarios\\UsuariosIndex.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2363"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BsemEms/rhmqrpNTrfKQVsKkzUN2gzAmst2gBIGZ7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:16:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BsemEms/rhmqrpNTrfKQVsKkzUN2gzAmst2gBIGZ7w="
+        }
+      ]
+    },
+    {
+      "Route": "css/Usuarios/UsuariosIndex.oysh7amd7q.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\css\\Usuarios\\UsuariosIndex.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2363"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"4BsemEms/rhmqrpNTrfKQVsKkzUN2gzAmst2gBIGZ7w=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:16:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "oysh7amd7q"
+        },
+        {
+          "Name": "label",
+          "Value": "css/Usuarios/UsuariosIndex.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-4BsemEms/rhmqrpNTrfKQVsKkzUN2gzAmst2gBIGZ7w="
+        }
+      ]
+    },
+    {
       "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1425,7 +1696,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1449,7 +1720,7 @@
     },
     {
       "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1470,7 +1741,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1485,8 +1756,664 @@
       ]
     },
     {
+      "Route": "imagenes/Usuarios/Agregar usuario.leetkq6dk9.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Agregar usuario.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lcrlfjy8OBptSJSxypi1KzJ/TGe2hsC0uzOkGiHHkrg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "leetkq6dk9"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Agregar usuario.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lcrlfjy8OBptSJSxypi1KzJ/TGe2hsC0uzOkGiHHkrg="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Agregar usuario.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Agregar usuario.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "11994"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Lcrlfjy8OBptSJSxypi1KzJ/TGe2hsC0uzOkGiHHkrg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Lcrlfjy8OBptSJSxypi1KzJ/TGe2hsC0uzOkGiHHkrg="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Foto perfil.1uin7kvsx6.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Foto perfil.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GeYTFGoUWt1HT7Ol1/1wRSGMH7avIihzxrjrdwYpmPw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "1uin7kvsx6"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Foto perfil.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-GeYTFGoUWt1HT7Ol1/1wRSGMH7avIihzxrjrdwYpmPw="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Foto perfil.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Foto perfil.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "10861"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"GeYTFGoUWt1HT7Ol1/1wRSGMH7avIihzxrjrdwYpmPw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:45 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-GeYTFGoUWt1HT7Ol1/1wRSGMH7avIihzxrjrdwYpmPw="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Gear.fyqzlkc19d.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Gear.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18924"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N3hoIfFGySxr6C6byWVJkultIKKtcCxpt5n91Z13R0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fyqzlkc19d"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Gear.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-N3hoIfFGySxr6C6byWVJkultIKKtcCxpt5n91Z13R0Y="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Gear.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Gear.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "18924"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"N3hoIfFGySxr6C6byWVJkultIKKtcCxpt5n91Z13R0Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:50 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-N3hoIfFGySxr6C6byWVJkultIKKtcCxpt5n91Z13R0Y="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Logo.ngge9htigj.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kdh4Gr8Cso7fjRsvlTIzTUxNOVIdXJ1JJUKdO44lzlY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ngge9htigj"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kdh4Gr8Cso7fjRsvlTIzTUxNOVIdXJ1JJUKdO44lzlY="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Logo.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "51543"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Kdh4Gr8Cso7fjRsvlTIzTUxNOVIdXJ1JJUKdO44lzlY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Kdh4Gr8Cso7fjRsvlTIzTUxNOVIdXJ1JJUKdO44lzlY="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Lupita.nlbuc5mptv.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Lupita.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12542"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O/YWapRRSKM4n2kT0h5oxT8adwoJohSNpZldBRBdriQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nlbuc5mptv"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Lupita.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-O/YWapRRSKM4n2kT0h5oxT8adwoJohSNpZldBRBdriQ="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Lupita.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Lupita.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "12542"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"O/YWapRRSKM4n2kT0h5oxT8adwoJohSNpZldBRBdriQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:10:59 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-O/YWapRRSKM4n2kT0h5oxT8adwoJohSNpZldBRBdriQ="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/S&C logo.6y1poqr8pv.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\S&C logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8014"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HkbriVXeCKULfQRc4mGHuGN9+qhUPPlPp8hyvVkkPY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6y1poqr8pv"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/S&C logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HkbriVXeCKULfQRc4mGHuGN9+qhUPPlPp8hyvVkkPY8="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/S&C logo.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\S&C logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8014"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HkbriVXeCKULfQRc4mGHuGN9+qhUPPlPp8hyvVkkPY8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:04 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-HkbriVXeCKULfQRc4mGHuGN9+qhUPPlPp8hyvVkkPY8="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Usuario icono.n48bjlwagm.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuario icono.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16279"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5+Qm0+fbO0sz1b2Ok18yFbKTi+p8gifBEplGmb7urDs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "n48bjlwagm"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Usuario icono.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-5+Qm0+fbO0sz1b2Ok18yFbKTi+p8gifBEplGmb7urDs="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Usuario icono.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuario icono.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "16279"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"5+Qm0+fbO0sz1b2Ok18yFbKTi+p8gifBEplGmb7urDs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:10 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-5+Qm0+fbO0sz1b2Ok18yFbKTi+p8gifBEplGmb7urDs="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Usuarios icono.f5t8tjhqvj.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuarios icono.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20903"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kz51HZ+ppl4IO5Cwyot/R9HpSkYJ83eFfrBb6srwhag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "f5t8tjhqvj"
+        },
+        {
+          "Name": "label",
+          "Value": "imagenes/Usuarios/Usuarios icono.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-kz51HZ+ppl4IO5Cwyot/R9HpSkYJ83eFfrBb6srwhag="
+        }
+      ]
+    },
+    {
+      "Route": "imagenes/Usuarios/Usuarios icono.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuarios icono.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20903"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"kz51HZ+ppl4IO5Cwyot/R9HpSkYJ83eFfrBb6srwhag=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Fri, 25 Jul 2025 01:11:14 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-kz51HZ+ppl4IO5Cwyot/R9HpSkYJ83eFfrBb6srwhag="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1507,7 +2434,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1523,7 +2450,7 @@
     },
     {
       "Route": "js/site.xtxxf3hu2r.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1544,7 +2471,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1568,7 +2495,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1589,7 +2516,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1605,7 +2532,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.73kdqttayv.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1626,7 +2553,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1650,7 +2577,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1671,7 +2598,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1687,7 +2614,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.6gzpyzhau4.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1708,7 +2635,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1732,7 +2659,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1753,7 +2680,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1769,7 +2696,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.8inm30yfxf.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1790,7 +2717,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1814,7 +2741,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1835,7 +2762,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1851,7 +2778,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.ozu22stjof.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1872,7 +2799,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1896,7 +2823,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1917,7 +2844,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1933,7 +2860,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.4gxs3k148c.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1954,7 +2881,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1978,7 +2905,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1999,7 +2926,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2015,7 +2942,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.gjcw7pocpk.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2036,7 +2963,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2060,7 +2987,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.6l4ir0ityv.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2081,7 +3008,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2105,7 +3032,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2126,7 +3053,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2142,7 +3069,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.fctod5rc9n.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2163,7 +3090,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2187,7 +3114,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2208,7 +3135,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2224,7 +3151,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2245,7 +3172,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2261,7 +3188,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2282,7 +3209,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2298,7 +3225,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.css.st1cbwfwo5.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2319,7 +3246,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2343,7 +3270,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.5p029spbuu.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2364,7 +3291,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2388,7 +3315,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2409,7 +3336,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2425,7 +3352,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.5vj65cig9w.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2446,7 +3373,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2470,7 +3397,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2491,7 +3418,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2507,7 +3434,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.nakmwdwsxp.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2528,7 +3455,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2552,7 +3479,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2573,7 +3500,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2589,7 +3516,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.2q4vfeazbq.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2610,7 +3537,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2634,7 +3561,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2655,7 +3582,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2671,7 +3598,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.e6q6xbwqzk.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2692,7 +3619,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2716,7 +3643,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2737,7 +3664,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2753,7 +3680,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2774,7 +3701,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2790,7 +3717,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.o371a8zbv2.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2811,7 +3738,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2835,7 +3762,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.dy6jgresuo.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2856,7 +3783,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2880,7 +3807,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2901,7 +3828,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2917,7 +3844,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.jeal3x0ldm.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2938,7 +3865,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2962,7 +3889,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2983,7 +3910,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2999,7 +3926,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3020,7 +3947,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3036,7 +3963,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3057,7 +3984,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3073,7 +4000,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.okkk44j0xs.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3094,7 +4021,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3118,7 +4045,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.min.z7kmom2977.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3139,7 +4066,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3163,7 +4090,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.mk8rdyw69w.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3184,7 +4111,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3208,7 +4135,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.97yrjpyf9r.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3229,7 +4156,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3253,7 +4180,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3274,7 +4201,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3290,7 +4217,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.cwzlr5n8x4.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3311,7 +4238,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3335,7 +4262,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3356,7 +4283,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3372,7 +4299,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3393,7 +4320,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3409,7 +4336,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3430,7 +4357,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3446,7 +4373,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.wmug9u23qg.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3467,7 +4394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3491,7 +4418,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.y53cy5s2zj.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3512,7 +4439,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3536,7 +4463,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3557,7 +4484,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3573,7 +4500,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.j75batdsum.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3594,7 +4521,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3618,7 +4545,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3639,7 +4566,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3655,7 +4582,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.2yn17lgxub.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3676,7 +4603,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3700,7 +4627,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3721,7 +4648,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3737,7 +4664,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3758,7 +4685,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3774,7 +4701,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.vy0bq9ydhf.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3795,7 +4722,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3819,7 +4746,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3840,7 +4767,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3856,7 +4783,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.ab1c3rmv7g.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3877,7 +4804,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3901,7 +4828,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3922,7 +4849,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3938,7 +4865,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3959,7 +4886,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3975,7 +4902,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.56d2bn4wt9.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3996,7 +4923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4020,7 +4947,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4041,7 +4968,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4057,7 +4984,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.ik6i2hrs65.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4078,7 +5005,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4102,7 +5029,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.ophe14yye5.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4123,7 +5050,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4147,7 +5074,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap-utilities.z9shlbduue.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4168,7 +5095,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4192,7 +5119,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.1piudyfv7h.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4213,7 +5140,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4237,7 +5164,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.f6zq8v6eb3.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4258,7 +5185,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4282,7 +5209,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4303,7 +5230,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4319,7 +5246,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.kbynt5jhd9.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4340,7 +5267,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4364,7 +5291,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4385,7 +5312,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4401,7 +5328,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.89qbw8ngem.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4422,7 +5349,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4446,7 +5373,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4467,7 +5394,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4483,7 +5410,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.c2nslu3uf3.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4504,7 +5431,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4528,7 +5455,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4549,7 +5476,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4565,7 +5492,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4586,7 +5513,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4602,7 +5529,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.2lgwfvgpvi.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4623,7 +5550,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4647,7 +5574,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4668,7 +5595,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4684,7 +5611,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.jqwzsa9uv6.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4705,7 +5632,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4729,7 +5656,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4750,7 +5677,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4766,7 +5693,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4787,7 +5714,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4803,7 +5730,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.min.js.wsezl0heh6.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4824,7 +5751,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4848,7 +5775,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.esm.n5w6o92d9r.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4869,7 +5796,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4893,7 +5820,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4914,7 +5841,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4930,7 +5857,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.6ukhryfubh.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4951,7 +5878,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -4975,7 +5902,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -4996,7 +5923,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5012,7 +5939,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.4908xmbfjr.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5033,7 +5960,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5057,7 +5984,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5078,7 +6005,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5094,7 +6021,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5115,7 +6042,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5131,7 +6058,7 @@
     },
     {
       "Route": "lib/bootstrap/dist/js/bootstrap.min.js.u33ctipx7g.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5152,7 +6079,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5176,7 +6103,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5197,7 +6124,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5213,7 +6140,7 @@
     },
     {
       "Route": "lib/bootstrap/LICENSE.81b7ukuj9c",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5234,7 +6161,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5258,7 +6185,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.7s2n0ol71w.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5279,7 +6206,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5303,7 +6230,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5324,7 +6251,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5340,7 +6267,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.5pze98is44.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5361,7 +6288,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5385,7 +6312,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.ehgnz7f14e.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5406,7 +6333,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5430,7 +6357,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5451,7 +6378,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5467,7 +6394,7 @@
     },
     {
       "Route": "lib/jquery/dist/jquery.min.map",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5488,7 +6415,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5504,7 +6431,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.mlv21k5csn.txt",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5525,7 +6452,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5549,7 +6476,7 @@
     },
     {
       "Route": "lib/jquery/LICENSE.txt",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5570,7 +6497,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5586,7 +6513,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.ay5nd8zt9x.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5607,7 +6534,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5631,7 +6558,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5652,7 +6579,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5668,7 +6595,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.9oaff4kq20.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5689,7 +6616,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5713,7 +6640,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/additional-methods.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5734,7 +6661,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5750,7 +6677,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.6d0lkjaslc.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5771,7 +6698,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5795,7 +6722,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5816,7 +6743,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5832,7 +6759,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5853,7 +6780,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5869,7 +6796,7 @@
     },
     {
       "Route": "lib/jquery-validation/dist/jquery.validate.min.l1zq2mitth.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5890,7 +6817,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5914,7 +6841,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.md",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5935,7 +6862,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5951,7 +6878,7 @@
     },
     {
       "Route": "lib/jquery-validation/LICENSE.x0q3zqp4vz.md",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -5972,7 +6899,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -5996,7 +6923,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.03hjc8e09r.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6017,7 +6944,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6041,7 +6968,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6062,7 +6989,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6078,7 +7005,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.48y08845bh.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6099,7 +7026,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6123,7 +7050,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6144,7 +7071,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6160,7 +7087,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.356vix0kms.txt",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6181,7 +7108,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6205,7 +7132,7 @@
     },
     {
       "Route": "lib/jquery-validation-unobtrusive/LICENSE.txt",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6226,7 +7153,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6242,7 +7169,7 @@
     },
     {
       "Route": "Proyecto Periodo 2.bundle.scp.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6263,7 +7190,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6279,7 +7206,7 @@
     },
     {
       "Route": "Proyecto Periodo 2.rvfk8gxkxf.bundle.scp.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Proyecto Periodo 2.bundle.scp.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6300,7 +7227,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6324,7 +7251,7 @@
     },
     {
       "Route": "Proyecto Periodo 2.rvfk8gxkxf.styles.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6345,7 +7272,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -6369,7 +7296,7 @@
     },
     {
       "Route": "Proyecto Periodo 2.styles.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Proyecto Periodo 2.styles.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -6390,7 +7317,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 19 Jun 2025 01:58:08 GMT"
+          "Value": "Fri, 25 Jul 2025 01:04:52 GMT"
         },
         {
           "Name": "Cache-Control",

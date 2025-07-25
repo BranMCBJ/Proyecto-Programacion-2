@@ -1,5 +1,14 @@
 wwwroot\css\site.css
+wwwroot\css\Usuarios\UsuariosIndex.css
 wwwroot\favicon.ico
+wwwroot\imagenes\Usuarios\Agregar usuario.png
+wwwroot\imagenes\Usuarios\Foto perfil.png
+wwwroot\imagenes\Usuarios\Gear.png
+wwwroot\imagenes\Usuarios\Logo.png
+wwwroot\imagenes\Usuarios\Lupita.png
+wwwroot\imagenes\Usuarios\S&C logo.png
+wwwroot\imagenes\Usuarios\Usuario icono.png
+wwwroot\imagenes\Usuarios\Usuarios icono.png
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

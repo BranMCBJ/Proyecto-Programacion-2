@@ -91,6 +91,38 @@ namespace Proyecto_Periodo_2.Migrations
                     b.ToTable("CopiaLibros", (string)null);
                 });
 
+            modelBuilder.Entity("Proyecto_Periodo_2.Models.CopiaLibroPrestamo", b =>
+                {
+                    b.Property<int>("IdRelacion")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdRelacion"));
+
+                    b.Property<bool>("Activo")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("CopiaLibroIdCopiaLibro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdCopiaLibro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPrestamo")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("PrestamoIdPrestamo")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdRelacion");
+
+                    b.HasIndex("CopiaLibroIdCopiaLibro");
+
+                    b.HasIndex("PrestamoIdPrestamo");
+
+                    b.ToTable("CopiasLibrosPrestamos");
+                });
+
             modelBuilder.Entity("Proyecto_Periodo_2.Models.EstadoCopiaLibro", b =>
                 {
                     b.Property<int>("IdEstadoCopialibro")
@@ -136,7 +168,7 @@ namespace Proyecto_Periodo_2.Migrations
 
                     b.HasKey("_IdEstado");
 
-                    b.ToTable("EstadoPrestamos", (string)null);
+                    b.ToTable("EstadoPrestamo", (string)null);
                 });
 
             modelBuilder.Entity("Proyecto_Periodo_2.Models.Libro", b =>
@@ -294,6 +326,21 @@ namespace Proyecto_Periodo_2.Migrations
                     b.Navigation("EstadoCopiaLibro");
 
                     b.Navigation("Libro");
+                });
+
+            modelBuilder.Entity("Proyecto_Periodo_2.Models.CopiaLibroPrestamo", b =>
+                {
+                    b.HasOne("Proyecto_Periodo_2.Models.CopiaLibro", "CopiaLibro")
+                        .WithMany()
+                        .HasForeignKey("CopiaLibroIdCopiaLibro");
+
+                    b.HasOne("Proyecto_Periodo_2.Models.Prestamo", "Prestamo")
+                        .WithMany()
+                        .HasForeignKey("PrestamoIdPrestamo");
+
+                    b.Navigation("CopiaLibro");
+
+                    b.Navigation("Prestamo");
                 });
 
             modelBuilder.Entity("Proyecto_Periodo_2.Models.Libro", b =>
