@@ -21,4 +21,10 @@
     <Folder Include="wwwroot\imagenes\Usuarios\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Datos\Datos.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Utilities\Utilities.csproj" />
+  </ItemGroup>
+
 </Project>

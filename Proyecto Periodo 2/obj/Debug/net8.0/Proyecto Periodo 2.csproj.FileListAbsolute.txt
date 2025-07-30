@@ -739,3 +739,6 @@ C:\Users\cecil\Desktop\Proyecto II Periodo\Proyecto-Programacion-2\Proyecto Peri
 C:\Users\cecil\Desktop\Proyecto II Periodo\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
 C:\Users\cecil\Desktop\Proyecto II Periodo\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.genruntimeconfig.cache
 C:\Users\cecil\Desktop\Proyecto II Periodo\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\ref\Proyecto Periodo 2.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\refint\Proyecto Periodo 2.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb

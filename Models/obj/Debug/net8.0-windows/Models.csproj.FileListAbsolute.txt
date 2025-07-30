@@ -1,0 +1,15 @@
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\bin\Debug\net8.0-windows\Models.deps.json
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\bin\Debug\net8.0-windows\Models.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\bin\Debug\net8.0-windows\Models.pdb
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.AssemblyInfoInputs.cache
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.AssemblyInfo.cs
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.csproj.CoreCompileInputs.cache
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.sourcelink.json
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\refint\Models.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.pdb
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\ref\Models.dll
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\bin\Debug\net8.0-windows\Models.runtimeconfig.json
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.csproj.AssemblyReference.cache
+C:\Users\Estudiante-07\Desktop\aa\Proyecto-Programacion-2\Proyecto-Programacion-2\Proyecto-Programacion-2\Models\obj\Debug\net8.0-windows\Models.genruntimeconfig.cache

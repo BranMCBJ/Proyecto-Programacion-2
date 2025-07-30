@@ -1431,6 +1431,36 @@
         "runtime": {
           "lib/netcoreapp2.1/_._": {}
         }
+      },
+      "Datos/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/Datos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Datos.dll": {}
+        }
+      },
+      "Models/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Models.dll": {}
+        }
+      },
+      "Utilities/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/Utilities.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Utilities.dll": {}
+        }
       }
     }
   },
@@ -4044,34 +4074,52 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Datos/1.0.0": {
+      "type": "project",
+      "path": "../Datos/Datos.csproj",
+      "msbuildProject": "../Datos/Datos.csproj"
+    },
+    "Models/1.0.0": {
+      "type": "project",
+      "path": "../Models/Models.csproj",
+      "msbuildProject": "../Models/Models.csproj"
+    },
+    "Utilities/1.0.0": {
+      "type": "project",
+      "path": "../Utilities/Utilities.csproj",
+      "msbuildProject": "../Utilities/Utilities.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Datos >= 1.0.0",
       "Microsoft.Data.SqlClient >= 6.0.1",
       "Microsoft.EntityFrameworkCore >= 9.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.2",
-      "Microsoft.EntityFrameworkCore.Tools >= 9.0.2"
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.2",
+      "Models >= 1.0.0",
+      "Utilities >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cecil\\.nuget\\packages\\": {},
+    "C:\\Users\\Estudiante-07\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "projectUniqueName": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
       "projectName": "Proyecto Periodo 2",
-      "projectPath": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-      "packagesPath": "C:\\Users\\cecil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
+      "projectPath": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+      "packagesPath": "C:\\Users\\Estudiante-07\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\cecil\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Estudiante-07\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4085,7 +4133,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Datos\\Datos.csproj": {
+              "projectPath": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Datos\\Datos.csproj"
+            },
+            "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Models\\Models.csproj"
+            },
+            "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\Estudiante-07\\Desktop\\aa\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4142,8 +4200,37 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto Models no es compatible con net8.0 (.NETCoreApp,Version=v8.0). El proyecto Models admite: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "Models",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto Datos no es compatible con net8.0 (.NETCoreApp,Version=v8.0). El proyecto Datos admite: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "Datos",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "El proyecto Utilities no es compatible con net8.0 (.NETCoreApp,Version=v8.0). El proyecto Utilities admite: net8.0-windows7.0 (.NETCoreApp,Version=v8.0)",
+      "libraryId": "Utilities",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
