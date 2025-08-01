@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Proyecto_Periodo_2.Datos;
-using Proyecto_Periodo_2.Models;
+using Data;
+using Models;
 
 namespace Proyecto_Periodo_2.Controllers
 {

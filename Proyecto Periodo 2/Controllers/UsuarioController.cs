@@ -2,8 +2,8 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Proyecto_Periodo_2.Datos;
-using Proyecto_Periodo_2.Models;
+using Data;
+using Models;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -72,7 +72,7 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     // Verificar si ya existe un usuario con el mismo nombre de usuario o cédula
                     var usuarioExistente = _db.Usuarios
-                        .FirstOrDefault(u => u.NombreDeUsuario == usuario.NombreDeUsuario ||
+                        .FirstOrDefault(u => u.UserName == usuario.UserName ||
                                            u.Cedula == usuario.Cedula);
 
                     if (usuarioExistente != null)
@@ -134,9 +134,9 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     // Verificar si ya existe otro usuario con el mismo nombre de usuario o cédula
                     var usuarioExistente = _db.Usuarios
-                        .FirstOrDefault(u => (u.NombreDeUsuario == usuario.NombreDeUsuario ||
+                        .FirstOrDefault(u => (u.UserName == usuario.UserName ||
                                             u.Cedula == usuario.Cedula) &&
-                                            u.IdUsuario != usuario.IdUsuario);
+                                            u.Id != usuario.Id);
 
                     if (usuarioExistente != null)
                     {

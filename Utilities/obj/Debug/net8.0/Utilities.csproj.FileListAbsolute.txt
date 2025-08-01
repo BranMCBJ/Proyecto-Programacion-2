@@ -1,0 +1,15 @@
+C:\Users\cecil\Desktop\proyecto 2\Utilities\bin\Debug\net8.0\Utilities.deps.json
+C:\Users\cecil\Desktop\proyecto 2\Utilities\bin\Debug\net8.0\Utilities.dll
+C:\Users\cecil\Desktop\proyecto 2\Utilities\bin\Debug\net8.0\Utilities.pdb
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.sourcelink.json
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.dll
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\refint\Utilities.dll
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.pdb
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\ref\Utilities.dll
+C:\Users\cecil\Desktop\proyecto 2\Utilities\bin\Debug\net8.0\Utilities.runtimeconfig.json
+C:\Users\cecil\Desktop\proyecto 2\Utilities\obj\Debug\net8.0\Utilities.genruntimeconfig.cache

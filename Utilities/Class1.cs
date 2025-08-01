@@ -1,6 +1,8 @@
 ﻿namespace Utilities
 {
-    public class Class1
+    public class WC
     {
+        public const string AdminRole = "Admin";
+        public const string UserRole = "Usuario";
     }
 }

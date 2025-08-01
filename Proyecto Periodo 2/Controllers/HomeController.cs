@@ -1,6 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Proyecto_Periodo_2.Models;
+using Models;
 
 namespace Proyecto_Periodo_2.Controllers;
 
