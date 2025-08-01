@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Data;
 using Microsoft.AspNetCore.Identity;
-using Proyecto_Periodo_2.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);

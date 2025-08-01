@@ -5,52 +5,96 @@
       "PackagePath": "staticwebassets\\Proyecto Periodo 2.rvfk8gxkxf.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\css\\Usuarios\\UsuariosIndex.css",
-      "PackagePath": "staticwebassets\\css\\Usuarios\\UsuariosIndex.css"
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+      "PackagePath": "staticwebassets\\Clientes\\main.js"
     },
     {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Clientes\\styles.css",
+      "PackagePath": "staticwebassets\\Clientes\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\HomeAministrador\\resources\\ArbolHome.png",
+      "PackagePath": "staticwebassets\\HomeAministrador\\resources\\ArbolHome.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\HomeAministrador\\resources\\Logo.png",
+      "PackagePath": "staticwebassets\\HomeAministrador\\resources\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\HomeAministrador\\resources\\fondoHomepage.png",
+      "PackagePath": "staticwebassets\\HomeAministrador\\resources\\fondoHomepage.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\HomeAministrador\\resources\\hoja.png",
+      "PackagePath": "staticwebassets\\HomeAministrador\\resources\\hoja.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\HomeAministrador\\styles.css",
+      "PackagePath": "staticwebassets\\HomeAministrador\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Home\\resources\\ArbolHome.png",
+      "PackagePath": "staticwebassets\\Home\\resources\\ArbolHome.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Home\\resources\\Logo.png",
+      "PackagePath": "staticwebassets\\Home\\resources\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Home\\resources\\fondoHomepage.png",
+      "PackagePath": "staticwebassets\\Home\\resources\\fondoHomepage.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Home\\resources\\hoja.png",
+      "PackagePath": "staticwebassets\\Home\\resources\\hoja.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Home\\styles.css",
+      "PackagePath": "staticwebassets\\Home\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Libros vistas\\resources\\fotoperfil.jpg",
+      "PackagePath": "staticwebassets\\Libros vistas\\resources\\fotoperfil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Libros vistas\\resources\\logo.png",
+      "PackagePath": "staticwebassets\\Libros vistas\\resources\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Libros vistas\\styles.css",
+      "PackagePath": "staticwebassets\\Libros vistas\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Fondo-Login.jpg",
+      "PackagePath": "staticwebassets\\Login\\resources\\Fondo-Login.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Logo.png",
+      "PackagePath": "staticwebassets\\Login\\resources\\Logo.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\styles.css",
+      "PackagePath": "staticwebassets\\Login\\styles.css"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Prestamos\\resources\\Gear.png",
+      "PackagePath": "staticwebassets\\Prestamos\\resources\\Gear.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Prestamos\\resources\\fotoperfil.jpg",
+      "PackagePath": "staticwebassets\\Prestamos\\resources\\fotoperfil.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Prestamos\\resources\\pasted-image.png",
+      "PackagePath": "staticwebassets\\Prestamos\\resources\\pasted-image.png"
+    },
+    {
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Prestamos\\styles.css",
+      "PackagePath": "staticwebassets\\Prestamos\\styles.css"
     },
     {
       "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Agregar usuario.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Agregar usuario.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Foto perfil.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Foto perfil.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Gear.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Gear.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Logo.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Logo.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Lupita.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Lupita.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\S&C logo.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\S&C logo.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuario icono.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Usuario icono.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\imagenes\\Usuarios\\Usuarios icono.png",
-      "PackagePath": "staticwebassets\\imagenes\\Usuarios\\Usuarios icono.png"
-    },
-    {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
       "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\lib\\bootstrap\\LICENSE",

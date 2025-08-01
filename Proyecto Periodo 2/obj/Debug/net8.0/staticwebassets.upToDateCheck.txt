@@ -1,15 +1,16 @@
-wwwroot\css\site.css
-wwwroot\css\Usuarios\UsuariosIndex.css
+wwwroot\Clientes\main.js
+wwwroot\Clientes\styles.css
 wwwroot\favicon.ico
-wwwroot\imagenes\Usuarios\Agregar usuario.png
-wwwroot\imagenes\Usuarios\Foto perfil.png
-wwwroot\imagenes\Usuarios\Gear.png
-wwwroot\imagenes\Usuarios\Logo.png
-wwwroot\imagenes\Usuarios\Lupita.png
-wwwroot\imagenes\Usuarios\S&C logo.png
-wwwroot\imagenes\Usuarios\Usuario icono.png
-wwwroot\imagenes\Usuarios\Usuarios icono.png
-wwwroot\js\site.js
+wwwroot\Home\resources\ArbolHome.png
+wwwroot\Home\resources\fondoHomepage.png
+wwwroot\Home\resources\hoja.png
+wwwroot\Home\resources\Logo.png
+wwwroot\Home\styles.css
+wwwroot\HomeAministrador\resources\ArbolHome.png
+wwwroot\HomeAministrador\resources\fondoHomepage.png
+wwwroot\HomeAministrador\resources\hoja.png
+wwwroot\HomeAministrador\resources\Logo.png
+wwwroot\HomeAministrador\styles.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
@@ -67,3 +68,13 @@ wwwroot\lib\jquery-validation\LICENSE.md
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js
 wwwroot\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js
 wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+wwwroot\Libros vistas\resources\fotoperfil.jpg
+wwwroot\Libros vistas\resources\logo.png
+wwwroot\Libros vistas\styles.css
+wwwroot\Login\resources\Fondo-Login.jpg
+wwwroot\Login\resources\Logo.png
+wwwroot\Login\styles.css
+wwwroot\Prestamos\resources\fotoperfil.jpg
+wwwroot\Prestamos\resources\Gear.png
+wwwroot\Prestamos\resources\pasted-image.png
+wwwroot\Prestamos\styles.css

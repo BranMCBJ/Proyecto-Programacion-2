@@ -29,6 +29,7 @@ namespace Data
             modelBuilder.Entity<Prestamo>().ToTable("Prestamo");
             modelBuilder.Entity<EstadoCopiaLibro>().ToTable("EstadoCopiaLibro");
 
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Models
         public Cliente? cliente { get; set; }
 
 
-        public int? IdUsuario { get; set; }
+        public string? IdUsuario { get; set; }
 
         [ForeignKey(nameof(IdUsuario))]
         public Usuario? usuario { get; set; }
