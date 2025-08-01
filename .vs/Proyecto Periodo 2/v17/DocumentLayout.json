@@ -1,527 +1,135 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\cecil\\Desktop\\proyecto 2\\",
+  "WorkspaceRootPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\proyecto periodo 2\\wwwroot\\clientes\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\wwwroot\\clientes\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\prestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\datos\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\views\\clientes\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\clientes\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\proyecto periodo 2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\proyecto periodo 2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{19E953DD-6A63-48E9-84B2-F79DAC296D40}|Utilities\\Utilities.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\utilities\\wc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{19E953DD-6A63-48E9-84B2-F79DAC296D40}|Utilities\\Utilities.csproj|solutionrelative:utilities\\wc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\controllers\\estadoprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\estadoprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\controllers\\copialibroprestamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\copialibroprestamocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250531233842_migracion2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250531233842_migracion2.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250725012752_migracion5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250725012752_migracion5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250619032342_migracion4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250619032342_migracion4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250531235417_migracion3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250531235417_migracion3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250531233842_migracion2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250531233842_migracion2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250531225907_migracion1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250531225907_migracion1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250725012752_migracion5.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250725012752_migracion5.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\librocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\copialibroprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\copialibroprestamo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\copialibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\copialibro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Estudiante-07\\AppData\\Local\\SourceServer\\ccf167ddf883f488a763bf98d7405e3b64f071ec395636efc4e299017bc5cb3c\\Proyecto Periodo 2\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250725011847_migracion5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|c:\\users\\cecil\\desktop\\proyecto 2\\data\\migrations\\20250801140541_migracion6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C5996300-7B39-44EC-8E01-506A4A8DDFC9}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250801140541_migracion6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\models\\viewmodels\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\viewmodels\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\documents\\github\\proyecto-programacion-2\\proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:01:30.673Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAkwI4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:50:24.237Z",
-              "IsPinned": true,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "RelativeToolTip": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "ViewState": "AgIAACwAAAAAAAAAAAAYwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-01T22:29:25.085Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "20250801140541_migracion6.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250801140541_migracion6.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250801140541_migracion6.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250801140541_migracion6.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250801140541_migracion6.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T14:05:41.983Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Prestamo.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Prestamo.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\Prestamo.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Prestamo.cs",
-              "RelativeToolTip": "Models\\Models\\Prestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAwA4AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T13:59:16.788Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Datos\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\Datos\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Datos\\AppDbContext.cs",
-              "RelativeToolTip": "Data\\Datos\\AppDbContext.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAIwA8AAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:42:14.918Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Proyecto Periodo 2\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAADcAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-08-01T06:29:45.037Z",
+              "WhenOpened": "2025-08-01T21:35:24.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AppDbContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "RelativeToolTip": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\ViewModels\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\ViewModels\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\ViewModels\\Cliente.cs",
+              "RelativeToolTip": "Models\\ViewModels\\Cliente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T12:56:21.617Z"
+              "WhenOpened": "2025-08-01T21:26:54.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
+              "RelativeToolTip": "Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
+              "ViewState": "AgIAAPMAAAAAAAAAAAAAABUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-01T21:23:07.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-01T21:21:30.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\appsettings.json",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
+              "RelativeToolTip": "Proyecto Periodo 2\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-01T21:14:16.337Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Views\\Clientes\\index.html",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Views\\Clientes\\index.html",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Views\\Clientes\\index.html",
-              "RelativeToolTip": "Proyecto Periodo 2\\Views\\Clientes\\index.html",
-              "ViewState": "AgIAAN4AAAAAAAAAAAAAAPEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-08-01T13:28:02.681Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Program.cs",
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\Program.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Program.cs",
+              "ToolTip": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Program.cs",
               "RelativeToolTip": "Proyecto Periodo 2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T06:34:19.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Proyecto Periodo 2.csproj",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-              "RelativeToolTip": "Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-08-01T13:27:24.585Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAHUAAAAAAAAAAAAAAEoAAABLAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T00:59:57.39Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "20250531233842_migracion2.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531233842_migracion2.Designer.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250531233842_migracion2.Designer.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531233842_migracion2.Designer.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250531233842_migracion2.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:18:12.151Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CopiaLibroPrestamoController.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\CopiaLibroPrestamoController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\CopiaLibroPrestamoController.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\CopiaLibroPrestamoController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\CopiaLibroPrestamoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:18:46.586Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WC.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Utilities\\WC.cs",
-              "RelativeDocumentMoniker": "Utilities\\WC.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Utilities\\WC.cs",
-              "RelativeToolTip": "Utilities\\WC.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:02:57.694Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:19:23.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "20250725012752_migracion5.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250725012752_migracion5.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250725012752_migracion5.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250725012752_migracion5.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250725012752_migracion5.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:17:54.279Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "EstadoPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\EstadoPrestamo.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\EstadoPrestamo.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\EstadoPrestamo.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\EstadoPrestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-20T01:30:40.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "20250619032342_migracion4.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250619032342_migracion4.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250619032342_migracion4.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250619032342_migracion4.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250619032342_migracion4.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:17:52.433Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "20250531235417_migracion3.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531235417_migracion3.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250531235417_migracion3.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531235417_migracion3.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250531235417_migracion3.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:17:51.046Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "20250531233842_migracion2.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531233842_migracion2.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250531233842_migracion2.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531233842_migracion2.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250531233842_migracion2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:17:48.545Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "20250531225907_Migracion1.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531225907_Migracion1.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250531225907_Migracion1.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250531225907_Migracion1.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250531225907_Migracion1.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAiwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:17:43.896Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:15:37.563Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CopiaLibroPrestamo.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\CopiaLibroPrestamo.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\CopiaLibroPrestamo.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\CopiaLibroPrestamo.cs",
-              "RelativeToolTip": "Models\\Models\\CopiaLibroPrestamo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:15:37.1Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "LibroController.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\LibroController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\LibroController.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\Controllers\\LibroController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\LibroController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:13:36.241Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "20250725012752_migracion5.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250725012752_migracion5.Designer.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20250725012752_migracion5.Designer.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Migrations\\20250725012752_migracion5.Designer.cs",
-              "RelativeToolTip": "Data\\Migrations\\20250725012752_migracion5.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:14:53.784Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "CopiaLibro.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\CopiaLibro.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\CopiaLibro.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\CopiaLibro.cs",
-              "RelativeToolTip": "Models\\Models\\CopiaLibro.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:15:36.653Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\Models\\Cliente.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Models\\Models\\Cliente.cs",
-              "RelativeToolTip": "Models\\Models\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T05:15:34.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Class1.cs",
-              "RelativeDocumentMoniker": "Data\\Class1.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Data\\Class1.cs",
-              "RelativeToolTip": "Data\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-01T04:58:38.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "Microsoft.Common.CurrentVersion.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAE8HAAAAAAAAAAAiwFoHAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-07-30T19:46:15.34Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Estudiante-07\\AppData\\Local\\SourceServer\\ccf167ddf883f488a763bf98d7405e3b64f071ec395636efc4e299017bc5cb3c\\Proyecto Periodo 2\\Program.cs",
-              "RelativeDocumentMoniker": "..\\..\\..\\Estudiante-07\\AppData\\Local\\SourceServer\\ccf167ddf883f488a763bf98d7405e3b64f071ec395636efc4e299017bc5cb3c\\Proyecto Periodo 2\\Program.cs",
-              "ToolTip": "C:\\Users\\Estudiante-07\\AppData\\Local\\SourceServer\\ccf167ddf883f488a763bf98d7405e3b64f071ec395636efc4e299017bc5cb3c\\Proyecto Periodo 2\\Program.cs",
-              "RelativeToolTip": "..\\..\\..\\Estudiante-07\\AppData\\Local\\SourceServer\\ccf167ddf883f488a763bf98d7405e3b64f071ec395636efc4e299017bc5cb3c\\Proyecto Periodo 2\\Program.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-30T21:54:04.63Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\appsettings.json",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeToolTip": "Proyecto Periodo 2\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-07-25T01:18:10.669Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "20250725011847_migracion5.cs",
-              "DocumentMoniker": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250725011847_migracion5.cs",
-              "RelativeDocumentMoniker": "..\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250725011847_migracion5.cs",
-              "ToolTip": "C:\\Users\\cecil\\Desktop\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250725011847_migracion5.cs",
-              "RelativeToolTip": "..\\Proyecto II Periodo\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Migrations\\20250725011847_migracion5.cs",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-25T01:18:48.231Z"
+              "WhenOpened": "2025-08-01T21:14:07.483Z",
+              "EditorCaption": ""
             }
           ]
         }

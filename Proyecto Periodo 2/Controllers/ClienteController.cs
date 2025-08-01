@@ -9,26 +9,30 @@ namespace Proyecto_Periodo_2.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly AppDbContext _db;
+        private readonly AppDbContext db;
 
-        public ClienteController(AppDbContext db)
+        public ClienteController(AppDbContext _db)
         {
-            _db = db;
+            db = _db;
         }
 
         // GET: UsuarioController - Listar todos los Clientes activos
         public ActionResult Index()
         {
-            try
-            {
-                IEnumerable<Cliente> listaClientes = _db.Clientes.Where(c => c.Activo == true);
-                return View(listaClientes);
-            }
-            catch (Exception)
-            {
-                // En caso de error, retorna una lista vacía
-                return View(new List<Cliente>());
-            }
+            IEnumerable<Models.ViewModels.Cliente> clientes = db.Clientes
+                .Where(c => c.Activo == true)
+                .Select(c => new Models.ViewModels.Cliente {
+                    IdCliente = c.IdCliente,
+                    Cedula = c.Cedula,
+                    Nombre = c.Nombre,
+                    Apellido1 = c.Apellido1,
+                    Apellido2 = c.Apellido2,
+                    Correo = c.Correo,
+                    Telefono = c.Telefono,
+                    CantidadPrestamosDisponibles = c.CantidadPrestamosDisponibles,
+                    Activo = c.Activo
+                }).ToList();
+            return View(clientes);
         }
 
         // GET: 
@@ -41,7 +45,7 @@ namespace Proyecto_Periodo_2.Controllers
                     return NotFound();
                 }
 
-                var cliente = _db.Clientes.Find(id); //El método Find() busca una entidad por su clave primaria(id).
+                var cliente = db.Clientes.Find(id); //El método Find() busca una entidad por su clave primaria(id).
                 if (cliente == null || cliente.Activo != true)
                 {
                     return NotFound();
@@ -71,7 +75,7 @@ namespace Proyecto_Periodo_2.Controllers
                 if (ModelState.IsValid)
                 {
                     // Verificar si ya existe un Clientes con el mismo nombre de usuario o cédula
-                    var ClientesExistente = _db.Clientes
+                    var ClientesExistente = db.Clientes
                         .FirstOrDefault(u => u.Nombre == cliente.Nombre ||
                                            u.Cedula == cliente.Cedula);
 
@@ -84,8 +88,8 @@ namespace Proyecto_Periodo_2.Controllers
                     //si no
                     cliente.Activo = true;
 
-                    _db.Clientes.Add(cliente);
-                    _db.SaveChanges();
+                    db.Clientes.Add(cliente);
+                    db.SaveChanges();
 
 
                     return RedirectToAction(nameof(Index));
@@ -109,7 +113,7 @@ namespace Proyecto_Periodo_2.Controllers
                     return NotFound();
                 }
 
-                var cliente = _db.Clientes.Find(id);
+                var cliente = db.Clientes.Find(id);
                 if (cliente == null)
                 {
                     return NotFound();
@@ -132,7 +136,7 @@ namespace Proyecto_Periodo_2.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    var ClientesExistente = _db.Clientes
+                    var ClientesExistente = db.Clientes
                       .FirstOrDefault(u => u.Nombre == cliente.Nombre ||
                                           u.Cedula == cliente.Cedula);
 
@@ -142,8 +146,8 @@ namespace Proyecto_Periodo_2.Controllers
                         return View(cliente);
                     }
                     //actualizar
-                    _db.Clientes.Update(cliente);
-                    _db.SaveChanges();
+                    db.Clientes.Update(cliente);
+                    db.SaveChanges();
 
                     //TempData["Mensaje"] = "Usuario actualizado exitosamente";
                     return RedirectToAction(nameof(Index));
@@ -167,7 +171,7 @@ namespace Proyecto_Periodo_2.Controllers
                     return NotFound();
                 }
 
-                var cliente = _db.Clientes.Find(id);
+                var cliente = db.Clientes.Find(id);
                 if (cliente == null)
                 {
                     return NotFound();
@@ -188,13 +192,13 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                var cliente = _db.Clientes.Find(id);
+                var cliente = db.Clientes.Find(id);
                 if (cliente != null)
                 {
                     //cambiar Activo a false
                     cliente.Activo = false;
-                    _db.Clientes.Update(cliente);
-                    _db.SaveChanges();
+                    db.Clientes.Update(cliente);
+                    db.SaveChanges();
 
 
                 }

@@ -1,4 +1,6 @@
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using Data;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -6,21 +8,25 @@ namespace Proyecto_Periodo_2.Controllers;
 
 public class HomeController : Controller
 {
+    private readonly AppDbContext db;
     private readonly ILogger<HomeController> _logger;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext _db)
     {
         _logger = logger;
+        db = _db;
     }
 
     public IActionResult Index()
     {
-        return View();
-    }
-
-    public IActionResult Privacy()
-    {
-        return View();
+        Models.ViewModels.Home home = new Models.ViewModels.Home
+        {
+            cantidadLibros = db.Libros.Count(),
+            cantidadPrestamos = db.Prestamos.Count(),
+            cantidadClientes = db.Clientes.Count(),
+            cantidadUsuarios = db.Usuarios.Count()
+        };
+        return View(home);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
