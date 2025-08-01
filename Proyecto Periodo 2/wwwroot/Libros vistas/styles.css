@@ -1,0 +1,238 @@
+/* Navbar en general*/
+.navbar {
+  box-shadow: 0 4px 6px rgba(14, 13, 13, 0.1);
+  padding-bottom: 10px;
+  padding-top: 20px;
+}
+
+/*Todos los iconos de font awsome en el navbar*/
+.navbar i {
+  color: #8C2445;
+}
+
+/*Item del navbar*/
+.nav-item {
+  padding-right: 20px;
+  border-right: 1px solid #8C2445;
+}
+
+/* Esta es la barrita que indica en cual pestaña se está*/
+.nav-libros::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: -10px;
+  width: 100%;
+  height: 5px;
+  background-color: #8C2445;
+
+}
+
+/*Parte del Administrador*/
+.profile-name {
+  margin: 0;
+  color: #882038;
+  font-weight: 600;
+  font-family: 'Comfortaa', sans-serif;
+  padding-left: 20px;
+}
+
+/*La card del perfil*/
+.profile-menu-card {
+  width: 260px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+/* La parte de arriba de la card*/
+.profile-header {
+  background-color: #8C2445;
+  color: white;
+  height: 40px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/*Imagen predeterminada del usuario */
+.profile-img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* El nombre de Yaret en el perfil*/
+.profile-nombre {
+  font-weight: 700;
+  text-align: left;
+  font-size: 16px;
+}
+
+/*Email en el perfil */
+.profile-email {
+  font-size: 14px;
+  color: #6c757d;
+  margin: 0 0 5px 0;
+}
+
+/*Editar perfil en el perfil */
+.edit-profile-link {
+  color: #8C2445;
+  font-size: 14px;
+  text-decoration: none;
+  padding-left: 40px;
+}
+
+/*Al pasar el cursor salga subrayado */
+.edit-profile-link:hover {
+  text-decoration: underline;
+}
+
+/* Espaciado del navbar*/
+.nav-link-custom {
+  padding-right: 50px;
+}
+
+/*Texto libro del inicio*/
+.texto-libro{
+  color: #8C2445;
+  padding-top: 40px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  font-weight: bold;
+  font-family: 'Comfortaa', sans-serif;  
+}
+
+.filtros{
+  padding-left: 20px;
+}
+
+.dropdown-item:hover {
+  color: #8C2445 !important;
+  background-color : #8c244510 !important;
+}
+.border-graydark {
+border-color: #cacaca !important;
+}
+
+input:focus {
+outline: none !important;
+box-shadow: none !important;
+}
+
+.botonagregar{
+  padding-right: 21px;
+}
+/* Boton agregar libro */
+.btn-agregar-libro {
+  background-color: #8C2445;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+/*Al pasar el cursor se vea del color y no blanco*/
+.btn-agregar-libro:hover {
+  background-color: #8C2445; 
+  color:#FFFF;
+}
+
+/* Titulo de datos en los modals*/
+.titulo-datos {      
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  display: inline-block;
+  margin-left: 40%;
+}
+
+/* Titulo de imagen en los modals*/
+.titulo-imagen{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*Todas las Imageness de las cards de los libros */
+.card-img-top {
+  height: 250px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+/*Espaciado de las columnas del modal */
+.columnaIzq{
+  padding-left: 100px;
+}
+
+.columnaDere{
+  padding-right: 100px;
+}
+
+/* Botones del modal de vista previa*/
+.btn-eliminar,
+.btn-editar{
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: #8C2445;
+  color: white;
+  font-size: 20px;
+
+}
+.btn-outline-cancelar {
+  color: #8C2445;
+  background-color: #FFFF;
+  border: 1px solid #8C2445;
+}
+
+.btn-outline-cancelar:hover {
+  background-color: #8C2445;
+  color: white;
+}
+
+/*Botones del modal de vista previa en general */
+.contenedor-botones {
+  margin-top: 50px;
+  padding-left: 110px;
+}
+
+/*Paginacion de la pagina*/
+
+/* En general */
+.pagpersonalizada {
+  justify-content: center;
+  margin-top: 30px;
+}
+
+/*Items como el 1 2 3 */
+.pagpersonalizada .page-link {
+  color: #8C2445;
+  border: 1px solid #8C2445;
+  padding: 10px 15px;
+ 
+}
+
+/*Al pasar el cursor por encima */
+.pagpersonalizada .page-link:hover {
+  background-color: #8C2445;
+  color: white;
+}
+
+/*El item activo */
+.pagpersonalizada .active .page-link {
+  background-color: #8C2445;
+  color: white;
+  border-color: #8C2445;
+}
+
+/* El Anterior deshabilitado en caso de estar en el 1*/
+.pagpersonalizada .disabled .page-link {
+  color: #6e6d6d;
+  background-color: #f8f9fa;
+  border-color: #757779;
+  cursor: not-allowed;
+}

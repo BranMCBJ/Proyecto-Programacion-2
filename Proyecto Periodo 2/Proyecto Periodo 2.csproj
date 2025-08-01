@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\imagenes\**" />
+    <Content Remove="wwwroot\imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\imagenes\**" />
+    <None Remove="wwwroot\imagenes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.16" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.16" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.0" />
@@ -22,13 +29,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\imagenes\Usuarios\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Data\Data.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Utilities\Utilities.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Clientes\Imagenes\" />
+    <Folder Include="wwwroot\HomeAministrador\Imagenes\" />
+    <Folder Include="wwwroot\Home\Imagenes\" />
+    <Folder Include="wwwroot\Libros vistas\Imagenes\" />
+    <Folder Include="wwwroot\Login\Imagenes\" />
+    <Folder Include="wwwroot\Prestamos\Imagenes\" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Préstamos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="./resources/css/prestamos.css">
+
+<style>
+  .title{
+    font-size: 60px !important;
+    font-weight: normal;
+    color: #8c2445;
+  }
+  
+    .card-user, .card-admin {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: #fff;
+    }
+
+
+    .card-user{
+      width: 950px;
+    }
+    .card-admin{
+      width: 600px;
+      margin-right: 150px;
+    }
+    .card-user img, .card-admin img {
+      width: 170px;
+      height: 170px;
+      border-radius: 4px;
+      
+    }
+
+    .admin-label {
+      color: #791C36;
+      font-weight: bold;
+      margin-top: 1.2rem;
+    }
+
+    .date-inputs input {
+      max-width: 150px;
+      height: 38px;
+    }
+
+    .arrow {
+      font-size: 1.5rem;
+      margin: 0 0.5rem;
+      color: #333;
+    }
+    .date-inputs:focus{
+      outline: none !important;
+      box-shadow: none !important;
+    }
+
+    .admin-label{
+      font-size: 30px;
+      margin-top: 135px !important;
+      font-weight: normal !important;
+    }
+    .btn-custom {
+      background-color: #fff;
+      border: 2px solid #791C36;
+      color: #791C36;
+      font-weight: bold;
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 160px;
+      height: 130px;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .btn-custom i {
+      font-size: 2.4rem;
+      color: #7C51C7;
+    }
+
+    .layout {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .right-section {
+      flex: 1;
+      margin-left: 100px;
+    }
+
+    .top-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 992px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .btn-custom {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .container-admin{
+      display: flex;
+    }
+
+</style>
+
+</head>
+<body class="">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+   
+
+<div class="container-fluid px-4">
+  <div class="row align-items-stretch gy-1">
+    <!-- Columna izquierda -->
+     <h1 class="title">Nuevo Préstamo</h1>
+     <div class="d-flex justify-content-end px-3">
+  <a href="libros.html" class="btn mb-4" style="background-color: #8c2445; color: white; min-width: 150px;">
+    Volver
+  </a>
+</div>
+    <div class="col-md-4">
+      <div class="card p-5 h-100 shadow-sm">
+        <div class="d-flex justify-content-end">
+        </div>
+        <div class="text-center">
+          <img src="./pasted-image (1).png" alt="Libro" class="rounded-square ">
+          <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
+          <p style="opacity: 60%;">ISBN: 123456789</p>
+          <div class="card-body text-center mt-3">
+        <h4 class="card-title fw-bold mb-4">Don Quijote de la Mancha</h5>
+        <p class="card-text text-start">
+          <strong>Autor:</strong> Miguel de Cervantes<br>
+          <strong>Idioma:</strong> Español<br>
+          <strong>Fecha de Pub:</strong> Dic, 20. 1605
+        </p>
+      </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Columna Derecha -->
+      <!-- Columna Derecha -->
+      <div class="right-section">
+        <!-- Usuario -->
+        <div class="card-user ">
+          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Usuario">
+          <div>
+            <h4><strong>Jose Pablo Araya</strong></h4>
+            <br>
+            <p style="opacity: 75%;">
+              Cédula: 190238421<br>
+              Correo: jparaya@gmail.com<br>
+              Teléfono: 1232-8762
+            </p>
+            
+          </div>
+        </div>
+
+        <!-- Fechas -->
+        <div class="date-inputs  align-items-center mt-5">
+          <label class="me-2">Plazo Vigente</label>
+          <div class="input d-flex mt-3">
+            <input type="text" class="form-control me-2" placeholder="DD/MM/YYYY" disabled>
+          <span class="arrow">&rarr;</span>
+          <input type="date" class="form-control"> 
+          </div>
+          
+          
+        </div>
+
+        <div class="admin-label mt-5">Efectuado por</div>
+        <!-- Admin + Boton -->
+         <div class="container-admin h-80 mt-3">
+          
+            
+            <div class="card-admin">
+              
+              <img src="./resources/img_9279a55e5a_min.jpg" alt="Admin">
+              <div>
+                <h4 class="fw-normal">Isaac Cordero Arias<br></h4>
+                <p style="opacity: 75%;">
+                  Usuario: fallingisaac_<br>
+                  Cédula: 305790820<br>
+                  Rol: Administrador<br>
+                  Correo: isaac@syc.cr
+                </p>
+                
+              </div>
+            </div>
+            <div class="d-inline-block text-center border rounded shadow-sm p-3" style="width: 200px; padding: 40px !important;  height: 200px; cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center;" data-bs-toggle="modal" data-bs-target="#prestamoModal">
+              <i class="bi bi-check2" style="font-size: 2.5rem; color: #8A1F40;"></i>
+              <div class="mt-2" style="color: #8A1F40; font-weight: 500;">Agregar Préstamo</div>
+            </div>
+
+
+          <div class="modal fade" id="prestamoModal" tabindex="-1" aria-labelledby="prestamoModalLabel" aria-hidden="true" >
+            <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 500px !important;" >
+              <div class="modal-content text-center p-5" style="height: 500px !important; padding-top: 80px !important;">
+                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="fw-normal mb-3">Préstamo agregado<br>correctamente</h5>
+                <div class="my-3">
+                  <div class="position-relative d-inline-block mt-3">
+                    <svg width="100" height="100" viewBox="0 0 100 100">
+                      <circle cx="50" cy="50" r="45" stroke="#8A1F40" stroke-width="5" fill="none" stroke-dasharray="250" stroke-dashoffset="60"/>
+                    </svg>
+                    <i class="bi bi-check2 position-absolute top-50 start-50 translate-middle" style="font-size: 3rem; color: #8A1F40;"></i>
+                  </div>
+                </div>
+                <button class="btn text-white mt-5" style="background-color: #8A1F40;" data-bs-dismiss="modal">Aceptar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+      </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>

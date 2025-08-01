@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="hojita.css">
+
+
+</head>
+
+<body>
+  <!--Navbar -->
+  <nav class="navbar navbar-expand-lg bg-white">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Logo" width="auto" height="45">
+      </a>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item mx-2">
+            <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-pen-to-square me-1"></i>
+              PRÉSTAMOS</a>
+          </li>
+          <li class="nav-item dropdown mx-2 nav-libros active">
+            <a class="nav-link dropdown-toggle dropdown-libros" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-book me-1"></i> LIBROS
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Copia Libro</a></li>
+              <li><a class="dropdown-item" href="#">Estado Copia Libro</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link" href="#"><i class="fa-solid fa-user-group me-1"></i> CLIENTES</a>
+          </li>
+        </ul>
+
+        <div class="dropdown nav-link-custom position-relative">
+          <div class="d-flex align-items-center ms-3 dropdown-toggle" role="button" id="userDropdown"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fa-solid fa-user" style="padding-right: 35px; width:20px"></i>
+            <div>
+              <p class="profile-name mb-0">Yaret</p>
+              <p class="profile-role mb-0">Administrador</p>
+            </div>
+          </div>
+
+          <!--Parte del perfil -->
+          <div class="dropdown-menu dropdown-menu-end p-0 mt-2 profile-menu-card" aria-labelledby="userDropdown">
+            <div class="profile-header px-3 py-2 d-flex justify-content-between align-items-start">
+              <div></div>
+              <span class="close-btn" onclick="document.getElementById('userDropdown').click()">x</span>
+            </div>
+            <div class="profile-info px-3 py-3">
+              <div class="d-flex align-items-start mb-3">
+                <img src="fotoperfil.jpg" alt="avatar" class="profile-img me-3">
+
+                <a href="#" class="edit-profile-link">
+                  <i class="fa-solid fa-pen-to-square me-1"></i> Editar Perfil
+                </a>
+              </div>
+              <p class="profile-nombre mb-0">Yaret</p>
+              <p class="profile-email text-muted mb-2">yarethgc@gmail.com</p>
+              <button class="btn btn-outline-secondary w-100">
+                <i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar Sesión
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Body de la pagina -->
+  <div>
+    <h1 class="texto-libro">Libros</h1>
+  </div>
+  <!-- Filtros y búsqueda -->
+  <div class="row g-2 mb-3 justify-content-start filtros ">
+    <!-- Buscar -->
+    <div class="position-relative" style="width: 255px;">
+      <i class="fa-solid fa-magnifying-glass position-absolute"
+        style="top: 50%; left: 8px; transform: translateY(-50%); color: #6c757d; font-size: 0.9rem;"></i>
+      <input type="text" class="form-control ps-4" placeholder="Buscar" style="padding-left: 30px;">
+    </div>
+
+    <!-- Ordenar por -->
+    <div class="col-1">
+      <div class="dropdown border border-graydark rounded">
+        <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="d-flex text-secondary">
+            <span>Ordenar por</span>
+            <i class="bi bi-chevron-down ms-auto me-0"></i>
+          </div>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a>
+          </li>
+          <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
+            </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Filtrar por -->
+    <div class="col-1">
+      <div class="dropdown border border-graydark rounded">
+        <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <div class="d-flex text-secondary">
+            <span>Filtrar por</span>
+            <i class="bi bi-chevron-down ms-auto me-0"></i>
+          </div>
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2 "></i>Cédula</a>
+          </li>
+          <li><a class="dropdown-item" href="#"><i class="fa-regular fa-envelope text-primary me-2"></i>Correo
+            </a></li>
+          <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
+          <li><a class="dropdown-item" href="#"><i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
+            </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col d-flex justify-content-end botonagregar">
+      <button type="button" class="btn btn-agregar-libro d-flex align-items-center" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop">
+        <i class="fa-solid fa-book me-1"></i>
+        <i class="fa-solid fa-plus me-1" style="font-size:10px;"></i>
+        Agregar libro
+      </button>
+    </div>
+
+    <!-- Modal de agregar libro -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header"
+            style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+            <h1 class="modal-title fs-2" id="staticBackdropLabel"
+              style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+              Agregar libro
+            </h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%);
+               width: 10px;">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col columnaIzq">
+                  <h4 class="titulo-imagen">Imagen</h4>
+                  <div class="text-center">
+                    <div class="position-relative bg-white border rounded shadow-sm"
+                      style="width: 300px; height: 400px;">
+                      <img id="previewImg" src="" alt="Vista previa" class="w-100 h-100" style="object-fit: contain;" />
+                      <button type="button" class="btn btn-dark position-absolute"
+                        style="bottom: 10px; left: 10px; background-color: #8C2445; border: none;"
+                        onclick="document.getElementById('inputFile').click();">
+                        <i class="fa-solid fa-upload"></i> Subir Imagen
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col columnaDere">
+                  <h3 class="titulo-datos">Datos</h3>
+                  <div class="form-group mb-3">
+                    <label for="usr">Título</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="usr">ISBN</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="usr">Fecha de publicación</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="usr">Clasificación de Edad</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="usr">Stock</label>
+                    <input type="text" class="form-control">
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="comment">Descripción</label>
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                  <button type="button" class="btn btn-agregar-libro">Guardar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards -->
+    <div class="container mt-4  px-4">
+      <div class="row justify-content-center">
+        <div class="col-md-3 mb-4  g-4">
+          <div class="card shadow-sm">
+            <img src="Frankenstein.webp" class="card-img-top" alt="Frankenstein">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Frankenstein</h6>
+              <p class="card-text text-muted small">Mary Shelley</p>
+            </div>
+            <!--boton que no debe salir -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              Ver más
+            </button>
+
+            <!-- Modal ejemplo vista previa de frankenstein-->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                  <div class="modal-header"
+                    style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                    <h1 class="modal-title fs-2" id="staticBackdropLabel"
+                      style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                      Agregar libro
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                      style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%);
+               width: 10px;">
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <div class="row">
+                        <div class="col columnaIzq">
+                          <h4 class="titulo-imagen">Imagen</h4>
+                          <div class="text-center">
+                            <div class="position-relative bg-white border rounded shadow-sm"
+                              style="width: 300px; height: 400px;">
+                              <img id="previewImg" src="Frankenstein.webp" alt="Vista previa" class="w-100 h-100"
+                                style="object-fit: contain;" />
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="d-grid gap-2 d-md-block contenedor-botones">
+                              <button class="btn btn-editar" type="button">
+                                <i class="fa-solid fa-pen-to-square"></i>
+                              </button>
+                              <button class="btn btn-eliminar" type="button">
+                                <i class="fa-solid fa-trash-can"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col columnaDere">
+                          <h3 class="titulo-datos">Datos</h3>
+                          <div class="form-group mb-3">
+                            <label for="usr">Título</label>
+                            <input type="text" class="form-control" id="usr" value="Frankenstein" readonly>
+
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="usr">ISBN</label>
+                            <input type="text" class="form-control" id="usr" value="9781234567897" readonly>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="usr">Fecha de publicación</label>
+                            <input type="text" class="form-control" id="usr" value="1/01/1818" readonly>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="usr">Clasificación de Edad</label>
+                            <input type="text" class="form-control" id="usr" value="+12" readonly>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="usr">Stock</label>
+                            <input type="text" class="form-control" id="usr" value="30" readonly>
+                          </div>
+                          <div class="form-group mb-3">
+                            <label for="comment">Descripción</label>
+                            <textarea class="form-control" rows="5" id="comment" readonly>
+Marie Shelley
+La obra narra la historia de Víctor Frankenstein, un científico que crea una criatura grotesca a partir de partes de cadáveres. El monstruo, al ser rechazado por su creador y la sociedad, se vuelve vengativo y causa sufrimiento. La novela explora temas como la ética científica, la naturaleza de la monstruosidad y las consecuencias de jugar a ser dios.
+                        </textarea>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4  g-4">
+          <div class="card shadow-sm">
+            <img src="angel.jpg" class="card-img-top" alt="Mi Ángel de la Guarda">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Mi Ángel de la Guarda</h6>
+              <p class="card-text text-muted small">June Loves</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4  g-4">
+          <div class="card shadow-sm">
+            <img src="ElPrincipito.jpg" class="card-img-top" alt="El Principito">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">El Principito</h6>
+              <p class="card-text text-muted small">Antoine de Saint-Exupéry</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3 mb-4  g-4">
+          <div class="card shadow-sm">
+            <img src="DonQuijote.jpg" class="card-img-top" alt="Don Quijote de la Mancha">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Don Quijote de la Mancha</h6>
+              <p class="card-text text-muted small">Miguel de Cervantes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="20mil.jpg" class="card-img-top" alt="Veinte mil leguas de viaje submarino">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Veinte Mil Leguas de Viaje Submarino</h6>
+              <p class="card-text text-muted small">Julio Verne</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  g-4">
+          <div class="card shadow-sm h-100">
+            <img src="fantasma.webp" class="card-img-top" alt="El Fantasma de la Ópera">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">El Fantasma de la Ópera</h6>
+              <p class="card-text text-muted small">Gaston Leroux</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  g-4">
+          <div class="card shadow-sm h-100">
+            <img src="forrestGump.jpg" class="card-img-top" alt="Forrest Gump">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">Forest Gump</h6>
+              <p class="card-text text-muted small">Tom Hanks</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col  g-4">
+          <div class="card shadow-sm h-100">
+            <img src="alma.jpg" class="card-img-top" alt="El Diamante de Alma">
+            <div class="card-body text-start">
+              <h6 class="card-title mb-1">El Diamante de Alma</h6>
+              <p class="card-text text-muted small">Mar Cole de Temple</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paginación de libros -->
+    <nav aria-label="...">
+      <ul class="pagination pagpersonalizada">
+        <li class="page-item disabled">
+          <a class="page-link">Anterior</a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#" aria-current="page">2</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Siguiente</a>
+        </li>
+      </ul>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

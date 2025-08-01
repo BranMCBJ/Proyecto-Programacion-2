@@ -1,0 +1,130 @@
+.nav-link {
+      color: #791d35;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link:hover {
+      color: #5a1226;
+    }
+
+    .navbar-divider {
+      height: 24px;
+      width: 1px;
+      background-color: #ccc;
+      margin: 0 12px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #791d35;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .login-button {
+      color: #791d35;
+      border: 1px solid #791d35;
+    }
+
+    .login-button:hover {
+      background-color: #791d35;
+      color: white;
+    }
+
+  html, body {
+  height: 100%;
+}
+
+.row{
+    margin: 20px;
+}
+
+.container-fluid {
+  height: 100vh;
+}
+
+.row.align-items-stretch {
+  height: 100%;
+}
+
+.col-md-8 > .row {
+  height: 100%;
+}
+
+.col-md-8 .card {
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .col-md-8 > .row {
+    flex-direction: column;
+  }
+
+  .col-md-8 .card {
+    margin-bottom: 1rem;
+  }
+}
+
+.card i {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+
+.rounded-square{
+  width: 350px;
+  padding-bottom: 100px;
+}
+
+.bi-pencil-square{
+  color: #791d35;
+}
+
+.bi-person-x{
+  color:#791d35;
+}
+
+.bi-pencil{
+  color:#791d35
+}
+
+.col-5{
+  margin-right: 30px;
+  width: 535px;
+}
+
+.col-md-4{
+  margin-bottom: 50px;
+}
+
+.col-md-8{
+  margin-bottom: 50px;
+}
+
+.col-sm-6{
+  height: 400px;
+  width: 380px;
+  margin-right: 55px;
+}
+
+.col-sm-6 button{
+  width: 100px;
+  color: #791d35;
+}
+
+.btn:hover{
+  background-color: #8c2445;
+  color: white !important;
+}
+
+.dropdown-toggle::after{
+  display: none !important;
+}

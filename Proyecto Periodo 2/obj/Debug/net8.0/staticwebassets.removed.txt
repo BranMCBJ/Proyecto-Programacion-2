@@ -1,0 +1,11 @@
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\css\site.css
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\css\Usuarios\UsuariosIndex.css
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Agregar usuario.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Foto perfil.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Gear.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Logo.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Lupita.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\S&C logo.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Usuario icono.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\imagenes\Usuarios\Usuarios icono.png
+C:\Users\Bran\Desktop\Proyecto Programacion\Proyecto Periodo 2\wwwroot\js\site.js

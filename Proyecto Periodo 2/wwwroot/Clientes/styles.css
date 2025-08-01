@@ -1,0 +1,40 @@
+.dropdown-item:hover {
+            color: #8C2445 !important;
+            background-color : #8c244510 !important;
+        }
+.border-graydark {
+        border-color: #cacaca !important;
+    }
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+.fade-card {
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: auto;
+}
+
+.fade-card.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card-preview-extendida-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 0;
+    height: auto;
+}
+
+#preview, #cardExpandida {
+    position: static;
+    width: 100%;
+    height: auto;
+}
