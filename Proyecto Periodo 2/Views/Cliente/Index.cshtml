@@ -1,6 +1,10 @@
+<<<<<<< Updated upstream
 @model IEnumerable<Models.ViewModels.Cliente>
 
 <div class="container-fluid">
+=======
+<div class="container-fluid p-3 p-md-5">
+>>>>>>> Stashed changes
     <!-- Encabezado de la página -->
     <div class="row align-items-center mb-3">
         <div class="col-12 col-md-6 text-primary">
@@ -18,7 +22,11 @@
         <div class="col-3">
             <div class="input-group border-graydark border rounded d-flex align-items-center">
                 <i class="bi bi-search me-2 ms-1 text-secondary"></i>
+<<<<<<< Updated upstream
                 <input id="inputBuscar" type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
+=======
+                <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
+>>>>>>> Stashed changes
             </div>
         </div>
         <!-- Filtrar por -->
@@ -31,10 +39,27 @@
                     </div>
                 </button>
                 <ul class="dropdown-menu">
+<<<<<<< Updated upstream
                     <li><a class="dropdown-item filtro" href="#" data-filter="Cedula"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a></li>
                     <li><a class="dropdown-item filtro" href="#" data-filter="Correo"><i class="fa-regular fa-envelope text-primary me-2"></i>Correo</a></li>
                     <li><a class="dropdown-item filtro" href="#" data-filter="Nombre"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
                     <li><a class="dropdown-item filtro" href="#" data-filter="Telefono"><i class="fa fa-phone text-primary me-2"></i>Número de Teléfono</a></li>
+=======
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-regular fa-envelope text-primary me-2"></i>Correo
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
+                        </a>
+                    </li>
+>>>>>>> Stashed changes
                 </ul>
             </div>
         </div>
@@ -48,12 +73,24 @@
                     </div>
                 </button>
                 <ul class="dropdown-menu">
+<<<<<<< Updated upstream
                     <li><a class="dropdown-item ordenar" href="#" data-sort="Nombre" data-order="asc"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a></li>
                     <li><a class="dropdown-item ordenar" href="#" data-sort="Nombre" data-order="desc"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)</a></li>
+=======
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
+                        </a>
+                    </li>
+>>>>>>> Stashed changes
                 </ul>
             </div>
         </div>
     </div>
+<<<<<<< Updated upstream
 
     <!-- Tabla de clientes -->
     <div class="row g-4" id="contenedorClientes">
@@ -67,29 +104,53 @@
                 <!-- Preview -->
                 <div class="row" id="preview-123456789" data-cedula="123456789">
                     <div class="col-10 ps-4 pt-2">
+=======
+    <!-- Tabla de clientes -->
+    <div class="row g-4">
+        <!--Card individual-->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="container-fluid border-graydark border rounded p-3 fs-5 h-100">
+                <!-- Preview -->
+                <div class="row" id="preview">
+                    <div class="col-11 ps-4 pt-2">
+>>>>>>> Stashed changes
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-2">
                                     <div class="ratio ratio-1x1 mb-2" style="width: 60px;">
+<<<<<<< Updated upstream
                                         <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=JP" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+=======
+                                        <img src="descarga.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+>>>>>>> Stashed changes
                                              alt="Cliente">
                                     </div>
                                 </div>
                                 <div class="col-10">
                                     <div class="row d-flex text-center">
+<<<<<<< Updated upstream
                                         <div class="col-12 cliente-nombre">Juan Pérez García</div>
                                         <div class="col-12 text-secondary cliente-cedula">123456789</div>
+=======
+                                        <div class="col-12">Jose Pablo Araya</div>
+                                        <div class="col-12 text-secondary">1902384221</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                                 <hr />
                             </div>
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     <div class="col-2 ms-auto">
+=======
+                    <div class="col-1 ms-auto">
+>>>>>>> Stashed changes
                         <div class="container-fluid" style="margin-top: -0.6em;">
                             <div class="col-12">
                                 <div class="dropdown dropend">
                                     <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
+<<<<<<< Updated upstream
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
                                     </button>
@@ -108,6 +169,20 @@
                                         <hr class="dropdown-divider" />
                                         <li class="mt-2">
                                             <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="123456789">
+=======
+                                            id="dropdownOpcionesCliente2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownOpcionesCliente2">
+                                        <li class="mb-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#clienteModal">
+                                                <i class="bi bi-pencil"></i> Editar
+                                            </button>
+                                        </li>
+                                        <hr class="dropdown-divider">
+                                        <li class="mt-2">
+                                            <button class="dropdown-item text-primary fs-5">
+>>>>>>> Stashed changes
                                                 <i class="bi bi-trash"></i> Eliminar
                                             </button>
                                         </li>
@@ -116,7 +191,12 @@
                             </div>
                             <div class="col-12">
                                 <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
+<<<<<<< Updated upstream
                                         data-bs-toggle="collapse" data-bs-target="#cardExpandida-123456789" aria-expanded="false" aria-controls="cardExpandida-123456789">
+=======
+                                        data-bs-toggle="collapse" data-bs-target="#cardExpandida" aria-expanded="false" aria-controls="cardExpandida"
+                                        id="toggleInfoBtn">
+>>>>>>> Stashed changes
                                     <i class="bi bi-chevron-down text-primary fs-3"></i>
                                 </button>
                             </div>
@@ -124,52 +204,86 @@
                     </div>
                 </div>
                 <!-- Card extendida -->
+<<<<<<< Updated upstream
                 <div class="row collapse ps-3" id="cardExpandida-123456789">
                     <div class="col-10">
                         <div class="container-fluid">
                             <div class="row justify-content-center">
                                 <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
                                     <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=JP" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+=======
+                <div class="row collapse ps-3" id="cardExpandida">
+                    <div class="col-11">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
+                                    <img src="descarga.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+>>>>>>> Stashed changes
                                          alt="Cliente">
                                 </div>
                             </div>
                             <div class="row text-center">
+<<<<<<< Updated upstream
                                 <p class="cliente-nombre-extendido">Juan Pérez García</p>
+=======
+                                <p>Jose Pablo Araya</p>
+>>>>>>> Stashed changes
                             </div>
                             <hr class="mt-auto" />
                             <div class="ms-4">
                                 <div class="row mb-2">
                                     <div class="col d-flex text-center">
                                         <div class="text-primary">Cédula:</div>
+<<<<<<< Updated upstream
                                         <div class="text-secondary ms-4 cliente-cedula">123456789</div>
+=======
+                                        <div class="text-secondary ms-4">190238421</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col d-flex text-center">
                                         <div class="text-primary">Teléfono:</div>
+<<<<<<< Updated upstream
                                         <div class="text-secondary ms-4 cliente-telefono">8888-8888</div>
+=======
+                                        <div class="text-secondary ms-4">8478-0923</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col d-flex text-center">
                                         <div class="text-primary">Correo:</div>
+<<<<<<< Updated upstream
                                         <div class="text-secondary ms-4 cliente-correo">juan.perez@email.com</div>
+=======
+                                        <div class="text-secondary ms-4">josearr@gmail.com</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                                 <div class="row mb-2">
                                     <div class="col d-flex text-center">
                                         <div class="text-primary">Préstamos disponibles:</div>
+<<<<<<< Updated upstream
                                         <div class="text-secondary ms-4 cliente-prestamos">3</div>
+=======
+                                        <div class="text-secondary ms-4">5</div>
+>>>>>>> Stashed changes
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+<<<<<<< Updated upstream
                     <div class="col-2 ms-auto">
+=======
+                    <div class="col-12 col-md-1 ms-auto">
+>>>>>>> Stashed changes
                         <div class="container-fluid" style="margin-top: -0.6em;">
                             <div class="col-12">
                                 <div class="dropdown dropend">
                                     <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
+<<<<<<< Updated upstream
                                             data-bs-toggle="dropdown" aria-expanded="false">
                                         <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
                                     </button>
@@ -188,6 +302,20 @@
                                         <hr class="dropdown-divider" />
                                         <li class="mt-2">
                                             <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="123456789">
+=======
+                                            id="dropdownOpcionesCliente2" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownOpcionesCliente2">
+                                        <li class="mb-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#clienteModal">
+                                                <i class="bi bi-pencil"></i> Editar
+                                            </button>
+                                        </li>
+                                        <hr class="dropdown-divider">
+                                        <li class="mt-2">
+                                            <button class="dropdown-item text-primary fs-5">
+>>>>>>> Stashed changes
                                                 <i class="bi bi-trash"></i> Eliminar
                                             </button>
                                         </li>
@@ -196,7 +324,12 @@
                             </div>
                             <div class="col-12">
                                 <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
+<<<<<<< Updated upstream
                                         data-bs-toggle="collapse" data-bs-target="#cardExpandida-123456789" aria-expanded="false" aria-controls="cardExpandida-123456789">
+=======
+                                        data-bs-toggle="collapse" data-bs-target="#cardExpandida" aria-expanded="false" aria-controls="cardExpandida"
+                                        id="toggleInfoBtn2">
+>>>>>>> Stashed changes
                                     <i class="bi bi-chevron-up text-primary fs-3"></i>
                                 </button>
                             </div>
@@ -207,6 +340,7 @@
         </div>
     </div>
 </div>
+<<<<<<< Updated upstream
 
 <!-- Modal Agregar Cliente -->
 <div class="modal fade" id="agregarClienteModal" tabindex="-1" aria-hidden="true">
@@ -216,12 +350,28 @@
                 <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
                     <h5 class="modal-title w-100 text-center" style="font-weight: 350;">Agregar Cliente</h5>
                     <button type="button" class="btn-close btn-close-white opacity-100" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+=======
+<!-- Modal Cliente -->
+<div class="modal fade" id="clienteModal" tabindex="-1" aria-labelledby="clienteModalTitulo" aria-hidden="true">
+    <div class="modal-dialog modal modal-dialog-centered">
+        <div class="modal-content border-0 rounded-5">
+            <form>
+                <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
+                    <h5 class="modal-title w-100 text-center" id="clienteModalTitulo" style="font-weight: 350;">Editar Cliente</h5>
+                    <button style="outline: none; box-shadow: none;" type="reset" class="btn-close btn-close-white opacity-100" id="btnCerrarModal" aria-label="Cerrar"></button>
+>>>>>>> Stashed changes
                 </div>
                 <div class="modal-body px-5 py-5">
                     <div class="text-center mb-3">
                         <div style="position: relative; width: 100px; height: 100px; display: inline-block;">
+<<<<<<< Updated upstream
                             <label for="modalImagen" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
                                 <img id="previewImg" src="" alt="Imagen Cliente"
+=======
+                            <label for="inputFoto" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
+                                <img id="previewImg"
+                                     src=""
+>>>>>>> Stashed changes
                                      class="rounded"
                                      style="width: 100%; height: 100%; object-fit: cover; display: none; position: absolute; top: 0; left: 0; z-index: 2;" />
                                 <span id="imgPlaceholder"
@@ -230,11 +380,16 @@
                                     <i class="bi bi-plus-lg fs-1 text-primary"></i>
                                 </span>
                             </label>
+<<<<<<< Updated upstream
                             <input id="modalImagen" type="file" accept="image/*" style="display: none;" />
+=======
+                            <input type="file" id="inputFoto" accept="image/*" style="display: none;" />
+>>>>>>> Stashed changes
                         </div>
                     </div>
                     <div class="container-fluid">
                         <div class="form-floating mb-1 border-bottom border-graydark">
+<<<<<<< Updated upstream
                             <input id="modalNombre" name="Nombre" type="text" class="form-control border-0" placeholder="Nombre" required>
                             <label for="modalNombre">Nombre</label>
                         </div>
@@ -253,17 +408,38 @@
                         <div class="form-floating mb-1 border-bottom border-graydark">
                             <input id="modalPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles" required>
                             <label for="modalPrestamos">Préstamos disponibles</label>
+=======
+                            <input type="text" class="form-control border-0" id="inputNombre" placeholder="Nombre">
+                            <label for="inputNombre">Nombre</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input type="text" class="form-control border-0" id="inputCedula" placeholder="Cédula">
+                            <label for="inputCedula">Cédula</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input type="text" class="form-control border-0" id="inputTelefono" placeholder="Número de teléfono">
+                            <label for="inputTelefono">Número de teléfono</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input type="email" class="form-control border-0" id="inputCorreo" placeholder="Correo electrónico">
+                            <label for="inputCorreo">Correo electrónico</label>
+>>>>>>> Stashed changes
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex flex-column flex-md-row justify-content-between align-items-stretch px-2 px-md-4 px-lg-5 border-top-0 mb-3">
+<<<<<<< Updated upstream
                     <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarModal" data-bs-dismiss="modal">Cancelar</button>
+=======
+                    <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarModal">Cancelar</button>
+>>>>>>> Stashed changes
                     <button type="submit" class="btn btn-primary rounded-5 px-4">Aceptar</button>
                 </div>
             </form>
         </div>
     </div>
 </div>
+<<<<<<< Updated upstream
 
 <!-- Modal Editar Cliente -->
 <div class="modal fade" id="editarClienteModal" tabindex="-1" aria-hidden="true">
@@ -325,3 +501,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/Clientes/main.js"></script>
+=======
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/Clientes/main.js"></script>
+>>>>>>> Stashed changes

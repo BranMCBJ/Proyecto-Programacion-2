@@ -19,6 +19,7 @@ namespace Proyecto_Periodo_2.Controllers
         // GET: UsuarioController - Listar todos los Clientes activos
         public ActionResult Index()
         {
+<<<<<<< Updated upstream
             IEnumerable<Models.ViewModels.Cliente> clientes = db.Clientes
                 .Where(c => c.Activo == true)
                 .Select(c => new Models.ViewModels.Cliente {
@@ -33,6 +34,39 @@ namespace Proyecto_Periodo_2.Controllers
                     Activo = c.Activo
                 }).ToList();
             return View(clientes);
+=======
+            return View();
+        }
+
+        // GET: 
+        public ActionResult Details(int? id)
+        {
+            try
+            {
+                if (id == null || id == 0)
+                {
+                    return NotFound();
+                }
+
+                var cliente = _db.Clientes.Find(id); //El método Find() busca una entidad por su clave primaria(id).
+                if (cliente == null || cliente.Activo != true)
+                {
+                    return NotFound();
+                }
+
+                return View(cliente);
+            }
+            catch (Exception)
+            {
+                return NotFound();
+            }
+        }
+
+        // GET: 
+        public ActionResult Create()
+        {
+            return View();
+>>>>>>> Stashed changes
         }
 
         // POST: UsuarioController/Create - Crear nuevo usuario
