@@ -306,4 +306,3 @@ C:\Users\Bran\Desktop\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.
 C:\Users\Bran\Desktop\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.pdb
 C:\Users\Bran\Desktop\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\Proyecto Periodo 2.genruntimeconfig.cache
 C:\Users\Bran\Desktop\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\ref\Proyecto Periodo 2.dll
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Proyecto Periodo 2\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

@@ -3,36 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\wwwroot\\clientes\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\wwwroot\\clientes\\main.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\wwwroot\\clientes\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\wwwroot\\clientes\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\cliente\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\models\\viewmodels\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\viewmodels\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{977D60E2-7520-45EC-A7B4-95998BF4DB25}|Models\\Models.csproj|solutionrelative:models\\models\\cliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|c:\\users\\bran\\desktop\\proyecto-programacion-2\\proyecto periodo 2\\wwwroot\\clientes\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{52399CC1-B4BA-4711-9AB5-451436D00996}|Proyecto Periodo 2\\Proyecto Periodo 2.csproj|solutionrelative:proyecto periodo 2\\wwwroot\\clientes\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,32 +38,71 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Cliente.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models\\Cliente.cs",
+              "RelativeDocumentMoniker": "Models\\Models\\Cliente.cs",
+              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models\\Cliente.cs",
+              "RelativeToolTip": "Models\\Models\\Cliente.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAA7wBgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T18:02:04.237Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "main.js",
+              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "RelativeToolTip": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
+              "ViewState": "AgIAAJwAAAAAAAAAAAAAALwAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-02T14:02:34.545Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
               "RelativeToolTip": "Proyecto Periodo 2\\Views\\Cliente\\Index.cshtml",
-              "ViewState": "AgIAADsBAAAAAAAAAAAAwFIBAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAOMAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-02T14:02:34.551Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Proyecto Periodo 2\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAABoAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwEkAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-08-02T14:02:34.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwEAAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-02T14:02:34.548Z",
               "EditorCaption": ""
             },
             {
@@ -78,70 +113,20 @@
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\wwwroot\\Clientes\\styles.css",
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\styles.css",
               "RelativeToolTip": "Proyecto Periodo 2\\wwwroot\\Clientes\\styles.css",
-              "ViewState": "AgIAADEAAAAAAAAAAAAswFYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAwwFUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-08-02T14:02:34.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "main.js",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
-              "RelativeToolTip": "Proyecto Periodo 2\\wwwroot\\Clientes\\main.js",
-              "ViewState": "AgIAAL8AAAAAAAAAAAAYwOEAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-08-02T14:02:34.545Z",
+              "WhenOpened": "2025-08-02T14:02:34.542Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ClienteController.cs",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "RelativeToolTip": "Proyecto Periodo 2\\Controllers\\ClienteController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAwwMYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T14:02:34.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Cliente.cs",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\ViewModels\\Cliente.cs",
-              "RelativeDocumentMoniker": "Models\\ViewModels\\Cliente.cs",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\ViewModels\\Cliente.cs",
-              "RelativeToolTip": "Models\\ViewModels\\Cliente.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-02T14:02:34.554Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeDocumentMoniker": "Proyecto Periodo 2\\appsettings.json",
-              "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\appsettings.json",
-              "RelativeToolTip": "Proyecto Periodo 2\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-02T14:02:34.558Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Program.cs",
               "RelativeDocumentMoniker": "Proyecto Periodo 2\\Program.cs",
               "ToolTip": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Program.cs",
               "RelativeToolTip": "Proyecto Periodo 2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACAAAAAAAAAAAAAQwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-02T14:02:34.561Z",
               "EditorCaption": ""

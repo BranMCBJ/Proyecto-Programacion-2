@@ -8,25 +8,21 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\Clientes\Imagenes\**" />
     <Compile Remove="wwwroot\Home\Imagenes\**" />
     <Compile Remove="wwwroot\imagenes\**" />
     <Compile Remove="wwwroot\Libros\Imagenes\**" />
     <Compile Remove="wwwroot\Login\Imagenes\**" />
     <Compile Remove="wwwroot\Prestamos\Imagenes\**" />
-    <Content Remove="wwwroot\Clientes\Imagenes\**" />
     <Content Remove="wwwroot\Home\Imagenes\**" />
     <Content Remove="wwwroot\imagenes\**" />
     <Content Remove="wwwroot\Libros\Imagenes\**" />
     <Content Remove="wwwroot\Login\Imagenes\**" />
     <Content Remove="wwwroot\Prestamos\Imagenes\**" />
-    <EmbeddedResource Remove="wwwroot\Clientes\Imagenes\**" />
     <EmbeddedResource Remove="wwwroot\Home\Imagenes\**" />
     <EmbeddedResource Remove="wwwroot\imagenes\**" />
     <EmbeddedResource Remove="wwwroot\Libros\Imagenes\**" />
     <EmbeddedResource Remove="wwwroot\Login\Imagenes\**" />
     <EmbeddedResource Remove="wwwroot\Prestamos\Imagenes\**" />
-    <None Remove="wwwroot\Clientes\Imagenes\**" />
     <None Remove="wwwroot\Home\Imagenes\**" />
     <None Remove="wwwroot\imagenes\**" />
     <None Remove="wwwroot\Libros\Imagenes\**" />
@@ -70,6 +66,10 @@
     <None Include="wwwroot\Libros\resources\Frankenstein.webp" />
     <None Include="wwwroot\logo.png" />
     <None Include="wwwroot\Login\styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Clientes\Imagenes\" />
   </ItemGroup>
 
 </Project>

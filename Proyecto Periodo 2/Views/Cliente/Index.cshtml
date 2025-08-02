@@ -1,25 +1,25 @@
 @model IEnumerable<Models.ViewModels.Cliente>
-
 <div class="container-fluid p-3 p-md-5">
+
     <!-- Encabezado de la página -->
     <div class="row align-items-center mb-3">
         <div class="col-12 col-md-6 text-primary">
             <h1>Clientes</h1>
         </div>
         <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0" id="btnAgregarCliente">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarClienteModal">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#clienteModal">
                 <i class="fa-solid fa-user-plus"></i> Agregar Cliente
             </button>
         </div>
     </div>
-
+    
     <!-- Filtros y búsqueda -->
     <div class="row g-2 mb-4 justify-content-start">
         <!-- Buscar -->
         <div class="col-3">
             <div class="input-group border-graydark border rounded d-flex align-items-center">
                 <i class="bi bi-search me-2 ms-1 text-secondary"></i>
-                <input id="inputBuscar" type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
+                <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
             </div>
         </div>
         <!-- Filtrar por -->
@@ -32,10 +32,20 @@
                     </div>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item filtro" href="#" data-filter="Cedula"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a></li>
-                    <li><a class="dropdown-item filtro" href="#" data-filter="Correo"><i class="fa-regular fa-envelope text-primary me-2"></i>Correo</a></li>
-                    <li><a class="dropdown-item filtro" href="#" data-filter="Nombre"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
-                    <li><a class="dropdown-item filtro" href="#" data-filter="Telefono"><i class="fa fa-phone text-primary me-2"></i>Número de Teléfono</a></li>
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa-regular fa-envelope text-primary me-2"></i>Correo
+                        </a>
+                    </li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -49,227 +59,196 @@
                     </div>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item ordenar" href="#" data-sort="Nombre" data-order="asc"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a></li>
-                    <li><a class="dropdown-item ordenar" href="#" data-sort="Nombre" data-order="desc"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)</a></li>
+                    <li>
+                        <a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
     </div>
-
     <!-- Tabla de clientes -->
-    <div class="row g-4" id="contenedorClientes">
-        @if (!Model.Any())
+    <div class="row g-4 align-items-start">
+        @if(!Model.Any() || Model == null)
         {
-            <div class="col-12 text-center">
-                <h1 class="text-secondary">No hay clientes registrados.</h1>
-            </div>
+            <h3 class="text-muted text-center mt-5">No hay clientes registrados</h3>
         }
         else
         {
-            foreach (var cliente in Model)
+            @foreach (var cliente in Model)
             {
-                <div class="col-12 col-md-6 col-lg-3 cliente-card"
-                     data-nombre="@cliente.nombreCompleto"
-                     data-cedula="@cliente.Cedula"
-                     data-correo="@cliente.Correo"
-                     data-telefono="@cliente.Telefono">
+                <!-- Card individual -->
+                <div class="col-12 col-md-6 col-lg-3">
                     <div class="container-fluid border-graydark border rounded p-3 fs-5 h-100">
-                        <!-- Preview -->
-                        <div class="row" id="preview-@cliente.Cedula" data-cedula="@cliente.Cedula">
-                            <div class="col-10 ps-4 pt-2">
-                                <div class="container-fluid">
+                        <div class="row">
+
+                            <!-- Columna de contenido (Preview + Expandida) -->
+                            <div class="col-11 ps-4 pt-2">
+                                <!-- Preview -->
+                                <div class="container-fluid d-flex" id="preview-@cliente.IdCliente">
                                     <div class="row">
                                         <div class="col-2">
                                             <div class="ratio ratio-1x1 mb-2" style="width: 60px;">
-                                                <img src="~/images/default-avatar.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
-                                                     alt="Cliente">
+                                                <img src="@(string.IsNullOrEmpty(cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{cliente.URLImagen}")" 
+                                                     class="img-fluid object-fit-cover w-100 h-100 rounded-circle" 
+                                                     alt="Cliente"
+                                                     onerror="this.src='/images/default-user.svg'">
                                             </div>
                                         </div>
                                         <div class="col-10">
                                             <div class="row d-flex text-center">
-                                                <div class="col-12 cliente-nombre">@cliente.nombreCompleto</div>
-                                                <div class="col-12 text-secondary cliente-cedula">@cliente.Cedula</div>
+                                                <div class="col-12">@cliente.nombreCompleto</div>
+                                                <div class="col-12 text-secondary">@cliente.Cedula</div>
                                             </div>
                                         </div>
                                         <hr />
                                     </div>
                                 </div>
+
+                                <!-- Card extendida -->
+                                <div class="d-none" id="cardExpandida-@cliente.IdCliente">
+                                    <div class="container-fluid">
+                                        <div class="row justify-content-center">
+                                            <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
+                                                <img src="@(string.IsNullOrEmpty(cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{cliente.URLImagen}")" 
+                                                     class="img-fluid object-fit-cover w-100 h-100 rounded-circle" 
+                                                     alt="Cliente"
+                                                     onerror="this.src='/images/default-user.svg'">
+                                            </div>
+                                        </div>
+                                        <div class="row text-center">
+                                            <p>@cliente.nombreCompleto</p>
+                                        </div>
+                                        <hr class="mt-auto" />
+                                        <div class="ms-4">
+                                            <div class="row mb-2">
+                                                <div class="col d-flex text-center">
+                                                    <div class="text-primary">Cédula:</div>
+                                                    <div class="text-secondary ms-4">@cliente.Cedula</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col d-flex text-center">
+                                                    <div class="text-primary">Teléfono:</div>
+                                                    <div class="text-secondary ms-4">@cliente.Telefono</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col d-flex text-center">
+                                                    <div class="text-primary">Correo:</div>
+                                                    <div class="text-secondary ms-4">@cliente.Correo</div>
+                                                </div>
+                                            </div>
+                                            <div class="row mb-2">
+                                                <div class="col d-flex text-center">
+                                                    <div class="text-primary">Préstamos disponibles:</div>
+                                                    <div class="text-secondary ms-4">@cliente.CantidadPrestamosDisponibles</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-2 ms-auto">
-                                <div class="container-fluid" style="margin-top: -0.6em;">
-                                    <div class="col-12">
-                                        <div class="dropdown dropend">
-                                            <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+
+                            <div class="col-1 d-flex flex-column align-items-center justify-content-start" style="margin-top: -0.6em;">
+                                <!-- Dropdown -->
+                                <div class="dropdown dropend mb-4">
+                                    <button class="btn p-0 border-0 bg-transparent" style="box-shadow:none;" type="button"
+                                            id="dropdownOpcionesCliente-@cliente.IdCliente" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill text-primary fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownOpcionesCliente-@cliente.IdCliente">
+                                        <li class="mb-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#clienteModal" data-id="@cliente.IdCliente">
+                                                <i class="bi bi-pencil"></i> Editar
                                             </button>
-                                            <ul class="dropdown-menu">
-                                                <li class="mb-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#editarClienteModal"
-                                                            data-id="@cliente.IdCliente"
-                                                            data-nombre="@cliente.Nombre"
-                                                            data-cedula="@cliente.Cedula"
-                                                            data-telefono="@cliente.Telefono"
-                                                            data-correo="@cliente.Correo"
-                                                            data-prestamos="@cliente.CantidadPrestamosDisponibles">
-                                                        <i class="bi bi-pencil"></i> Editar
-                                                    </button>
-                                                </li>
-                                                <hr class="dropdown-divider" />
-                                                <li class="mt-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="@cliente.Cedula">
-                                                        <i class="bi bi-trash"></i> Eliminar
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#cardExpandida-@cliente.Cedula" aria-expanded="false" aria-controls="cardExpandida-@cliente.Cedula">
-                                            <i class="bi bi-chevron-down text-primary fs-3"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card extendida -->
-                        <div class="row collapse ps-3" id="cardExpandida-@cliente.Cedula">
-                            <div class="col-10">
-                                <div class="container-fluid">
-                                    <div class="row justify-content-center">
-                                        <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
-                                            <img src="~/images/default-avatar.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
-                                                 alt="Cliente">
-                                        </div>
-                                    </div>
-                                    <div class="row text-center">
-                                        <p class="cliente-nombre-extendido">@cliente.nombreCompleto</p>
-                                    </div>
-                                    <hr class="mt-auto" />
-                                    <div class="ms-4">
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Cédula:</div>
-                                                <div class="text-secondary ms-4 cliente-cedula">@cliente.Cedula</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Teléfono:</div>
-                                                <div class="text-secondary ms-4 cliente-telefono">@cliente.Telefono</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Correo:</div>
-                                                <div class="text-secondary ms-4 cliente-correo">@cliente.Correo</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Préstamos disponibles:</div>
-                                                <div class="text-secondary ms-4 cliente-prestamos">@cliente.CantidadPrestamosDisponibles</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2 ms-auto">
-                                <div class="container-fluid" style="margin-top: -0.6em;">
-                                    <div class="col-12">
-                                        <div class="dropdown dropend">
-                                            <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+                                        </li>
+                                        <li><hr class="dropdown-divider"></li>
+                                        <li class="mt-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-bs-toggle="modal" data-bs-target="#eliminarClienteModal" data-id="@cliente.IdCliente" data-nombre="@cliente.nombreCompleto" data-imagen="@cliente.URLImagen">
+                                                <i class="bi bi-trash"></i> Eliminar
                                             </button>
-                                            <ul class="dropdown-menu">
-                                                <li class="mb-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#editarClienteModal"
-                                                            data-id="@cliente.IdCliente"
-                                                            data-nombre="@cliente.Nombre"
-                                                            data-cedula="@cliente.Cedula"
-                                                            data-telefono="@cliente.Telefono"
-                                                            data-correo="@cliente.Correo"
-                                                            data-prestamos="@cliente.CantidadPrestamosDisponibles">
-                                                        <i class="bi bi-pencil"></i> Editar
-                                                    </button>
-                                                </li>
-                                                <hr class="dropdown-divider" />
-                                                <li class="mt-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="@cliente.Cedula">
-                                                        <i class="bi bi-trash"></i> Eliminar
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#cardExpandida-@cliente.Cedula" aria-expanded="false" aria-controls="cardExpandida-@cliente.Cedula">
-                                            <i class="bi bi-chevron-up text-primary fs-3"></i>
-                                        </button>
-                                    </div>
+                                        </li>
+                                    </ul>
                                 </div>
+
+                                <button id="collapseCardButton-@cliente.IdCliente" class="btnCollapseCard btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button">
+                                    <i id="collapseCardIcon-@cliente.IdCliente" class="bi bi-chevron-down text-primary fs-3"></i>
+                                </button>
                             </div>
+
                         </div>
                     </div>
                 </div>
             }
-        }
+        }        
     </div>
 </div>
-
-<!-- Modal Agregar Cliente -->
-<div class="modal fade" id="agregarClienteModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
+<!-- Modal Cliente -->
+<div class="modal fade" id="clienteModal" tabindex="-1" aria-labelledby="clienteModalTitulo" aria-hidden="true">
+    <div class="modal-dialog modal modal-dialog-centered">
         <div class="modal-content border-0 rounded-5">
-            <form id="formAgregarCliente" asp-controller="Cliente" asp-action="Create" method="post" enctype="multipart/form-data">
+            <form id="formCliente" method="post" enctype="multipart/form-data">
+                @Html.AntiForgeryToken()
                 <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
-                    <h5 class="modal-title w-100 text-center" style="font-weight: 350;">Agregar Cliente</h5>
-                    <button type="button" class="btn-close btn-close-white opacity-100" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <h5 class="modal-title w-100 text-center" id="clienteModalTitulo" style="font-weight: 350;">Editar Cliente</h5>
+                    <button style="outline: none; box-shadow: none;" type="reset" class="btn-close btn-close-white opacity-100" id="btnCerrarModal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body px-5 py-5">
                     <div class="text-center mb-3">
                         <div style="position: relative; width: 100px; height: 100px; display: inline-block;">
-                            <label for="AgregarImagen" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
-                                <img id="AgregarPreviewImg" src="" alt="Imagen Cliente"
+                            <label for="inputFoto" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
+                                <img id="previewImg"
+                                     src=""
                                      class="rounded"
                                      style="width: 100%; height: 100%; object-fit: cover; display: none; position: absolute; top: 0; left: 0; z-index: 2;" />
-                                <span id="AgregarImgPlaceholder"
+                                <span id="imgPlaceholder"
                                       class="d-flex align-items-center justify-content-center border border-primary border-1"
                                       style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: white; z-index: 1;">
                                     <i class="bi bi-plus-lg fs-1 text-primary"></i>
                                 </span>
                             </label>
-                            <input id="AgregarImagen" name="ImagenFile" type="file" accept="image/*" style="display: none;" />
+                            <input type="file" id="inputFoto" name="ImageFile" accept="image/*" style="display: none;"/>
                         </div>
                     </div>
                     <div class="container-fluid">
+                        <input type="hidden" id="inputIdCliente" name="IdCliente" />
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="AgregarNombre" name="Nombre" type="text" class="form-control border-0" placeholder="Nombre" required>
-                            <label for="AgregarNombre">Nombre</label>
+                            <input name="Nombre" type="text" class="form-control border-0" id="inputNombre" placeholder="Nombre" required>
+                            <label for="inputNombre">Nombre</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="AgregarCedula" name="Cedula" type="text" class="form-control border-0" placeholder="Cédula" required>
-                            <label for="AgregarCedula">Cédula</label>
+                            <input name="Apellido1" type="text" class="form-control border-0" id="inputApellido1" placeholder="Primer Apellido" required>
+                            <label for="inputApellido1">Primer Apellido</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="AgregarTelefono" name="Telefono" type="text" class="form-control border-0" placeholder="Número de teléfono" required>
-                            <label for="AgregarTelefono">Número de teléfono</label>
+                            <input name="Apellido2" type="text" class="form-control border-0" id="inputApellido2" placeholder="Segundo Apellido">
+                            <label for="inputApellido2">Segundo Apellido</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="AgregarCorreo" name="Correo" type="email" class="form-control border-0" placeholder="Correo electrónico" required>
-                            <label for="AgregarCorreo">Correo electrónico</label>
+                            <input name="Cedula" type="text" class="form-control border-0" id="inputCedula" placeholder="Cédula" required>
+                            <label for="inputCedula">Cédula</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="AgregarPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles" required>
-                            <label for="AgregarPrestamos">Préstamos disponibles</label>
+                            <input name="Telefono" type="text" class="form-control border-0" id="inputTelefono" placeholder="Número de teléfono" required>
+                            <label for="inputTelefono">Número de teléfono</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input name="Correo" type="email" class="form-control border-0" id="inputCorreo" placeholder="Correo electrónico" required>
+                            <label for="inputCorreo">Correo electrónico</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input name="CantidadPrestamosDisponibles" type="number" class="form-control border-0" id="inputCantidadDePrestamos" placeholder="Cantidad de prestamos" required>
+                            <label for="inputCantidadDePrestamos">Cantidad de prestamos</label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex flex-column flex-md-row justify-content-between align-items-stretch px-2 px-md-4 px-lg-5 border-top-0 mb-3">
-                    <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarAgregar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarModal">Cancelar</button>
                     <button type="submit" class="btn btn-primary rounded-5 px-4">Aceptar</button>
                 </div>
             </form>
@@ -277,58 +256,47 @@
     </div>
 </div>
 
-<!-- Modal Editar Cliente -->
-<div class="modal fade" id="editarClienteModal" tabindex="-1" aria-hidden="true">
+<!-- Modal Eliminar Cliente -->
+<div class="modal fade" id="eliminarClienteModal" tabindex="-1" aria-labelledby="eliminarClienteModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 rounded-5">
-            <form id="formEditarCliente" asp-controller="Cliente" asp-action="Edit" method="post" enctype="multipart/form-data">
-                <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
-                    <h5 class="modal-title w-100 text-center" style="font-weight: 350;">Editar Cliente</h5>
-                    <button type="button" class="btn-close btn-close-white opacity-100" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        <div class="modal-content border-0 rounded-4">
+            <form id="formEliminarCliente" asp-controller="Cliente" asp-action="Delete" method="post">
+                <input type="hidden" id="inputEliminarId" name="id" />
+                <div class="modal-header border-0 pb-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body px-5 py-5">
-                    <div class="text-center mb-3">
-                        <div style="position: relative; width: 100px; height: 100px; display: inline-block;">
-                            <label for="EditarImagen" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
-                                <img id="EditarPreviewImg" src="" alt="Imagen Cliente"
-                                     class="rounded"
-                                     style="width: 100%; height: 100%; object-fit: cover; display: none; position: absolute; top: 0; left: 0; z-index: 2;" />
-                                <span id="EditarImgPlaceholder"
-                                      class="d-flex align-items-center justify-content-center border border-primary border-1"
-                                      style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: white; z-index: 1;">
-                                    <i class="bi bi-plus-lg fs-1 text-primary"></i>
-                                </span>
-                            </label>
-                            <input id="EditarImagen" name="ImagenFile" type="file" accept="image/*" style="display: none;" />
-                        </div>
+                <div class="modal-body text-center px-4 pb-4">
+                    <!-- Icono de advertencia -->
+                    <div class="warning-icon mb-3 text-primary" style="font-size: 4rem;">
+                        <i class="bi bi-exclamation-circle"></i>
                     </div>
-                    <div class="container-fluid">
-                        <input type="hidden" id="EditarIdCliente" name="IdCliente" />
-                        <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="EditarNombre" name="Nombre" type="text" class="form-control border-0" placeholder="Nombre" required>
-                            <label for="EditarNombre">Nombre</label>
-                        </div>
-                        <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="EditarCedula" name="Cedula" type="text" class="form-control border-0" placeholder="Cedula" required>
-                            <label for="EditarCedula">Cedula</label>
-                        </div>
-                        <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="EditarTelefono" name="Telefono" type="text" class="form-control border-0" placeholder="Número de teléfono" required>
-                            <label for="EditarTelefono">Número de teléfono</label>
-                        </div>
-                        <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="EditarCorreo" name="Correo" type="email" class="form-control border-0" placeholder="Correo electrónico" required>
-                            <label for="EditarCorreo">Correo electrónico</label>
-                        </div>
-                        <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="EditarPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles" required>
-                            <label for="EditarPrestamos">Préstamos disponibles</label>
-                        </div>
+                    
+                    <!-- Título -->
+                    <h4 class="text-primary mb-4">Confirmar eliminación del cliente</h4>
+                    
+                    <!-- Tarjeta del usuario -->
+                    <div class="user-card mb-4 p-3 bg-light rounded-3">
+                        <img id="eliminarClienteImagen" src="/images/default-user.svg" 
+                             alt="Avatar" 
+                             class="rounded-circle mb-2" 
+                             style="width: 80px; height: 80px; object-fit: cover;">
+                        <p id="eliminarClienteNombre" class="mb-0 fw-bold">Nombre del Cliente</p>
                     </div>
-                </div>
-                <div class="modal-footer d-flex flex-column flex-md-row justify-content-between align-items-stretch px-2 px-md-4 px-lg-5 border-top-0 mb-3">
-                    <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarEditar" data-bs-dismiss="modal">Cancelar</button>
-                    <button type="submit" class="btn btn-primary rounded-5 px-4">Aceptar</button>
+                    
+                    <!-- Pregunta de confirmación -->
+                    <p class="text-muted mb-4">
+                        ¿Estás seguro de que deseas eliminar a este cliente?<br>
+                    </p>
+                    
+                    <!-- Botones -->
+                    <div class="d-flex gap-3 justify-content-center">
+                        <button type="button" class="btn btn-outline-secondary px-4" data-bs-dismiss="modal">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="btn btn-primary px-4">
+                            Eliminar
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

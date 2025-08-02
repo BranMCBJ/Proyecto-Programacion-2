@@ -260,6 +260,10 @@ namespace Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<string>("URLImagen")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
                     b.HasKey("IdCliente");
 
                     b.ToTable("Clientes", (string)null);

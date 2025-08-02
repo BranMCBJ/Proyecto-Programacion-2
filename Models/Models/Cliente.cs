@@ -20,5 +20,8 @@ namespace Models
         public string? Telefono { get; set; }        
         public int? CantidadPrestamosDisponibles { get; set; }
         public bool? Activo { get; set; }
+
+        [StringLength(300)]
+        public string? URLImagen { get; set; }
     }
 }
