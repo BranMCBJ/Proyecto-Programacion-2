@@ -35,36 +35,6 @@ namespace Proyecto_Periodo_2.Controllers
             return View(clientes);
         }
 
-        // GET: 
-        public ActionResult Details(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var cliente = db.Clientes.Find(id); //El método Find() busca una entidad por su clave primaria(id).
-                if (cliente == null || cliente.Activo != true)
-                {
-                    return NotFound();
-                }
-
-                return View(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
-        // GET: 
-        public ActionResult Create()
-        {
-            return View();
-        }
-
         // POST: UsuarioController/Create - Crear nuevo usuario
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -82,7 +52,7 @@ namespace Proyecto_Periodo_2.Controllers
                     if (ClientesExistente != null)
                     {
                         ModelState.AddModelError("", "Ya existe un Cliente con ese nombre de usuario o cédula.");
-                        return View(cliente);
+                        return NotFound();
                     }
 
                     //si no
@@ -103,30 +73,6 @@ namespace Proyecto_Periodo_2.Controllers
             }
         }
 
-        // GET: 
-        public ActionResult Edit(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var cliente = db.Clientes.Find(id);
-                if (cliente == null)
-                {
-                    return NotFound();
-                }
-
-                return View(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
         // POST: 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -134,30 +80,52 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (!ModelState.IsValid)
                 {
-                    var ClientesExistente = db.Clientes
-                      .FirstOrDefault(u => u.Nombre == cliente.Nombre ||
-                                          u.Cedula == cliente.Cedula);
-
-                    if (ClientesExistente != null)
-                    {
-                        ModelState.AddModelError("", "Ya existe un Cliente con ese nombre de usuario o cédula.");
-                        return View(cliente);
-                    }
-                    //actualizar
-                    db.Clientes.Update(cliente);
-                    db.SaveChanges();
-
-                    //TempData["Mensaje"] = "Usuario actualizado exitosamente";
+                    TempData["Error"] = "Los datos enviados no son válidos. Verifique los campos.";
                     return RedirectToAction(nameof(Index));
                 }
-                return View(cliente);
+
+                var clienteDb = db.Clientes.Find(cliente.IdCliente);
+                if (clienteDb == null)
+                {
+                    TempData["Error"] = "No se encontró el cliente especificado.";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                // Validar si la cédula ya existe en otro cliente
+                var cedulaExistente = db.Clientes
+                    .Any(c => c.Cedula == cliente.Cedula && c.IdCliente != cliente.IdCliente);
+                if (cedulaExistente)
+                {
+                    TempData["Error"] = "Ya existe un cliente con la misma cédula.";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                // Actualizar campos
+                clienteDb.Nombre = cliente.Nombre;
+                clienteDb.Apellido1 = cliente.Apellido1;
+                clienteDb.Apellido2 = cliente.Apellido2;
+                clienteDb.Cedula = cliente.Cedula;
+                clienteDb.Correo = cliente.Correo;
+                clienteDb.Telefono = cliente.Telefono;
+                clienteDb.CantidadPrestamosDisponibles = cliente.CantidadPrestamosDisponibles;
+
+                db.Clientes.Update(clienteDb);
+                db.SaveChanges();
+
+                TempData["Exito"] = "Cliente actualizado correctamente.";
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (DbUpdateException dbEx)
             {
-                ModelState.AddModelError("", "Error al actualizar el Cliente");
-                return View(cliente);
+                TempData["Error"] = "Error en la base de datos al editar el cliente: " + dbEx.Message;
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Ocurrió un error inesperado: " + ex.Message;
+                return RedirectToAction(nameof(Index));
             }
         }
 

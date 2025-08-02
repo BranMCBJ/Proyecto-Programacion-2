@@ -1,30 +1,72 @@
-.dropdown-item:hover {
-            color: #8C2445 !important;
-            background-color : #8c244510 !important;
-        }
-.border-graydark {
-        border-color: #cacaca !important;
+/* ===========================
+   Tarjeta de cliente
+=========================== */
+.cliente-card {
+    transition: all 0.3s ease;
+}
+
+    .cliente-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
+/* ===========================
+   Proporción de imágenes
+=========================== */
+.ratio-1x1 {
+    aspect-ratio: 1 / 1;
+}
+
+/* ===========================
+   Botones
+=========================== */
+.btn:focus,
+button:focus,
+button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* ===========================
+   Inputs
+=========================== */
 input:focus {
     outline: none !important;
     box-shadow: none !important;
 }
-button:focus, button:active {
-    outline: none !important;
-    box-shadow: none !important;
+
+/* ===========================
+   Dropdown
+=========================== */
+.dropdown-item:hover {
+    color: #8C2445 !important;
+    background-color: #8c244510 !important;
 }
+
+/* ===========================
+   Bordes
+=========================== */
+.border-graydark {
+    border-color: #cacaca !important;
+}
+
+/* ===========================
+   Animación de tarjeta
+=========================== */
 .fade-card {
     opacity: 1;
     transition: opacity 0.3s;
     pointer-events: auto;
 }
 
-.fade-card.hide {
-    opacity: 0;
-    pointer-events: none;
-}
+    .fade-card.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
 
+/* ===========================
+   Contenedor de preview y extendida
+=========================== */
 .card-preview-extendida-container {
     display: flex;
     flex-direction: column;
@@ -33,7 +75,11 @@ button:focus, button:active {
     height: auto;
 }
 
-#preview, #cardExpandida {
+/* ===========================
+   Elementos preview y extendida
+=========================== */
+#preview,
+#cardExpandida {
     position: static;
     width: 100%;
     height: auto;

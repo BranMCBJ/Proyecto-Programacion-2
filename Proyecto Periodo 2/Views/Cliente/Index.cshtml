@@ -1,13 +1,17 @@
 @model IEnumerable<Models.ViewModels.Cliente>
 
 <div class="container-fluid">
-
-    <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0" id="btnAgregarCliente">
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#clienteModal" id="btnAgregarClienteBtn">
-            <i class="fa-solid fa-user-plus"></i> Agregar Cliente
-        </button>
+    <!-- Encabezado de la página -->
+    <div class="row align-items-center mb-3">
+        <div class="col-12 col-md-6 text-primary">
+            <h1>Clientes</h1>
+        </div>
+        <div class="col-12 col-md-6 text-md-end mt-3 mt-md-0" id="btnAgregarCliente">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#clienteModal">
+                <i class="fa-solid fa-user-plus"></i> Agregar Cliente
+            </button>
+        </div>
     </div>
-
     <!-- Filtros y búsqueda -->
     <div class="row g-2 mb-4 justify-content-start">
         <!-- Buscar -->
@@ -53,173 +57,164 @@
 
     <!-- Tabla de clientes -->
     <div class="row g-4" id="contenedorClientes">
-        @if (!Model.Any())
-        {
-            <div class="col-12 text-center">
-                <h1 class="text-secondary">No hay clientes registrados.</h1>
-            </div>
-        }
-        else
-        {
-            foreach (var cliente in Model)
-            {
-                <div class="col-12 col-md-6 col-lg-3 cliente-card"
-                     data-nombre="@cliente.nombreCompleto.ToLower()"
-                     data-cedula="@cliente.Cedula.ToLower()"
-                     data-correo="@cliente.Correo.ToLower()"
-                     data-telefono="@cliente.Telefono.ToLower()">
-                    <div class="container-fluid border-graydark border rounded p-3 fs-5 h-100">
-                        <!-- Preview -->
-                        <div class="row" id="preview">
-                            <div class="col-11 ps-4 pt-2">
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-2">
-                                            <div class="ratio ratio-1x1 mb-2" style="width: 60px;">
-                                                <img src="descarga.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
-                                                     alt="Cliente">
-                                            </div>
-                                        </div>
-                                        <div class="col-10">
-                                            <div class="row d-flex text-center">
-                                                <div class="col-12 cliente-nombre">@cliente.nombreCompleto</div>
-                                                <div class="col-12 text-secondary cliente-cedula">@cliente.Cedula</div>
-                                            </div>
-                                        </div>
-                                        <hr />
+        <!-- Cliente 1 -->
+        <div class="col-12 col-md-6 col-lg-3 cliente-card"
+             data-nombre="Juan Pérez García"
+             data-cedula="123456789"
+             data-correo="juan.perez@email.com"
+             data-telefono="8888-8888">
+            <div class="container-fluid border-graydark border rounded p-3 fs-5 h-100">
+                <!-- Preview -->
+                <div class="row" id="preview-123456789" data-cedula="123456789">
+                    <div class="col-10 ps-4 pt-2">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="ratio ratio-1x1 mb-2" style="width: 60px;">
+                                        <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=JP" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+                                             alt="Cliente">
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col-1 ms-auto">
-                                <div class="container-fluid" style="margin-top: -0.6em;">
-                                    <div class="col-12">
-                                        <div class="dropdown dropend">
-                                            <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li class="mb-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#clienteModal"
-                                                            data-nombre="@cliente.nombreCompleto"
-                                                            data-cedula="@cliente.Cedula"
-                                                            data-telefono="@cliente.Telefono"
-                                                            data-correo="@cliente.Correo"
-                                                            data-prestamos="@cliente.CantidadPrestamosDisponibles">
-                                                        <i class="bi bi-pencil"></i> Editar
-                                                    </button>
-                                                </li>
-                                                <hr class="dropdown-divider" />
-                                                <li class="mt-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="@cliente.Cedula">
-                                                        <i class="bi bi-trash"></i> Eliminar
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#cardExpandida-@cliente.Cedula" aria-expanded="false" aria-controls="cardExpandida-@cliente.Cedula">
-                                            <i class="bi bi-chevron-down text-primary fs-3"></i>
-                                        </button>
+                                <div class="col-10">
+                                    <div class="row d-flex text-center">
+                                        <div class="col-12 cliente-nombre">Juan Pérez García</div>
+                                        <div class="col-12 text-secondary cliente-cedula">123456789</div>
                                     </div>
                                 </div>
+                                <hr />
                             </div>
                         </div>
-                        <!-- Card extendida -->
-                        <div class="row collapse ps-3" id="cardExpandida-@cliente.Cedula">
-                            <div class="col-11">
-                                <div class="container-fluid">
-                                    <div class="row justify-content-center">
-                                        <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
-                                            <img src="descarga.jpg" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
-                                                 alt="Cliente">
-                                        </div>
-                                    </div>
-                                    <div class="row text-center">
-                                        <p class="cliente-nombre-extendido">@cliente.nombreCompleto</p>
-                                    </div>
-                                    <hr class="mt-auto" />
-                                    <div class="ms-4">
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Cédula:</div>
-                                                <div class="text-secondary ms-4 cliente-cedula">@cliente.Cedula</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Teléfono:</div>
-                                                <div class="text-secondary ms-4 cliente-telefono">@cliente.Telefono</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Correo:</div>
-                                                <div class="text-secondary ms-4 cliente-correo">@cliente.Correo</div>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-2">
-                                            <div class="col d-flex text-center">
-                                                <div class="text-primary">Préstamos disponibles:</div>
-                                                <div class="text-secondary ms-4 cliente-prestamos">@cliente.CantidadPrestamosDisponibles</div>
-                                            </div>
-                                        </div>
-                                    </div>
+                    </div>
+                    <div class="col-2 ms-auto">
+                        <div class="container-fluid" style="margin-top: -0.6em;">
+                            <div class="col-12">
+                                <div class="dropdown dropend">
+                                    <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="mb-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#editarClienteModal"
+                                                    data-id="1"
+                                                    data-nombre="Juan Pérez"
+                                                    data-cedula="123456789"
+                                                    data-telefono="8888-8888"
+                                                    data-correo="juan.perez@email.com"
+                                                    data-prestamos="3">
+                                                <i class="bi bi-pencil"></i> Editar
+                                            </button>
+                                        </li>
+                                        <hr class="dropdown-divider" />
+                                        <li class="mt-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="123456789">
+                                                <i class="bi bi-trash"></i> Eliminar
+                                            </button>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                            <div class="col-12 col-md-1 ms-auto">
-                                <div class="container-fluid" style="margin-top: -0.6em;">
-                                    <div class="col-12">
-                                        <div class="dropdown dropend">
-                                            <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
-                                                    data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li class="mb-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#clienteModal"
-                                                            data-nombre="@cliente.nombreCompleto"
-                                                            data-cedula="@cliente.Cedula"
-                                                            data-telefono="@cliente.Telefono"
-                                                            data-correo="@cliente.Correo"
-                                                            data-prestamos="@cliente.CantidadPrestamosDisponibles">
-                                                        <i class="bi bi-pencil"></i> Editar
-                                                    </button>
-                                                </li>
-                                                <hr class="dropdown-divider" />
-                                                <li class="mt-2">
-                                                    <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="@cliente.Cedula">
-                                                        <i class="bi bi-trash"></i> Eliminar
-                                                    </button>
-                                                </li>
-                                            </ul>
-                                        </div>
+                            <div class="col-12">
+                                <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#cardExpandida-123456789" aria-expanded="false" aria-controls="cardExpandida-123456789">
+                                    <i class="bi bi-chevron-down text-primary fs-3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card extendida -->
+                <div class="row collapse ps-3" id="cardExpandida-123456789">
+                    <div class="col-10">
+                        <div class="container-fluid">
+                            <div class="row justify-content-center">
+                                <div class="ratio ratio-1x1 mb-2" style="width: 60px; height: 60px;">
+                                    <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=JP" class="img-fluid object-fit-cover w-100 h-100 rounded-circle"
+                                         alt="Cliente">
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <p class="cliente-nombre-extendido">Juan Pérez García</p>
+                            </div>
+                            <hr class="mt-auto" />
+                            <div class="ms-4">
+                                <div class="row mb-2">
+                                    <div class="col d-flex text-center">
+                                        <div class="text-primary">Cédula:</div>
+                                        <div class="text-secondary ms-4 cliente-cedula">123456789</div>
                                     </div>
-                                    <div class="col-12">
-                                        <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
-                                                data-bs-toggle="collapse" data-bs-target="#cardExpandida-@cliente.Cedula" aria-expanded="false" aria-controls="cardExpandida-@cliente.Cedula">
-                                            <i class="bi bi-chevron-up text-primary fs-3"></i>
-                                        </button>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col d-flex text-center">
+                                        <div class="text-primary">Teléfono:</div>
+                                        <div class="text-secondary ms-4 cliente-telefono">8888-8888</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col d-flex text-center">
+                                        <div class="text-primary">Correo:</div>
+                                        <div class="text-secondary ms-4 cliente-correo">juan.perez@email.com</div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col d-flex text-center">
+                                        <div class="text-primary">Préstamos disponibles:</div>
+                                        <div class="text-secondary ms-4 cliente-prestamos">3</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-2 ms-auto">
+                        <div class="container-fluid" style="margin-top: -0.6em;">
+                            <div class="col-12">
+                                <div class="dropdown dropend">
+                                    <button class="btn p-0 border-0 bg-transparent mb-4" style="box-shadow:none;" type="button"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill ms-auto text-primary mt-auto fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li class="mb-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-editar-cliente" data-bs-toggle="modal" data-bs-target="#editarClienteModal"
+                                                    data-id="1"
+                                                    data-nombre="Juan Pérez"
+                                                    data-cedula="123456789"
+                                                    data-telefono="8888-8888"
+                                                    data-correo="juan.perez@email.com"
+                                                    data-prestamos="3">
+                                                <i class="bi bi-pencil"></i> Editar
+                                            </button>
+                                        </li>
+                                        <hr class="dropdown-divider" />
+                                        <li class="mt-2">
+                                            <button class="dropdown-item text-primary fs-5 btn-eliminar-cliente" data-cedula="123456789">
+                                                <i class="bi bi-trash"></i> Eliminar
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn p-0 border-0 bg-transparent" style="box-shadow: none;" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#cardExpandida-123456789" aria-expanded="false" aria-controls="cardExpandida-123456789">
+                                    <i class="bi bi-chevron-up text-primary fs-3"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            }
-        }
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- Modal Cliente -->
-<div class="modal fade" id="clienteModal" tabindex="-1" aria-labelledby="clienteModalTitulo" aria-hidden="true">
+<!-- Modal Agregar Cliente -->
+<div class="modal fade" id="agregarClienteModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 rounded-5">
-            <form id="formCliente">
+            <form id="formAgregarCliente" asp-controller="Cliente" asp-action="Create" method="post">
                 <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
-                    <h5 class="modal-title w-100 text-center" id="clienteModalTitulo" style="font-weight: 350;">Editar Cliente</h5>
+                    <h5 class="modal-title w-100 text-center" style="font-weight: 350;">Agregar Cliente</h5>
                     <button type="button" class="btn-close btn-close-white opacity-100" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body px-5 py-5">
@@ -248,21 +243,79 @@
                             <label for="modalCedula">Cédula</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="modalTelefono" name="Telefono" type="text" class="form-control border-0" placeholder="Número de teléfono">
+                            <input id="modalTelefono" name="Telefono" type="text" class="form-control border-0" placeholder="Número de teléfono" required>
                             <label for="modalTelefono">Número de teléfono</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="modalCorreo" name="Correo" type="email" class="form-control border-0" placeholder="Correo electrónico">
+                            <input id="modalCorreo" name="Correo" type="email" class="form-control border-0" placeholder="Correo electrónico" required>
                             <label for="modalCorreo">Correo electrónico</label>
                         </div>
                         <div class="form-floating mb-1 border-bottom border-graydark">
-                            <input id="modalPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles">
+                            <input id="modalPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles" required>
                             <label for="modalPrestamos">Préstamos disponibles</label>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer d-flex flex-column flex-md-row justify-content-between align-items-stretch px-2 px-md-4 px-lg-5 border-top-0 mb-3">
                     <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarModal" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-primary rounded-5 px-4">Aceptar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Editar Cliente -->
+<div class="modal fade" id="editarClienteModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-5">
+            <form id="formEditarCliente" asp-controller="Cliente" asp-action="Edit" method="post">
+                <div class="modal-header text-white bg-primary justify-content-center border-0 rounded-top-5 ps-5">
+                    <h5 class="modal-title w-100 text-center" style="font-weight: 350;">Editar Cliente</h5>
+                    <button type="button" class="btn-close btn-close-white opacity-100" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body px-5 py-5">
+                    <div class="text-center mb-3">
+                        <div style="position: relative; width: 100px; height: 100px; display: inline-block;">
+                            <label for="EditarImagen" style="cursor: pointer; display: block; width: 100%; height: 100%; position: relative;">
+                                <img id="EditarPreviewImg" src="" alt="Imagen Cliente"
+                                     class="rounded"
+                                     style="width: 100%; height: 100%; object-fit: cover; display: none; position: absolute; top: 0; left: 0; z-index: 2;" />
+                                <span id="EditarImgPlaceholder"
+                                      class="d-flex align-items-center justify-content-center border border-primary border-1"
+                                      style="width: 100%; height: 100%; position: absolute; top: 0; left: 0; background-color: white; z-index: 1;">
+                                    <i class="bi bi-plus-lg fs-1 text-primary"></i>
+                                </span>
+                            </label>
+                            <input id="EditarImagen" type="file" accept="image/*" style="display: none;" />
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <input type="hidden" id="EditarIdCliente" name="IdCliente" />
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input id="EditarNombre" name="Nombre" type="text" class="form-control border-0" placeholder="Nombre" required>
+                            <label for="EditarNombre">Nombre</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input id="EditarCedula" name="Cedula" type="text" class="form-control border-0" placeholder="Cedula" required>
+                            <label for="EditarCedula">Cedula</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input id="EditarTelefono" name="Telefono" type="text" class="form-control border-0" placeholder="Número de teléfono" required>
+                            <label for="EditarTelefono">Número de teléfono</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input id="EditarCorreo" name="Correo" type="email" class="form-control border-0" placeholder="Correo electrónico" required>
+                            <label for="EditarCorreo">Correo electrónico</label>
+                        </div>
+                        <div class="form-floating mb-1 border-bottom border-graydark">
+                            <input id="EditarPrestamos" name="CantidadPrestamosDisponibles" type="number" min="0" class="form-control border-0" placeholder="Préstamos disponibles" required>
+                            <label for="EditarPrestamos">Préstamos disponibles</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex flex-column flex-md-row justify-content-between align-items-stretch px-2 px-md-4 px-lg-5 border-top-0 mb-3">
+                    <button type="reset" class="btn border rounded-5 px-4 border-primary text-primary mb-2 mb-md-0" id="btnCancelarEditar" data-bs-dismiss="modal">Cancelar</button>
                     <button type="submit" class="btn btn-primary rounded-5 px-4">Aceptar</button>
                 </div>
             </form>
