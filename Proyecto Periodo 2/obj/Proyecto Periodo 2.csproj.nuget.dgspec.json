@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {}
+    "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\Data.csproj": {
+    "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Bran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\obj\\",
+        "outputPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj"
+              "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj"
               }
             }
           }
@@ -105,14 +105,14 @@
         }
       }
     },
-    "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj": {
+    "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\Bran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\obj\\",
+        "outputPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -202,14 +202,14 @@
         }
       }
     },
-    "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {
+    "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+        "projectUniqueName": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
         "projectName": "Proyecto Periodo 2",
-        "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
+        "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\Proyecto Periodo 2.csproj",
         "packagesPath": "C:\\Users\\Bran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
+        "outputPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Proyecto Periodo 2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -230,14 +230,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Data\\Data.csproj"
+              "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Data\\Data.csproj"
               },
-              "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj"
+              "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj"
               },
-              "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj"
+              "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -316,14 +316,14 @@
         }
       }
     },
-    "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
+        "projectPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\Bran\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Utilities\\obj\\",
+        "outputPath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

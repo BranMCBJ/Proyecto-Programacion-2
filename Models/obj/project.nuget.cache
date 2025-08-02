@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iZTByuCs2/E=",
+  "dgSpecHash": "PO2Idq6ccrc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj",
+  "projectFilePath": "C:\\Users\\Bran\\Desktop\\Proyecto-Programacion-2\\Models\\Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Bran\\.nuget\\packages\\azure.core\\1.44.1\\azure.core.1.44.1.nupkg.sha512",
     "C:\\Users\\Bran\\.nuget\\packages\\azure.identity\\1.13.2\\azure.identity.1.13.2.nupkg.sha512",
@@ -86,15 +86,5 @@
     "C:\\Users\\Bran\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512",
     "C:\\Users\\Bran\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problema al leer el archivo de caché C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\Bran\\Documents\\GitHub\\Proyecto-Programacion-2\\Models\\Models.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
