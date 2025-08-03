@@ -64,6 +64,7 @@
     <None Include="wwwroot\Libros\styles.css" />
     <None Include="wwwroot\fotoperfil.jpg" />
     <None Include="wwwroot\Libros\resources\Frankenstein.webp" />
+    <None Include="wwwroot\Login\Imagenes\fondoHomepage.png" />
     <None Include="wwwroot\logo.png" />
     <None Include="wwwroot\Login\styles.css" />
   </ItemGroup>

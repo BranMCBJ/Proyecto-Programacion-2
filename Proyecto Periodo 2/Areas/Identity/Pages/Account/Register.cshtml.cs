@@ -27,19 +27,19 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 {
     public class RegisterModel : PageModel
     {
-        private readonly SignInManager<Usuario> _signInManager;
-        private readonly UserManager<Usuario> _userManager;
-        private readonly IUserStore<Usuario> _userStore;
-        private readonly IUserEmailStore<Usuario> _emailStore;
+        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
+        private readonly IUserStore<IdentityUser> _userStore;
+        private readonly IUserEmailStore<IdentityUser> _emailStore;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         public RegisterModel(
-            UserManager<Usuario> userManager,
-            IUserStore<Usuario> userStore,
-            SignInManager<Usuario> signInManager,
+            UserManager<IdentityUser> userManager,
+            IUserStore<IdentityUser> userStore,
+            SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
             RoleManager<IdentityRole> roleManager,
@@ -52,10 +52,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             _emailSender = emailSender;
             _roleManager = roleManager;
             _emailStore = GetEmailStore();
-
-
             _webHostEnvironment = webHostEnvironment;
-
         }
 
         /// <summary>
@@ -105,11 +102,11 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
             [Required]
             [Phone]
-            [Display(Name = "Tel�fono")]
+            [Display(Name = "Teléfono")]
             public string Telefono { get; set; }
 
             [Required]
-            [Display(Name = "C�dula")]
+            [Display(Name = "Cédula")]
             public string Cedula { get; set; }
 
             [Required]
@@ -123,7 +120,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             [Required]
             [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
             [DataType(DataType.Password)]
-            [Display(Name = "Contrase�a")]
+            [Display(Name = "Contraseña")]
             public string Contrasena { get; set; }
 
             /// <summary>
@@ -131,10 +128,10 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             /// 
-            //Este atributo es momentaneo solo se usa para validar la contrase�a no se guarda en la DB
+            //Este atributo es momentaneo solo se usa para validar la contraseña no se guarda en la DB
             [DataType(DataType.Password)]
-            [Display(Name = "Confirmar Contrase�a")]
-            [Compare("Contrasena", ErrorMessage = "Las contrase�as no coiciden.")]
+            [Display(Name = "Confirmar Contraseña")]
+            [Compare("Contrasena", ErrorMessage = "Las contraseñas no coiciden.")]
             public string ConfirmarContrasena { get; set; }
 
             //imagen del usuario *OPCIONAL*
@@ -159,7 +156,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
-            Debug.WriteLine("Entra al m�todo");
+            Debug.WriteLine("Entra al método");
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
@@ -187,62 +184,26 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     Input.UrlImagen = Path.Combine(WC.ImagenUsuario.TrimStart('\\'), fileName + extension);
                 }
                 Debug.WriteLine("ModelState no exploto");
-                
+
                 var user = new Usuario()
                 {
                     Nombre = Input.Nombre,
                     Apellido1 = Input.Apellido1,
                     Apellido2 = Input.Apellido2,
                     NombreUsuario = Input.NombreUsuario,
-
-
                     UserName = Input.NombreUsuario,
-
                     Email = Input.Email,
                     PhoneNumber = Input.Telefono,
                     Cedula = Input.Cedula,
                     UrlImagen = Input.UrlImagen,
                     Activo = true
                 };
-
-
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-
-
-                var result = await _userManager.CreateAsync(user, Input.Contrasena); //aca se crea el usuario con la contrase�a
+                var result = await _userManager.CreateAsync(user, Input.Contrasena); //aca se crea el usuario con la contraseña
 
                 if (result.Succeeded)
                 {
-
-                    if (User.IsInRole(WC.AdminRole))
-                    {
-                        await _userManager.AddToRoleAsync(user, WC.AdminRole);
-                    }
-                    else
-                    {
-                        await _userManager.AddToRoleAsync(user, WC.UserRole);
-                    }
-
-                    _logger.LogInformation("User created a new account with password.");
-
-                    var userId = await _userManager.GetUserIdAsync(user);
-                    var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-                    code = WebEncoders.Base64UrlEncode(Encoding.UTF8.GetBytes(code));
-                    var callbackUrl = Url.Page(
-                        "/Account/ConfirmEmail",
-                        pageHandler: null,
-                        values: new { area = "Identity", userId = userId, code = code, returnUrl = returnUrl },
-                        protocol: Request.Scheme);
-
-                    await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
-
-                    if (_userManager.Options.SignIn.RequireConfirmedAccount)
-
                     Debug.WriteLine("No esplota");
                     if (User.IsInRole(WC.AdminRole))
-
                     {
                         await _userManager.AddToRoleAsync(user, WC.AdminRole);
                     }
@@ -260,33 +221,33 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     {
                         Debug.WriteLine($"Error: {error.Description}");
                     }
-                }  
+                }
             }
-                // If we got this far, something failed, redisplay form
-                return Page();
+            // If we got this far, something failed, redisplay form
+            return Page();
         }
 
-        private Usuario CreateUser()
+        private IdentityUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<Usuario>();
+                return Activator.CreateInstance<IdentityUser>();
             }
             catch
             {
-                throw new InvalidOperationException($"Can't create an instance of '{nameof(Usuario)}'. " +
-                    $"Ensure that '{nameof(Usuario)}' is not an abstract class and has a parameterless constructor, or alternatively " +
+                throw new InvalidOperationException($"Can't create an instance of '{nameof(IdentityUser)}'. " +
+                    $"Ensure that '{nameof(IdentityUser)}' is not an abstract class and has a parameterless constructor, or alternatively " +
                     $"override the register page in /Areas/Identity/Pages/Account/Register.cshtml");
             }
         }
 
-        private IUserEmailStore<Usuario> GetEmailStore()
+        private IUserEmailStore<IdentityUser> GetEmailStore()
         {
             if (!_userManager.SupportsUserEmail)
             {
                 throw new NotSupportedException("The default UI requires a user store with email support.");
             }
-            return (IUserEmailStore<Usuario>)_userStore;
+            return (IUserEmailStore<IdentityUser>)_userStore;
         }
     }
 }

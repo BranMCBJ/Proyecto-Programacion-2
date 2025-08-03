@@ -5,7 +5,7 @@ using Models;
 
 namespace Data
 {
-    public class AppDbContext : IdentityDbContext<Usuario>
+    public class AppDbContext : IdentityDbContext
     {
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
@@ -21,7 +21,7 @@ namespace Data
         public DbSet<CopiaLibroPrestamo> CopiasLibrosPrestamos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Usuario>().ToTable("Usuarios");
+            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
             modelBuilder.Entity<Cliente>().ToTable("Clientes");
             modelBuilder.Entity<EstadoPrestamo>().ToTable("EstadoPrestamo");
             modelBuilder.Entity<Libro>().ToTable("Libros");

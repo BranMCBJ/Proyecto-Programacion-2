@@ -15,7 +15,7 @@ options.UseSqlServer(
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Proyecto_Periodo_2Context>();
 
 //Esta es la dependencia para el manejo del Identity
-builder.Services.AddIdentity<Usuario, IdentityRole>()
+builder.Services.AddIdentity<IdentityUser, IdentityRole>()
     .AddDefaultTokenProviders().AddDefaultUI()
         .AddEntityFrameworkStores<AppDbContext>();
 

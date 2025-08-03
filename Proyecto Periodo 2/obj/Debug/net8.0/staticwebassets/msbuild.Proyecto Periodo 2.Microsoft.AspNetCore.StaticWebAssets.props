@@ -1,7 +1,5 @@
 ﻿<Project>
   <ItemGroup>
-<<<<<<< HEAD
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Clientes\images\0b2d5614-c156-47f0-8adf-d5aae551fdfc.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -74,7 +72,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Clientes\images\e0141ce1-9c3c-4cc2-9c74-fecdc74e081d.png'))</OriginalItemSpec>
     </StaticWebAsset>
->>>>>>> 0b0e43f (Login completo)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Clientes\main.js'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -87,13 +84,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>63hvz8xd83</Fingerprint>
-      <Integrity>QtuaqqHh8QUulU2kKry2c0N1c7owCS0/wjdHaf+Tacw=</Integrity>
-=======
       <Fingerprint>y8v88lqiuu</Fingerprint>
       <Integrity>MuyQ+XiJyD8CmS0rO2A6LwclZNISQtZd8t55qfPoHho=</Integrity>
->>>>>>> 0b0e43f (Login completo)
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Clientes\main.js'))</OriginalItemSpec>
@@ -110,13 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>uxmr5uepjr</Fingerprint>
-      <Integrity>4ikZhAF4edtdxO/Ls+pe1BkMfqSpKy3GS84Gt5N3fpQ=</Integrity>
-=======
       <Fingerprint>ov9qjagk1u</Fingerprint>
       <Integrity>hA9bBq9ZRVQpi8bjs+6LoO/+WoDJA5MHbUL2VkHaQWo=</Integrity>
->>>>>>> 0b0e43f (Login completo)
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Clientes\styles.css'))</OriginalItemSpec>
@@ -139,8 +126,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</OriginalItemSpec>
     </StaticWebAsset>
-<<<<<<< HEAD
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fotoperfil.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -159,7 +144,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\fotoperfil.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
->>>>>>> 0b0e43f (Login completo)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Home\resources\ArbolHome.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -250,92 +234,12 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Home\styles.css'))</OriginalItemSpec>
     </StaticWebAsset>
-<<<<<<< HEAD
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\ArbolHome.png'))">
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Home\stylesAdministrador.css'))">
->>>>>>> 0b0e43f (Login completo)
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Proyecto Periodo 2</BasePath>
-<<<<<<< HEAD
-      <RelativePath>HomeAministrador/resources/ArbolHome.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>focywn2jed</Fingerprint>
-      <Integrity>rzDgAl5sjLo9shVabkqSmGKuL1PztdYPAAH/mwL3fwE=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\ArbolHome.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\fondoHomepage.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-      <RelativePath>HomeAministrador/resources/fondoHomepage.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iz7jmkx4zh</Fingerprint>
-      <Integrity>0pq4T//qmanPNPnBYnk6M4HDABtGzs0wDFGmaXhKdJU=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\fondoHomepage.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\hoja.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-      <RelativePath>HomeAministrador/resources/hoja.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7npmvj7xx8</Fingerprint>
-      <Integrity>rXk69hYk7hjYjkQHiS0YvsYV5/49/1tS2Le69YOBLP0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\hoja.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\Logo.png'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-      <RelativePath>HomeAministrador/resources/Logo.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>72wy4keyza</Fingerprint>
-      <Integrity>z4pG3ke69S9sZc5qm1yZn8kvEvkrbFHJUH27HbxIo1Y=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\resources\Logo.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\styles.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-      <RelativePath>HomeAministrador/styles.css</RelativePath>
-=======
       <RelativePath>Home/stylesAdministrador.css</RelativePath>
->>>>>>> 0b0e43f (Login completo)
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -346,9 +250,6 @@
       <Integrity>G9uFckQ+609mtOWexcxtv1d8mv3Lu/7/jtsksdm1PFU=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-<<<<<<< HEAD
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\HomeAministrador\styles.css'))</OriginalItemSpec>
-=======
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Home\stylesAdministrador.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\default-user.svg'))">
@@ -368,7 +269,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\default-user.svg'))</OriginalItemSpec>
->>>>>>> 0b0e43f (Login completo)
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\bootstrap\dist\css\bootstrap.css'))">
       <SourceType>Package</SourceType>
@@ -1396,35 +1296,18 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\jquery\LICENSE.txt'))</OriginalItemSpec>
     </StaticWebAsset>
-<<<<<<< HEAD
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\resources\fotoperfil.jpg'))">
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros\resources\Frankenstein.webp'))">
->>>>>>> 0b0e43f (Login completo)
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Proyecto Periodo 2</BasePath>
-<<<<<<< HEAD
-      <RelativePath>Libros vistas/resources/fotoperfil.jpg</RelativePath>
-=======
       <RelativePath>Libros/resources/Frankenstein.webp</RelativePath>
->>>>>>> 0b0e43f (Login completo)
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
-      <Fingerprint>kw1xtncgbd</Fingerprint>
-      <Integrity>HL/UVInL+eXfv+fhfkh0YgT+JFEYJ6vxiQ1e5Aj1qAc=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\resources\fotoperfil.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\resources\logo.png'))">
-=======
       <Fingerprint>5aic1wse2e</Fingerprint>
       <Integrity>c7fBjYEHoMTYRpxAM3uL//OKl4XXfKuR7/FydGyxAm0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
@@ -1432,34 +1315,11 @@
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros\resources\Frankenstein.webp'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros\styles.css'))">
->>>>>>> 0b0e43f (Login completo)
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/Proyecto Periodo 2</BasePath>
-<<<<<<< HEAD
-      <RelativePath>Libros vistas/resources/logo.png</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>7mx54oa07v</Fingerprint>
-      <Integrity>b70TPBBqM5dpqJzSQJ2F/GWvn9VG5aZK67LvhKGkdI0=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\resources\logo.png'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\styles.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-      <RelativePath>Libros vistas/styles.css</RelativePath>
-=======
       <RelativePath>Libros/styles.css</RelativePath>
->>>>>>> 0b0e43f (Login completo)
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
@@ -1470,67 +1330,7 @@
       <Integrity>shh+UR6CseNrEURuPO8IZxssnn6RULtQklMyLf8ZTfk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-<<<<<<< HEAD
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros vistas\styles.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\Imagenes\Fondo-Login.jpg'))">
-=======
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Libros\styles.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\resources\Fondo-Login.jpg'))">
->>>>>>> 0b0e43f (Login completo)
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-<<<<<<< HEAD
-      <RelativePath>Login/Imagenes/Fondo-Login.jpg</RelativePath>
-=======
-      <RelativePath>Login/resources/Fondo-Login.jpg</RelativePath>
->>>>>>> 0b0e43f (Login completo)
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hi7ghw9nn5</Fingerprint>
-      <Integrity>9/RxwGCSnvvHkunP8313IwbLQyqOVYi7/oK80o6xV+g=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-<<<<<<< HEAD
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\Imagenes\Fondo-Login.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\Imagenes\Logo.png'))">
-=======
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\resources\Fondo-Login.jpg'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\resources\Logo.png'))">
->>>>>>> 0b0e43f (Login completo)
-      <SourceType>Package</SourceType>
-      <SourceId>Proyecto Periodo 2</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/Proyecto Periodo 2</BasePath>
-<<<<<<< HEAD
-      <RelativePath>Login/Imagenes/Logo.png</RelativePath>
-=======
-      <RelativePath>Login/resources/Logo.png</RelativePath>
->>>>>>> 0b0e43f (Login completo)
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>72wy4keyza</Fingerprint>
-      <Integrity>z4pG3ke69S9sZc5qm1yZn8kvEvkrbFHJUH27HbxIo1Y=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-<<<<<<< HEAD
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\Imagenes\Logo.png'))</OriginalItemSpec>
-=======
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\resources\Logo.png'))</OriginalItemSpec>
->>>>>>> 0b0e43f (Login completo)
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\styles.css'))">
       <SourceType>Package</SourceType>
@@ -1544,19 +1344,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-<<<<<<< HEAD
       <Fingerprint>rtb0dad7j3</Fingerprint>
       <Integrity>32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw=</Integrity>
-=======
-      <Fingerprint>2fkb7fvbla</Fingerprint>
-      <Integrity>4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k=</Integrity>
->>>>>>> 0b0e43f (Login completo)
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Login\styles.css'))</OriginalItemSpec>
     </StaticWebAsset>
-<<<<<<< HEAD
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\logo.png'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -1575,7 +1368,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\logo.png'))</OriginalItemSpec>
     </StaticWebAsset>
->>>>>>> 0b0e43f (Login completo)
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Prestamos\resources\fotoperfil.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -1642,8 +1434,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>iniaaffer6</Fingerprint>
-      <Integrity>Ei3M6NMMuxu+S/ZPUDN+7aDkQ8GOxmJkmlsCskCe0UM=</Integrity>
+      <Fingerprint>3d4tgk1tvh</Fingerprint>
+      <Integrity>V+uSgffeh2xWZzBOQmEfGJDZuiCXViblhh3tXG5BJJk=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Prestamos\styles.css'))</OriginalItemSpec>
@@ -1666,8 +1458,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Proyecto Periodo 2.rvfk8gxkxf.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
-<<<<<<< HEAD
-=======
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\b67cbc60-eae6-4c2b-b576-9e05f1cd8a52.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>
@@ -1794,6 +1584,5 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\Vista principal Css.css'))</OriginalItemSpec>
     </StaticWebAsset>
->>>>>>> 0b0e43f (Login completo)
   </ItemGroup>
 </Project>
