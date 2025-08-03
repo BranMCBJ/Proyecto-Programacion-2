@@ -70,13 +70,10 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\Clientes\Imagenes\" />
-<<<<<<< HEAD
     <Folder Include="wwwroot\HomeAministrador\Imagenes\" />
     <Folder Include="wwwroot\Home\Imagenes\" />
     <Folder Include="wwwroot\Libros vistas\Imagenes\" />
     <Folder Include="wwwroot\Prestamos\Imagenes\" />
-=======
->>>>>>> 844d8f8d1d591315cd36afe4e222b6d807de994b
   </ItemGroup>
 
   <ItemGroup>

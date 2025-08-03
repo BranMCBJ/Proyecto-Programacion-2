@@ -1,203 +1,184 @@
-<<<<<<< HEAD
-﻿
-=======
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Saber Y Cultura</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="estilosYaret.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-   
- 
-  <!-- Contenedor que ocupa todo el ancho de la pantalla -->
-  <div class="container-fluid"> 
-  
-    <div class="row h-100">
+<link rel="stylesheet" href="~/Login/styles.css" asp-append-version="true" />   
+<!-- Contenedor que ocupa todo el ancho de la pantalla -->
+<div class="container-fluid"> 
 
-      <!-- Parte del Izquierda del Login-->
-      <div class="col-md-4 login-box">
+  <div class="row h-100">
 
-        <!-- Parte del Logo-->
-        <div class="d-flex align-items-center gap-2 ps-4 pt-4">
-          <img src="Logo.png" alt="Logo de libros" class="logo" style="max-height: 45px;">
-            <div class="d-flex flex-column lh-sm">
-              <span style="font-family: 'Merriweather', serif; color: #8C2445; font-size: 0.8rem;">SABER Y</span>
-              <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.8rem;">CULTURA</span>
-            </div>
-        </div>
+    <!-- Parte del Izquierda del Login-->
+    <div class="col-md-4 login-box">
 
-        
-        <h1>Iniciar Sesión</h1>
-        <p>Por favor ingrese sus datos.</p>
-
-        <!-- Formulario de inicio de sesión -->
-        <form class="form-login">
-
-          <!-- Input de Usuario -->
-          <div class="form-floating-custom mb-4">
-            <input type="text" id="usuario" class="form-control form-control-login" placeholder=" ">
-            <label for="usuario">Nombre de usuario</label>
+      <!-- Parte del Logo-->
+      <div class="d-flex align-items-center gap-2 ps-4 pt-4">
+        <img src="Logo.png" alt="Logo de libros" class="logo" style="max-height: 45px;">
+          <div class="d-flex flex-column lh-sm">
+            <span style="font-family: 'Merriweather', serif; color: #8C2445; font-size: 0.8rem;">SABER Y</span>
+            <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.8rem;">CULTURA</span>
           </div>
-
-          <!-- Input de Contraseña -->
-          <div class="form-floating-custom mb-1">
-            <div class="input-group input-group-login">
-              <input type="password" id="password-login" class="form-control form-control-login" placeholder=" ">
-              <label for="password">Contraseña</label>
-              <span class="input-group-text input-group-text-login" onclick="togglePassword()" style="cursor:pointer;">
-                <i class="bi bi-eye-slash"></i>
-              </span>
-            </div>
-          </div>
-
-          <!-- Botón para enviar el formulario -->
-          <button type="submit" class="btn-login">Iniciar Sesión</button>
-        </form>
-        
-        <!-- Espacio Divisorio -->
-        <div class="divider ">
-          <span>o</span>
-        </div>
-
-        <!-- (Abre el modal) -->
-        <div class="divider mt-0">
-          ¿No tienes una cuenta? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalCrearCuenta">Crear Cuenta</a>
-        </div>
-
-        <!-- Texto del Footer -->
-        <div class="footer-text mb-4">
-          Biblioteca Saber y Cultura, Todos los derechos reservados.
-        </div>
       </div>
 
-      <!-- Imagen de la derecha, es imagen en pantallas medianas a grandes -->
-      <div class="col-md-8 d-none d-lg-block p-0 h-100">
-        <img src="Fondo-Login.jpg" class="w-100 h-100 object-fit-cover" alt="Biblioteca">
+      
+      <h1>Iniciar Sesión</h1>
+      <p>Por favor ingrese sus datos.</p>
+
+      <!-- Formulario de inicio de sesión -->
+      <form class="form-login">
+
+        <!-- Input de Usuario -->
+        <div class="form-floating-custom mb-4">
+          <input type="text" id="usuario" class="form-control form-control-login" placeholder=" ">
+          <label for="usuario">Nombre de usuario</label>
+        </div>
+
+        <!-- Input de Contraseña -->
+        <div class="form-floating-custom mb-1">
+          <div class="input-group input-group-login">
+            <input type="password" id="password-login" class="form-control form-control-login" placeholder=" ">
+            <label for="password">Contraseña</label>
+            <span class="input-group-text input-group-text-login" onclick="togglePassword()" style="cursor:pointer;">
+              <i class="bi bi-eye-slash"></i>
+            </span>
+          </div>
+        </div>
+
+        <!-- Botón para enviar el formulario -->
+        <button type="submit" class="btn-login">Iniciar Sesión</button>
+      </form>
+      
+      <!-- Espacio Divisorio -->
+      <div class="divider ">
+        <span>o</span>
+      </div>
+
+      <!-- (Abre el modal) -->
+      <div class="divider mt-0">
+        ¿No tienes una cuenta? <a href="#" class="text-decoration-none" data-bs-toggle="modal" data-bs-target="#modalCrearCuenta">Crear Cuenta</a>
+      </div>
+
+      <!-- Texto del Footer -->
+      <div class="footer-text mb-4">
+        Biblioteca Saber y Cultura, Todos los derechos reservados.
       </div>
     </div>
+
+    <!-- Imagen de la derecha, es imagen en pantallas medianas a grandes -->
+    <div class="col-md-8 d-none d-lg-block p-0 h-100">
+      <img src="Fondo-Login.jpg" class="w-100 h-100 object-fit-cover" alt="Biblioteca">
+    </div>
   </div>
+</div>
 
-  <!-- Importa Bootstrap Bundle -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Importa Bootstrap Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Script para visibilidad de la contraseña -->
-  <script>
-    function togglePassword() {
-      const input = document.getElementById('password-login'); 
-      const icon = document.querySelector('.input-group-text i'); // Selecciona el ícono del ojo
-      if (input.type === 'password') {
-        input.type = 'text'; 
-        icon.classList.remove('bi-eye-slash');
-        icon.classList.add('bi-eye');
-      } else {
-        input.type = 'password'; 
-        icon.classList.remove('bi-eye');
-        icon.classList.add('bi-eye-slash');
-      }
+<!-- Script para visibilidad de la contraseña -->
+<script>
+  function togglePassword() {
+    const input = document.getElementById('password-login'); 
+    const icon = document.querySelector('.input-group-text i'); // Selecciona el ícono del ojo
+    if (input.type === 'password') {
+      input.type = 'text'; 
+      icon.classList.remove('bi-eye-slash');
+      icon.classList.add('bi-eye');
+    } else {
+      input.type = 'password'; 
+      icon.classList.remove('bi-eye');
+      icon.classList.add('bi-eye-slash');
     }
-  </script>
+  }
+</script>
 
-  <!-- Modal de crear cuenta -->
-  <div class="modal fade" id="modalCrearCuenta" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content p-4 rounded-4 ">
+<!-- Modal de crear cuenta -->
+<div class="modal fade" id="modalCrearCuenta" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-4 rounded-4 ">
 
-        <!-- Encabezado del modal -->
-        <div class="modal-header">
-          <div class="d-flex align-items-center gap-2">
-            <img src="Logo.png" alt="Logo" style="max-height: 40px;">
-            <div class="d-flex flex-column lh-sm">
-              <span style="font-family: 'Merriweather', serif; color: #8C2445; font-size: 0.8rem;">SABER Y</span>
-              <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.8rem;">CULTURA</span>
+      <!-- Encabezado del modal -->
+      <div class="modal-header">
+        <div class="d-flex align-items-center gap-2">
+          <img src="Logo.png" alt="Logo" style="max-height: 40px;">
+          <div class="d-flex flex-column lh-sm">
+            <span style="font-family: 'Merriweather', serif; color: #8C2445; font-size: 0.8rem;">SABER Y</span>
+            <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.8rem;">CULTURA</span>
+          </div>
+        </div>
+        <!-- Título del modal -->
+        <h5 class="ms-auto me-3 mt-2">Crear Cuenta</h5>
+        <!-- Botón para cerrar el modal -->
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Formulario de registro del modal -->
+      <div class="modal-body ">
+        <form>
+          
+          <div class="row g-3">
+
+            <!-- Fila 1 --> 
+            <div class="col-md-4 mb-4">
+              <label class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombreCrearCuenta"  placeholder="Ingrese su nombre">
+              </div>
+
+              <div class="col-md-4 mb-4">
+                <label class="form-label">Primer Apellido</label>
+                <input type="text" class="form-control" id="primerApellidoCrearCuenta"  placeholder="Ingrese su primer apellido">
+              </div>
+              
+              <div class="col-md-4 mb-4">
+                <label class="form-label">Segundo Apellido</label>
+                <input type="text" class="form-control" id="segundoApellidoCrearCuenta" placeholder="Ingrese su segundo apellido">
+              </div>
+
+              <!-- Fila 2 -->
+              <div class="col-md-8">
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="correoCrearCuenta" placeholder="ejemplo@gmail.com">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Número de Teléfono</label>
+                  <input type="tel" class="form-control" id="telefonoCrearCuenta" placeholder="Ingrese su número de teléfono">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Número de Cédula</label>
+                  <input type="text" class="form-control" id="cedulaCrearCuenta" placeholder="Ingrese su número de cédula">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Nombre de Usuario</label>
+                  <input type="text" class="form-control" id="usuarioCrearCuenta" placeholder="Ingrese su nombre de usuario">
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Contraseña</label>
+                  <div class="input-group input-group-modal">
+                    <input type="password" class="form-control" id="password-crearCuenta" placeholder="Ingrese su contraseña">
+                    <span class="input-group-text input-group-text-modal"><i class="bi bi-eye-slash"></i></span>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label class="form-label">Confirmar Contraseña</label>
+                  <div class="input-group input-group-modal">
+                    <input type="password" class="form-control" id="password-crearCuenta-confirmar" placeholder="Repita su contraseña">
+                    <span class="input-group-text input-group-text-modal"><i class="bi bi-eye-slash"></i></span>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+              <!-- Cuadro de Imagen -->
+              <div class="col-md-4">
+                <div class="image-placeholder">
+                  <i class="bi bi-plus-lg"></i>
+                </div>
+              </div>
+
+              <!-- Boton para crear cuenta -->
+              <div class="col-6 mx-auto mt-5">
+              <button type="submit" class="btn-crear-cuenta w-100">Crear Cuenta</button>
             </div>
           </div>
-          <!-- Título del modal -->
-          <h5 class="ms-auto me-3 mt-2">Crear Cuenta</h5>
-          <!-- Botón para cerrar el modal -->
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-
-        <!-- Formulario de registro del modal -->
-        <div class="modal-body ">
-          <form>
-            
-            <div class="row g-3">
-
-              <!-- Fila 1 --> 
-              <div class="col-md-4 mb-4">
-                <label class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombreCrearCuenta"  placeholder="Ingrese su nombre">
-                </div>
-
-                <div class="col-md-4 mb-4">
-                  <label class="form-label">Primer Apellido</label>
-                  <input type="text" class="form-control" id="primerApellidoCrearCuenta"  placeholder="Ingrese su primer apellido">
-                </div>
-                
-                <div class="col-md-4 mb-4">
-                  <label class="form-label">Segundo Apellido</label>
-                  <input type="text" class="form-control" id="segundoApellidoCrearCuenta" placeholder="Ingrese su segundo apellido">
-                </div>
-
-                <!-- Fila 2 -->
-                <div class="col-md-8">
-                <div class="row g-3">
-                  <div class="col-12">
-                    <label class="form-label">Correo Electrónico</label>
-                    <input type="email" class="form-control" id="correoCrearCuenta" placeholder="ejemplo@gmail.com">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label">Número de Teléfono</label>
-                    <input type="tel" class="form-control" id="telefonoCrearCuenta" placeholder="Ingrese su número de teléfono">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label">Número de Cédula</label>
-                    <input type="text" class="form-control" id="cedulaCrearCuenta" placeholder="Ingrese su número de cédula">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label">Nombre de Usuario</label>
-                    <input type="text" class="form-control" id="usuarioCrearCuenta" placeholder="Ingrese su nombre de usuario">
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label">Contraseña</label>
-                    <div class="input-group input-group-modal">
-                      <input type="password" class="form-control" id="password-crearCuenta" placeholder="Ingrese su contraseña">
-                      <span class="input-group-text input-group-text-modal"><i class="bi bi-eye-slash"></i></span>
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <label class="form-label">Confirmar Contraseña</label>
-                    <div class="input-group input-group-modal">
-                      <input type="password" class="form-control" id="password-crearCuenta-confirmar" placeholder="Repita su contraseña">
-                      <span class="input-group-text input-group-text-modal"><i class="bi bi-eye-slash"></i></span>
-                    </div>
-                  </div>
-                </div>
-                </div>
-
-                <!-- Cuadro de Imagen -->
-                <div class="col-md-4">
-                  <div class="image-placeholder">
-                    <i class="bi bi-plus-lg"></i>
-                  </div>
-                </div>
-
-                <!-- Boton para crear cuenta -->
-                <div class="col-6 mx-auto mt-5">
-                <button type="submit" class="btn-crear-cuenta w-100">Crear Cuenta</button>
-              </div>
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
     </div>
   </div>
-</body>
-</html>
->>>>>>> 844d8f8d1d591315cd36afe4e222b6d807de994b
+</div>

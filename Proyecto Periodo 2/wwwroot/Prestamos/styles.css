@@ -1,54 +1,5 @@
-.nav-link {
-      color: #791d35;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .nav-link:hover {
-      color: #5a1226;
-    }
-
-    .navbar-divider {
-      height: 24px;
-      width: 1px;
-      background-color: #ccc;
-      margin: 0 12px;
-    }
-
-    .navbar-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: bold;
-      color: #791d35;
-    }
-
-    .navbar-brand img {
-      height: 40px;
-    }
-
-    .login-button {
-      color: #791d35;
-      border: 1px solid #791d35;
-    }
-
-    .login-button:hover {
-      background-color: #791d35;
-      color: white;
-    }
-
-  html, body {
-  height: 100%;
-}
-
 .row{
     margin: 20px;
-}
-
-.container-fluid {
-  height: 100vh;
 }
 
 .row.align-items-stretch {

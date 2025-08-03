@@ -7,6 +7,6 @@ namespace Proyecto_Periodo_2.Controllers
         public IActionResult Index()
         {
             return View();
-        }
+        }    
     }
 }

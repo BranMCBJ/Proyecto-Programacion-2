@@ -27,7 +27,7 @@
                     <!-- Encabezado -->
                     <div class="d-flex align-items-center justify-content-between mb-4">
                         <div class="d-flex align-items-center gap-2">
-                            <img src="~/Login/resources/Logo.png" alt="Logo" style="max-height: 40px;">
+                            <img src="~/Login/Imagenes/Logo.png" alt="Logo" style="max-height: 40px;">
                             <div class="d-flex flex-column lh-sm">
                                 <span style="font-family: 'Merriweather', serif; color: #8C2445; font-size: 0.8rem;">SABER Y</span>
                                 <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 0.8rem;">CULTURA</span>
@@ -37,7 +37,9 @@
                     </div>
 
                     <!-- Formulario -->
+
                     <form id="formCrearCuenta" method="post" asp-route-returnUrl="/Identity/Account/Login" enctype="multipart/form-data">
+
                         @Html.AntiForgeryToken()
 
                         <div class="row g-3">
@@ -65,18 +67,18 @@
                             <div class="col-md-8">
                                 <div class="row g-3">
                                     <div class="col-12">
-                                        <label asp-for="Input.Email" class="form-label">Correo Electrónico</label>
+                                        <label asp-for="Input.Email" class="form-label">Correo Electr�nico</label>
                                         <input asp-for="Input.Email" type="email" class="form-control" placeholder="ejemplo@gmail.com" required>
                                         <span asp-validation-for="Input.Email" class="text-danger"></span>
                                     </div>
                                     <div class="col-12">
-                                        <label asp-for="Input.Telefono" class="form-label">Número de Teléfono</label>
-                                        <input asp-for="Input.Telefono" type="tel" class="form-control" placeholder="Ingrese su número de teléfono" required>
+                                        <label asp-for="Input.Telefono" class="form-label">N�mero de Tel�fono</label>
+                                        <input asp-for="Input.Telefono" type="tel" class="form-control" placeholder="Ingrese su n�mero de tel�fono" required>
                                         <span asp-validation-for="Input.Telefono" class="text-danger"></span>
                                     </div>
                                     <div class="col-12">
-                                        <label asp-for="Input.Cedula" class="form-label">Número de Cédula</label>
-                                        <input asp-for="Input.Cedula" type="text" class="form-control" placeholder="Ingrese su número de cédula" required>
+                                        <label asp-for="Input.Cedula" class="form-label">N�mero de C�dula</label>
+                                        <input asp-for="Input.Cedula" type="text" class="form-control" placeholder="Ingrese su n�mero de c�dula" required>
                                         <span asp-validation-for="Input.Cedula" class="text-danger"></span>
                                     </div>
                                     <div class="col-12">
@@ -85,20 +87,20 @@
                                         <span asp-validation-for="Input.NombreUsuario" class="text-danger"></span>
                                     </div>
                                     <div class="col-12">
-                                        <label asp-for="Input.Contrasena" class="form-label">Contraseña</label>
+                                        <label asp-for="Input.Contrasena" class="form-label">Contrase�a</label>
                                         <div class="input-group">
-                                            <input asp-for="Input.Contrasena" type="password" class="form-control" id="password" placeholder="Ingrese su contraseña" required>
+                                            <input asp-for="Input.Contrasena" type="password" class="form-control" id="password" placeholder="Ingrese su contrase�a" required>
+                                            <span asp-validation-for="Input.Contrasena" class="text-danger"></span>
                                             <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
                                         </div>
-                                        <span asp-validation-for="Input.Contrasena" class="text-danger"></span>
                                     </div>
                                     <div class="col-12">
-                                        <label asp-for="Input.ConfirmarContrasena" class="form-label">Confirmar Contraseña</label>
+                                        <label asp-for="Input.ConfirmarContrasena" class="form-label">Confirmar Contrase�a</label>
                                         <div class="input-group">
-                                            <input asp-for="Input.ConfirmarContrasena" type="password" class="form-control" id="confirmPassword" placeholder="Repita su contraseña" required>
+                                            <input asp-for="Input.ConfirmarContrasena" type="password" class="form-control" id="confirmPassword" placeholder="Repita su contrase�a" required>
+                                            <span asp-validation-for="Input.ConfirmarContrasena" class="text-danger"></span>
                                             <span class="input-group-text"><i class="bi bi-eye-slash"></i></span>
                                         </div>
-                                        <span asp-validation-for="Input.ConfirmarContrasena" class="text-danger"></span>
                                     </div>
                                 </div>
                             </div>
@@ -106,10 +108,22 @@
                             <!-- Cuadro de imagen -->
                             <div class="col-md-4 d-flex align-items-center justify-content-center">
                                 <!-- Input oculto -->
+
                                 <input asp-for="Input.UrlImagen" type="file" id="fileInput" accept="image/*" class="d-none" onchange="previewImage(event)">
                                 <span asp-validation-for="Input.UrlImagen" class="text-danger"></span>
 
-                                <!-- Área interactiva -->
+                                <!-- �rea que act�a como bot�n -->
+                                <div class="image-placeholder text-center border rounded p-4 w-100 h-100" id="imagePreview" onclick="document.getElementById('fileInput').click();">
+                                    <i class="bi bi-plus-lg" style="font-size: 2rem;"></i>
+                                    <label asp-for="Input.UrlImagen" class="mt-2">Haz clic para subir una imagen</label>
+                                </div>
+                            </div>
+
+
+                                <input type="file" name="files" id="fileInput" accept="image/*" class="d-none" onchange="previewImage(event)">
+                                <span asp-validation-for="Input.UrlImagen" class="text-danger"></span>
+
+                                <!-- �rea interactiva -->
                                 <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
                                      id="imagePreview"
                                      onclick="document.getElementById('fileInput').click();"
@@ -127,10 +141,9 @@
                                     }
                                 </div>
                             </div>
-
                             <validation-summary asp-validation-summary="All" class="text-danger"></validation-summary>
 
-                            <!-- Botón de crear cuenta -->
+                            <!-- Bot�n de crear cuenta -->
                             <div class="col-6 mx-auto mt-5">
                                 <button id="btnCrearCuenta" type="submit" class="btn-crear-cuenta w-100">Crear Cuenta</button>
                             </div>
@@ -144,7 +157,7 @@
 
     @section Scripts {
         <script>
-            // Mostrar/ocultar contraseña
+            // Mostrar/ocultar contrase�a
             document.querySelectorAll('.input-group-text').forEach(el => {
                 el.addEventListener('click', function () {
                     const input = this.previousElementSibling;
@@ -169,7 +182,12 @@
             }
         </script>
 
+
+    }
+    </body>
+
         <partial name="_ValidationScriptsPartial" />
+
     }
 </body>
 

@@ -1,4 +1,4 @@
-﻿// Licensed to the .NET Foundation under one or more agreements.
+// Licensed to the .NET Foundation under one or more agreements.
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
@@ -22,10 +22,10 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly AppDbContext _db;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<Usuario> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, AppDbContext db)
+        public LoginModel(SignInManager<Usuario> signInManager, ILogger<LoginModel> logger, AppDbContext db)
         {
             _signInManager = signInManager;
             _logger = logger;
@@ -106,25 +106,15 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 //busca el primer usuario que coincida con el input de nombre usuario
-<<<<<<< HEAD
-                var usuario = _db.Usuarios.FirstOrDefault(u=> u.NombreUsuario == Input.NombreUsuario);
-
-                if(usuario == null)
-=======
                 var usuario = _db.Usuarios.FirstOrDefault(u => u.NombreUsuario == Input.NombreUsuario);
 
                 if (usuario == null)
->>>>>>> 0b0e43f (Login completo)
                 {
                     return NotFound();
                 }
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-<<<<<<< HEAD
-                var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent:false, lockoutOnFailure: false);
-=======
                 var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent: false, lockoutOnFailure: false);
->>>>>>> 0b0e43f (Login completo)
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

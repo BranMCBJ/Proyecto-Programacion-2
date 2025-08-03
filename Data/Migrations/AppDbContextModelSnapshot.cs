@@ -458,7 +458,6 @@ namespace Migrations
                         .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("NombreUsuario")
-<<<<<<< HEAD
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -485,10 +484,6 @@ namespace Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
-=======
-                        .HasColumnType("nvarchar(max)");
-
->>>>>>> 0b0e43f (Login completo)
                     b.Property<string>("UrlImagen")
                         .HasColumnType("nvarchar(max)");
 

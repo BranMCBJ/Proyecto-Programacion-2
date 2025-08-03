@@ -21,9 +21,9 @@ public class HomeController : Controller
     {
         Models.ViewModels.Home home = new Models.ViewModels.Home
         {
-            cantidadLibros = db.Libros.Count(),
-            cantidadPrestamos = db.Prestamos.Count(),
-            cantidadClientes = db.Clientes.Count(),
+            cantidadLibros = db.Libros.Where(p => p.Activo == true).Count(),
+            cantidadPrestamos = db.Prestamos.Where(p => p.Activo == true).Count(),
+            cantidadClientes = db.Clientes.Where(p => p.Activo == true).Count(),
             cantidadUsuarios = db.Usuarios.Count()
         };
         return View(home);
