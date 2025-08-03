@@ -8,7 +8,7 @@ namespace Models
         [Key]
         public int? IdLibro { get; set; }
 
-        [Required(ErrorMessage = "Se necesita el ID del Stock")]
+        // Rehabilitar la relación con Stock
         public int? IdStock { get; set; }
 
         [ForeignKey(nameof(IdStock))]
@@ -18,11 +18,11 @@ namespace Models
         public int? ClasificacionEdad { get; set; }
 
         [Required(ErrorMessage = "Se necesita la fecha de publicación")]
-        [DataType(DataType.Date)] //muestra la fecha en formato dd/mm/yyyy
+        [DataType(DataType.Date)]
         public DateTime? FechaPublicacion { get; set; }
 
         [Required(ErrorMessage = "Se necesita el ISBN")]
-        [RegularExpression(@"^\d+$", ErrorMessage = "Solo se permiten números.")] // hace que solo se permitan numeros
+        [RegularExpression(@"^\d+$", ErrorMessage = "Solo se permiten números.")]
         [StringLength(13, MinimumLength = 13, ErrorMessage = "El ISBN debe ser de 13 digitos")]
         public string? ISBN { get; set; }
 
@@ -34,6 +34,8 @@ namespace Models
         [StringLength(400)]
         public string? Descripcion { get; set; }
 
-        public bool? Activo { get; set; }
+        public string? ImagenUrl { get; set; }
+
+        public bool Activo { get; set; }
     }
 }

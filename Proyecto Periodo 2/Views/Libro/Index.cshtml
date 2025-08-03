@@ -1,252 +1,331 @@
-<link rel="stylesheet" href="~/Libros/styles.css" asp-append-version="true" />
 
-<!-- Body de la página -->
-<div>
-    <h1 class="texto-libro">Libros</h1>
-</div>
+@model IEnumerable<Models.Libro>
 
-<!-- Filtros y búsqueda -->
-<div class="row g-2 mb-3 justify-content-start filtros">
-    <!-- Buscar -->
-    <div class="position-relative" style="width: 255px;">
-        <i class="fa-solid fa-magnifying-glass position-absolute"
-            style="top: 50%; left: 8px; transform: translateY(-50%); color: #6c757d; font-size: 0.9rem;"></i>
-        <input type="text" class="form-control ps-4" placeholder="Buscar" style="padding-left: 30px;">
-    </div>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-    <!-- Ordenar por -->
-    <div class="col-1">
-        <div class="dropdown border border-graydark rounded">
-            <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="d-flex text-secondary">
-                    <span>Ordenar por</span>
-                    <i class="bi bi-chevron-down ms-auto me-0"></i>
-                </div>
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
-                    </a>
-                </li>
-            </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="~/Libro/styles.css">
+</head>
+
+<body>
+    <!-- Mensajes de TempData -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success alert-dismissible fade show" role="alert" style="margin: 0; border-radius: 0;">
+            <i class="fa-solid fa-check-circle me-2"></i>@TempData["Success"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-    </div>
+    }
 
-    <!-- Filtrar por -->
-    <div class="col-1">
-        <div class="dropdown border border-graydark rounded">
-            <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <div class="d-flex text-secondary">
-                    <span>Filtrar por</span>
-                    <i class="bi bi-chevron-down ms-auto me-0"></i>
-                </div>
-            </button>
-            <ul class="dropdown-menu">
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa-regular fa-id-card text-primary me-2"></i>Cédula
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa-regular fa-envelope text-primary me-2"></i>Correo
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="bi bi-fonts text-primary me-2"></i>Nombre
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#">
-                        <i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
-                    </a>
-                </li>
-            </ul>
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="margin: 0; border-radius: 0;">
+            <i class="fa-solid fa-exclamation-triangle me-2"></i>@TempData["Error"]
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
-    </div>
+    }
 
-    <!-- Botón agregar -->
-    <div class="col d-flex justify-content-end botonagregar">
-        <button type="button" class="btn btn-agregar-libro d-flex align-items-center" data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop">
-            <i class="fa-solid fa-book me-1"></i>
-            <i class="fa-solid fa-plus me-1" style="font-size:10px;"></i>
-            Agregar libro
-        </button>
-    </div>
-</div>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="~/Libros vistas/resources/logo.png" alt="Logo" width="auto" height="45">
+            </a>
 
-<!-- Modal agregar libro -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl">
-        <div class="modal-content">
-            <div class="modal-header"
-                    style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
-                <h1 class="modal-title fs-2" id="staticBackdropLabel"
-                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
-                    Agregar libro
-                </h1>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
-                        style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;">
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="container">
-                    <div class="row">
-                        <div class="col columnaIzq">
-                            <h4 class="titulo-imagen">Imagen</h4>
-                            <div class="text-center">
-                                <div class="position-relative bg-white border rounded shadow-sm"
-                                        style="width: 300px; height: 400px;">
-                                    <img id="previewImg" src="" alt="Vista previa" class="w-100 h-100"
-                                            style="object-fit: contain;" />
-                                    <button type="button" class="btn btn-dark position-absolute"
-                                            style="bottom: 10px; left: 10px; background-color: #8C2445; border: none;"
-                                            onclick="document.getElementById('inputFile').click();">
-                                        <i class="fa-solid fa-upload"></i> Subir Imagen
-                                    </button>
-                                </div>
-                            </div>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-pen-to-square me-1"></i>
+                            PRÉSTAMOS
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown mx-2 nav-libros active">
+                        <a class="nav-link dropdown-toggle dropdown-libros" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            <i class="fa-solid fa-book me-1"></i> LIBROS
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Copia Libro</a></li>
+                            <li><a class="dropdown-item" href="#">Estado Copia Libro</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#"><i class="fa-solid fa-user-group me-1"></i> CLIENTES</a>
+                    </li>
+                </ul>
+
+                <!-- User dropdown -->
+                <div class="dropdown nav-link-custom position-relative">
+                    <div class="d-flex align-items-center ms-3 dropdown-toggle" role="button" id="userDropdown"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-user" style="padding-right: 35px; width:20px"></i>
+                        <div>
+                            <p class="profile-name mb-0">Yaret</p>
+                            <p class="profile-role mb-0">Administrador</p>
                         </div>
+                    </div>
 
-                        <div class="col columnaDere">
-                            <h3 class="titulo-datos">Datos</h3>
-                            <div class="form-group mb-3">
-                                <label for="usr">Título</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="usr">ISBN</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="usr">Fecha de publicación</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="usr">Clasificación de Edad</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="usr">Stock</label>
-                                <input type="text" class="form-control">
-                            </div>
-                            <div class="form-group mb-3">
-                                <label for="comment">Descripción</label>
-                                <textarea class="form-control" rows="5" id="comment"></textarea>
-                            </div>
+                    <div class="dropdown-menu dropdown-menu-end p-0 mt-2 profile-menu-card" aria-labelledby="userDropdown">
+                        <div class="profile-header px-3 py-2 d-flex justify-content-between align-items-start">
+                            <div></div>
+                            <span class="close-btn" onclick="document.getElementById('userDropdown').click()">x</span>
                         </div>
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-outline-cancelar"
-                                    data-bs-dismiss="modal">
-                                Cancelar
+                        <div class="profile-info px-3 py-3">
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="~/images/fotoperfil.jpg" alt="avatar" class="profile-img me-3">
+                                <a href="#" class="edit-profile-link">
+                                    <i class="fa-solid fa-pen-to-square me-1"></i> Editar Perfil
+                                </a>
+                            </div>
+                            <p class="profile-nombre mb-0">Yaret</p>
+                            <p class="profile-email text-muted mb-2">yarethgc@gmail.com</p>
+                            <button class="btn btn-outline-secondary w-100">
+                                <i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar Sesión
                             </button>
-                            <button type="button" class="btn btn-agregar-libro">Guardar</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </nav>
+
+    <!-- Page title -->
+    <div>
+        <h1 class="texto-libro">Libros</h1>
     </div>
-</div>
 
-<!-- Cards -->
-<div class="container mt-4 px-4">
-    <div class="row justify-content-center">
-        <div class="col-md-3 mb-4 g-4">
-            <div class="card shadow-sm">
-                <img src="/Libros/resources/Frankenstein.webp" class="card-img-top" alt="Frankenstein">
-                <div class="card-body text-start">
-                    <h6 class="card-title mb-1">Frankenstein</h6>
-                    <p class="card-text text-muted small">Mary Shelley</p>
-                </div>
+    <!-- Filters and search -->
+    <div class="row g-2 mb-3 justify-content-start filtros">
+        <!-- Search -->
+        <div class="position-relative" style="width: 255px;">
+            <i class="fa-solid fa-magnifying-glass position-absolute"
+               style="top: 50%; left: 8px; transform: translateY(-50%); color: #6c757d; font-size: 0.9rem;"></i>
+            <input type="text" class="form-control ps-4" placeholder="Buscar" style="padding-left: 30px;">
+        </div>
 
-                <!-- Botón modal -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                    Ver más
+        <!-- Sort dropdown -->
+        <div class="col-1">
+            <div class="dropdown border border-graydark rounded">
+                <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex text-secondary">
+                        <span>Ordenar por</span>
+                        <i class="bi bi-chevron-down ms-auto me-0"></i>
+                    </div>
                 </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)</a></li>
+                </ul>
+            </div>
+        </div>
 
-                <!-- Modal vista previa Frankenstein -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
-                    <div class="modal-dialog modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header"
-                                    style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
-                                <h1 class="modal-title fs-2" id="staticBackdropLabel"
-                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
-                                    Agregar libro
-                                </h1>
-                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
-                                        aria-label="Close"
-                                        style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;">
+        <!-- Filter dropdown -->
+        <div class="col-1">
+            <div class="dropdown border border-graydark rounded">
+                <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex text-secondary">
+                        <span>Filtrar por</span>
+                        <i class="bi bi-chevron-down ms-auto me-0"></i>
+                    </div>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2"></i>ISBN</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Título</a></li>
+                    <li><a class="dropdown-item" href="#"><i class="bi bi-calendar text-primary me-2"></i>Fecha</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Add book button -->
+        <div class="col d-flex justify-content-end botonagregar">
+            <button type="button" class="btn btn-agregar-libro d-flex align-items-center" data-bs-toggle="modal"
+                    data-bs-target="#addBookModal">
+                <i class="fa-solid fa-book me-1"></i>
+                <i class="fa-solid fa-plus me-1" style="font-size:10px;"></i>
+                Agregar libro
+            </button>
+        </div>
+    </div>
+
+    <!-- Add book modal -->
+    <div class="modal fade" id="addBookModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                    <h1 class="modal-title fs-2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                        Agregar libro
+                    </h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                            style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;"></button>
+                </div>
+                <form asp-controller="Libro" asp-action="Create" method="post" enctype="multipart/form-data" id="addBookForm">
+                    @Html.AntiForgeryToken()
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col columnaIzq">
+                                    <h4 class="titulo-imagen">Imagen</h4>
+                                    <div class="text-center">
+                                        <div class="position-relative bg-white border rounded shadow-sm" style="width: 300px; height: 400px;">
+                                            <img id="previewImg" src="~/images/no-image.png" alt="Vista previa" class="w-100 h-100" style="object-fit: contain;" />
+                                            <button type="button" class="btn btn-dark position-absolute"
+                                                    style="bottom: 10px; left: 10px; background-color: #8C2445; border: none;"
+                                                    onclick="document.getElementById('inputFile').click();">
+                                                <i class="fa-solid fa-upload"></i> Subir Imagen
+                                            </button>
+                                            <input type="file" id="inputFile" name="files" accept="image/*" style="display: none;" onchange="previewImage(this)">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col columnaDere">
+                                    <h3 class="titulo-datos">Datos</h3>
+                                    <div class="form-group mb-3">
+                                        <label for="titulo">Título <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="Titulo" id="titulo" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="isbn">ISBN <span class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" name="ISBN" id="isbn" required>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="fecha">Fecha de publicación</label>
+                                        <input type="date" class="form-control" name="FechaPublicacion" id="fecha">
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="clasificacion">Clasificación de Edad</label>
+                                        <input type="number" class="form-control" name="ClasificacionEdad" id="clasificacion" min="0">
+                                    </div>
+                                    <!-- NUEVO CAMPO: Stock inicial -->
+                                    <div class="form-group mb-3">
+                                        <label for="stock">Stock <span class="text-danger">*</span></label>
+                                        <input type="number" class="form-control" name="StockInicial" id="stock" min="0" value="0" required>
+                                        <small class="form-text text-muted">Cantidad inicial de copias disponibles</small>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <label for="descripcion">Descripción</label>
+                                        <textarea class="form-control" rows="5" id="descripcion" name="Descripcion"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-agregar-libro">
+                            <span class="spinner-border spinner-border-sm me-2 d-none" id="loadingSpinner"></span>
+                            Guardar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books cards -->
+    <div class="container mt-4 px-4" id="librosContainer">
+        <div class="row justify-content-center">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3 mb-4 g-4">
+                        <div class="card shadow-sm">
+                            <img src="@(string.IsNullOrEmpty(item.ImagenUrl) ? "/images/no-image.png" : item.ImagenUrl)"
+                                 alt="@item.Titulo" class="w-100 h-100" style="object-fit: contain;" />
+                            <div class="card-body text-start">
+                                <h6 class="card-title mb-1">@item.Titulo</h6>
+                                <p class="card-text text-muted small">ISBN: @item.ISBN</p>
+                            </div>
+                            <div class="card-footer">
+                                <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal-@item.IdLibro">
+                                    Ver más
                                 </button>
                             </div>
-                            <div class="modal-body">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col columnaIzq">
-                                            <h4 class="titulo-imagen">Imagen</h4>
-                                            <div class="text-center">
-                                                <div class="position-relative bg-white border rounded shadow-sm"
-                                                        style="width: 300px; height: 400px;">
-                                                    <img id="previewImg"
-                                                            src="/Libros/resources/Frankenstein.webp"
-                                                            alt="Vista previa" class="w-100 h-100"
-                                                            style="object-fit: contain;" />
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="d-grid gap-2 d-md-block contenedor-botones">
-                                                    <button class="btn btn-editar" type="button">
-                                                        <i class="fa-solid fa-pen-to-square"></i>
-                                                    </button>
-                                                    <button class="btn btn-eliminar" type="button">
-                                                        <i class="fa-solid fa-trash-can"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <div class="col columnaDere">
-                                            <h3 class="titulo-datos">Datos</h3>
-                                            <div class="form-group mb-3">
-                                                <label for="usr">Título</label>
-                                                <input type="text" class="form-control" value="Frankenstein"
-                                                        readonly>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label for="usr">ISBN</label>
-                                                <input type="text" class="form-control" value="9781234567897"
-                                                        readonly>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label for="usr">Fecha de publicación</label>
-                                                <input type="text" class="form-control" value="1/01/1818" readonly>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label for="usr">Clasificación de Edad</label>
-                                                <input type="text" class="form-control" value="+12" readonly>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label for="usr">Stock</label>
-                                                <input type="text" class="form-control" value="30" readonly>
-                                            </div>
-                                            <div class="form-group mb-3">
-                                                <label for="comment">Descripción</label>
-                                                <textarea class="form-control" rows="5" readonly>Marie Shelley
-La obra narra la historia de Víctor Frankenstein, un científico que crea una criatura grotesca a partir de partes de cadáveres. El monstruo, al ser rechazado por su creador y la sociedad, se vuelve vengativo y causa sufrimiento. La novela explora temas como la ética científica, la naturaleza de la monstruosidad y las consecuencias de jugar a ser dios.
-                                                </textarea>
+                            <!-- Detail modal for each book -->
+                            <div class="modal fade" id="detailModal-@item.IdLibro" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                                            <h1 class="modal-title fs-2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                                                Detalle del libro
+                                            </h1>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                                                    style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <div class="col columnaIzq">
+                                                        <h4 class="titulo-imagen">Imagen</h4>
+                                                        <div class="text-center">
+                                                            <div class="position-relative bg-white border rounded shadow-sm" style="width: 300px; height: 400px;">
+                                                                <img src="@(string.IsNullOrEmpty(item.ImagenUrl) ? "/images/no-image.png" : item.ImagenUrl)"
+                                                                     alt="@item.Titulo" class="w-100 h-100" style="object-fit: contain;" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="d-grid gap-2 d-md-block contenedor-botones">
+                                                                <a asp-controller="Libro" asp-action="Edit" asp-route-id="@item.IdLibro" class="btn btn-editar" type="button">
+                                                                    <i class="fa-solid fa-pen-to-square"></i>
+                                                                </a>
+                                                                <form asp-controller="Libro" asp-action="Delete" asp-route-id="@item.IdLibro" method="post" style="display: inline;">
+                                                                    <button type="submit" class="btn btn-eliminar" onclick="return confirm('¿Estás seguro de eliminar este libro?')">
+                                                                        <i class="fa-solid fa-trash-can"></i>
+                                                                    </button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col columnaDere">
+                                                        <h3 class="titulo-datos">Datos</h3>
+                                                        <div class="form-group mb-3">
+                                                            <label>Título</label>
+                                                            <input type="text" class="form-control" value="@item.Titulo" readonly>
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label>ISBN</label>
+                                                            <input type="text" class="form-control" value="@item.ISBN" readonly>
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label>Fecha de publicación</label>
+                                                            <input type="text" class="form-control" value="@(item.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "No especificada")" readonly>
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label>Clasificación de Edad</label>
+                                                            <input type="text" class="form-control" value="@(item.ClasificacionEdad?.ToString() ?? "No especificada")" readonly>
+                                                        </div>
+                                                        <!-- MOSTRAR EL STOCK ACTUAL -->
+                                                        <div class="form-group mb-3">
+                                                            <label>Stock</label>
+                                                            <input type="text" class="form-control"
+                                                                   value="@(item.Stock?.Cantidad?.ToString() ?? "0") copias disponibles"
+                                                                   readonly>
+                                                        </div>
+                                                        <div class="form-group mb-3">
+                                                            <label>Descripción</label>
+                                                            <textarea class="form-control" rows="5" readonly>@item.Descripcion</textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -254,29 +333,122 @@ La obra narra la historia de Víctor Frankenstein, un científico que crea una c
                             </div>
                         </div>
                     </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center">
+                    <div class="alert alert-info">
+                        <i class="fa-solid fa-info-circle me-2"></i>
+                        No hay libros disponibles. ¡Agrega tu primer libro!
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     </div>
 
-    <!-- Paginación -->
-    <nav aria-label="...">
+
+    <!-- Pagination -->
+    <nav aria-label="Paginación de libros">
         <ul class="pagination pagpersonalizada">
             <li class="page-item disabled">
                 <a class="page-link">Anterior</a>
             </li>
-            <li class="page-item active">
-                <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#" aria-current="page">2</a>
-            </li>
-            <li class="page-item">
-                <a class="page-link" href="#">3</a>
-            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
                 <a class="page-link" href="#">Siguiente</a>
             </li>
         </ul>
     </nav>
-</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            crossorigin="anonymous"></script>
+
+    <script>
+                // Preview de imagen
+                function previewImage(input) {
+                    if (input.files && input.files[0]) {
+                        const reader = new FileReader();
+                        reader.onload = function(e) {
+                            document.getElementById('previewImg').src = e.target.result;
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+
+                // Manejo del formulario
+                document.addEventListener('DOMContentLoaded', function() {
+                    const form = document.getElementById('addBookForm');
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const spinner = document.getElementById('loadingSpinner');
+
+                    // Mostrar spinner al enviar
+                    form.addEventListener('submit', function() {
+                        submitBtn.disabled = true;
+                        spinner.classList.remove('d-none');
+                        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Guardando...';
+                    });
+
+                    // Cerrar modal y limpiar formulario si hay éxito
+                    @if (TempData["Success"] != null)
+                    {
+                                            <text>
+                                            // Cerrar modal después de éxito
+                                            setTimeout(function() {
+                                                var modal = bootstrap.Modal.getInstance(document.getElementById('addBookModal'));
+                                                if (modal) {
+                                                    modal.hide();
+                                                }
+                                                // Limpiar formulario
+                                                document.getElementById('addBookForm').reset();
+                                                document.getElementById('previewImg').src = '~/images/no-image.png';
+                                            }, 100);
+                                            </text>
+                    }
+
+                    // Limpiar formulario al cerrar modal
+                    document.getElementById('addBookModal').addEventListener('hidden.bs.modal', function () {
+                        form.reset();
+                        document.getElementById('previewImg').src = '~/images/no-image.png';
+                        submitBtn.disabled = false;
+                        spinner.classList.add('d-none');
+                        submitBtn.innerHTML = 'Guardar';
+                    });
+
+                    // Auto-dismiss alerts después de 5 segundos
+                    setTimeout(function() {
+                        var alerts = document.querySelectorAll('.alert');
+                        alerts.forEach(function(alert) {
+                            var bsAlert = new bootstrap.Alert(alert);
+                            bsAlert.close();
+                        });
+                    }, 5000);
+                });
+
+                // Validación básica del formulario
+                function validateForm() {
+                    const titulo = document.getElementById('titulo').value.trim();
+                    const isbn = document.getElementById('isbn').value.trim();
+
+                    if (!titulo || !isbn) {
+                        alert('Por favor, completa los campos obligatorios (Título e ISBN).');
+                        return false;
+                    }
+                    return true;
+                }
+
+                // Agregar validación al formulario - DESHABILITADO PARA DEBUG
+        /*
+        document.getElementById('addBookForm').addEventListener('submit', function(e) {
+            if (!validateForm()) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        */
+    </script>
+</body>
+</html>
