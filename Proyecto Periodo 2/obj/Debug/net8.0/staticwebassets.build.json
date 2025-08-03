@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VWHMudLVxrT1DoAZayNpA9tPc/I3E6jRFOLfT70UYrI=",
+  "Hash": "UYBqU/Z2Ku7rBLctkeWG9hjtxFpqdfXeX5pm2x6Mmwg=",
   "Source": "Proyecto Periodo 2",
   "BasePath": "_content/Proyecto Periodo 2",
   "Mode": "Default",
@@ -2852,12 +2852,12 @@
       "OriginalItemSpec": "wwwroot\\Libros vistas\\styles.css"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Fondo-Login.jpg",
+      "Identity": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Fondo-Login.jpg",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
-      "RelativePath": "Login/resources/Fondo-Login#[.{fingerprint}]?.jpg",
+      "RelativePath": "Login/Imagenes/Fondo-Login#[.{fingerprint}]?.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2870,15 +2870,15 @@
       "Integrity": "9/RxwGCSnvvHkunP8313IwbLQyqOVYi7/oK80o6xV+g=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Login\\resources\\Fondo-Login.jpg"
+      "OriginalItemSpec": "wwwroot\\Login\\Imagenes\\Fondo-Login.jpg"
     },
     {
-      "Identity": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Logo.png",
+      "Identity": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Logo.png",
       "SourceId": "Proyecto Periodo 2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\",
       "BasePath": "_content/Proyecto Periodo 2",
-      "RelativePath": "Login/resources/Logo#[.{fingerprint}]?.png",
+      "RelativePath": "Login/Imagenes/Logo#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2891,7 +2891,7 @@
       "Integrity": "z4pG3ke69S9sZc5qm1yZn8kvEvkrbFHJUH27HbxIo1Y=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Login\\resources\\Logo.png"
+      "OriginalItemSpec": "wwwroot\\Login\\Imagenes\\Logo.png"
     },
     {
       "Identity": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\styles.css",
@@ -2908,8 +2908,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "2fkb7fvbla",
-      "Integrity": "4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k=",
+      "Fingerprint": "rtb0dad7j3",
+      "Integrity": "32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Login\\styles.css"
@@ -11207,8 +11207,8 @@
       ]
     },
     {
-      "Route": "Login/resources/Fondo-Login.hi7ghw9nn5.jpg",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Fondo-Login.jpg",
+      "Route": "Login/Imagenes/Fondo-Login.hi7ghw9nn5.jpg",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Fondo-Login.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11229,7 +11229,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
+          "Value": "Fri, 01 Aug 2025 13:55:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11243,7 +11243,7 @@
         },
         {
           "Name": "label",
-          "Value": "Login/resources/Fondo-Login.jpg"
+          "Value": "Login/Imagenes/Fondo-Login.jpg"
         },
         {
           "Name": "integrity",
@@ -11252,8 +11252,8 @@
       ]
     },
     {
-      "Route": "Login/resources/Fondo-Login.jpg",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Fondo-Login.jpg",
+      "Route": "Login/Imagenes/Fondo-Login.jpg",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Fondo-Login.jpg",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11274,7 +11274,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
+          "Value": "Fri, 01 Aug 2025 13:55:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11289,8 +11289,8 @@
       ]
     },
     {
-      "Route": "Login/resources/Logo.72wy4keyza.png",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Logo.png",
+      "Route": "Login/Imagenes/Logo.72wy4keyza.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11311,7 +11311,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
+          "Value": "Fri, 01 Aug 2025 13:55:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11325,7 +11325,7 @@
         },
         {
           "Name": "label",
-          "Value": "Login/resources/Logo.png"
+          "Value": "Login/Imagenes/Logo.png"
         },
         {
           "Name": "integrity",
@@ -11334,8 +11334,8 @@
       ]
     },
     {
-      "Route": "Login/resources/Logo.png",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Logo.png",
+      "Route": "Login/Imagenes/Logo.png",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Logo.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11356,7 +11356,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
+          "Value": "Fri, 01 Aug 2025 13:55:54 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11367,51 +11367,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-z4pG3ke69S9sZc5qm1yZn8kvEvkrbFHJUH27HbxIo1Y="
-        }
-      ]
-    },
-    {
-      "Route": "Login/styles.2fkb7fvbla.css",
-      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\styles.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "7185"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "2fkb7fvbla"
-        },
-        {
-          "Name": "label",
-          "Value": "Login/styles.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k="
         }
       ]
     },
@@ -11426,7 +11381,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "7185"
+          "Value": "7881"
         },
         {
           "Name": "Content-Type",
@@ -11434,11 +11389,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k=\""
+          "Value": "\"32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 01 Aug 2025 13:55:56 GMT"
+          "Value": "Sat, 02 Aug 2025 20:52:03 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11448,7 +11403,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-4hA4j75gtTHXe0KsVyo+Bcxp0BigAdTtR3cLMzSu64k="
+          "Value": "sha256-32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw="
+        }
+      ]
+    },
+    {
+      "Route": "Login/styles.rtb0dad7j3.css",
+      "AssetFile": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\styles.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7881"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 02 Aug 2025 20:52:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "rtb0dad7j3"
+        },
+        {
+          "Name": "label",
+          "Value": "Login/styles.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-32BuE8JMc1k+bWG9C04DaNu+NHtAqPKgPzel1v8+Vzw="
         }
       ]
     },

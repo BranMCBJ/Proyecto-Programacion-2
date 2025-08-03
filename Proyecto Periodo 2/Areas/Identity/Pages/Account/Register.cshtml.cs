@@ -43,11 +43,11 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
         {
             _userManager = userManager;
             _userStore = userStore;
-            _emailStore = GetEmailStore();
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
             _roleManager = roleManager;
+            _emailStore = GetEmailStore();
         }
 
         /// <summary>
@@ -160,7 +160,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     Nombre = Input.Nombre,
                     Apellido1 = Input.Apellido1,
                     Apellido2 = Input.Apellido2,
-                    UserName = Input.NombreUsuario,
+                    NombreUsuario = Input.NombreUsuario,
                     Email = Input.Email,
                     PhoneNumber = Input.Telefono,
                     Cedula = Input.Cedula,
@@ -170,10 +170,19 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-                var result = await _userManager.CreateAsync(user, Input.Contrasena);
+                var result = await _userManager.CreateAsync(user, Input.Contrasena); //aca se crea el usuario con la contraseña
 
                 if (result.Succeeded)
                 {
+                    if (User.IsInRole(WC.AdminRole))
+                    {
+                        await _userManager.AddToRoleAsync(user, WC.AdminRole);
+                    }
+                    else
+                    {
+                        await _userManager.AddToRoleAsync(user, WC.UserRole);
+                    }
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var userId = await _userManager.GetUserIdAsync(user);

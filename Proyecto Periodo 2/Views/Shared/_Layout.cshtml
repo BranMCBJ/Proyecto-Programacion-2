@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Proyecto_Periodo_2</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Proyecto_Periodo_2.styles.css" asp-append-version="true" />
 </head>
@@ -28,7 +28,10 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Usuario" asp-action="Index">Usuarios</a>
                         </li>
-                        <li><a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Registrer"></a> Gestion Usuarios</li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Login">Login</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

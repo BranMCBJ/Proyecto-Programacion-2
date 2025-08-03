@@ -65,12 +65,12 @@
       "PackagePath": "staticwebassets\\Libros vistas\\styles.css"
     },
     {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Fondo-Login.jpg",
-      "PackagePath": "staticwebassets\\Login\\resources\\Fondo-Login.jpg"
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Fondo-Login.jpg",
+      "PackagePath": "staticwebassets\\Login\\Imagenes\\Fondo-Login.jpg"
     },
     {
-      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\resources\\Logo.png",
-      "PackagePath": "staticwebassets\\Login\\resources\\Logo.png"
+      "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\Imagenes\\Logo.png",
+      "PackagePath": "staticwebassets\\Login\\Imagenes\\Logo.png"
     },
     {
       "Id": "C:\\Users\\cecil\\Desktop\\proyecto 2\\Proyecto Periodo 2\\wwwroot\\Login\\styles.css",

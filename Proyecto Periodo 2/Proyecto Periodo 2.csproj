@@ -39,8 +39,12 @@
     <Folder Include="wwwroot\HomeAministrador\Imagenes\" />
     <Folder Include="wwwroot\Home\Imagenes\" />
     <Folder Include="wwwroot\Libros vistas\Imagenes\" />
-    <Folder Include="wwwroot\Login\Imagenes\" />
     <Folder Include="wwwroot\Prestamos\Imagenes\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Login\Imagenes\Fondo-Login.jpg" />
+    <None Include="wwwroot\Login\Imagenes\Logo.png" />
   </ItemGroup>
 
 </Project>

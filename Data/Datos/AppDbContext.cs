@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Models;
 
@@ -20,7 +21,7 @@ namespace Data
         public DbSet<CopiaLibroPrestamo> CopiasLibrosPrestamos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Usuario>().ToTable("Usuarios");
+            //modelBuilder.Entity<Usuario>().ToTable("Usuarios");
             modelBuilder.Entity<Cliente>().ToTable("Clientes");
             modelBuilder.Entity<EstadoPrestamo>().ToTable("EstadoPrestamo");
             modelBuilder.Entity<Libro>().ToTable("Libros");

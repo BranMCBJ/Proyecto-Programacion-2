@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Data;
 using Microsoft.AspNetCore.Identity;
+using Models;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -42,6 +43,8 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
+app.MapRazorPages();
 
 app.MapControllerRoute(
     name: "default",

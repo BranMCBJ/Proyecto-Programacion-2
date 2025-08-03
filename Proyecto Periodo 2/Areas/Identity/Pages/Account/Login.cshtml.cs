@@ -14,18 +14,22 @@ using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
+using Data;
+using Models;
 
 namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 {
     public class LoginModel : PageModel
     {
+        private readonly AppDbContext _db;
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger)
+        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, AppDbContext db)
         {
             _signInManager = signInManager;
             _logger = logger;
+            _db = db;
         }
 
         /// <summary>
@@ -65,8 +69,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Required]
-            [EmailAddress]
-            public string Email { get; set; }
+            public string NombreUsuario { get; set; }
 
             /// <summary>
             ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
@@ -74,14 +77,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             /// </summary>
             [Required]
             [DataType(DataType.Password)]
-            public string Password { get; set; }
-
-            /// <summary>
-            ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
-            ///     directly from your code. This API may change or be removed in future releases.
-            /// </summary>
-            [Display(Name = "Remember me?")]
-            public bool RememberMe { get; set; }
+            public string Contrasena { get; set; }
         }
 
         public async Task OnGetAsync(string returnUrl = null)
@@ -109,22 +105,20 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
+                //busca el primer usuario que coincida con el input de nombre usuario
+                var usuario = _db.Usuarios.FirstOrDefault(u=> u.NombreUsuario == Input.NombreUsuario);
+
+                if(usuario == null)
+                {
+                    return NotFound();
+                }
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(Input.Email, Input.Password, Input.RememberMe, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent:false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
                     return LocalRedirect(returnUrl);
-                }
-                if (result.RequiresTwoFactor)
-                {
-                    return RedirectToPage("./LoginWith2fa", new { ReturnUrl = returnUrl, RememberMe = Input.RememberMe });
-                }
-                if (result.IsLockedOut)
-                {
-                    _logger.LogWarning("User account locked out.");
-                    return RedirectToPage("./Lockout");
                 }
                 else
                 {

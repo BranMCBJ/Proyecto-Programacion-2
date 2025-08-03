@@ -71,8 +71,8 @@ wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
 wwwroot\Libros vistas\resources\fotoperfil.jpg
 wwwroot\Libros vistas\resources\logo.png
 wwwroot\Libros vistas\styles.css
-wwwroot\Login\resources\Fondo-Login.jpg
-wwwroot\Login\resources\Logo.png
+wwwroot\Login\Imagenes\Fondo-Login.jpg
+wwwroot\Login\Imagenes\Logo.png
 wwwroot\Login\styles.css
 wwwroot\Prestamos\resources\fotoperfil.jpg
 wwwroot\Prestamos\resources\Gear.png

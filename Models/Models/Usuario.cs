@@ -5,8 +5,6 @@ namespace Models
 {
     public class Usuario : IdentityUser
     {
-        public string? Contrasena { get; set; }
-        [StringLength(10)]
         public string? Cedula { get; set; }
         [StringLength(50)]
         public string? Nombre { get; set; }
@@ -16,5 +14,7 @@ namespace Models
         public string? Apellido2 { get; set; }
         public bool? Activo { get; set; }
         public string? UrlImagen { get; set; }
+        [Required]
+        public string? NombreUsuario { get; set; }
     }
 }
