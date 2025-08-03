@@ -78,6 +78,10 @@ wwwroot\Prestamos\resources\fotoperfil.jpg
 wwwroot\Prestamos\resources\Gear.png
 wwwroot\Prestamos\resources\pasted-image.png
 wwwroot\Prestamos\styles.css
+wwwroot\Usuario\2569bae3-5f9e-4e9f-83db-309f84b58500.jpeg
+wwwroot\Usuario\2b0e2c13-20f1-43af-bf72-2bd075504d83.png
+wwwroot\Usuario\320452bb-3f82-49b9-a00b-5881ef25bccf.jpg
+wwwroot\Usuario\3f146400-7f00-4957-b51b-594901e018a1.jpeg
 wwwroot\Usuario\b67cbc60-eae6-4c2b-b576-9e05f1cd8a52.jpeg
 wwwroot\Usuario\bootstrap.css
 wwwroot\Usuario\d724626d-b41f-47d7-acec-8b85fe3f8de5.jpg

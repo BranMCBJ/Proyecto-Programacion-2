@@ -4195,11 +4195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\proyecto\\Models\\Models.csproj",
+      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Models\\Models.csproj",
       "projectName": "Models",
-      "projectPath": "C:\\Users\\cecil\\Desktop\\proyecto\\Models\\Models.csproj",
+      "projectPath": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Models\\Models.csproj",
       "packagesPath": "C:\\Users\\cecil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cecil\\Desktop\\proyecto\\Models\\obj\\",
+      "outputPath": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

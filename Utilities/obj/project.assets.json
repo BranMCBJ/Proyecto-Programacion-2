@@ -4195,11 +4195,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\proyecto\\Utilities\\Utilities.csproj",
+      "projectUniqueName": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
       "projectName": "Utilities",
-      "projectPath": "C:\\Users\\cecil\\Desktop\\proyecto\\Utilities\\Utilities.csproj",
+      "projectPath": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Utilities\\Utilities.csproj",
       "packagesPath": "C:\\Users\\cecil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cecil\\Desktop\\proyecto\\Utilities\\obj\\",
+      "outputPath": "C:\\Users\\cecil\\Desktop\\Proyecto 2\\Proyecto-Programacion-2\\Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
