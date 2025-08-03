@@ -106,15 +106,25 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             if (ModelState.IsValid)
             {
                 //busca el primer usuario que coincida con el input de nombre usuario
+<<<<<<< HEAD
                 var usuario = _db.Usuarios.FirstOrDefault(u=> u.NombreUsuario == Input.NombreUsuario);
 
                 if(usuario == null)
+=======
+                var usuario = _db.Usuarios.FirstOrDefault(u => u.NombreUsuario == Input.NombreUsuario);
+
+                if (usuario == null)
+>>>>>>> 0b0e43f (Login completo)
                 {
                     return NotFound();
                 }
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
+<<<<<<< HEAD
                 var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent:false, lockoutOnFailure: false);
+=======
+                var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent: false, lockoutOnFailure: false);
+>>>>>>> 0b0e43f (Login completo)
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");

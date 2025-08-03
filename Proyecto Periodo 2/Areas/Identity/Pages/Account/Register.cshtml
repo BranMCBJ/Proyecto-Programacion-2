@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +19,20 @@
 
     </head>
     <body>
+=======
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"
+          asp-append-version="true">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/Login/styles.css">
+
+</head>
+<body>
+>>>>>>> 0b0e43f (Login completo)
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-lg-10">
@@ -36,7 +51,11 @@
                     </div>
 
                     <!-- Formulario -->
+<<<<<<< HEAD
                     <form id="formCrearCuenta" method="post">
+=======
+                    <form id="formCrearCuenta" method="post" asp-route-returnUrl="/Identity/Account/Login" enctype="multipart/form-data">
+>>>>>>> 0b0e43f (Login completo)
                         @Html.AntiForgeryToken()
 
                         <div class="row g-3">
@@ -50,7 +69,11 @@
 
                             <div class="col-md-4 mb-4">
                                 <label asp-for="Input.Apellido1" class="form-label">Primer Apellido</label>
+<<<<<<< HEAD
                                 <input asp-for="Input.Apellido1"  type="text" class="form-control" placeholder="Ingrese su primer apellido" required>
+=======
+                                <input asp-for="Input.Apellido1" type="text" class="form-control" placeholder="Ingrese su primer apellido" required>
+>>>>>>> 0b0e43f (Login completo)
                                 <span asp-validation-for="Input.Apellido1" class="text-danger"></span>
                             </div>
 
@@ -105,6 +128,7 @@
                             <!-- Cuadro de imagen -->
                             <div class="col-md-4 d-flex align-items-center justify-content-center">
                                 <!-- Input oculto -->
+<<<<<<< HEAD
                                 <input asp-for="Input.UrlImagen" type="file" id="fileInput" accept="image/*" class="d-none" onchange="previewImage(event)">
                                 <span asp-validation-for="Input.UrlImagen" class="text-danger"></span>
 
@@ -115,6 +139,30 @@
                                 </div>
                             </div>
 
+=======
+                                <input type="file" name="files" id="fileInput" accept="image/*" class="d-none" onchange="previewImage(event)">
+                                <span asp-validation-for="Input.UrlImagen" class="text-danger"></span>
+
+                                <!-- Área interactiva -->
+                                <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
+                                     id="imagePreview"
+                                     onclick="document.getElementById('fileInput').click();"
+                                     style="cursor: pointer;">
+                                    @if (!string.IsNullOrEmpty(Model.Input?.UrlImagen))
+                                    {
+                                        <img src="@Url.Content("~/" + Model.Input.UrlImagen)"
+                                             class="img-fluid w-100 h-100 object-fit-cover rounded"
+                                             alt="Imagen actual" />
+                                    }
+                                    else
+                                    {
+                                        <i class="bi bi-plus-lg" style="font-size: 2rem;"></i>
+                                        <label asp-for="Input.UrlImagen" class="mt-2 text-muted">Haz clic para subir una imagen</label>
+                                    }
+                                </div>
+                            </div>
+                            <validation-summary asp-validation-summary="All" class="text-danger"></validation-summary>
+>>>>>>> 0b0e43f (Login completo)
                             <!-- Botón de crear cuenta -->
                             <div class="col-6 mx-auto mt-5">
                                 <button id="btnCrearCuenta" type="submit" class="btn-crear-cuenta w-100">Crear Cuenta</button>
@@ -153,7 +201,14 @@
                 }
             }
         </script>
+<<<<<<< HEAD
 
     }
     </body>
+=======
+        <partial name="_ValidationScriptsPartial" />
+
+    }
+</body>
+>>>>>>> 0b0e43f (Login completo)
 </html>

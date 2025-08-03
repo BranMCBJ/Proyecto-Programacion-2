@@ -20,6 +20,8 @@ using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using Utilities;
 using Models;
+using System.Diagnostics;
+using Microsoft.AspNetCore.Hosting;
 
 namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 {
@@ -32,6 +34,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
@@ -39,7 +42,8 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
-            RoleManager<IdentityRole> roleManager)
+            RoleManager<IdentityRole> roleManager,
+            IWebHostEnvironment webHostEnvironment)
         {
             _userManager = userManager;
             _userStore = userStore;
@@ -48,6 +52,10 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             _emailSender = emailSender;
             _roleManager = roleManager;
             _emailStore = GetEmailStore();
+<<<<<<< HEAD
+=======
+            _webHostEnvironment = webHostEnvironment;
+>>>>>>> 0b0e43f (Login completo)
         }
 
         /// <summary>
@@ -151,29 +159,62 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
+            Debug.WriteLine("Entra al método");
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+                // Manejo de la imagen
+
+                var files = HttpContext.Request.Form.Files;
+                if (files.Count > 0)
+                {
+                    string webRootPath = _webHostEnvironment.WebRootPath;
+                    string upload = Path.Combine(webRootPath, WC.ImagenUsuario.TrimStart('\\'));
+                    Directory.CreateDirectory(upload);
+
+                    string fileName = Guid.NewGuid().ToString();
+                    string extension = Path.GetExtension(files[0].FileName);
+                    string fullPath = Path.Combine(upload, fileName + extension);
+
+                    // Guardar archivo en disco
+                    using (var fileStream = new FileStream(fullPath, FileMode.Create))
+                    {
+                        files[0].CopyTo(fileStream);
+                    }
+
+                    //ruta relativa de UrlImagen
+                    Input.UrlImagen = Path.Combine(WC.ImagenUsuario.TrimStart('\\'), fileName + extension);
+                }
+                Debug.WriteLine("ModelState no exploto");
+                
                 var user = new Usuario()
                 {
                     Nombre = Input.Nombre,
                     Apellido1 = Input.Apellido1,
                     Apellido2 = Input.Apellido2,
                     NombreUsuario = Input.NombreUsuario,
+<<<<<<< HEAD
+=======
+                    UserName = Input.NombreUsuario,
+>>>>>>> 0b0e43f (Login completo)
                     Email = Input.Email,
                     PhoneNumber = Input.Telefono,
                     Cedula = Input.Cedula,
                     UrlImagen = Input.UrlImagen,
                     Activo = true
                 };
+<<<<<<< HEAD
 
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
+=======
+>>>>>>> 0b0e43f (Login completo)
                 var result = await _userManager.CreateAsync(user, Input.Contrasena); //aca se crea el usuario con la contraseña
 
                 if (result.Succeeded)
                 {
+<<<<<<< HEAD
                     if (User.IsInRole(WC.AdminRole))
                     {
                         await _userManager.AddToRoleAsync(user, WC.AdminRole);
@@ -198,23 +239,31 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                         $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
+=======
+                    Debug.WriteLine("No esplota");
+                    if (User.IsInRole(WC.AdminRole))
+>>>>>>> 0b0e43f (Login completo)
                     {
-                        return RedirectToPage("RegisterConfirmation", new { email = Input.Email, returnUrl = returnUrl });
+                        await _userManager.AddToRoleAsync(user, WC.AdminRole);
                     }
                     else
                     {
-                        await _signInManager.SignInAsync(user, isPersistent: false);
-                        return LocalRedirect(returnUrl);
+                        await _userManager.AddToRoleAsync(user, WC.UserRole);
                     }
+                    // Usuario creado exitosamente
+                    return LocalRedirect(returnUrl);
                 }
-                foreach (var error in result.Errors)
+                else
                 {
-                    ModelState.AddModelError(string.Empty, error.Description);
-                }
+                    Debug.WriteLine("Si esplota");
+                    foreach (var error in result.Errors)
+                    {
+                        Debug.WriteLine($"Error: {error.Description}");
+                    }
+                }  
             }
-
-            // If we got this far, something failed, redisplay form
-            return Page();
+                // If we got this far, something failed, redisplay form
+                return Page();
         }
 
         private IdentityUser CreateUser()

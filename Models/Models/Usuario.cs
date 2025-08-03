@@ -14,7 +14,11 @@ namespace Models
         public string? Apellido2 { get; set; }
         public bool? Activo { get; set; }
         public string? UrlImagen { get; set; }
+<<<<<<< HEAD
         [Required]
+=======
+
+>>>>>>> 0b0e43f (Login completo)
         public string? NombreUsuario { get; set; }
     }
 }
