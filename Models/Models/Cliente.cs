@@ -17,8 +17,11 @@ namespace Models
         [StringLength(50)]
         public string? Correo { get; set; }
         [StringLength(15)]
-        public string? Telefono { get; set; }
+        public string? Telefono { get; set; }        
         public int? CantidadPrestamosDisponibles { get; set; }
         public bool? Activo { get; set; }
+
+        [StringLength(300)]
+        public string? URLImagen { get; set; }
     }
 }

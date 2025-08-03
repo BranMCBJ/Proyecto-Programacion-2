@@ -1,0 +1,280 @@
+<!-- Body de la página -->
+<div>
+    <h1 class="texto-libro">Libros</h1>
+</div>
+
+<!-- Filtros y búsqueda -->
+<div class="row g-2 mb-3 justify-content-start filtros">
+    <!-- Buscar -->
+    <div class="position-relative" style="width: 255px;">
+        <i class="fa-solid fa-magnifying-glass position-absolute"
+            style="top: 50%; left: 8px; transform: translateY(-50%); color: #6c757d; font-size: 0.9rem;"></i>
+        <input type="text" class="form-control ps-4" placeholder="Buscar" style="padding-left: 30px;">
+    </div>
+
+    <!-- Ordenar por -->
+    <div class="col-1">
+        <div class="dropdown border border-graydark rounded">
+            <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="d-flex text-secondary">
+                    <span>Ordenar por</span>
+                    <i class="bi bi-chevron-down ms-auto me-0"></i>
+                </div>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Filtrar por -->
+    <div class="col-1">
+        <div class="dropdown border border-graydark rounded">
+            <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="d-flex text-secondary">
+                    <span>Filtrar por</span>
+                    <i class="bi bi-chevron-down ms-auto me-0"></i>
+                </div>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-regular fa-id-card text-primary me-2"></i>Cédula
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa-regular fa-envelope text-primary me-2"></i>Correo
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="bi bi-fonts text-primary me-2"></i>Nombre
+                    </a>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Botón agregar -->
+    <div class="col d-flex justify-content-end botonagregar">
+        <button type="button" class="btn btn-agregar-libro d-flex align-items-center" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+            <i class="fa-solid fa-book me-1"></i>
+            <i class="fa-solid fa-plus me-1" style="font-size:10px;"></i>
+            Agregar libro
+        </button>
+    </div>
+</div>
+
+<!-- Modal agregar libro -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+            <div class="modal-header"
+                    style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                <h1 class="modal-title fs-2" id="staticBackdropLabel"
+                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                    Agregar libro
+                </h1>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                        style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;">
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col columnaIzq">
+                            <h4 class="titulo-imagen">Imagen</h4>
+                            <div class="text-center">
+                                <div class="position-relative bg-white border rounded shadow-sm"
+                                        style="width: 300px; height: 400px;">
+                                    <img id="previewImg" src="" alt="Vista previa" class="w-100 h-100"
+                                            style="object-fit: contain;" />
+                                    <button type="button" class="btn btn-dark position-absolute"
+                                            style="bottom: 10px; left: 10px; background-color: #8C2445; border: none;"
+                                            onclick="document.getElementById('inputFile').click();">
+                                        <i class="fa-solid fa-upload"></i> Subir Imagen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col columnaDere">
+                            <h3 class="titulo-datos">Datos</h3>
+                            <div class="form-group mb-3">
+                                <label for="usr">Título</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="usr">ISBN</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="usr">Fecha de publicación</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="usr">Clasificación de Edad</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="usr">Stock</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="comment">Descripción</label>
+                                <textarea class="form-control" rows="5" id="comment"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-cancelar"
+                                    data-bs-dismiss="modal">
+                                Cancelar
+                            </button>
+                            <button type="button" class="btn btn-agregar-libro">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Cards -->
+<div class="container mt-4 px-4">
+    <div class="row justify-content-center">
+        <div class="col-md-3 mb-4 g-4">
+            <div class="card shadow-sm">
+                <img src="/Libros/resources/Frankenstein.webp" class="card-img-top" alt="Frankenstein">
+                <div class="card-body text-start">
+                    <h6 class="card-title mb-1">Frankenstein</h6>
+                    <p class="card-text text-muted small">Mary Shelley</p>
+                </div>
+
+                <!-- Botón modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                    Ver más
+                </button>
+
+                <!-- Modal vista previa Frankenstein -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header"
+                                    style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                                <h1 class="modal-title fs-2" id="staticBackdropLabel"
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                                    Agregar libro
+                                </h1>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                        aria-label="Close"
+                                        style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;">
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col columnaIzq">
+                                            <h4 class="titulo-imagen">Imagen</h4>
+                                            <div class="text-center">
+                                                <div class="position-relative bg-white border rounded shadow-sm"
+                                                        style="width: 300px; height: 400px;">
+                                                    <img id="previewImg"
+                                                            src="/Libros/resources/Frankenstein.webp"
+                                                            alt="Vista previa" class="w-100 h-100"
+                                                            style="object-fit: contain;" />
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="d-grid gap-2 d-md-block contenedor-botones">
+                                                    <button class="btn btn-editar" type="button">
+                                                        <i class="fa-solid fa-pen-to-square"></i>
+                                                    </button>
+                                                    <button class="btn btn-eliminar" type="button">
+                                                        <i class="fa-solid fa-trash-can"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col columnaDere">
+                                            <h3 class="titulo-datos">Datos</h3>
+                                            <div class="form-group mb-3">
+                                                <label for="usr">Título</label>
+                                                <input type="text" class="form-control" value="Frankenstein"
+                                                        readonly>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="usr">ISBN</label>
+                                                <input type="text" class="form-control" value="9781234567897"
+                                                        readonly>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="usr">Fecha de publicación</label>
+                                                <input type="text" class="form-control" value="1/01/1818" readonly>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="usr">Clasificación de Edad</label>
+                                                <input type="text" class="form-control" value="+12" readonly>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="usr">Stock</label>
+                                                <input type="text" class="form-control" value="30" readonly>
+                                            </div>
+                                            <div class="form-group mb-3">
+                                                <label for="comment">Descripción</label>
+                                                <textarea class="form-control" rows="5" readonly>Marie Shelley
+La obra narra la historia de Víctor Frankenstein, un científico que crea una criatura grotesca a partir de partes de cadáveres. El monstruo, al ser rechazado por su creador y la sociedad, se vuelve vengativo y causa sufrimiento. La novela explora temas como la ética científica, la naturaleza de la monstruosidad y las consecuencias de jugar a ser dios.
+                                                </textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Paginación -->
+    <nav aria-label="...">
+        <ul class="pagination pagpersonalizada">
+            <li class="page-item disabled">
+                <a class="page-link">Anterior</a>
+            </li>
+            <li class="page-item active">
+                <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#" aria-current="page">2</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">3</a>
+            </li>
+            <li class="page-item">
+                <a class="page-link" href="#">Siguiente</a>
+            </li>
+        </ul>
+    </nav>
+</div>

@@ -17,7 +17,7 @@ namespace Data
         public DbSet<CopiaLibro> CopiasLibros { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<EstadoCopiaLibro> EstadoCopiaLibro { get; set; }
-        public DbSet<Prestamo> Prestamo { get; set; }
+        public DbSet<Prestamo> Prestamos { get; set; }
         public DbSet<CopiaLibroPrestamo> CopiasLibrosPrestamos { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

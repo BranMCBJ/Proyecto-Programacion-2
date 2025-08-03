@@ -1,212 +1,246 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Data;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Data;
 using Models;
+using Utilities;
 
 namespace Proyecto_Periodo_2.Controllers
 {
     public class ClienteController : Controller
     {
-        private readonly AppDbContext _db;
+        private readonly AppDbContext db;
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public ClienteController(AppDbContext db)
+        public ClienteController(AppDbContext _db, IWebHostEnvironment _webHostEnvironment)
         {
-            _db = db;
+            db = _db;
+            webHostEnvironment = _webHostEnvironment;
         }
 
-        // GET: UsuarioController - Listar todos los Clientes activos
         public ActionResult Index()
         {
-            try
-            {
-                IEnumerable<Cliente> listaClientes = _db.Clientes.Where(c => c.Activo == true);
-                return View(listaClientes);
-            }
-            catch (Exception)
-            {
-                // En caso de error, retorna una lista vacía
-                return View(new List<Cliente>());
-            }
-        }
-
-        // GET: 
-        public ActionResult Details(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
+            IEnumerable<Models.ViewModels.Cliente> clientes = db.Clientes
+                .Where(c => c.Activo == true)
+                .Select(c => new Models.ViewModels.Cliente
                 {
-                    return NotFound();
-                }
+                    IdCliente = c.IdCliente,
+                    Cedula = c.Cedula,
+                    Nombre = c.Nombre,
+                    Apellido1 = c.Apellido1,
+                    Apellido2 = c.Apellido2,
+                    Correo = c.Correo,
+                    Telefono = c.Telefono,
+                    CantidadPrestamosDisponibles = c.CantidadPrestamosDisponibles,
+                    Activo = c.Activo,
+                    URLImagen = c.URLImagen
+                }).ToList();
 
-                var cliente = _db.Clientes.Find(id); //El método Find() busca una entidad por su clave primaria(id).
-                if (cliente == null || cliente.Activo != true)
-                {
-                    return NotFound();
-                }
-
-                return View(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
+            return View(clientes);
         }
 
-        // GET: 
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: UsuarioController/Create - Crear nuevo usuario
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Cliente cliente)
+        public ActionResult Create(Cliente cliente, IFormFile ImageFile)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
-                    // Verificar si ya existe un Clientes con el mismo nombre de usuario o cédula
-                    var ClientesExistente = _db.Clientes
-                        .FirstOrDefault(u => u.Nombre == cliente.Nombre ||
-                                           u.Cedula == cliente.Cedula);
+                    var clienteExistente = db.Clientes
+                        .FirstOrDefault(u => (u.Nombre == cliente.Nombre ||
+                                             u.Cedula == cliente.Cedula) && u.Activo == true);
 
-                    if (ClientesExistente != null)
+                    if (clienteExistente != null)
                     {
-                        ModelState.AddModelError("", "Ya existe un Cliente con ese nombre de usuario o cédula.");
-                        return View(cliente);
+                        TempData["Error"] = "Ya existe un Cliente con ese nombre o cédula.";
+                        return RedirectToAction(nameof(Index));
                     }
 
-                    //si no
                     cliente.Activo = true;
 
-                    _db.Clientes.Add(cliente);
-                    _db.SaveChanges();
+                    // Manejo de la imagen
+                    if (ImageFile != null && ImageFile.Length > 0)
+                    {
+                        // Validar tipo de archivo
+                        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                        var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
+                        
+                        if (!allowedExtensions.Contains(extension))
+                        {
+                            TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                            return RedirectToAction(nameof(Index));
+                        }
 
+                        // Validar tamaño (máximo 5MB)
+                        if (ImageFile.Length > 5 * 1024 * 1024)
+                        {
+                            TempData["Error"] = "El archivo de imagen no puede superar los 5MB.";
+                            return RedirectToAction(nameof(Index));
+                        }
 
+                        string webRootPath = webHostEnvironment.WebRootPath;
+                        string upload = Path.Combine(webRootPath, "Clientes", "images");
+                        
+                        if (!Directory.Exists(upload))
+                        {
+                            Directory.CreateDirectory(upload);
+                        }
+                        
+                        string fileName = Guid.NewGuid().ToString() + extension;
+
+                        using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
+                        {
+                            ImageFile.CopyTo(fileStream);
+                        }
+
+                        cliente.URLImagen = fileName;
+                    }
+
+                    db.Clientes.Add(cliente);
+                    db.SaveChanges();
+
+                    TempData["Exito"] = "Cliente creado correctamente.";
                     return RedirectToAction(nameof(Index));
                 }
-                return View(cliente);
+                
+                // Si el modelo no es válido, mostrar errores específicos
+                var errores = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                TempData["Error"] = "Datos inválidos: " + string.Join(", ", errores);
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Error al crear un Cliente");
-                return View(cliente);
+                TempData["Error"] = "Error al crear el Cliente: " + ex.Message;
+                return RedirectToAction(nameof(Index));
             }
         }
 
-        // GET: 
-        public ActionResult Edit(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var cliente = _db.Clientes.Find(id);
-                if (cliente == null)
-                {
-                    return NotFound();
-                }
-
-                return View(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
-        // POST: 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Cliente cliente)
+        public ActionResult Edit(Cliente cliente, IFormFile ImageFile)
         {
             try
             {
-                if (ModelState.IsValid)
+                // Debug: Log valores recibidos
+                System.Diagnostics.Debug.WriteLine($"Edit llamado - ID: {cliente.IdCliente}, Nombre: {cliente.Nombre}, Cedula: {cliente.Cedula}");
+                
+                var clienteDb = db.Clientes.Find(cliente.IdCliente);
+                if (clienteDb == null)
                 {
-                    var ClientesExistente = _db.Clientes
-                      .FirstOrDefault(u => u.Nombre == cliente.Nombre ||
-                                          u.Cedula == cliente.Cedula);
-
-                    if (ClientesExistente != null)
-                    {
-                        ModelState.AddModelError("", "Ya existe un Cliente con ese nombre de usuario o cédula.");
-                        return View(cliente);
-                    }
-                    //actualizar
-                    _db.Clientes.Update(cliente);
-                    _db.SaveChanges();
-
-                    //TempData["Mensaje"] = "Usuario actualizado exitosamente";
+                    TempData["Error"] = "No se encontró el cliente especificado.";
                     return RedirectToAction(nameof(Index));
                 }
-                return View(cliente);
+
+                var cedulaExistente = db.Clientes
+                    .Any(c => c.Cedula == cliente.Cedula && c.IdCliente != cliente.IdCliente);
+                if (cedulaExistente)
+                {
+                    TempData["Error"] = "Ya existe un cliente con la misma cédula.";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                // Actualizar datos básicos
+                clienteDb.Nombre = cliente.Nombre;
+                clienteDb.Apellido1 = cliente.Apellido1;
+                clienteDb.Apellido2 = cliente.Apellido2;
+                clienteDb.Cedula = cliente.Cedula;
+                clienteDb.Correo = cliente.Correo;
+                clienteDb.Telefono = cliente.Telefono;
+                clienteDb.CantidadPrestamosDisponibles = cliente.CantidadPrestamosDisponibles;
+
+                // Manejo de la nueva imagen si se proporcionó
+                if (ImageFile != null && ImageFile.Length > 0)
+                {
+                    // Validar tipo de archivo
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                    var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
+                    
+                    if (!allowedExtensions.Contains(extension))
+                    {
+                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    // Validar tamaño (máximo 5MB)
+                    if (ImageFile.Length > 5 * 1024 * 1024)
+                    {
+                        TempData["Error"] = "El archivo de imagen no puede superar los 5MB.";
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    string webRootPath = webHostEnvironment.WebRootPath;
+                    string upload = Path.Combine(webRootPath, "Clientes", "images");
+                    
+                    if (!Directory.Exists(upload))
+                    {
+                        Directory.CreateDirectory(upload);
+                    }
+
+                    // Eliminar la imagen anterior si existe
+                    if (!string.IsNullOrEmpty(clienteDb.URLImagen))
+                    {
+                        string oldImagePath = Path.Combine(upload, clienteDb.URLImagen);
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+                    
+                    string fileName = Guid.NewGuid().ToString() + extension;
+
+                    using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
+                    {
+                        ImageFile.CopyTo(fileStream);
+                    }
+
+                    clienteDb.URLImagen = fileName;
+                }
+
+                db.Clientes.Update(clienteDb);
+                db.SaveChanges();
+
+                TempData["Exito"] = "Cliente actualizado correctamente.";
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (DbUpdateException dbEx)
             {
-                ModelState.AddModelError("", "Error al actualizar el Cliente");
-                return View(cliente);
+                TempData["Error"] = "Error en la base de datos al editar el cliente: " + dbEx.Message;
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Ocurrió un error inesperado: " + ex.Message;
+                return RedirectToAction(nameof(Index));
             }
         }
 
-        // GET: eliminación
-        public ActionResult Delete(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var cliente = _db.Clientes.Find(id);
-                if (cliente == null)
-                {
-                    return NotFound();
-                }
-
-                return View(cliente);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
-        // POST:  Eliminar  
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
         {
             try
             {
-                var cliente = _db.Clientes.Find(id);
+                var cliente = db.Clientes.Find(id);
                 if (cliente != null)
                 {
-                    //cambiar Activo a false
                     cliente.Activo = false;
-                    _db.Clientes.Update(cliente);
-                    _db.SaveChanges();
-
-
+                    db.Clientes.Update(cliente);
+                    db.SaveChanges();
+                    TempData["Exito"] = "Cliente eliminado correctamente.";
                 }
-
+                else
+                {
+                    TempData["Error"] = "No se encontró el cliente especificado.";
+                }
                 return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Error al Eliminar el Cliente");
+                TempData["Error"] = "Error al eliminar el cliente: " + ex.Message;
                 return RedirectToAction(nameof(Index));
             }
         }
-
     }
 }

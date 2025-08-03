@@ -1,30 +1,15 @@
-C:\Users\cecil\Desktop\proyecto 2\Models\bin\Debug\net8.0\Models.deps.json
-C:\Users\cecil\Desktop\proyecto 2\Models\bin\Debug\net8.0\Models.dll
-C:\Users\cecil\Desktop\proyecto 2\Models\bin\Debug\net8.0\Models.pdb
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.csproj.AssemblyReference.cache
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.AssemblyInfoInputs.cache
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.AssemblyInfo.cs
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.csproj.CoreCompileInputs.cache
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.sourcelink.json
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.dll
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\refint\Models.dll
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.pdb
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\ref\Models.dll
-C:\Users\cecil\Desktop\proyecto 2\Models\bin\Debug\net8.0\Models.runtimeconfig.json
-C:\Users\cecil\Desktop\proyecto 2\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\bin\Debug\net8.0\Models.deps.json
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\bin\Debug\net8.0\Models.runtimeconfig.json
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\bin\Debug\net8.0\Models.dll
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\bin\Debug\net8.0\Models.pdb
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.csproj.AssemblyReference.cache
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.AssemblyInfoInputs.cache
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.AssemblyInfo.cs
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.csproj.CoreCompileInputs.cache
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.sourcelink.json
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.dll
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\refint\Models.dll
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.pdb
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
-C:\Users\Bran\Desktop\Proyecto Programacion\Models\obj\Debug\net8.0\ref\Models.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\bin\Debug\net8.0\Models.deps.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\bin\Debug\net8.0\Models.runtimeconfig.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\bin\Debug\net8.0\Models.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\bin\Debug\net8.0\Models.pdb
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.csproj.AssemblyReference.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.AssemblyInfoInputs.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.AssemblyInfo.cs
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.csproj.CoreCompileInputs.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.sourcelink.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\refint\Models.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.pdb
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\Models.genruntimeconfig.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Models\obj\Debug\net8.0\ref\Models.dll

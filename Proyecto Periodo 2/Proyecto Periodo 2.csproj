@@ -8,10 +8,31 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\Home\Imagenes\**" />
     <Compile Remove="wwwroot\imagenes\**" />
+    <Compile Remove="wwwroot\Libros\Imagenes\**" />
+    <Compile Remove="wwwroot\Login\Imagenes\**" />
+    <Compile Remove="wwwroot\Prestamos\Imagenes\**" />
+    <Content Remove="wwwroot\Home\Imagenes\**" />
     <Content Remove="wwwroot\imagenes\**" />
+    <Content Remove="wwwroot\Libros\Imagenes\**" />
+    <Content Remove="wwwroot\Login\Imagenes\**" />
+    <Content Remove="wwwroot\Prestamos\Imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\Home\Imagenes\**" />
     <EmbeddedResource Remove="wwwroot\imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\Libros\Imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\Login\Imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\Prestamos\Imagenes\**" />
+    <None Remove="wwwroot\Home\Imagenes\**" />
     <None Remove="wwwroot\imagenes\**" />
+    <None Remove="wwwroot\Libros\Imagenes\**" />
+    <None Remove="wwwroot\Login\Imagenes\**" />
+    <None Remove="wwwroot\Prestamos\Imagenes\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\Libros\resources\fotoperfil.jpg" />
+    <Content Remove="wwwroot\Libros\resources\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -35,11 +56,27 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Home\resources\ArbolHome.png" />
+    <None Include="wwwroot\Home\resources\fondoHomepage.png" />
+    <None Include="wwwroot\Home\resources\hoja.png" />
+    <None Include="wwwroot\Home\resources\Logo.png" />
+    <None Include="wwwroot\Home\stylesAdministrador.css" />
+    <None Include="wwwroot\Libros\styles.css" />
+    <None Include="wwwroot\fotoperfil.jpg" />
+    <None Include="wwwroot\Libros\resources\Frankenstein.webp" />
+    <None Include="wwwroot\logo.png" />
+    <None Include="wwwroot\Login\styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="wwwroot\Clientes\Imagenes\" />
+<<<<<<< HEAD
     <Folder Include="wwwroot\HomeAministrador\Imagenes\" />
     <Folder Include="wwwroot\Home\Imagenes\" />
     <Folder Include="wwwroot\Libros vistas\Imagenes\" />
     <Folder Include="wwwroot\Prestamos\Imagenes\" />
+=======
+>>>>>>> 844d8f8d1d591315cd36afe4e222b6d807de994b
   </ItemGroup>
 
   <ItemGroup>

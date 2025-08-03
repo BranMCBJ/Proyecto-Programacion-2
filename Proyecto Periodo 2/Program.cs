@@ -38,6 +38,8 @@ if (!app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+// Configuración de archivos estáticos
 app.UseStaticFiles();
 
 app.UseRouting();
