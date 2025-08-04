@@ -7,14 +7,7 @@ using Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews(options =>
-{
-    // Require authentication for all controllers and actions by default
-    var policy = new Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder()
-        .RequireAuthenticatedUser()
-        .Build();
-    options.Filters.Add(new Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter(policy));
-});
+builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(options =>
 options.UseSqlServer(
     builder.Configuration.GetConnectionString("DefaultConnection")));

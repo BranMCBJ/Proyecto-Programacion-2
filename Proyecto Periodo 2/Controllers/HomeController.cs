@@ -19,7 +19,6 @@ public class HomeController : Controller
         db = _db;
     }
 
-    [AllowAnonymous] // Permitir acceso público a la página principal
     public IActionResult Index()
     {
         Models.ViewModels.Home home = new Models.ViewModels.Home
