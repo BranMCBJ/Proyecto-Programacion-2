@@ -1458,6 +1458,78 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Proyecto Periodo 2.rvfk8gxkxf.bundle.scp.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\2569bae3-5f9e-4e9f-83db-309f84b58500.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Proyecto Periodo 2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Proyecto Periodo 2</BasePath>
+      <RelativePath>Usuario/2569bae3-5f9e-4e9f-83db-309f84b58500.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6fbsazhv09</Fingerprint>
+      <Integrity>LlF5W9J3mnj9FKPcTKVNH6wXpLkhDYjOXkRjahvOWuI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\2569bae3-5f9e-4e9f-83db-309f84b58500.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\2b0e2c13-20f1-43af-bf72-2bd075504d83.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Proyecto Periodo 2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Proyecto Periodo 2</BasePath>
+      <RelativePath>Usuario/2b0e2c13-20f1-43af-bf72-2bd075504d83.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>72wy4keyza</Fingerprint>
+      <Integrity>z4pG3ke69S9sZc5qm1yZn8kvEvkrbFHJUH27HbxIo1Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\2b0e2c13-20f1-43af-bf72-2bd075504d83.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\320452bb-3f82-49b9-a00b-5881ef25bccf.jpg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Proyecto Periodo 2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Proyecto Periodo 2</BasePath>
+      <RelativePath>Usuario/320452bb-3f82-49b9-a00b-5881ef25bccf.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>hi7ghw9nn5</Fingerprint>
+      <Integrity>9/RxwGCSnvvHkunP8313IwbLQyqOVYi7/oK80o6xV+g=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\320452bb-3f82-49b9-a00b-5881ef25bccf.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\3f146400-7f00-4957-b51b-594901e018a1.jpeg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>Proyecto Periodo 2</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Proyecto Periodo 2</BasePath>
+      <RelativePath>Usuario/3f146400-7f00-4957-b51b-594901e018a1.jpeg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oecmtlq7lg</Fingerprint>
+      <Integrity>UPk23lCkSmdUy65wTO9IYj/1Re0mMqUE7Czn7BMWq2s=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\3f146400-7f00-4957-b51b-594901e018a1.jpeg'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Usuario\b67cbc60-eae6-4c2b-b576-9e05f1cd8a52.jpeg'))">
       <SourceType>Package</SourceType>
       <SourceId>Proyecto Periodo 2</SourceId>

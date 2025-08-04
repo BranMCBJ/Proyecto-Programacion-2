@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using Data;
 using Models;
+using System.Diagnostics;
 
 namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 {
@@ -105,16 +106,9 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
 
             if (ModelState.IsValid)
             {
-                //busca el primer usuario que coincida con el input de nombre usuario
-                var usuario = _db.Usuarios.FirstOrDefault(u => u.NombreUsuario == Input.NombreUsuario);
-
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
                 // This doesn't count login failures towards account lockout
                 // To enable password failures to trigger account lockout, set lockoutOnFailure: true
-                var result = await _signInManager.PasswordSignInAsync(usuario.Email, Input.Contrasena, isPersistent: false, lockoutOnFailure: false);
+                var result = await _signInManager.PasswordSignInAsync(Input.NombreUsuario, Input.Contrasena, isPersistent: false, lockoutOnFailure: false);
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User logged in.");
@@ -125,7 +119,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     ModelState.AddModelError(string.Empty, "Invalid login attempt.");
                     return Page();
                 }
-            }
+            };
 
             // If we got this far, something failed, redisplay form
             return Page();
