@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Data;
@@ -8,6 +9,7 @@ using Cliente = Models.Cliente;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    [Authorize] // Requiere autenticación para todo el controlador
     public class PrestamoController : Controller
     {
         private readonly AppDbContext db;

@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Data;
 using Models;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    [Authorize] // Requiere autenticación para todo el controlador
     public class StockController : Controller
     {
         private readonly AppDbContext _db;

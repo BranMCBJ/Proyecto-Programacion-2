@@ -1,4 +1,5 @@
 ﻿using Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -8,6 +9,7 @@ using Utilities;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    [Authorize] // Requiere autenticación para todo el controlador
     public class ClienteController : Controller
     {
         private readonly AppDbContext db;

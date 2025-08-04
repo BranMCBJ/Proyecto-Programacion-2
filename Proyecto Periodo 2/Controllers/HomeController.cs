@@ -2,10 +2,12 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 using Models;
 
 namespace Proyecto_Periodo_2.Controllers;
 
+[Authorize] // Requiere autenticación para todo el controlador
 public class HomeController : Controller
 {
     private readonly AppDbContext db;
@@ -17,6 +19,7 @@ public class HomeController : Controller
         db = _db;
     }
 
+    [AllowAnonymous] // Permitir acceso público a la página principal
     public IActionResult Index()
     {
         Models.ViewModels.Home home = new Models.ViewModels.Home
@@ -30,6 +33,7 @@ public class HomeController : Controller
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+    [AllowAnonymous] // Permitir acceso público a la página de error
     public IActionResult Error()
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });

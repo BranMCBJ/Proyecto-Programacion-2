@@ -1,4 +1,5 @@
 ﻿using Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -9,6 +10,7 @@ using System.Linq;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    [Authorize] // Requiere autenticación para todo el controlador
     public class LibroController : Controller
     {
         private readonly AppDbContext _db;

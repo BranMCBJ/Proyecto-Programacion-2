@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using Data;
 using Models;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    [Authorize] // Requiere autenticación para todo el controlador
     public class CopiaLibroPrestamoController : Controller
     {
         private readonly AppDbContext db;
