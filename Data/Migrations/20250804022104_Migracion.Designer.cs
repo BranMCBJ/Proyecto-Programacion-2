@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Migrations
+namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250801235423_migracion8")]
-    partial class migracion8
+    [Migration("20250804022104_Migracion")]
+    partial class Migracion
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -263,6 +263,10 @@ namespace Migrations
                         .HasMaxLength(15)
                         .HasColumnType("nvarchar(15)");
 
+                    b.Property<string>("URLImagen")
+                        .HasMaxLength(300)
+                        .HasColumnType("nvarchar(300)");
+
                     b.HasKey("IdCliente");
 
                     b.ToTable("Clientes", (string)null);
@@ -270,21 +274,19 @@ namespace Migrations
 
             modelBuilder.Entity("Models.CopiaLibro", b =>
                 {
-                    b.Property<int?>("IdCopiaLibro")
+                    b.Property<int>("IdCopiaLibro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("IdCopiaLibro"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCopiaLibro"));
 
-                    b.Property<bool?>("Activo")
+                    b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("IdEstadoCopiaLibro")
-                        .IsRequired()
+                    b.Property<int>("IdEstadoCopiaLibro")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdLibro")
-                        .IsRequired()
+                    b.Property<int>("IdLibro")
                         .HasColumnType("int");
 
                     b.HasKey("IdCopiaLibro");
@@ -386,7 +388,7 @@ namespace Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("IdLibro"));
 
-                    b.Property<bool?>("Activo")
+                    b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
                     b.Property<int?>("ClasificacionEdad")
@@ -408,8 +410,10 @@ namespace Migrations
                         .HasColumnType("nvarchar(13)");
 
                     b.Property<int?>("IdStock")
-                        .IsRequired()
                         .HasColumnType("int");
+
+                    b.Property<string>("ImagenUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Titulo")
                         .IsRequired()
@@ -601,9 +605,7 @@ namespace Migrations
                 {
                     b.HasOne("Models.Stock", "Stock")
                         .WithMany()
-                        .HasForeignKey("IdStock")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("IdStock");
 
                     b.Navigation("Stock");
                 });

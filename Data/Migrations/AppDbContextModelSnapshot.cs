@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Migrations
+namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     partial class AppDbContextModelSnapshot : ModelSnapshot
@@ -271,26 +271,20 @@ namespace Migrations
 
             modelBuilder.Entity("Models.CopiaLibro", b =>
                 {
-                    b.Property<int?>("IdCopiaLibro")
+                    b.Property<int>("IdCopiaLibro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("IdCopiaLibro"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCopiaLibro"));
 
-                    b.Property<bool?>("Activo")
+                    b.Property<bool>("Activo")
                         .HasColumnType("bit");
 
-                    b.Property<int?>("IdEstadoCopiaLibro")
-                        .IsRequired()
+                    b.Property<int>("IdEstadoCopiaLibro")
                         .HasColumnType("int");
 
-                    b.Property<int?>("IdLibro")
-                        .IsRequired()
+                    b.Property<int>("IdLibro")
                         .HasColumnType("int");
-
-                    b.Property<string>("NombreEstado")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdCopiaLibro");
 
@@ -572,7 +566,7 @@ namespace Migrations
 
             modelBuilder.Entity("Models.CopiaLibro", b =>
                 {
-                    b.HasOne("Models.EstadoCopiaLibro", "EstadosCopiasLibros")
+                    b.HasOne("Models.EstadoCopiaLibro", "EstadoCopiaLibro")
                         .WithMany()
                         .HasForeignKey("IdEstadoCopiaLibro")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -584,7 +578,7 @@ namespace Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("EstadosCopiasLibros");
+                    b.Navigation("EstadoCopiaLibro");
 
                     b.Navigation("Libro");
                 });
