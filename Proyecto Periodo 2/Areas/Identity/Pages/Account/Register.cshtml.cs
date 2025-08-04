@@ -162,27 +162,47 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                // Manejo de la imagen
-
                 var files = HttpContext.Request.Form.Files;
                 if (files.Count > 0)
                 {
-                    string webRootPath = _webHostEnvironment.WebRootPath;
-                    string upload = Path.Combine(webRootPath, WC.ImagenUsuario.TrimStart('\\'));
-                    Directory.CreateDirectory(upload);
+                    var ImageFile = files[0];
 
-                    string fileName = Guid.NewGuid().ToString();
-                    string extension = Path.GetExtension(files[0].FileName);
-                    string fullPath = Path.Combine(upload, fileName + extension);
+                    // Validar tipo de archivo
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                    var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
 
-                    // Guardar archivo en disco
-                    using (var fileStream = new FileStream(fullPath, FileMode.Create))
+                    if (!allowedExtensions.Contains(extension))
                     {
-                        files[0].CopyTo(fileStream);
+                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                        return Page(); // O Redirect si quieres redirigir
                     }
 
-                    //ruta relativa de UrlImagen
-                    Input.UrlImagen = Path.Combine(WC.ImagenUsuario.TrimStart('\\'), fileName + extension);
+                    // Validar tamaño máximo 5MB
+                    if (ImageFile.Length > 5 * 1024 * 1024)
+                    {
+                        TempData["Error"] = "El archivo de imagen no puede superar los 5MB.";
+                        return Page();
+                    }
+
+                    // Ruta para guardar imagen dentro de wwwroot/Usuario/Imagenes
+                    string webRootPath = _webHostEnvironment.WebRootPath;
+                    string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+
+                    if (!Directory.Exists(upload))
+                    {
+                        Directory.CreateDirectory(upload);
+                    }
+
+                    string fileName = Guid.NewGuid().ToString() + extension;
+                    string filePath = Path.Combine(upload, fileName);
+
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await ImageFile.CopyToAsync(fileStream);
+                    }
+
+                    // Asignar nombre de archivo guardado a Input.UrlImagen (solo el nombre, no ruta completa)
+                    Input.UrlImagen = fileName;
                 }
                 Debug.WriteLine("ModelState no exploto");
 
@@ -216,6 +236,7 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     var claims = new List<Claim>
                 {
                     new Claim("Nombre", Input.Nombre),
+                    new Claim("NombreUsuario", Input.NombreUsuario),
                     new Claim("Apellido1", Input.Apellido1),
                     new Claim("Apellido2", Input.Apellido2),
                     new Claim("Cedula", Input.Cedula),

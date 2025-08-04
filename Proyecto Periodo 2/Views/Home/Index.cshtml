@@ -1,4 +1,5 @@
 @model Models.ViewModels.Home
+@using System.Security.Claims
 <link rel="stylesheet" href="~/Home/styles.css" asp-append-version="true" />
 <div class="libros-fondo" style="background-image: url('/Home/resources/fondoHomepage.png');"></div>
 
@@ -14,7 +15,7 @@
 <nav class="mt-5 ms-5 mb-5 ps-2">
     <h2 class="mb-0" style="font-family: sans-serif; font-size: 2.5rem; font-weight: 200;">
         Bienvenido/a <br>
-        <span style="color: #8C2445; font-weight: 200;">Yaret</span>, a Saber Y Cultura
+        <span style="color: #8C2445; font-weight: 200;">@User.FindFirst("NombreUsuario")?.Value</span>, a Saber Y Cultura
     </h2>
 </nav>
 

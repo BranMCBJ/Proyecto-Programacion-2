@@ -1,0 +1,834 @@
+body {
+    background-color: white;
+}
+/*NAVBAR*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Da sombra al navbar y espacio arriba y abajo */
+.navbar {
+    box-shadow: 0 4px 6px rgba(41, 41, 41, 0.1); /* Sombra suave */
+    padding-bottom: 10px; /* Espacio inferior */
+    padding-top: 20px; /* Espacio superior */
+}
+
+    /* Cambia el color de los íconos dentro del navbar */
+    .navbar i {
+        color: #8C2445; /* Vino oscuro */
+    }
+
+/* Agrega separación y línea vertical a cada ítem del navbar */
+.nav-item {
+    padding-right: 20px; /* Espacio a la derecha */
+    border-right: 1px solid #8C2445; /* Línea separadora color vino */
+}
+
+/* Sección especial para el menú de libros */
+.nav-libros {
+    position: relative; /* Necesario para colocar elementos con position absoluta dentro */
+}
+
+    /* Línea decorativa que aparece debajo del ítem LIBROS al activarse */
+    .nav-libros::after {
+        content: ''; /* Elemento vacío, solo para estilo */
+        position: absolute; /* Posición absoluta respecto al nav-libros */
+        bottom: -18px; /* Aparece debajo */
+        left: -10px; /* Un poco más a la izquierda */
+        width: 100%; /* Todo el ancho */
+        height: 5px; /* Grosor de la línea */
+        background-color: #8C2445; /* Color vino */
+        display: none; /* Oculto por defecto */
+    }
+
+    /* Hace visible la línea decorativa cuando LIBROS está activo */
+    .nav-libros.active::after {
+        display: block;
+    }
+
+/* Estilo para el nombre de perfil */
+.profile-name {
+    margin: 0;
+    color: #882038; /* Color vino */
+    font-weight: 600; /* Texto más grueso */
+    font-family: 'Intel', sans-serif; /* Fuente decorativa */
+    padding-left: 20px; /* Separación izquierda */
+}
+
+/* Estilo para el rol debajo del nombre (por ejemplo, Administrador) */
+.profile-role {
+    margin: 0;
+    font-size: 0.9rem; /* Tamaño más pequeño */
+    color: gray; /* Color gris */
+}
+
+/* Estilo general del menú desplegable de perfil */
+.profile-menu-card {
+    width: 260px; /* Ancho del menú */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra para dar efecto flotante */
+    overflow: hidden; /* Oculta el desbordamiento */
+    background-color: #fff; /* Fondo blanco */
+}
+
+/* Encabezado del menú de perfil (color vino y botón de cerrar) */
+.profile-header {
+    background-color: #8C2445; /* Color vino */
+    color: white; /* Texto blanco */
+    height: 40px; /* Altura del encabezado */
+    font-size: 20px; /* Tamaño del texto */
+    line-height: 1; /* Altura de línea ajustada */
+}
+
+/* Botón X para cerrar el menú de perfil */
+.close-btn {
+    cursor: pointer; /* Cambia el cursor al pasar */
+    font-size: 24px; /* Tamaño del ícono */
+}
+
+/* Estilo de la foto de perfil */
+.profile-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se recorte bien */
+}
+
+/* Contenedor de texto informativo (nombre, correo, etc.) */
+.text-info {
+    display: flex;
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    justify-content: center; /* Centrado vertical */
+}
+
+/* Nombre del usuario dentro del perfil */
+.profile-nombre {
+    font-weight: 700;
+    text-align: left;
+    font-size: 16px;
+}
+
+/* Correo del usuario */
+.profile-email {
+    font-size: 14px;
+    color: #6c757d; /* Gris claro */
+    margin: 0 0 5px 0; /* Solo margen inferior */
+}
+
+/* Enlace para editar el perfil */
+.edit-profile-link {
+    color: #8C2445; /* Color vino */
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 40px; /* Separación a la izquierda */
+}
+
+    /* Subrayado al pasar el mouse por el enlace de editar perfil */
+    .edit-profile-link:hover {
+        text-decoration: underline;
+    }
+
+/* Ajuste al padding lateral del ícono de usuario */
+.nav-link-custom {
+    padding-right: 50px; /* Espacio adicional a la derecha */
+}
+
+.nav-libros {
+    position: relative;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*NAVBAR*/
+
+
+
+
+
+/*TITULO USUARIOS*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.container-usuario {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.titulo-usuario {
+    color: #8C2445;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*TITULO USUARIOS*/
+
+
+
+
+
+/*BOTON AGREGAR USUARIO*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.btn-agregar {
+    background-color: #8C2445;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 16px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+    .btn-agregar:hover {
+        background-color: #6e1d37;
+        color: white;
+    }
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*BOTON AGREGAR USUARIO*/
+
+
+
+
+
+/*FILTROS DE BUSQUEDA*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.dropdown-item:hover {
+    color: #8C2445 !important;
+    background-color: #8c244510 !important;
+}
+
+.border-graydark {
+    border-color: #cacaca !important;
+}
+
+input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.fade-card {
+    opacity: 1;
+    transition: opacity 0.3s;
+    pointer-events: auto;
+}
+
+    .fade-card.hide {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+.card-preview-extendida-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 0;
+    height: auto;
+}
+
+#preview, #cardExpandida {
+    position: static;
+    width: 100%;
+    height: auto;
+}
+
+/* Estilo para submenú en dropdown */
+.dropdown-submenu {
+    position: relative;
+}
+
+    .dropdown-submenu > .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-left: 0.1rem;
+        margin-right: 0.1rem;
+    }
+
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*FILTROS DE BUSQUEDA*/
+
+
+
+
+
+/*TEXTO SIN USUARIOS AGREGADOS*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/* Texto cuando no hay usuarios */
+.sin-usuarios-texto {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #6c757d; /* Gris suave */
+    text-align: center;
+    margin-top: 60px;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*TEXTO SIN USUARIOS AGREGADOS*/
+
+
+
+/* TARJETA DE USUARIO */
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+.card-user {
+    max-width: 400px;
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+    .card-user .card-body {
+        padding: 20px;
+    }
+
+    .card-user img.profile-pic {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .card-user .user-name {
+        font-weight: 600;
+        margin-bottom: 0;
+        font-size: 1.1rem;
+    }
+
+    .card-user .user-fullname {
+        font-size: 0.9rem;
+        color: gray;
+    }
+
+    .card-user .user-info-label {
+        color: #8C2445;
+        font-weight: bold;
+    }
+
+    /*BOTON EDITAR/BORRAR*/
+    /*-----------------------------------------------------------------------------------------------------------------------------*/
+
+    .card-user .config-icon {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        filter: none;
+        transform: translateY(-35px); /* Sube un poco el icono del engranaje */
+    }
+
+.dropdown {
+    position: relative;
+}
+
+/* Ocultar el checkbox que controla el menú */
+.toggle-menu {
+    display: none;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 100%; /* Menu a la derecha del icono */
+    top: -4px; /* Sube el menú un poco */
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    min-width: 150px;
+    z-index: 1000;
+}
+
+/* Mostrar el menú cuando se activa el checkbox */
+.toggle-menu:checked + label + .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu .dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #000000;
+}
+
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #f1f1f1;
+    }
+
+.dropdown-menu .menu-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+    object-fit: contain;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*BOTON EDITAR/BORRAR*/
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/* TARJETA DE USUARIO */
+
+
+
+/*LEVANTAMIENTO DE TEXTO*/
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+
+.form-floating-custom {
+    position: relative;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+    .form-floating-custom input,
+    .form-floating-custom select {
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        padding: 0.5rem 0;
+        background: transparent;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+        .form-floating-custom input:focus,
+        .form-floating-custom select:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #8C2445;
+        }
+
+    .form-floating-custom label {
+        position: absolute;
+        left: 0;
+        top: 0rem;
+        color: #6c757d;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        font-size: 1rem;
+    }
+
+    .form-floating-custom input:focus + label,
+    .form-floating-custom input:not(:placeholder-shown) + label,
+    .form-floating-custom select:focus + label,
+    .form-floating-custom select:not([value=""]) + label {
+        top: -1rem;
+        font-size: 0.8rem;
+        color: #8C2445;
+    }
+
+/*-----------------------------------------------------------------------------------------------------------------------------*/
+/*LEVANTAMIENTO DE TEXTO*/
+
+/*AGREGAR USUARIOS*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* ----- ESTILO GENERAL DEL MODAL ----- */
+.custom-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Mostrar solo el modal de agregar cuando se activa su toggle */
+#toggleAgregarUsuario:checked ~ #modalAgregarUsuario {
+    display: flex;
+}
+
+/* ----- CAJA BLANCA DEL MODAL ----- */
+.custom-modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 550px;
+    max-width: 90%;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+/* ----- ENCABEZADO DEL MODAL ----- */
+.custom-modal-header {
+    background-color: #8C2445;
+    color: white;
+    padding: 25px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* Botón "X" para cerrar */
+.close-btn {
+    position: absolute;
+    right: 15px;
+    background: none; /* Sin fondo */
+    border: none; /* Sin borde */
+    padding: 0; /* Sin padding extra */
+    font-size: 20px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+    cursor: pointer; /* Cursor de mano */
+    line-height: 1; /* Para que no tenga espacio vertical raro */
+}
+
+    .close-btn i {
+        pointer-events: none; /* Hace que el clic cuente sobre el botón, no el icono */
+    }
+
+/* ----- ICONO DE AGREGAR ----- */
+.add-icon {
+    border: 2px solid #8C2445;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #8C2445;
+    margin: 20px auto;
+    margin-top: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+/* ----- CUERPO DEL MODAL ----- */
+/* Solo body y footer tienen padding interno */
+.custom-modal-body {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.custom-modal-footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Etiquetas de los inputs */
+.custom-modal-body label {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Inputs y selects del formulario */
+.custom-modal-body input,
+.custom-modal-body select {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+/* Botón Cancelar */
+.btn-cancelar {
+    border: 1px solid #8C2445;
+    color: #8C2445;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Botón Aceptar */
+.btn-aceptar {
+    background-color: #8C2445;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-dropdown {
+    position: relative;
+    width: 100%;
+}
+
+.dropdown-btn {
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 99;
+}
+
+    .dropdown-content a {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        text-decoration: none;
+        color: #000;
+        font-size: 14px;
+    }
+
+        .dropdown-content a:hover {
+            background-color: rgba(140, 36, 69, 0.1);
+            color: #8C2445;
+        }
+
+.custom-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*EDITAR USUARIOS*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* Mostrar solo el modal de editar cuando se activa su toggle */
+#toggleEditarUsuario:checked ~ #modalEditarUsuario {
+    display: flex;
+}
+
+
+
+/* Contenedor de la imagen de perfil */
+.profile-image-container {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 20px auto 10px;
+    border-radius: 8px;
+    overflow: visible;
+}
+/* Imagen del usuario */
+.profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+.edit-camera {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: #000000;
+    margin: 20px auto;
+    margin-top: 40px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    background-repeat: no-repeat;
+}
+
+/* Ícono de cámara en la esquina inferior derecha (afuera) */
+.camera-icon {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    z-index: 10;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*EDITAR USUARIOS*/
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*AGREGAR USUARIOS*/
+
+
+/*ELIMINAR USUARIOS*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* Mostrar solo el modal de eliminar cuando se activa su toggle */
+#toggleDeleteModal:checked ~ #modalEliminarUsuario {
+    display: flex;
+}
+
+.custom-modal-header-eliminar-alerta {
+    background-color: #ffffff;
+    color: inherit; /* Toma el color de texto por defecto */
+    padding: 25px;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+/* ----- Icono de advertencia ----- */
+.icono-advertencia img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 20px auto;
+    margin-top: 20px;
+}
+
+/* Título del modal eliminar */
+.titulo-eliminar {
+    color: #8C2445;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Caja de datos del usuario */
+.usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f3f3f3;
+    border-radius: 7px;
+    font-weight: bold;
+    width: 250px;
+    margin: 0 auto;
+}
+
+    .usuario img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+/* Botones */
+.btn-cancelar {
+    border: 1px solid #8C2445;
+    color: #8C2445;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.btn-aceptar {
+    background: #8C2445;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*ELIMINAR USUARIOS*/
+
+
+/*ALERTAS-EXITO*/
+/*---------------------------------------------------------------------------------------------------------------------------*/
+
+/* Mostrar modales según toggle */
+#toggleAgregarUsuario:checked ~ #modalAgregarUsuario {
+    display: flex;
+}
+
+#toggleSuccessAgregar:checked ~ #modalSuccessAgregar {
+    display: flex;
+}
+
+#toggleEditarUsuario:checked ~ #modalEditarUsuario {
+    display: flex;
+}
+
+#toggleSuccessEditar:checked ~ #modalSuccessEditar {
+    display: flex;
+}
+
+#toggleDeleteModal:checked ~ #modalEliminarUsuario {
+    display: flex;
+}
+
+#toggleSuccessDelete:checked ~ #modalSuccessDelete {
+    display: flex;
+}
+
+.modal-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 350px;
+}
+
+.modal-button {
+    background-color: #8C2445;
+    color: white;
+    border: none;
+    width: 100px;
+    margin: 0px auto 0 auto;
+    padding: 6px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+    .modal-button:hover {
+        background-color: #5a1735;
+    }
+
+.row-custom {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-floating-custom {
+    flex: 1;
+    position: relative;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------*/
+/*ALERTAS-EXITO*/
+
+
