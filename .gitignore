@@ -16,6 +16,10 @@ bld/
 [Oo]bj/
 [Ll]og/
 
+# Project specific directories
+Utilities/bin/
+Utilities/obj/
+
 # .NET Core
 project.lock.json
 project.fragment.lock.json
