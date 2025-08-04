@@ -106,7 +106,7 @@ namespace Proyecto_Periodo_2.Controllers
                     try
                     {
                         string webRootPath = _webHostEnvironment.WebRootPath;
-                        string carpetaFisica = Path.Combine(webRootPath, "images", "libros");
+                        string carpetaFisica = Path.Combine(webRootPath, "Libros", "images");
 
                         if (!Directory.Exists(carpetaFisica))
                         {
@@ -122,7 +122,7 @@ namespace Proyecto_Periodo_2.Controllers
                             files.CopyTo(stream);
                         }
 
-                        nuevoLibro.ImagenUrl = $"/images/libros/{fileName}";
+                        nuevoLibro.ImagenUrl = $"/Libros/images/{fileName}";
                         Console.WriteLine($"Imagen guardada: {nuevoLibro.ImagenUrl}");
                     }
                     catch (Exception ex)

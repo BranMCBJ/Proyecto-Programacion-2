@@ -1,49 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="./bootstrap.css">
-  <link rel="stylesheet" href="./resources/css/prestamos.css">
-  <title>Préstamos</title>
-
-  <style>
-    .dropdown-item.active,
-    .dropdown-item:active {
-      background-color: #f8d7da !important;
-      color: #c82333 !important;
-    }
-
-    #filtrarBtn,
-    #ordenarBtn {
-      width: 220px;
-      justify-content: space-between;
-      display: flex;
-      align-items: center;
-    }
-
-    #searchInput {
-      width: 400px;
-    }
-
-    h1, h3 {
-      color: #8c2445;
-    }
-
-    input:focus{
-      outline: none !important;
-      box-shadow: none !important;
-    }
-    
-  </style>
-</head>
-<body class="m-3" style="padding: 20px;">
+@model IEnumerable<Cliente>
+<link rel="stylesheet" href="~/Prestamo/clientes.css">
+<div class="m-3" style="padding: 20px;">
   <h1 class="px-3 pt-3">Préstamos</h1>
   <div class="d-flex justify-content-end px-3">
-  <a href="prestamos.html" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
+  <a asp-controller="Prestamo" asp-action="Index" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
     Volver
   </a>
 </div>
@@ -100,91 +60,26 @@
     Seleccione un cliente...
   </h3>
 <div class="row">
-  <!-- Card 1 -->
-    <div class="col-sm-6  col-lg-3 mt-4">
-      <div class="card shadow-sm text-center h-100 pt-3">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg"
-             class="card-img-top mx-auto d-block mt-3 rounded"
-             style="width: 150px; height: 150px; object-fit: cover;"
-             alt="Foto del cliente">
-        <div class="card-body pt-5">
-          <p class="card-text mb-1"><strong>Nombre:</strong> Jose Pablo Araya</p>
-          <p class="card-text"><strong>Cédula:</strong> 190238421</p>
-          <a href="#" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
+  @if(!Model.Any() || Model == null)
+  {
+    <h3 class="text-center my-3">No hay clientes registrados</h3>
+  }
+  else
+  {
+    foreach(var cliente in Model){
+      <div class="col-sm-6  col-lg-3 mt-4">
+        <div class="card shadow-sm text-center h-100 pt-3">
+          <img src="@(string.IsNullOrEmpty(cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{cliente.URLImagen}")"
+              class="card-img-top mx-auto d-block mt-2 rounded"
+              style="width: 150px; height: 150px; object-fit: cover;"
+              alt="Foto del cliente">
+          <div class="card-body">
+            <p class="card-text"><strong>Nombre:</strong> @($"{cliente.Nombre} {cliente.Apellido1} {cliente.Apellido2}")</p>
+            <p class="card-text mt-2"><strong>Cédula:</strong> @cliente.Cedula</p>
+            <a asp-controller="Prestamo" asp-action="Index" asp-route-id="@cliente.IdCliente" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="col-sm-6  col-lg-3 mt-4">
-      <div class="card shadow-sm text-center h-100 pt-3">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg"
-             class="card-img-top mx-auto d-block mt-3 rounded"
-             style="width: 150px; height: 150px; object-fit: cover;"
-             alt="Foto del cliente">
-        <div class="card-body pt-5">
-          <p class="card-text mb-1"><strong>Nombre:</strong> Jose Pablo Araya</p>
-          <p class="card-text"><strong>Cédula:</strong> 190238421</p>
-          <a href="#" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="col-sm-6  col-lg-3 mt-4">
-      <div class="card shadow-sm text-center h-100 pt-3">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg"
-             class="card-img-top mx-auto d-block mt-3 rounded"
-             style="width: 150px; height: 150px; object-fit: cover;"
-             alt="Foto del cliente">
-        <div class="card-body pt-5">
-          <p class="card-text mb-1"><strong>Nombre:</strong> Jose Pablo Araya</p>
-          <p class="card-text"><strong>Cédula:</strong> 190238421</p>
-          <a href="#" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="col-sm-6  col-lg-3 mt-4">
-      <div class="card shadow-sm text-center h-100 pt-3">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg"
-             class="card-img-top mx-auto d-block mt-3 rounded"
-             style="width: 150px; height: 150px; object-fit: cover;"
-             alt="Foto del cliente">
-        <div class="card-body pt-5">
-          <p class="card-text mb-1"><strong>Nombre:</strong> Jose Pablo Araya</p>
-          <p class="card-text"><strong>Cédula:</strong> 190238421</p>
-          <a href="#" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="col-sm-6  col-lg-3 mt-4">
-      <div class="card shadow-sm text-center h-100 pt-3">
-        <img src="https://randomuser.me/api/portraits/men/75.jpg"
-             class="card-img-top mx-auto d-block mt-3 rounded"
-             style="width: 150px; height: 150px; object-fit: cover;"
-             alt="Foto del cliente">
-        <div class="card-body pt-5">
-          <p class="card-text mb-1"><strong>Nombre:</strong> Jose Pablo Araya</p>
-          <p class="card-text"><strong>Cédula:</strong> 190238421</p>
-          <a href="#" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
-        </div>
-      </div>
-    </div>
+    }
+  }    
 </div>
-
-
-    
-
- 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"
-  ></script>
-
-
-</body>
-</html>

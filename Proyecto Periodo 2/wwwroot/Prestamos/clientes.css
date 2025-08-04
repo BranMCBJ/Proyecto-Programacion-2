@@ -1,0 +1,26 @@
+    .dropdown-item.active,
+    .dropdown-item:active {
+      background-color: #f8d7da !important;
+      color: #c82333 !important;
+    }
+
+    #filtrarBtn,
+    #ordenarBtn {
+      width: 220px;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+    }
+
+    #searchInput {
+      width: 400px;
+    }
+
+    h1, h3 {
+      color: #8c2445;
+    }
+
+    input:focus{
+      outline: none !important;
+      box-shadow: none !important;
+    }

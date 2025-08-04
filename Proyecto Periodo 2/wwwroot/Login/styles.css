@@ -4,12 +4,6 @@ body, html {
     font-family: 'Inter', sans-serif; /* Fuente general para todo el documento */
 }
 
-
-.container-fluid {
-    height: 100vh;
-}
-
-
 .login-box {
     background-color: #FFFFFE;
     padding: 0 3rem;

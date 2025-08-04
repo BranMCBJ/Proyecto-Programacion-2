@@ -13,21 +13,6 @@ C:\Users\cecil\Desktop\Nueva carpeta\Utilities\obj\Debug\net8.0\refint\Utilities
 C:\Users\cecil\Desktop\Nueva carpeta\Utilities\obj\Debug\net8.0\Utilities.pdb
 C:\Users\cecil\Desktop\Nueva carpeta\Utilities\obj\Debug\net8.0\Utilities.genruntimeconfig.cache
 C:\Users\cecil\Desktop\Nueva carpeta\Utilities\obj\Debug\net8.0\ref\Utilities.dll
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.deps.json
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.runtimeconfig.json
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.dll
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.pdb
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.sourcelink.json
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.dll
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\refint\Utilities.dll
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.pdb
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.genruntimeconfig.cache
-C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\ref\Utilities.dll
 C:\Users\cecil\Desktop\proyecto\Utilities\bin\Debug\net8.0\Utilities.deps.json
 C:\Users\cecil\Desktop\proyecto\Utilities\bin\Debug\net8.0\Utilities.runtimeconfig.json
 C:\Users\cecil\Desktop\proyecto\Utilities\bin\Debug\net8.0\Utilities.dll
@@ -58,3 +43,18 @@ C:\Users\cecil\Desktop\Proyecto 2\Proyecto-Programacion-2\Utilities\obj\Debug\ne
 C:\Users\cecil\Desktop\Proyecto 2\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.pdb
 C:\Users\cecil\Desktop\Proyecto 2\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.genruntimeconfig.cache
 C:\Users\cecil\Desktop\Proyecto 2\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\ref\Utilities.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.deps.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.runtimeconfig.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\bin\Debug\net8.0\Utilities.pdb
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.sourcelink.json
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\refint\Utilities.dll
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.pdb
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\Utilities.genruntimeconfig.cache
+C:\Users\Bran\Desktop\Proyecto-Programacion-2\Utilities\obj\Debug\net8.0\ref\Utilities.dll
