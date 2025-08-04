@@ -18,6 +18,8 @@ wwwroot\images\libros\30a95fa9-421b-4968-95ed-451cad15831a.jpg
 wwwroot\images\libros\b1b37f65-bbb7-44de-af4b-7b1fa387bb7c.jpg
 wwwroot\images\libros\b3fedf3a-45e6-4691-b347-3b1ed7a688f6.png
 wwwroot\images\libros\d2349119-e8ac-435a-8bd5-8af712dfa79c.jpg
+wwwroot\images\libros\d2b8cc66-6168-44ba-b2db-c199c854ef8b.webp
+wwwroot\images\libros\ee267940-1a98-45ed-af7c-2b0532de4c6b.jpg
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
 wwwroot\lib\bootstrap\dist\css\bootstrap.min.css

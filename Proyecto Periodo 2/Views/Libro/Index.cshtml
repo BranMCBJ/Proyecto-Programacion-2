@@ -1,9 +1,9 @@
-
 @model IEnumerable<Models.Libro>
 
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    var libros = Model?.ToList() ?? new List<Models.Libro>();
 }
 
 <!DOCTYPE html>
@@ -61,7 +61,7 @@
                             <i class="fa-solid fa-book me-1"></i> LIBROS
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Copia Libro</a></li>
+                            <li><a class="dropdown-item" asp-controller="CopiaLibro" asp-action="Index">Copia Libro</a></li>
                             <li><a class="dropdown-item" href="#">Estado Copia Libro</a></li>
                         </ul>
                     </li>
@@ -212,15 +212,13 @@
                                         <label for="clasificacion">Clasificación de Edad</label>
                                         <input type="number" class="form-control" name="ClasificacionEdad" id="clasificacion" min="0">
                                     </div>
-                                    <!-- NUEVO CAMPO: Stock inicial -->
-                                    <div class="form-group mb-3">
-                                        <label for="stock">Stock <span class="text-danger">*</span></label>
-                                        <input type="number" class="form-control" name="StockInicial" id="stock" min="0" value="0" required>
-                                        <small class="form-text text-muted">Cantidad inicial de copias disponibles</small>
-                                    </div>
                                     <div class="form-group mb-3">
                                         <label for="descripcion">Descripción</label>
-                                        <textarea class="form-control" rows="5" id="descripcion" name="Descripcion"></textarea>
+                                        <textarea class="form-control" rows="6" id="descripcion" name="Descripcion"></textarea>
+                                    </div>
+                                    <div class="alert alert-info">
+                                        <i class="fa-solid fa-info-circle me-2"></i>
+                                        <small>Para agregar copias de este libro, ve a <strong>LIBROS → Copia Libro</strong> después de crearlo.</small>
                                     </div>
                                 </div>
                             </div>
@@ -241,17 +239,21 @@
     <!-- Books cards -->
     <div class="container mt-4 px-4" id="librosContainer">
         <div class="row justify-content-center">
-            @if (Model != null && Model.Any())
+            @if (libros != null && libros.Any())
             {
-                @foreach (var item in Model)
+                @foreach (var item in libros)
                 {
-                    <div class="col-md-3 mb-4 g-4">
+                    <div class="col-md-3 mb-4 g-4" data-libro-id="@item.IdLibro">
                         <div class="card shadow-sm">
                             <img src="@(string.IsNullOrEmpty(item.ImagenUrl) ? "/images/no-image.png" : item.ImagenUrl)"
                                  alt="@item.Titulo" class="w-100 h-100" style="object-fit: contain;" />
                             <div class="card-body text-start">
                                 <h6 class="card-title mb-1">@item.Titulo</h6>
                                 <p class="card-text text-muted small">ISBN: @item.ISBN</p>
+                                <p class="card-text text-muted small card-stock">
+                                    <i class="fa-solid fa-copy me-1"></i>
+                                    @item.StockCalculado copias disponibles
+                                </p>
                             </div>
                             <div class="card-footer">
                                 <button type="button" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#detailModal-@item.IdLibro">
@@ -283,9 +285,9 @@
                                                         </div>
                                                         <div class="row">
                                                             <div class="d-grid gap-2 d-md-block contenedor-botones">
-                                                                <a asp-controller="Libro" asp-action="Edit" asp-route-id="@item.IdLibro" class="btn btn-editar" type="button">
+                                                                <button type="button" class="btn btn-editar" data-bs-toggle="modal" data-bs-target="#editModal-@item.IdLibro" data-bs-dismiss="modal">
                                                                     <i class="fa-solid fa-pen-to-square"></i>
-                                                                </a>
+                                                                </button>
                                                                 <form asp-controller="Libro" asp-action="Delete" asp-route-id="@item.IdLibro" method="post" style="display: inline;">
                                                                     <button type="submit" class="btn btn-eliminar" onclick="return confirm('¿Estás seguro de eliminar este libro?')">
                                                                         <i class="fa-solid fa-trash-can"></i>
@@ -313,12 +315,22 @@
                                                             <label>Clasificación de Edad</label>
                                                             <input type="text" class="form-control" value="@(item.ClasificacionEdad?.ToString() ?? "No especificada")" readonly>
                                                         </div>
-                                                        <!-- MOSTRAR EL STOCK ACTUAL -->
                                                         <div class="form-group mb-3">
-                                                            <label>Stock</label>
-                                                            <input type="text" class="form-control"
-                                                                   value="@(item.Stock?.Cantidad?.ToString() ?? "0") copias disponibles"
-                                                                   readonly>
+                                                            <label>Stock Disponible</label>
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control"
+                                                                       value="@item.StockCalculado copias disponibles"
+                                                                       readonly>
+                                                                <button type="button" class="btn btn-outline-secondary"
+                                                                        onclick="actualizarStock(@item.IdLibro)"
+                                                                        title="Actualizar stock">
+                                                                    <i class="fa-solid fa-sync"></i>
+                                                                </button>
+                                                            </div>
+                                                            <small class="text-info">
+                                                                <i class="fa-solid fa-info-circle me-1"></i>
+                                                                Para gestionar copias, ve a <strong>LIBROS → Copia Libro</strong>
+                                                            </small>
                                                         </div>
                                                         <div class="form-group mb-3">
                                                             <label>Descripción</label>
@@ -328,6 +340,80 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Edit modal for each book -->
+                            <div class="modal fade" id="editModal-@item.IdLibro" tabindex="-1">
+                                <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+                                            <h1 class="modal-title fs-2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+                                                Editar libro
+                                            </h1>
+                                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                                                    style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;"></button>
+                                        </div>
+                                        <form asp-controller="Libro" asp-action="Edit" method="post" enctype="multipart/form-data" id="editBookForm-@item.IdLibro">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="IdLibro" value="@item.IdLibro" />
+                                            <div class="modal-body">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="col columnaIzq">
+                                                            <h4 class="titulo-imagen">Imagen</h4>
+                                                            <div class="text-center">
+                                                                <div class="position-relative bg-white border rounded shadow-sm" style="width: 300px; height: 400px;">
+                                                                    <img id="editPreviewImg-@item.IdLibro" src="@(string.IsNullOrEmpty(item.ImagenUrl) ? "/images/no-image.png" : item.ImagenUrl)" alt="Vista previa" class="w-100 h-100" style="object-fit: contain;" />
+                                                                    <button type="button" class="btn btn-dark position-absolute"
+                                                                            style="bottom: 10px; left: 10px; background-color: #8C2445; border: none;"
+                                                                            onclick="document.getElementById('editInputFile-@item.IdLibro').click();">
+                                                                        <i class="fa-solid fa-upload"></i> Cambiar Imagen
+                                                                    </button>
+                                                                    <input type="file" id="editInputFile-@item.IdLibro" name="files" accept="image/*" style="display: none;" onchange="previewEditImage(this, @item.IdLibro)">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col columnaDere">
+                                                            <h3 class="titulo-datos">Datos</h3>
+                                                            <div class="form-group mb-3">
+                                                                <label for="editTitulo-@item.IdLibro">Título <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" name="Titulo" id="editTitulo-@item.IdLibro" value="@item.Titulo" required>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label for="editIsbn-@item.IdLibro">ISBN <span class="text-danger">*</span></label>
+                                                                <input type="text" class="form-control" name="ISBN" id="editIsbn-@item.IdLibro" value="@item.ISBN" required>
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label for="editFecha-@item.IdLibro">Fecha de publicación</label>
+                                                                <input type="date" class="form-control" name="FechaPublicacion" id="editFecha-@item.IdLibro" value="@(item.FechaPublicacion?.ToString("yyyy-MM-dd"))">
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label for="editClasificacion-@item.IdLibro">Clasificación de Edad</label>
+                                                                <input type="number" class="form-control" name="ClasificacionEdad" id="editClasificacion-@item.IdLibro" value="@item.ClasificacionEdad" min="0">
+                                                            </div>
+                                                            <div class="form-group mb-3">
+                                                                <label for="editDescripcion-@item.IdLibro">Descripción</label>
+                                                                <textarea class="form-control" rows="6" id="editDescripcion-@item.IdLibro" name="Descripcion">@item.Descripcion</textarea>
+                                                            </div>
+                                                            <div class="alert alert-warning">
+                                                                <i class="fa-solid fa-exclamation-triangle me-2"></i>
+                                                                <small>Las copias de este libro se gestionan en <strong>LIBROS → Copia Libro</strong></small>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-outline-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                                                <button type="submit" class="btn btn-agregar-libro">
+                                                    <span class="spinner-border spinner-border-sm me-2 d-none" id="editLoadingSpinner-@item.IdLibro"></span>
+                                                    Actualizar
+                                                </button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -347,7 +433,6 @@
         </div>
     </div>
 
-
     <!-- Pagination -->
     <nav aria-label="Paginación de libros">
         <ul class="pagination pagpersonalizada">
@@ -363,92 +448,178 @@
         </ul>
     </nav>
 
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             crossorigin="anonymous"></script>
 
     <script>
-                // Preview de imagen
-                function previewImage(input) {
-                    if (input.files && input.files[0]) {
-                        const reader = new FileReader();
-                        reader.onload = function(e) {
-                            document.getElementById('previewImg').src = e.target.result;
-                        }
-                        reader.readAsDataURL(input.files[0]);
-                    }
+        // Preview de imagen para agregar libro
+        function previewImage(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('previewImg').src = e.target.result;
                 }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
-                // Manejo del formulario
-                document.addEventListener('DOMContentLoaded', function() {
-                    const form = document.getElementById('addBookForm');
-                    const submitBtn = form.querySelector('button[type="submit"]');
-                    const spinner = document.getElementById('loadingSpinner');
+        // Preview de imagen para editar libro
+        function previewEditImage(input, idLibro) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById(`editPreviewImg-${idLibro}`).src = e.target.result;
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
 
-                    // Mostrar spinner al enviar
-                    form.addEventListener('submit', function() {
-                        submitBtn.disabled = true;
-                        spinner.classList.remove('d-none');
-                        submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Guardando...';
-                    });
-
-                    // Cerrar modal y limpiar formulario si hay éxito
-                    @if (TempData["Success"] != null)
-                    {
-                                            <text>
-                                            // Cerrar modal después de éxito
-                                            setTimeout(function() {
-                                                var modal = bootstrap.Modal.getInstance(document.getElementById('addBookModal'));
-                                                if (modal) {
-                                                    modal.hide();
-                                                }
-                                                // Limpiar formulario
-                                                document.getElementById('addBookForm').reset();
-                                                document.getElementById('previewImg').src = '~/images/no-image.png';
-                                            }, 100);
-                                            </text>
+        // Función: Actualizar stock dinámicamente
+        function actualizarStock(idLibro) {
+            fetch(`/Libro/GetStockLibro?idLibro=${idLibro}`)
+                .then(response => response.json())
+                .then(data => {
+                    // Actualizar el campo de stock en el modal correspondiente
+                    const modalId = `detailModal-${idLibro}`;
+                    const modal = document.getElementById(modalId);
+                    const stockInput = modal.querySelector('input[value*="copias disponibles"]');
+                    if (stockInput) {
+                        stockInput.value = `${data.stock} copias disponibles`;
                     }
 
-                    // Limpiar formulario al cerrar modal
-                    document.getElementById('addBookModal').addEventListener('hidden.bs.modal', function () {
-                        form.reset();
-                        document.getElementById('previewImg').src = '~/images/no-image.png';
-                        submitBtn.disabled = false;
-                        spinner.classList.add('d-none');
-                        submitBtn.innerHTML = 'Guardar';
-                    });
-
-                    // Auto-dismiss alerts después de 5 segundos
-                    setTimeout(function() {
-                        var alerts = document.querySelectorAll('.alert');
-                        alerts.forEach(function(alert) {
-                            var bsAlert = new bootstrap.Alert(alert);
-                            bsAlert.close();
-                        });
-                    }, 5000);
+                    // También actualizar en la tarjeta
+                    const card = document.querySelector(`[data-libro-id="${idLibro}"]`);
+                    if (card) {
+                        const stockElement = card.querySelector('.card-stock');
+                        if (stockElement) {
+                            stockElement.innerHTML = `<i class="fa-solid fa-copy me-1"></i>${data.stock} copias disponibles`;
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error('Error al actualizar stock:', error);
+                    alert('Error al actualizar el stock');
                 });
+        }
 
-                // Validación básica del formulario
-                function validateForm() {
+        // Manejo del formulario de agregar libro
+        document.addEventListener('DOMContentLoaded', function() {
+            const addForm = document.getElementById('addBookForm');
+            if (addForm) {
+                const addSubmitBtn = addForm.querySelector('button[type="submit"]');
+                const addSpinner = document.getElementById('loadingSpinner');
+
+                // Mostrar spinner al enviar formulario de agregar
+                addForm.addEventListener('submit', function(e) {
+                    // Validación básica
                     const titulo = document.getElementById('titulo').value.trim();
                     const isbn = document.getElementById('isbn').value.trim();
 
                     if (!titulo || !isbn) {
+                        e.preventDefault();
                         alert('Por favor, completa los campos obligatorios (Título e ISBN).');
                         return false;
                     }
-                    return true;
-                }
 
-                // Agregar validación al formulario - DESHABILITADO PARA DEBUG
-        /*
-        document.getElementById('addBookForm').addEventListener('submit', function(e) {
-            if (!validateForm()) {
-                e.preventDefault();
-                return false;
+                    addSubmitBtn.disabled = true;
+                    addSpinner.classList.remove('d-none');
+                    addSubmitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Guardando...';
+                });
             }
+
+            // Manejo de formularios de edición
+            @foreach (var item in libros)
+            {
+                    <text>
+                    // Manejo del formulario de edición para libro @item.IdLibro
+                    const editForm@item.IdLibro = document.getElementById('editBookForm-@item.IdLibro');
+                    if (editForm@item.IdLibro) {
+                        const editSubmitBtn@item.IdLibro = editForm@item.IdLibro.querySelector('button[type="submit"]');
+                        const editSpinner@item.IdLibro = document.getElementById('editLoadingSpinner-@item.IdLibro');
+
+                        editForm@item.IdLibro.addEventListener('submit', function(e) {
+                            // Validación básica
+                            const titulo = document.getElementById('editTitulo-@item.IdLibro').value.trim();
+                            const isbn = document.getElementById('editIsbn-@item.IdLibro').value.trim();
+
+                            if (!titulo || !isbn) {
+                                e.preventDefault();
+                                alert('Por favor, completa los campos obligatorios (Título e ISBN).');
+                                return false;
+                            }
+
+                            // Mostrar spinner
+                            editSubmitBtn@item.IdLibro.disabled = true;
+                            editSpinner@item.IdLibro.classList.remove('d-none');
+                            editSubmitBtn@item.IdLibro.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Actualizando...';
+                        });
+
+                        // Limpiar formulario de edición al cerrar modal
+                        const editModal@item.IdLibro = document.getElementById('editModal-@item.IdLibro');
+                        if (editModal@item.IdLibro) {
+                            editModal@item.IdLibro.addEventListener('hidden.bs.modal', function () {
+                                editSubmitBtn@item.IdLibro.disabled = false;
+                                editSpinner@item.IdLibro.classList.add('d-none');
+                                editSubmitBtn@item.IdLibro.innerHTML = 'Actualizar';
+
+                                
+                                // Limpiar input de archivo
+                                document.getElementById('editInputFile-@item.IdLibro').value = '';
+                            });
+                        }
+                    }
+                    </text>
+            }
+
+            // Cerrar modal de agregar y limpiar formulario si hay éxito
+            @if (TempData["Success"] != null)
+            {
+                    <text>
+                    // Cerrar modal después de éxito
+                    setTimeout(function() {
+                        var addModal = bootstrap.Modal.getInstance(document.getElementById('addBookModal'));
+                        if (addModal) {
+                            addModal.hide();
+                        }
+                        // Limpiar formulario
+                        if (document.getElementById('addBookForm')) {
+                            document.getElementById('addBookForm').reset();
+                            document.getElementById('previewImg').src = '/images/no-image.png';
+                        }
+                    }, 100);
+                    </text>
+            }
+
+            // Limpiar formulario de agregar al cerrar modal
+            const addBookModal = document.getElementById('addBookModal');
+            if (addBookModal) {
+                addBookModal.addEventListener('hidden.bs.modal', function () {
+                    const form = document.getElementById('addBookForm');
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    const spinner = document.getElementById('loadingSpinner');
+
+                    form.reset();
+                    document.getElementById('previewImg').src = '/images/no-image.png';
+                    submitBtn.disabled = false;
+                    spinner.classList.add('d-none');
+                    submitBtn.innerHTML = 'Guardar';
+                });
+            }
+
+            // Auto-dismiss alerts después de 5 segundos
+            setTimeout(function() {
+                var alerts = document.querySelectorAll('.alert');
+                alerts.forEach(function(alert) {
+                    var bsAlert = new bootstrap.Alert(alert);
+                    if (bsAlert) {
+                        bsAlert.close();
+                    }
+                });
+            }, 5000);
         });
-        */
     </script>
+
 </body>
 </html>

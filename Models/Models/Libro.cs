@@ -37,5 +37,7 @@ namespace Models
         public string? ImagenUrl { get; set; }
 
         public bool Activo { get; set; }
+        [NotMapped] // Esta propiedad no se guarda en BD pa ver si sale o me bananea brandon
+        public int StockCalculado { get; set; }
     }
 }

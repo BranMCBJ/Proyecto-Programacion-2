@@ -6,7 +6,6 @@ using Models;
 using System;
 using System.IO;
 using System.Linq;
-using Utilities;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -27,8 +26,16 @@ namespace Proyecto_Periodo_2.Controllers
             try
             {
                 var libros = _db.Libros
-                    .Include(l => l.Stock) // AGREGADO: Incluir la relación Stock
-                    .Where(l => l.Activo == true).ToList();
+                    .Where(l => l.Activo == true)
+                    .ToList();
+
+                // Calcular stock dinámicamente para cada libro
+                foreach (var libro in libros)
+                {
+                    libro.StockCalculado = _db.CopiasLibros
+                        .Count(c => c.IdLibro == libro.IdLibro && c.Activo == true);
+                }
+
                 Console.WriteLine($"Libros encontrados: {libros.Count}");
                 return View(libros);
             }
@@ -47,14 +54,14 @@ namespace Proyecto_Periodo_2.Controllers
             return View();
         }
 
-        // POST: Libro/Create - RUTAS CORREGIDAS
+        // POST: Libro/Create - SIN LÓGICA DE STOCK
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(Libro libro, IFormFile files, int StockInicial = 0)
+        public ActionResult Create(Libro libro, IFormFile files)
         {
             try
             {
-                Console.WriteLine("=== MÉTODO POST CREATE CON STOCK ===");
+                Console.WriteLine("=== MÉTODO POST CREATE SIN STOCK ===");
 
                 // Validaciones simples
                 if (string.IsNullOrWhiteSpace(libro?.Titulo) || string.IsNullOrWhiteSpace(libro?.ISBN))
@@ -76,26 +83,14 @@ namespace Proyecto_Periodo_2.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // PASO 1: Crear Stock con la cantidad inicial ingresada por el usuario
-                var nuevoStock = new Stock
-                {
-                    Cantidad = StockInicial, // Cantidad ingresada por el usuario
-                    Activo = true
-                };
-
-                _db.Stocks.Add(nuevoStock);
-                _db.SaveChanges(); // Guardar para obtener el IdStock auto-incremental
-
-                Console.WriteLine($"Stock creado - ID: {nuevoStock.IdStock}, Cantidad: {nuevoStock.Cantidad}");
-
-                // PASO 2: Crear el libro vinculado al stock
+                // Crear el libro SIN relación a Stock
                 var nuevoLibro = new Libro
                 {
                     Titulo = libro.Titulo?.Trim(),
                     ISBN = libro.ISBN?.Trim(),
                     FechaPublicacion = libro.FechaPublicacion,
                     ClasificacionEdad = libro.ClasificacionEdad ?? 0,
-                    IdStock = nuevoStock.IdStock, // FK hacia el stock creado (auto-incremental)
+                    IdStock = null,
                     Descripcion = string.IsNullOrWhiteSpace(libro.Descripcion) ? "Sin descripción" : libro.Descripcion.Trim(),
                     Activo = true
                 };
@@ -137,11 +132,14 @@ namespace Proyecto_Periodo_2.Controllers
                 }
 
                 _db.Libros.Add(nuevoLibro);
+
+
+
                 _db.SaveChanges();
 
-                Console.WriteLine($"Libro creado - ID: {nuevoLibro.IdLibro}, Stock ID: {nuevoLibro.IdStock}");
+                Console.WriteLine($"Libro creado - ID: {nuevoLibro.IdLibro}");
 
-                TempData["Success"] = $"¡Libro creado exitosamente con {StockInicial} copias en stock!";
+                TempData["Success"] = "¡Libro creado exitosamente! Ahora puedes agregar copias desde 'Gestionar Copias'.";
                 return RedirectToAction("Index");
             }
             catch (Exception ex)
@@ -177,7 +175,6 @@ namespace Proyecto_Periodo_2.Controllers
                 return NotFound();
             }
         }
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Libro libro, IFormFile files)
@@ -190,7 +187,7 @@ namespace Proyecto_Periodo_2.Controllers
                 if (string.IsNullOrWhiteSpace(libro?.Titulo) || string.IsNullOrWhiteSpace(libro?.ISBN))
                 {
                     TempData["Error"] = "Título e ISBN son obligatorios";
-                    return View(libro);
+                    return RedirectToAction("Index");
                 }
 
                 var libroExistente = _db.Libros.Find(libro.IdLibro);
@@ -200,13 +197,26 @@ namespace Proyecto_Periodo_2.Controllers
                     return RedirectToAction("Index");
                 }
 
-                // Actualizar campos
-                libroExistente.Titulo = libro.Titulo;
-                libroExistente.ISBN = libro.ISBN;
+                // Verificar duplicados (excluyendo el libro actual)
+                if (_db.Libros.Any(l => l.Titulo == libro.Titulo && l.Activo == true && l.IdLibro != libro.IdLibro))
+                {
+                    TempData["Error"] = "Ya existe otro libro con ese título";
+                    return RedirectToAction("Index");
+                }
+
+                if (_db.Libros.Any(l => l.ISBN == libro.ISBN && l.Activo == true && l.IdLibro != libro.IdLibro))
+                {
+                    TempData["Error"] = "Ya existe otro libro con ese ISBN";
+                    return RedirectToAction("Index");
+                }
+
+                // Actualizar campos (SIN STOCK)
+                libroExistente.Titulo = libro.Titulo.Trim();
+                libroExistente.ISBN = libro.ISBN.Trim();
                 libroExistente.FechaPublicacion = libro.FechaPublicacion;
                 libroExistente.ClasificacionEdad = libro.ClasificacionEdad ?? 0;
-                libroExistente.IdStock = libro.IdStock ?? 1;
-                libroExistente.Descripcion = libro.Descripcion ?? "Sin descripción";
+                libroExistente.Descripcion = string.IsNullOrWhiteSpace(libro.Descripcion) ? "Sin descripción" : libro.Descripcion.Trim();
+                // IdStock ya no se actualiza
 
                 // MANEJO DE IMAGEN UNIFICADO
                 if (files != null && files.Length > 0)
@@ -256,11 +266,14 @@ namespace Proyecto_Periodo_2.Controllers
                     {
                         Console.WriteLine($"Error al actualizar imagen: {imgEx.Message}");
                         Console.WriteLine($"Stack trace: {imgEx.StackTrace}");
+                        // No retornar error, continuar con la actualización sin imagen
                     }
                 }
 
                 _db.Libros.Update(libroExistente);
                 _db.SaveChanges();
+
+                Console.WriteLine($"Libro actualizado - ID: {libroExistente.IdLibro}, Título: {libroExistente.Titulo}");
 
                 TempData["Success"] = "Libro actualizado exitosamente";
                 return RedirectToAction("Index");
@@ -268,11 +281,11 @@ namespace Proyecto_Periodo_2.Controllers
             catch (Exception ex)
             {
                 Console.WriteLine($"Error en Edit: {ex.Message}");
+                Console.WriteLine($"Stack trace: {ex.StackTrace}");
                 TempData["Error"] = "Error al actualizar el libro";
-                return View(libro);
+                return RedirectToAction("Index");
             }
         }
-
         #endregion
 
         #region Delete
@@ -286,6 +299,16 @@ namespace Proyecto_Periodo_2.Controllers
                 var libro = _db.Libros.Find(id);
                 if (libro != null)
                 {
+                    // Verificar si tiene copias activas
+                    var tieneCopiasActivas = _db.CopiasLibros
+                        .Any(c => c.IdLibro == id && c.Activo == true);
+
+                    if (tieneCopiasActivas)
+                    {
+                        TempData["Error"] = "No se puede eliminar el libro porque tiene copias activas. Elimina primero todas las copias.";
+                        return RedirectToAction("Index");
+                    }
+
                     // Soft delete
                     libro.Activo = false;
                     _db.Libros.Update(libro);
@@ -301,6 +324,55 @@ namespace Proyecto_Periodo_2.Controllers
                 Console.WriteLine($"Error al eliminar: {ex.Message}");
                 TempData["Error"] = "Error al eliminar el libro";
                 return RedirectToAction("Index");
+            }
+        }
+
+        #endregion
+
+        #region Nuevos métodos para gestión de copias
+
+        // GET: Obtener copias de un libro específico
+        [HttpGet]
+        public IActionResult GetCopiasByLibro(int idLibro)
+        {
+            try
+            {
+                var libro = _db.Libros.Find(idLibro);
+                if (libro == null)
+                {
+                    return NotFound("Libro no encontrado");
+                }
+
+                var copias = _db.CopiasLibros
+                    .Include(c => c.EstadoCopiaLibro)
+                    .Where(c => c.IdLibro == idLibro && c.Activo == true)
+                    .ToList();
+
+                ViewBag.Libro = libro;
+                return PartialView("_CopiasLibroPartial", copias);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en GetCopiasByLibro: {ex.Message}");
+                return BadRequest("Error al obtener las copias");
+            }
+        }
+
+        // GET: Obtener stock calculado de un libro
+        [HttpGet]
+        public JsonResult GetStockLibro(int idLibro)
+        {
+            try
+            {
+                var stock = _db.CopiasLibros
+                    .Count(c => c.IdLibro == idLibro && c.Activo == true);
+
+                return Json(new { stock = stock });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error en GetStockLibro: {ex.Message}");
+                return Json(new { stock = 0 });
             }
         }
 
