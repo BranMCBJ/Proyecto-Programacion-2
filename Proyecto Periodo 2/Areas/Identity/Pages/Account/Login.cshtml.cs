@@ -23,10 +23,10 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
     public class LoginModel : PageModel
     {
         private readonly AppDbContext _db;
-        private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly SignInManager<Usuario> _signInManager;
         private readonly ILogger<LoginModel> _logger;
 
-        public LoginModel(SignInManager<IdentityUser> signInManager, ILogger<LoginModel> logger, AppDbContext db)
+        public LoginModel(SignInManager<Usuario> signInManager, ILogger<LoginModel> logger, AppDbContext db)
         {
             _signInManager = signInManager;
             _logger = logger;
