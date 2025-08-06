@@ -1,0 +1,154 @@
+﻿@model Models.ViewModels.UsuarioVM
+
+<!-- ========== AGREGAR USUARIO ========== -->
+
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
+            @Html.AntiForgeryToken()
+            <div class="custom-modal-header">
+                Agregar Usuario
+                <button type="reset" class="close-btn" data-bs-dismiss="modal">
+                    <i class="fa-solid fa-x"></i>
+                </button >
+            </div>
+            <div class="custom-modal-body">
+
+        <!-- Input oculto de archivo (fuera del div preview) -->
+        <input asp-for="usuario.UrlImagen" type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)" />
+
+        <!-- Área interactiva -->
+        <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
+             id="imagePreview"
+             onclick="document.getElementById('fileInput').click();"
+             style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+
+            @if (!string.IsNullOrEmpty(Model.usuario?.UrlImagen))
+            {
+                <img src="@Url.Content("~/" + Model.usuario.UrlImagen)"
+                     class="img-fluid w-100 h-100 object-fit-cover rounded"
+                     alt="Imagen actual" />
+            }
+            else
+            {
+                <div class="text-center">
+                    <i class="bi bi-plus-lg" style="font-size: 2rem;"></i>
+                    <label asp-for="usuario.UrlImagen" class="mt-2 text-muted d-block">Haz clic para subir una imagen</label>
+                </div>
+            }
+        </div>
+
+        
+
+                <!-- Fila 1 -->
+                <div class="row-custom">
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.Nombre" type="text" id="nombre" placeholder=" ">
+                        <label asp-for="usuario.Nombre" for="nombre">Nombre</label>
+                    </div>
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.Apellido1" type="text" id="apellido1" placeholder=" ">
+                        <label asp-for="usuario.Apellido1" for="apellido1">Primer Apellido</label>
+                    </div>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="row-custom">
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.Apellido2" type="text" id="apellido2" placeholder=" ">
+                        <label asp-for="usuario.Apellido2" for="apellido2">Segundo Apellido</label>
+                    </div>
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.NombreUsuario" type="text" id="nombreUsuario" placeholder=" ">
+                        <label asp-for="usuario.NombreUsuario" for="nombreUsuario">Nombre de Usuario</label>
+                    </div>
+                </div>
+
+                <!-- Fila 3 -->
+                <div class="row-custom">
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.Cedula" type="text" id="cedula" placeholder=" ">
+                        <label asp-for="usuario.Cedula" for="cedula">Cédula</label>
+                    </div>
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.PhoneNumber" type="text" id="telefono" placeholder=" ">
+                        <label asp-for="usuario.PhoneNumber" for="telefono">Número de Teléfono</label>
+                    </div>
+                </div>
+
+                <!-- Fila 4 -->
+                <div class="row-custom">
+                    <div class="form-floating-custom">
+                        <input asp-for="usuario.Email" type="email" id="correo" placeholder=" ">
+                        <label asp-for="usuario.Email" for="correo">Correo Electrónico</label>
+                    </div>
+                    <div class="form-floating-custom">
+                        <input asp-for="contrasena" type="password" id="password" placeholder=" ">
+                        <label asp-for="contrasena" for="password">Contraseña</label>
+                    </div>
+                </div>
+
+                <!-- Rol -->
+                <label class="mt-2">Rol:</label>
+                <div class="custom-dropdown">
+                    <button type="button" class="dropdown-btn" onclick="document.getElementById('dropdownContent').classList.toggle('show')">
+                        <span id="rolSeleccionado">Seleccionar Rol</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="#" onclick="seleccionarRol('Usuario'); return false;"><i class="fa-solid fa-user-group text-primary me-2"></i>Usuario</a>
+                        <a href="#" onclick="seleccionarRol('Administrador'); return false;"><i class="fa-solid fa-user text-primary me-2"></i>Administrador</a>
+                    </div>
+                </div>
+                <input asp-for="rol" name="rol" type="hidden" id="rolInput" />
+
+
+            </div>
+
+            <div class="custom-modal-footer">
+                <button type="reset" class="btn-cancelar" data-bs-dismiss="modal">
+                    Cancelar
+                </button>
+                <button type="submit" class="btn-aceptar">
+                    Aceptar
+                </button>
+            </div>
+        </form>
+
+
+    <script>
+            function seleccionarRol(rol) {
+            // Cambiar el texto visible
+            document.getElementById('rolSeleccionado').textContent = rol;
+
+            // Establecer el valor del input oculto
+            document.getElementById('rolInput').value = rol;
+
+            // Cerrar el dropdown
+            document.getElementById('dropdownContent').classList.remove('show');
+        }
+
+        // Cerrar el dropdown si se hace clic fuera
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown-btn') && !event.target.closest('.dropdown-content')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (let i = 0; i < dropdowns.length; i++) {
+                    dropdowns[i].classList.remove('show');
+                    }
+                }
+            }
+    </script>
+
+    <script>
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('imagePreview');
+
+            if (file && file.type.startsWith("image/")) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                preview.innerHTML = `<img src="${e.target.result}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="Imagen previa">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+

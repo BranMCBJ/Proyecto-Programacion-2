@@ -10,7 +10,6 @@ namespace Models.ViewModels
     {
         public Usuario? usuario { get; set; }
         public string? rol { get; set; }
-
         public string? contrasena { get; set; }
     }
 }

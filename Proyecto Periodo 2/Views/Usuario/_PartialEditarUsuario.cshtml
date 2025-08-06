@@ -1,0 +1,116 @@
+﻿@model Models.ViewModels.UsuarioVM
+
+<!-- ========== EDITAR USUARIO ========== -->
+<form method="post" asp-action="Edit" enctype="multipart/form-data">
+    @Html.AntiForgeryToken()
+
+    <input asp-for="usuario.Id" type="hidden" />
+
+    <div class="custom-modal-header">
+        Editar Usuario
+        <button type="reset" class="close-btn" data-bs-dismiss="modal">
+            <i class="fa-solid fa-x"></i>
+        </button>
+    </div>
+    <div class="custom-modal-body">
+        <div class="profile-image-container">
+            <img src="Foto perfil.png" alt="Foto del usuario" class="profile-image">
+            <label for="inputImagen" class="edit-camera"><i class="camera-icon fa-solid fa-camera"></i></label>
+            <input asp-for="usuario.UrlImagen" type="file" id="inputImagen" accept="image/*" hidden>
+        </div>
+
+        <!-- Fila 1 -->
+        <div class="row-custom">
+            <div class="form-floating-custom">
+                <input asp-for="usuario.Nombre" type="text" id="nombre" placeholder=" ">
+                <label asp-for="usuario.Nombre">Nombre</label>
+            </div>
+            <div class="form-floating-custom">
+                <input asp-for="usuario.Apellido1" type="text" id="apellido1" placeholder=" ">
+                <label asp-for="usuario.Apellido1" for="apellido1">Primer Apellido</label>
+            </div>
+        </div>
+
+        <!-- Fila 2 -->
+        <div class="row-custom">
+            <div class="form-floating-custom">
+                <input asp-for="usuario.Apellido2" type="text" id="apellido2" placeholder=" ">
+                <label asp-for="usuario.Apellido2" for="apellido2">Segundo Apellido</label>
+            </div>
+            <div class="form-floating-custom">
+                <input asp-for="usuario.NombreUsuario" type="text" id="nombreUsuario" placeholder=" ">
+                <label asp-for="usuario.NombreUsuario" for="nombreUsuario">Nombre de Usuario</label>
+            </div>
+        </div>
+
+        <!-- Fila 3 -->
+        <div class="row-custom">
+            <div class="form-floating-custom">
+                <input asp-for="usuario.Cedula" type="text" id="cedula" placeholder=" ">
+                <label asp-for="usuario.Cedula" for="cedula">Cédula</label>
+            </div>
+            <div class="form-floating-custom">
+                <input asp-for="usuario.PhoneNumber" type="text" id="telefono" placeholder=" ">
+                <label asp-for="usuario.PhoneNumber" for="telefono">Número de Teléfono</label>
+            </div>
+        </div>
+
+        <!-- Fila 4 -->
+        <div class="row-custom">
+            <div class="form-floating-custom">
+                <input asp-for="usuario.Email" type="email" id="correo" placeholder=" ">
+                <label asp-for="usuario.Email" for="correo">Correo Electrónico</label>
+            </div>
+            <div class="form-floating-custom">
+                <input asp-for="contrasena" type="text" id="password" placeholder=" ">
+                <label asp-for="contrasena" for="password">Contraseña</label>
+            </div>
+        </div>
+
+        <label>Rol:</label>
+        <div class="custom-dropdown">
+            <button type="button" class="dropdown-btn">
+                <span id="rolSeleccionadoEditar">Seleccionar Rol</span>
+                <i class="bi bi-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="document.getElementById('rolInputEditar').value='Usuario';document.getElementById('rolSeleccionadoEditar').innerText='Usuario';return false;"><i class="fa-solid fa-user-group text-primary me-2"></i>Usuario</a>
+                <a href="#" onclick="document.getElementById('rolInputEditar').value='Administrador';document.getElementById('rolSeleccionadoEditar').innerText='Administrador';return false;"><i class="fa-solid fa-user text-primary me-2"></i>Administrador</a>
+            </div>
+        </div>
+        <input asp-for="rol" type="hidden" name="rol" id="rolInputEditar">
+    </div>
+
+    <div class="custom-modal-footer">
+        <button type="reset" class="btn-cancelar" data-bs-dismiss="modal">
+            Cancelar
+        </button>
+        <button type="submit" class="btn-aceptar">
+            Actualizar
+        </button>
+    </div>
+</form>
+
+<script>
+        function seleccionarRol(rol) {
+        // Cambiar el texto visible
+        document.getElementById('rolSeleccionado').textContent = rol;
+
+        // Establecer el valor del input oculto
+        document.getElementById('rolInput').value = rol;
+
+        // Cerrar el dropdown
+        document.getElementById('dropdownContent').classList.remove('show');
+    }
+
+    // Cerrar el dropdown si se hace clic fuera
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-btn') && !event.target.closest('.dropdown-content')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (let i = 0; i < dropdowns.length; i++) {
+                dropdowns[i].classList.remove('show');
+                }
+            }
+        }
+</script>
+

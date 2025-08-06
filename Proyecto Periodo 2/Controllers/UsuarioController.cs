@@ -9,6 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Models.ViewModels;
 using Microsoft.AspNetCore.Hosting;
 using Utilities;
+using System.Security.Claims;
+using System.Diagnostics;
+using System.Threading.Tasks;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -19,13 +22,19 @@ namespace Proyecto_Periodo_2.Controllers
         private readonly UserManager<Usuario> _userManager;
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly SignInManager<Usuario> _signInManager;
 
-        public UsuarioController(AppDbContext db, UserManager<Usuario> userManager, IWebHostEnvironment webHostEnvironment, RoleManager<IdentityRole> roleManager)
+        public UsuarioController(AppDbContext db,
+            UserManager<Usuario> userManager,
+            IWebHostEnvironment webHostEnvironment,
+            RoleManager<IdentityRole> roleManager, 
+            SignInManager<Usuario> signInManager)
         {
             _db = db;
             _userManager = userManager;
             _webHostEnvironment = webHostEnvironment;
             _roleManager = roleManager;
+            _signInManager = signInManager;
         }
 
         // GET: UsuarioController - Listar todos los usuarios activos
@@ -79,14 +88,15 @@ namespace Proyecto_Periodo_2.Controllers
         }
 
         // GET: UsuarioController/Create - Mostrar formulario de creación
-        public ActionResult Create()
+        public ActionResult _PartialCrearUsuario()
         {
-            return View();
+            var usuarioVM = new UsuarioVM();
+            return PartialView("_PartialCrearUsuario", usuarioVM);
         }
 
         // POST: UsuarioController/Create - Crear nuevo usuario
         [HttpPost]
-        public async Task<IActionResult> Create(UsuarioVM usuarioVM, IFormFile ImageFile, string contrasena)
+        public async Task<IActionResult> Create(UsuarioVM usuarioVM /*, IFormFile ImageFile*/)
         {
             try
             {
@@ -94,6 +104,8 @@ namespace Proyecto_Periodo_2.Controllers
 
                 if (ModelState.IsValid)
                 {
+                    Debug.WriteLine("Modelo valido");
+                    //Comprueba si el usuario existe
                     var usuarioExiste = _db.Usuarios
                         .FirstOrDefault(u =>
                             (u.NombreUsuario == usuario.NombreUsuario ||
@@ -104,13 +116,14 @@ namespace Proyecto_Periodo_2.Controllers
 
                     if (usuarioExiste != null)
                     {
+                        Debug.WriteLine("Usuario existe");
                         TempData["Error"] = "Usuario ya registrado.";
                         return RedirectToAction(nameof(Index));
                     }
 
                     usuario.Activo = true;
 
-                    // ========== Manejo de Imagen ==========
+                    /*// ========== Manejo de Imagen ==========
                     if (ImageFile != null && ImageFile.Length > 0)
                     {
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
@@ -129,7 +142,7 @@ namespace Proyecto_Periodo_2.Controllers
                         }
 
                         string webRootPath = _webHostEnvironment.WebRootPath;
-                        string upload = Path.Combine(webRootPath, "Clientes", "images");
+                        string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
 
                         if (!Directory.Exists(upload))
                             Directory.CreateDirectory(upload);
@@ -142,34 +155,71 @@ namespace Proyecto_Periodo_2.Controllers
                         }
 
                         usuario.UrlImagen = fileName;
-                    }
+                    }*/
 
-                    // ========== Crear usuario con UserManager ==========
-                    var result = await _userManager.CreateAsync(usuario, contrasena);
+                    //Agrego valores necesarios para Identity
+                    var user = new Usuario
+                    {
+                        UserName = usuario.NombreUsuario,
+                        Email = usuario.Email,
+                        PhoneNumber = usuario.PhoneNumber,
+                        Cedula = usuario.Cedula,
+                        Nombre = usuario.Nombre,
+                        Apellido1 = usuario.Apellido1,
+                        Apellido2 = usuario.Apellido2,
+                        UrlImagen = usuario.UrlImagen,
+                        NombreUsuario = usuario.NombreUsuario,
+                        Activo = true
+                    };
+
+                    //se crea el usuario con la contraseña hasheada
+                    var result = await _userManager.CreateAsync(user, usuarioVM.contrasena);
 
                     if (!result.Succeeded)
                     {
+                        Debug.WriteLine("No se creo el usaurio exploto");
                         TempData["Error"] = string.Join(", ", result.Errors.Select(e => e.Description));
                         return RedirectToAction(nameof(Index));
                     }
 
+                        // Update the claims creation section to handle potential null values for "Cedula" and "UrlImagen".
+                    var claims = new List<Claim>
+                    {
+                        new Claim("Nombre", user.Nombre ?? string.Empty),
+                        new Claim("NombreUsuario", user.NombreUsuario ?? string.Empty),
+                        new Claim("Apellido1", user.Apellido1 ?? string.Empty),
+                        new Claim("Apellido2", user.Apellido2 ?? string.Empty),
+                        new Claim("Cedula", user.Cedula ?? string.Empty),
+                        new Claim("UrlImagen", user.UrlImagen ?? string.Empty)
+                    };
+
+                    // Añadir claims al usuario de manera permanente
+                    await _userManager.AddClaimsAsync(user, claims);
+
                     // ========== Asignar rol ==========
                     if (!string.IsNullOrEmpty(usuarioVM.rol))
                     {
-                        // Verifica que el rol exista
-                        if (!await _roleManager.RoleExistsAsync(usuarioVM.rol))
-                        {
-                            await _roleManager.CreateAsync(new IdentityRole("AdminRole"));
-                            await _roleManager.CreateAsync(new IdentityRole("UserRole"));
-                        }
+                        if (!await _roleManager.RoleExistsAsync("Administrador"))
+                            await _roleManager.CreateAsync(new IdentityRole("Administrador"));
 
-                        await _userManager.AddToRoleAsync(usuario, usuarioVM.rol);
+                        if (!await _roleManager.RoleExistsAsync("Usuario"))
+                            await _roleManager.CreateAsync(new IdentityRole("Usuario"));
+
+                        await _userManager.AddToRoleAsync(user, usuarioVM.rol);
                     }
 
                     TempData["Exito"] = "Usuario creado correctamente.";
                     return RedirectToAction(nameof(Index));
                 }
-
+                Debug.WriteLine("Modelo no valido");
+                foreach (var modelState in ModelState)
+                {
+                    var key = modelState.Key;
+                    foreach (var error in modelState.Value.Errors)
+                    {
+                        Debug.WriteLine($"Error en campo '{key}': {error.ErrorMessage} / Excepcion: {error.Exception?.Message}");
+                    }
+                }
                 // ModelState no válido
                 var errores = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
                 TempData["Error"] = "Datos inválidos: " + string.Join(", ", errores);
@@ -184,62 +234,153 @@ namespace Proyecto_Periodo_2.Controllers
 
 
         // GET: UsuarioController/Edit/5 - Mostrar formulario de edición
-        public ActionResult Edit(int? id)
+        public async Task<ActionResult> Edit(string id)
         {
-            try
+            if (string.IsNullOrEmpty(id))
             {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var usuario = _db.Usuarios.Find(id);
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                return View(usuario);
+                return BadRequest("ID de usuario no proporcionado.");
             }
-            catch (Exception)
+
+            var usuario = await _userManager.FindByIdAsync(id);
+            if (usuario == null || usuario.Activo == false)
             {
-                return NotFound();
+                return NotFound("Usuario no encontrado");
             }
+
+            //Datos que se muestran el modal de actualizar
+            var usuarioVM = new UsuarioVM()
+            {
+                usuario = new Usuario()
+                {
+                    Nombre = usuario.Nombre,
+                    Apellido1 = usuario.Apellido1,
+                    Apellido2 = usuario.Apellido2,
+                    NombreUsuario = usuario.NombreUsuario,
+                    Email = usuario.Email,
+                    PhoneNumber = usuario.PhoneNumber,
+                    Cedula = usuario.Cedula,
+                    UrlImagen = usuario.UrlImagen
+                },
+
+                rol = (await _userManager.GetRolesAsync(usuario)).FirstOrDefault(),
+
+                contrasena = string.Empty
+            };
+
+            return PartialView("_PartialEditarUsuario", usuarioVM);
         }
 
         // POST: UsuarioController/Edit/5 - Actualizar usuario
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Usuario usuario)
+        public async Task<ActionResult> Edit(UsuarioVM usuarioVM)
         {
             try
             {
-                if (ModelState.IsValid)
+                var usuario = usuarioVM.usuario;
+
+                ModelState.Remove(usuarioVM.contrasena); // evita que se valide la contraseña ya que siempre va a ser nula
+
+                    if (ModelState.IsValid)
                 {
-                    // Verificar si ya existe otro usuario con el mismo nombre de usuario o cédula
-                    var usuarioExistente = _db.Usuarios
-                        .FirstOrDefault(u => (u.UserName == usuario.UserName ||
-                                            u.Cedula == usuario.Cedula) &&
-                                            u.Id != usuario.Id);
+                    Debug.WriteLine("Modelo valido");
+                    //Comprueba si el usuario existe
+                    var usuarioExiste = _db.Usuarios
+                        .FirstOrDefault(u =>
+                            (u.NombreUsuario == usuario.NombreUsuario ||
+                            u.Email == usuario.Email ||
+                            u.PhoneNumber == usuario.PhoneNumber ||
+                            u.Cedula == usuario.Cedula) &&
+                            u.Activo == true);
 
-                    if (usuarioExistente != null)
+                    if (usuarioExiste != null)
                     {
-                        ModelState.AddModelError("", "Ya existe otro usuario con ese nombre de usuario o cédula.");
-                        return View(usuario);
+                        Debug.WriteLine("Usuario existe");
+                        TempData["Error"] = "Usuario ya registrado.";
+                        return RedirectToAction(nameof(Index));
                     }
-                    //actualizar
-                    _db.Usuarios.Update(usuario);
-                    _db.SaveChanges();
 
-                    TempData["Mensaje"] = "Usuario actualizado exitosamente";
-                    return RedirectToAction(nameof(Index));
+                    usuario.Activo = true;
+
+                    /*// ========== Manejo de Imagen ==========
+                    if (ImageFile != null && ImageFile.Length > 0)
+                    {
+                        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                        var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
+
+                        if (!allowedExtensions.Contains(extension))
+                        {
+                            TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                            return RedirectToAction(nameof(Index));
+                        }
+
+                        if (ImageFile.Length > 5 * 1024 * 1024)
+                        {
+                            TempData["Error"] = "El archivo no puede superar los 5MB.";
+                            return RedirectToAction(nameof(Index));
+                        }
+
+                        string webRootPath = _webHostEnvironment.WebRootPath;
+                        string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+
+                        if (!Directory.Exists(upload))
+                            Directory.CreateDirectory(upload);
+
+                        string fileName = Guid.NewGuid().ToString() + extension;
+
+                        using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
+                        {
+                            await ImageFile.CopyToAsync(fileStream);
+                        }
+
+                        usuario.UrlImagen = fileName;
+                    }*/
+
+                    if (!string.IsNullOrWhiteSpace(usuarioVM.contrasena))
+                    {
+                        var token = await _userManager.GeneratePasswordResetTokenAsync(usuario);
+                        var resultado = await _userManager.ResetPasswordAsync(usuario, token, usuarioVM.contrasena);
+                    }
+
+                    await _userManager.UpdateAsync(usuario); //Actualiza la tabla usuarios en la base de datos
+                    await _db.SaveChangesAsync(); //Guarda los cambios en las 2 tablas (Usuarios y IdentityUser)
+
+                    var idSession = User.FindFirstValue(ClaimTypes.NameIdentifier); //Obtiene el ID del usuario actual
+                    //Actualiza las claims si el usuario actualizado es el de la session
+                    if (idSession == usuario.Id)
+                    {
+                        await _signInManager.RefreshSignInAsync(usuario);
+                    }
+
+                    // se actualiza el rol
+                    var rolesActuales = await _userManager.GetRolesAsync(usuario);
+                    await _userManager.RemoveFromRolesAsync(usuario, rolesActuales);
+                    if (!string.IsNullOrEmpty(usuarioVM.rol))
+                    {
+                        await _userManager.AddToRoleAsync(usuario, usuarioVM.rol);
+
+                        TempData["Exito"] = "Usuario actualizado correctamente.";
+                        return RedirectToAction(nameof(Index));
+                    }
                 }
-                return View(usuario);
+                Debug.WriteLine("Modelo no valido");
+                // ModelState no válido
+                foreach (var modelState in ModelState)
+                {
+                    var key = modelState.Key;
+                    foreach (var error in modelState.Value.Errors)
+                    {
+                        Debug.WriteLine($"Error en campo '{key}': {error.ErrorMessage} / Excepción: {error.Exception?.Message}");
+                    }
+                }
+                var errores = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                TempData["Error"] = "Datos inválidos: " + string.Join(", ", errores);
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Error al actualizar el usuario");
-                return View(usuario);
+                TempData["Error"] = "Error al crear el Usuario: " + ex.Message;
+                return RedirectToAction(nameof(Index));
             }
         }
 

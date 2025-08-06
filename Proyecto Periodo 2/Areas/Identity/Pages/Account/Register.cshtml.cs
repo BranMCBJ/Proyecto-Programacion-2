@@ -240,7 +240,6 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                     new Claim("Apellido1", Input.Apellido1),
                     new Claim("Apellido2", Input.Apellido2),
                     new Claim("Cedula", Input.Cedula),
-                    new Claim("Telefono", Input.Telefono),
                     new Claim("UrlImagen", Input.UrlImagen ?? string.Empty)
                 };
                     await _userManager.AddClaimsAsync(user, claims); //agrega los claims al usuario
