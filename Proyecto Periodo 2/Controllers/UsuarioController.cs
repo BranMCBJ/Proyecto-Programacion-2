@@ -259,7 +259,8 @@ namespace Proyecto_Periodo_2.Controllers
                     Email = usuario.Email,
                     PhoneNumber = usuario.PhoneNumber,
                     Cedula = usuario.Cedula,
-                    UrlImagen = usuario.UrlImagen
+                    UrlImagen = usuario.UrlImagen,
+                    Id = usuario.Id
                 },
 
                 rol = (await _userManager.GetRolesAsync(usuario)).FirstOrDefault(),
@@ -275,114 +276,92 @@ namespace Proyecto_Periodo_2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(UsuarioVM usuarioVM)
         {
-            try
             {
-                var usuario = usuarioVM.usuario;
+                try
+                {
+                    var usuario = usuarioVM.usuario;
 
-                ModelState.Remove(usuarioVM.contrasena); // evita que se valide la contraseña ya que siempre va a ser nula
+
+                    // Evita que se valide la contraseña si está vacía
+                    ModelState.Remove(nameof(usuarioVM.contrasena));
 
                     if (ModelState.IsValid)
-                {
-                    Debug.WriteLine("Modelo valido");
-                    //Comprueba si el usuario existe
-                    var usuarioExiste = _db.Usuarios
-                        .FirstOrDefault(u =>
-                            (u.NombreUsuario == usuario.NombreUsuario ||
-                            u.Email == usuario.Email ||
-                            u.PhoneNumber == usuario.PhoneNumber ||
-                            u.Cedula == usuario.Cedula) &&
-                            u.Activo == true);
-
-                    if (usuarioExiste != null)
                     {
-                        Debug.WriteLine("Usuario existe");
-                        TempData["Error"] = "Usuario ya registrado.";
-                        return RedirectToAction(nameof(Index));
-                    }
 
-                    usuario.Activo = true;
+                        usuario.Activo = true;
 
-                    /*// ========== Manejo de Imagen ==========
-                    if (ImageFile != null && ImageFile.Length > 0)
-                    {
-                        var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
-                        var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
-
-                        if (!allowedExtensions.Contains(extension))
+                        // Cargar el usuario real desde la base de datos
+                        var usuarioEnDb = await _db.Usuarios.FindAsync(usuario.Id);
+                        if (usuarioEnDb == null || usuarioEnDb.Activo == false)
                         {
-                            TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                            TempData["Error"] = "Usuario no encontrado.";
                             return RedirectToAction(nameof(Index));
                         }
 
-                        if (ImageFile.Length > 5 * 1024 * 1024)
+                        // Actualizar datos
+                        usuarioEnDb.Nombre = usuario.Nombre;
+                        usuarioEnDb.Apellido1 = usuario.Apellido1;
+                        usuarioEnDb.Apellido2 = usuario.Apellido2;
+                        usuarioEnDb.Cedula = usuario.Cedula;
+                        usuarioEnDb.NombreUsuario = usuario.NombreUsuario;
+                        usuarioEnDb.PhoneNumber = usuario.PhoneNumber;
+                        usuarioEnDb.Email = usuario.Email;
+                        usuarioEnDb.Activo = true;
+
+                        // Cambiar contraseña si se especifica
+                        if (!string.IsNullOrWhiteSpace(usuarioVM.contrasena))
                         {
-                            TempData["Error"] = "El archivo no puede superar los 5MB.";
-                            return RedirectToAction(nameof(Index));
+
+                            var token = await _userManager.GeneratePasswordResetTokenAsync(usuarioEnDb);
+                            var resultado = await _userManager.ResetPasswordAsync(usuarioEnDb, token, usuarioVM.contrasena);
+
+                            if (!resultado.Succeeded)
+                            {
+                                Debug.WriteLine("Error al cambiar la contraseña: " + string.Join(", ", resultado.Errors.Select(e => e.Description)));
+                                TempData["Error"] = "Error al cambiar la contraseña: " + string.Join(", ", resultado.Errors.Select(e => e.Description));
+                                return RedirectToAction(nameof(Index));
+                            }
+
                         }
 
-                        string webRootPath = _webHostEnvironment.WebRootPath;
-                        string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+                        // Actualizar tabla IdentityUser
+                        var resultadoUpdate = await _userManager.UpdateAsync(usuarioEnDb);
 
-                        if (!Directory.Exists(upload))
-                            Directory.CreateDirectory(upload);
+                        // Guardar cambios en la tabla extendida
+                        await _db.SaveChangesAsync();
 
-                        string fileName = Guid.NewGuid().ToString() + extension;
-
-                        using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
+                        var idSession = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                        if (idSession == usuarioEnDb.Id)
                         {
-                            await ImageFile.CopyToAsync(fileStream);
+                            await _signInManager.RefreshSignInAsync(usuarioEnDb);
                         }
 
-                        usuario.UrlImagen = fileName;
-                    }*/
+                        // Actualizar rol
+                        var rolesActuales = await _userManager.GetRolesAsync(usuarioEnDb);
+                        await _userManager.RemoveFromRolesAsync(usuarioEnDb, rolesActuales);
 
-                    if (!string.IsNullOrWhiteSpace(usuarioVM.contrasena))
-                    {
-                        var token = await _userManager.GeneratePasswordResetTokenAsync(usuario);
-                        var resultado = await _userManager.ResetPasswordAsync(usuario, token, usuarioVM.contrasena);
-                    }
-
-                    await _userManager.UpdateAsync(usuario); //Actualiza la tabla usuarios en la base de datos
-                    await _db.SaveChangesAsync(); //Guarda los cambios en las 2 tablas (Usuarios y IdentityUser)
-
-                    var idSession = User.FindFirstValue(ClaimTypes.NameIdentifier); //Obtiene el ID del usuario actual
-                    //Actualiza las claims si el usuario actualizado es el de la session
-                    if (idSession == usuario.Id)
-                    {
-                        await _signInManager.RefreshSignInAsync(usuario);
-                    }
-
-                    // se actualiza el rol
-                    var rolesActuales = await _userManager.GetRolesAsync(usuario);
-                    await _userManager.RemoveFromRolesAsync(usuario, rolesActuales);
-                    if (!string.IsNullOrEmpty(usuarioVM.rol))
-                    {
-                        await _userManager.AddToRoleAsync(usuario, usuarioVM.rol);
+                        if (!string.IsNullOrEmpty(usuarioVM.rol))
+                        {
+                            await _userManager.AddToRoleAsync(usuarioEnDb, usuarioVM.rol);
+                            Debug.WriteLine($"Nuevo rol asignado: {usuarioVM.rol}");
+                        }
 
                         TempData["Exito"] = "Usuario actualizado correctamente.";
                         return RedirectToAction(nameof(Index));
                     }
+
+                    var errores = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
+                    TempData["Error"] = "Datos inválidos: " + string.Join(", ", errores);
+                    return RedirectToAction(nameof(Index));
                 }
-                Debug.WriteLine("Modelo no valido");
-                // ModelState no válido
-                foreach (var modelState in ModelState)
+                catch (Exception ex)
                 {
-                    var key = modelState.Key;
-                    foreach (var error in modelState.Value.Errors)
-                    {
-                        Debug.WriteLine($"Error en campo '{key}': {error.ErrorMessage} / Excepción: {error.Exception?.Message}");
-                    }
+                    TempData["Error"] = "Error al actualizar el usuario: " + ex.Message;
+                    return RedirectToAction(nameof(Index));
                 }
-                var errores = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage);
-                TempData["Error"] = "Datos inválidos: " + string.Join(", ", errores);
-                return RedirectToAction(nameof(Index));
-            }
-            catch (Exception ex)
-            {
-                TempData["Error"] = "Error al crear el Usuario: " + ex.Message;
-                return RedirectToAction(nameof(Index));
             }
         }
+
 
         // GET: UsuarioController/Delete/5 - Confirmar eliminación
         public ActionResult Delete(int? id)

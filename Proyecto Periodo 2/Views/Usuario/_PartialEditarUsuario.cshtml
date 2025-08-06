@@ -4,7 +4,8 @@
 <form method="post" asp-action="Edit" enctype="multipart/form-data">
     @Html.AntiForgeryToken()
 
-    <input asp-for="usuario.Id" type="hidden" />
+    <input type="hidden" asp-for="usuario.Id" />
+
 
     <div class="custom-modal-header">
         Editar Usuario
