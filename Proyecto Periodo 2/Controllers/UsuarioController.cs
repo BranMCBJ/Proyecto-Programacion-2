@@ -12,6 +12,8 @@ using Utilities;
 using System.Security.Claims;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Microsoft.IdentityModel.Tokens;
+using System.Globalization;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -27,7 +29,7 @@ namespace Proyecto_Periodo_2.Controllers
         public UsuarioController(AppDbContext db,
             UserManager<Usuario> userManager,
             IWebHostEnvironment webHostEnvironment,
-            RoleManager<IdentityRole> roleManager, 
+            RoleManager<IdentityRole> roleManager,
             SignInManager<Usuario> signInManager)
         {
             _db = db;
@@ -38,24 +40,19 @@ namespace Proyecto_Periodo_2.Controllers
         }
 
         // GET: UsuarioController - Listar todos los usuarios activos
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             try
             {
-                var usuarios = _userManager.Users.ToList();
-                var lista = new List<UsuarioVM>();
+                IEnumerable<Models.ViewModels.UsuarioVM> usuarios = _db.Usuarios
+                 .Where(c => c.Activo == true)
+                 .Select(c => new Models.ViewModels.UsuarioVM
+                 {
+                     usuario = c, // Asigna el usuario completo
+                     rol = _userManager.GetRolesAsync(c).Result.FirstOrDefault(),
+                 }).ToList();
 
-                foreach (var usuario in usuarios)
-                {
-                    var roles = await _userManager.GetRolesAsync(usuario);
-                    lista.Add(new UsuarioVM
-                    {
-                        usuario = usuario,
-                        rol = roles.FirstOrDefault() ?? "Sin rol"
-                    });
-                }
-
-                return View(lista);
+                return View(usuarios);
             }
             catch (Exception)
             {
@@ -182,7 +179,7 @@ namespace Proyecto_Periodo_2.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                        // Update the claims creation section to handle potential null values for "Cedula" and "UrlImagen".
+                    // Update the claims creation section to handle potential null values for "Cedula" and "UrlImagen".
                     var claims = new List<Claim>
                     {
                         new Claim("Nombre", user.Nombre ?? string.Empty),
@@ -284,6 +281,7 @@ namespace Proyecto_Periodo_2.Controllers
 
                     // Evita que se valide la contraseña si está vacía
                     ModelState.Remove(nameof(usuarioVM.contrasena));
+                    ModelState.Remove(nameof(usuarioVM.rol));
 
                     if (ModelState.IsValid)
                     {
@@ -362,57 +360,80 @@ namespace Proyecto_Periodo_2.Controllers
             }
         }
 
-
-        // GET: UsuarioController/Delete/5 - Confirmar eliminación
-        public ActionResult Delete(int? id)
+        public async Task<IActionResult> GetDelete(string id)
         {
-            try
+            if (string.IsNullOrEmpty(id))
             {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var usuario = _db.Usuarios.Find(id);
-                if (usuario == null)
-                {
-                    return NotFound();
-                }
-
-                return View(usuario);
+                return BadRequest("ID de usuario no proporcionado.");
             }
-            catch (Exception)
+
+            var usuario = await _userManager.FindByIdAsync(id);
+            if (usuario == null || usuario.Activo == false)
             {
-                return NotFound();
+                return NotFound("Usuario no encontrado");
             }
+
+            //Datos que se muestran el modal de actualizar
+            var usuarioVM = new UsuarioVM()
+            {
+                usuario = new Usuario()
+                {
+                    Nombre = usuario.Nombre,
+                    Apellido1 = usuario.Apellido1,
+                    Apellido2 = usuario.Apellido2,
+                    NombreUsuario = usuario.NombreUsuario,
+                    Email = usuario.Email,
+                    PhoneNumber = usuario.PhoneNumber,
+                    Cedula = usuario.Cedula,
+                    UrlImagen = usuario.UrlImagen,
+                    Id = usuario.Id
+                },
+
+                rol = (await _userManager.GetRolesAsync(usuario)).FirstOrDefault(),
+
+                contrasena = string.Empty
+            };
+
+            return PartialView("_PartialEliminarUsuario", usuarioVM);
         }
 
-        // POST: UsuarioController/Delete/5 - Eliminar usuario 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public async Task<IActionResult> Delete(string id)
         {
             try
             {
-                var usuario = _db.Usuarios.Find(id);
-                if (usuario != null)
+                if (string.IsNullOrEmpty(id))
                 {
-                    //cambiar Activo a false
-                    usuario.Activo = false;
-                    _db.Usuarios.Update(usuario);
-                    _db.SaveChanges();
-
-                    TempData["Mensaje"] = "Usuario eliminado exitosamente";
+                    TempData["Error"] = "ID no proporcionado.";
+                    return RedirectToAction(nameof(Index));
                 }
 
+                var usuario = await _userManager.FindByIdAsync(id);
+                if (usuario == null)
+                {
+                    TempData["Error"] = "Usuario no encontrado.";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                usuario.Activo = false;
+                var resultadoUpdate = await _userManager.UpdateAsync(usuario);
+
+                if (!resultadoUpdate.Succeeded)
+                {
+                    TempData["Error"] = "Error: " + string.Join(", ", resultadoUpdate.Errors.Select(e => e.Description));
+                    return RedirectToAction(nameof(Index));
+                }
+
+                await _db.SaveChangesAsync();
+                TempData["Exito"] = "Usuario eliminado correctamente.";
                 return RedirectToAction(nameof(Index));
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                TempData["Error"] = "Error al eliminar el usuario";
+                TempData["Error"] = "Error al eliminar el usuario: " + ex.Message;
                 return RedirectToAction(nameof(Index));
             }
         }
-
     }
 }

@@ -3,11 +3,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vista proyecto</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" asp-append-version="true" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fortawesome/fontawesome-free@6.5.2/css/all.min.css">
+    @*<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fortawesome/fontawesome-free@6.5.2/css/all.min.css" asp-append-version="true">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" asp-append-version="true">
+    *@
     <link rel="stylesheet" href="~/Usuario/style.css" asp-append-version="true">
     <link rel="stylesheet" href="~/Usuario/bootstrap.css" asp-append-version="true">
 
@@ -93,57 +92,51 @@
             <div class="row">
                 @foreach (var usuario in Model)
                 {
-                    <div class="col-4">
-                        <!--CARD DE USUARIO-->
-                        <div class="card card-user mb-4">
-                            <div class="card-body">
-                                <div class="d-flex align-items-center justify-content-between mb-3">
-
-                                    <!-- Info usuario -->
-                                    <div class="d-flex align-items-center">
-                                        <img src="@(string.IsNullOrEmpty(@usuario.usuario.UrlImagen) ? "~/Usuario/Imagenes/Foto perfil.png" : $"~/Usuario/Imagenes/{usuario.usuario.UrlImagen}" )" alt="Foto de perfil" class="profile-pic me-3">
-                                        <div>
-                                            <p class="user-name">@usuario.usuario.NombreUsuario</p>
-                                            <p class="user-fullname">@usuario.usuario.Nombre</p>
-                                        </div>
+                <div class="col-4">
+                    <div class="card card-user mb-4">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center justify-content-between mb-3">
+                                <!-- Info usuario -->
+                                <div class="d-flex align-items-center">
+                                    <img src="https://via.placeholder.com/50" alt="Foto de perfil" class="profile-pic me-3">
+                                    <div>
+                                        <p class="user-name">juan.perez</p>
+                                        <p class="user-fullname">Juan Pérez Gómez</p>
                                     </div>
-
-                                    <!--Dropdown editar/eliminar-->
-                                    <div class="dropdown">
-                                        <button class="btn btn-link p-0" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                            <i class="fa-solid fa-gear text-primary"></i>
-                                        </button>
-                                        <ul class="dropdown-menu dropdown-menu-end">
-                                            <li>
-                                                <label for="toggleEditarUsuario" class="dropdown-item">
-                                                    <i class="fa-solid fa-pen text-primary"></i> Editar
-                                                </label>
-                                            </li>
-                                            <li>
-                                                <label for="toggleDeleteModal" class="dropdown-item">
-                                                    <i class="fa-solid fa-trash text-primary"></i> Eliminar
-                                                </label>
-                                            </li>
-                                        </ul>
-                                    </div>
-
                                 </div>
 
-                                <hr>
-
-                                <!--Datos-->
-                                <p><span class="user-info-label">Cédula:</span> @usuario.usuario.Cedula</p>
-                                <p><span class="user-info-label">Teléfono:</span> @usuario.usuario.PhoneNumber</p>
-                                <p><span class="user-info-label">Correo:</span> @usuario.usuario.Email</p>
-                                <p><span class="user-info-label">Rol:</span> @usuario.rol</p>
-
-                                <!--Eliminar esta basura apenas se pueda-->
-                                <button class="btn btn-sm btn-info btn-edit-user" data-id="@usuario.usuario.Id">
-                                    Editar
-                                </button>
+                                <!-- Dropdown editar/eliminar -->
+                                <div class="dropdown dropend">
+                                    <button class="btn p-0 border-0 bg-transparent" style="box-shadow:none;" type="button"
+                                            id="dropdownOpcionesUsuario-1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-gear-fill text-primary fs-3"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownOpcionesUsuario-1">
+                                        <li class="mb-2">
+                                            <button type="button" class="dropdown-item text-primary fs-5 btn-edit-user" data-id="1">
+                                                <i class="bi bi-pencil"></i> Editar
+                                            </button>
+                                        </li>
+                                        <li><hr class="dropdown-divider" style="opacity: 40%;"></li>
+                                        <li class="mt-2">
+                                            <button type="button" class="dropdown-item text-primary fs-5 btn-delete-user" data-id="1">
+                                                <i class="bi bi-trash"></i> Eliminar
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
+
+                            <hr>
+
+                            <!--Datos-->
+                            <p><span class="user-info-label">Cédula:</span> 123456789</p>
+                            <p><span class="user-info-label">Teléfono:</span> +506 8888-8888</p>
+                            <p><span class="user-info-label">Correo:</span> juan.perez@email.com</p>
+                            <p><span class="user-info-label">Rol:</span> Administrador</p>
                         </div>
                     </div>
+                </div>
                 }
             </div>
         </div>
@@ -163,6 +156,15 @@
     <div class="modal fade" id="ModalActualizarUsuario" name="ModalActualizarUsuario" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content" id="modalActualizarUsuarioContent">
+                <!-- Aquí se carga el contenido con AJAX -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Eliminar Usuario Via AJAX -->
+    <div class="modal fade" id="ModalEliminarUsuario" name="ModalEliminarUsuario" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="modalEliminarUsuarioContent">
                 <!-- Aquí se carga el contenido con AJAX -->
             </div>
         </div>
@@ -189,41 +191,6 @@
         <!-- Checkbox para abrir modal de ÉXITO después de eliminar -->
         <input type="checkbox" id="toggleSuccessDelete" hidden>
 
-        <!-- Modal Eliminar Usuario -->
-        <div class="custom-modal" id="modalEliminarUsuario">
-            <div class="custom-modal-content">
-
-                <!-- Encabezado -->
-                <div class="custom-modal-header-eliminar-alerta">
-                    Confirmar eliminación
-                    <label for="toggleDeleteModal" class="close-btn">&times;</label>
-                </div>
-
-                <!-- Cuerpo -->
-                <div class="custom-modal-body text-center">
-                    <div class="icono-advertencia">
-                        <i class="bi bi-x-circle" style="color: #8C2445; font-size: 70px;"></i>
-                    </div>
-                    <h2 class="titulo-eliminar">Confirmar eliminación del usuario</h2>
-                    <div class="usuario">
-                        <img src="Foto perfil.png" alt="Foto del usuario">
-                        <span>Jose Pablo Araya</span>
-                    </div>
-                    <p>¿Está seguro de que desea eliminar a este usuario?</p>
-                </div>
-
-                <!-- Footer -->
-                <div class="custom-modal-footer justify-content-end">
-                    <label for="toggleDeleteModal" class="btn-cancelar">Cancelar</label>
-                    <!-- Cierra el modal de eliminar y abre el de éxito -->
-                    <label for="toggleSuccessDelete" class="btn-aceptar"
-                           onclick="document.getElementById('toggleDeleteModal').checked=false">
-                        Aceptar
-                    </label>
-                </div>
-            </div>
-        </div>
-
         <!-- Modal Éxito Eliminar -->
         <div class="modal-exito" id="modalSuccessDelete">
             <div class="modal-content">
@@ -238,7 +205,7 @@
 
 
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
             <script>
                 $(document).ready(function () {
                     $(document).on('click', '.btn-agregarUsuario', function () {
@@ -247,8 +214,6 @@
                             type: 'GET',
                             success: function (data) 
                             {   
-                                console.log("Contenido recibido:");
-                                console.log(data);
                         $('#modalCrearUsuarioContent').html(data);
                                 var myModal = new bootstrap.Modal(document.getElementById('ModalCrearUsuario'));
                                 myModal.show();
@@ -274,6 +239,21 @@
         });
     </script>
 
+    <script>
+        $(function(){
+          $('.btn-delete-user').click(function(){
+            var userId = $(this).data('id');
+            $.get('/Usuario/GetDelete/' + userId)
+              .done(function(html){
+                $('#ModalEliminarUsuario .modal-content').html(html);
+                $('#ModalEliminarUsuario').modal('show');
+              })
+              .fail(function(){
+                alert('No se pudo cargar el formulario de edición.');
+              });
+          });
+        });
+    </script>
 
 
 

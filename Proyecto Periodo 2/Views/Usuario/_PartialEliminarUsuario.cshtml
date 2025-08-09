@@ -1,0 +1,26 @@
+﻿@model Models.ViewModels.UsuarioVM
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" name="id" value="@Model.usuario.Id" />
+
+    <div class="custom-modal-header-eliminar-alerta">
+        Confirmar eliminación
+        <button type="button" class="close-btn" data-bs-dismiss="modal">&times;</button>
+    </div>
+
+    <div class="custom-modal-body text-center">
+        <i class="bi bi-x-circle" style="color: #8C2445; font-size: 70px;"></i>
+        <h2>Confirmar eliminación</h2>
+        <div class="usuario">
+            <img src="Foto perfil.png" alt="Foto" />
+            <span>@Model.usuario.NombreUsuario</span>
+        </div>
+        <p>¿Está seguro que desea eliminar a este usuario?</p>
+    </div>
+
+    <div class="custom-modal-footer justify-content-end">
+        <button type="button" class="btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+        <button type="submit" class="btn-aceptar">Aceptar</button>
+    </div>
+</form>
