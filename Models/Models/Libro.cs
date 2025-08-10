@@ -8,12 +8,6 @@ namespace Models
         [Key]
         public int? IdLibro { get; set; }
 
-        // Rehabilitar la relación con Stock
-        public int? IdStock { get; set; }
-
-        [ForeignKey(nameof(IdStock))]
-        public Stock? Stock { get; set; }
-
         [Required(ErrorMessage = "Se necesita la Clasificacion de Edad")]
         public int? ClasificacionEdad { get; set; }
 
@@ -36,8 +30,9 @@ namespace Models
 
         public string? ImagenUrl { get; set; }
 
-        public bool Activo { get; set; }
-        [NotMapped] // Esta propiedad no se guarda en BD pa ver si sale o me bananea brandon
-        public int StockCalculado { get; set; }
+        [Required(ErrorMessage = "Se necesita una cantidad de stock")]
+        public int? Stock { get; set; }
+
+        public bool? Activo { get; set; }
     }
 }

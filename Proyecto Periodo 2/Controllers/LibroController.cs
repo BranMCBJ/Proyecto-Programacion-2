@@ -1,16 +1,19 @@
 ﻿using Data;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using Models.ViewModels;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Proyecto_Periodo_2.Controllers
 {
-    [Authorize] // Requiere autenticación para todo el controlador
     public class LibroController : Controller
     {
         private readonly AppDbContext _db;
@@ -27,357 +30,162 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                var libros = _db.Libros
-                    .Where(l => l.Activo == true)
-                    .ToList();
-
-                // Calcular stock dinámicamente para cada libro
-                foreach (var libro in libros)
-                {
-                    libro.StockCalculado = _db.CopiasLibros
-                        .Count(c => c.IdLibro == libro.IdLibro && c.Activo == true);
-                }
-
-                Console.WriteLine($"Libros encontrados: {libros.Count}");
+                var libros = _db.Libros.Where(c => c.Activo == true).ToList();
                 return View(libros);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error en Index: {ex.Message}");
-                return View(new List<Libro>());
+                ViewBag.Error = ex.Message;
+                return View(new List<LibroVM>());
             }
         }
-
         // GET: Libro/Create
         [HttpGet]
-        public ActionResult Create()
+        public ActionResult _PartialCrearLibro()
         {
-            Console.WriteLine("=== MÉTODO GET CREATE EJECUTADO ===");
-            return View();
+
+            var libroVM = new LibroVM();
+            return PartialView("_PartialCrearLibro", libroVM);
         }
 
-        // POST: Libro/Create - SIN LÓGICA DE STOCK
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(Libro libro, IFormFile files)
+        [HttpGet]
+        public ActionResult _PartialVerMasLibro(int? id)
         {
             try
             {
-                Console.WriteLine("=== MÉTODO POST CREATE SIN STOCK ===");
-
-                // Validaciones simples
-                if (string.IsNullOrWhiteSpace(libro?.Titulo) || string.IsNullOrWhiteSpace(libro?.ISBN))
+                //saca el libro por el id
+                var libroVM = new LibroVM()
                 {
-                    TempData["Error"] = "Título e ISBN son obligatorios";
-                    return RedirectToAction("Index");
-                }
+                    Libro = _db.Libros.FirstOrDefault(s =>
+                s.IdLibro == id &&
+                s.Activo == true),
 
-                // Verificar duplicados
-                if (_db.Libros.Any(l => l.Titulo == libro.Titulo && l.Activo == true))
-                {
-                    TempData["Error"] = "Ya existe un libro con ese título";
-                    return RedirectToAction("Index");
-                }
-
-                if (_db.Libros.Any(l => l.ISBN == libro.ISBN && l.Activo == true))
-                {
-                    TempData["Error"] = "Ya existe un libro con ese ISBN";
-                    return RedirectToAction("Index");
-                }
-
-                // Crear el libro SIN relación a Stock
-                var nuevoLibro = new Libro
-                {
-                    Titulo = libro.Titulo?.Trim(),
-                    ISBN = libro.ISBN?.Trim(),
-                    FechaPublicacion = libro.FechaPublicacion,
-                    ClasificacionEdad = libro.ClasificacionEdad ?? 0,
-                    IdStock = null,
-                    Descripcion = string.IsNullOrWhiteSpace(libro.Descripcion) ? "Sin descripción" : libro.Descripcion.Trim(),
-                    Activo = true
+                    Imagen = null
                 };
-
-                // MANEJO DE IMAGEN (mantener código existente)
-                if (files != null && files.Length > 0)
-                {
-                    try
-                    {
-                        string webRootPath = _webHostEnvironment.WebRootPath;
-                        string carpetaFisica = Path.Combine(webRootPath, "Libros", "images");
-
-                        if (!Directory.Exists(carpetaFisica))
-                        {
-                            Directory.CreateDirectory(carpetaFisica);
-                        }
-
-                        string extension = Path.GetExtension(files.FileName);
-                        string fileName = Guid.NewGuid().ToString() + extension;
-                        string rutaFisica = Path.Combine(carpetaFisica, fileName);
-
-                        using (var stream = new FileStream(rutaFisica, FileMode.Create))
-                        {
-                            files.CopyTo(stream);
-                        }
-
-                        nuevoLibro.ImagenUrl = $"/Libros/images/{fileName}";
-                        Console.WriteLine($"Imagen guardada: {nuevoLibro.ImagenUrl}");
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine($"Error al guardar imagen: {ex.Message}");
-                        nuevoLibro.ImagenUrl = "/images/no-image.png";
-                    }
-                }
-                else
-                {
-                    nuevoLibro.ImagenUrl = "/images/no-image.png";
-                }
-
-                _db.Libros.Add(nuevoLibro);
-
-
-
-                _db.SaveChanges();
-
-                Console.WriteLine($"Libro creado - ID: {nuevoLibro.IdLibro}");
-
-                TempData["Success"] = "¡Libro creado exitosamente! Ahora puedes agregar copias desde 'Gestionar Copias'.";
-                return RedirectToAction("Index");
+                return PartialView("_PartialVerMasLibro", libroVM);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error en Create: {ex.Message}");
-                TempData["Error"] = "Error al guardar el libro.";
-                return RedirectToAction("Index");
+                // Manejo de errores
+                ViewBag.Error = ex.Message;
+                TempData["Error"] = "Error al cargar el libro.";
+                return View(nameof(Index));
+                throw;
             }
         }
-
-        #region Edit
-
-        [HttpGet]
-        public ActionResult Edit(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var libro = _db.Libros.Find(id);
-                if (libro == null)
-                {
-                    return NotFound();
-                }
-
-                return View(libro);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Libro libro, IFormFile files)
-        {
-            try
-            {
-                // Limpiar ModelState para testing
-                ModelState.Clear();
-
-                if (string.IsNullOrWhiteSpace(libro?.Titulo) || string.IsNullOrWhiteSpace(libro?.ISBN))
-                {
-                    TempData["Error"] = "Título e ISBN son obligatorios";
-                    return RedirectToAction("Index");
-                }
-
-                var libroExistente = _db.Libros.Find(libro.IdLibro);
-                if (libroExistente == null)
-                {
-                    TempData["Error"] = "Libro no encontrado";
-                    return RedirectToAction("Index");
-                }
-
-                // Verificar duplicados (excluyendo el libro actual)
-                if (_db.Libros.Any(l => l.Titulo == libro.Titulo && l.Activo == true && l.IdLibro != libro.IdLibro))
-                {
-                    TempData["Error"] = "Ya existe otro libro con ese título";
-                    return RedirectToAction("Index");
-                }
-
-                if (_db.Libros.Any(l => l.ISBN == libro.ISBN && l.Activo == true && l.IdLibro != libro.IdLibro))
-                {
-                    TempData["Error"] = "Ya existe otro libro con ese ISBN";
-                    return RedirectToAction("Index");
-                }
-
-                // Actualizar campos (SIN STOCK)
-                libroExistente.Titulo = libro.Titulo.Trim();
-                libroExistente.ISBN = libro.ISBN.Trim();
-                libroExistente.FechaPublicacion = libro.FechaPublicacion;
-                libroExistente.ClasificacionEdad = libro.ClasificacionEdad ?? 0;
-                libroExistente.Descripcion = string.IsNullOrWhiteSpace(libro.Descripcion) ? "Sin descripción" : libro.Descripcion.Trim();
-                // IdStock ya no se actualiza
-
-                // MANEJO DE IMAGEN UNIFICADO
-                if (files != null && files.Length > 0)
-                {
-                    try
-                    {
-                        string webRootPath = _webHostEnvironment.WebRootPath;
-                        string carpetaFisica = Path.Combine(webRootPath, "images", "libros");
-
-                        if (!Directory.Exists(carpetaFisica))
-                        {
-                            Directory.CreateDirectory(carpetaFisica);
-                        }
-
-                        // Borrar imagen anterior si existe y no es la imagen por defecto
-                        if (!string.IsNullOrEmpty(libroExistente.ImagenUrl) &&
-                            libroExistente.ImagenUrl != "/images/no-image.png")
-                        {
-                            // Extraer solo el nombre del archivo de la URL
-                            string oldFileName = Path.GetFileName(libroExistente.ImagenUrl);
-                            string oldImagePath = Path.Combine(carpetaFisica, oldFileName);
-
-                            if (System.IO.File.Exists(oldImagePath))
-                            {
-                                System.IO.File.Delete(oldImagePath);
-                                Console.WriteLine($"Imagen anterior eliminada: {oldImagePath}");
-                            }
-                        }
-
-                        // Guardar nueva imagen
-                        string extension = Path.GetExtension(files.FileName);
-                        string fileName = Guid.NewGuid().ToString() + extension;
-                        string fullPath = Path.Combine(carpetaFisica, fileName);
-
-                        using (var stream = new FileStream(fullPath, FileMode.Create))
-                        {
-                            files.CopyTo(stream);
-                        }
-
-                        // Actualizar URL de la imagen
-                        libroExistente.ImagenUrl = $"/images/libros/{fileName}";
-
-                        Console.WriteLine($"Nueva imagen guardada: {fullPath}");
-                        Console.WriteLine($"Nueva URL: {libroExistente.ImagenUrl}");
-                    }
-                    catch (Exception imgEx)
-                    {
-                        Console.WriteLine($"Error al actualizar imagen: {imgEx.Message}");
-                        Console.WriteLine($"Stack trace: {imgEx.StackTrace}");
-                        // No retornar error, continuar con la actualización sin imagen
-                    }
-                }
-
-                _db.Libros.Update(libroExistente);
-                _db.SaveChanges();
-
-                Console.WriteLine($"Libro actualizado - ID: {libroExistente.IdLibro}, Título: {libroExistente.Titulo}");
-
-                TempData["Success"] = "Libro actualizado exitosamente";
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error en Edit: {ex.Message}");
-                Console.WriteLine($"Stack trace: {ex.StackTrace}");
-                TempData["Error"] = "Error al actualizar el libro";
-                return RedirectToAction("Index");
-            }
-        }
-        #endregion
-
-        #region Delete
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id)
+        public IActionResult CrearLibro(LibroVM libroVM)
         {
-            try
+            if (ModelState.IsValid)
             {
-                var libro = _db.Libros.Find(id);
-                if (libro != null)
+                try
                 {
-                    // Verificar si tiene copias activas
-                    var tieneCopiasActivas = _db.CopiasLibros
-                        .Any(c => c.IdLibro == id && c.Activo == true);
+                    var imagen = libroVM.Imagen;
+                    var libro = libroVM.Libro;
 
-                    if (tieneCopiasActivas)
+                    if (imagen != null && imagen.Length > 0)
                     {
-                        TempData["Error"] = "No se puede eliminar el libro porque tiene copias activas. Elimina primero todas las copias.";
-                        return RedirectToAction("Index");
+                        // Guardar la imagen en el servidor
+                        var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "imagenes");
+                        if (!Directory.Exists(uploadsFolder))
+                        {
+                            Directory.CreateDirectory(uploadsFolder);
+                        }
+                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+                        var filePath = Path.Combine(uploadsFolder, fileName);
+                        using (var stream = new FileStream(filePath, FileMode.Create))
+                        {
+                            imagen.CopyTo(stream);
+                        }
+                        libroVM.Libro.ImagenUrl = "/Libros/images/" + fileName;
                     }
-
-                    // Soft delete
-                    libro.Activo = false;
-                    _db.Libros.Update(libro);
+                    libro.Activo = true; // Asegurarse de que el libro esté activo
+                    _db.Libros.Add(libro);
                     _db.SaveChanges();
-
-                    TempData["Success"] = "Libro eliminado exitosamente";
+                    TempData["Success"] = "Libro creado exitosamente.";
+                    return RedirectToAction(nameof(Index));
                 }
-
-                return RedirectToAction("Index");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error al eliminar: {ex.Message}");
-                TempData["Error"] = "Error al eliminar el libro";
-                return RedirectToAction("Index");
-            }
-        }
-
-        #endregion
-
-        #region Nuevos métodos para gestión de copias
-
-        // GET: Obtener copias de un libro específico
-        [HttpGet]
-        public IActionResult GetCopiasByLibro(int idLibro)
-        {
-            try
-            {
-                var libro = _db.Libros.Find(idLibro);
-                if (libro == null)
+                catch (Exception ex)
                 {
-                    return NotFound("Libro no encontrado");
+                    TempData["Error"] = "Error al crear el libro: " + ex.Message;
+                    return View(nameof(Index));
+                }
+            }
+            return PartialView("_PartialCrearLibro", libroVM);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult UpDelete(LibroVM libroVM, string accion)
+        {
+            if (accion == "actualizar")
+            {
+                if (!ModelState.IsValid)
+                {
+                    return PartialView("_PartialVerMasLibro", libroVM);
                 }
 
-                var copias = _db.CopiasLibros
-                    .Include(c => c.EstadoCopiaLibro)
-                    .Where(c => c.IdLibro == idLibro && c.Activo == true)
-                    .ToList();
+                var libroEnDb = _db.Libros.FirstOrDefault(x => x.IdLibro == libroVM.Libro.IdLibro);
+                if (libroEnDb == null)
+                {
+                    TempData["Error"] = "Libro no encontrado.";
+                    return RedirectToAction(nameof(Index));
+                }
 
-                ViewBag.Libro = libro;
-                return PartialView("_CopiasLibroPartial", copias);
+                // Actualizar campos
+                libroEnDb.Titulo = libroVM.Libro.Titulo;
+                libroEnDb.ISBN = libroVM.Libro.ISBN;
+                libroEnDb.FechaPublicacion = libroVM.Libro.FechaPublicacion;
+                libroEnDb.ClasificacionEdad = libroVM.Libro.ClasificacionEdad;
+                libroEnDb.Stock = libroVM.Libro.Stock;
+                libroEnDb.Descripcion = libroVM.Libro.Descripcion;
+
+                var imagen = libroVM.Imagen;
+                if (imagen != null && imagen.Length > 0)
+                {
+                    // Guarda en wwwroot/Libros/images para mantener consistencia con las URLs usadas
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
+                    if (!Directory.Exists(uploadsFolder))
+                        Directory.CreateDirectory(uploadsFolder);
+
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+                    var filePath = Path.Combine(uploadsFolder, fileName);
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        imagen.CopyTo(stream);
+                    }
+
+                    // Asigna la URL pública coherente con la carpeta anterior
+                    libroEnDb.ImagenUrl = $"/Libros/images/{fileName}";
+                }
+
+                _db.SaveChanges();
+                TempData["Success"] = "Libro actualizado exitosamente.";
+                return RedirectToAction(nameof(Index));
             }
-            catch (Exception ex)
+
+            if (accion == "eliminar")
             {
-                Console.WriteLine($"Error en GetCopiasByLibro: {ex.Message}");
-                return BadRequest("Error al obtener las copias");
+                var libroEnDb = _db.Libros.FirstOrDefault(x => x.IdLibro == libroVM.Libro.IdLibro);
+                if (libroEnDb == null)
+                {
+                    TempData["Error"] = "Libro no encontrado.";
+                    return RedirectToAction(nameof(Index));
+                }
+
+                // Soft delete
+                libroEnDb.Activo = false;
+                _db.SaveChanges();
+                TempData["Success"] = "Libro eliminado exitosamente.";
+                return RedirectToAction(nameof(Index));
             }
+
+            TempData["Error"] = "Acción no válida.";
+            return RedirectToAction(nameof(Index));
         }
 
-        // GET: Obtener stock calculado de un libro
-        [HttpGet]
-        public JsonResult GetStockLibro(int idLibro)
-        {
-            try
-            {
-                var stock = _db.CopiasLibros
-                    .Count(c => c.IdLibro == idLibro && c.Activo == true);
-
-                return Json(new { stock = stock });
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error en GetStockLibro: {ex.Message}");
-                return Json(new { stock = 0 });
-            }
-        }
-
-        #endregion
     }
 }

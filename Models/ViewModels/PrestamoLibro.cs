@@ -6,7 +6,6 @@ namespace Models.ViewModels
         public PrestamoLibro(Libro l)
         {
             IdLibro = l.IdLibro;
-            IdStock = l.IdStock;
             ClasificacionEdad = l.ClasificacionEdad;
             FechaPublicacion = l.FechaPublicacion;
             ISBN = l.ISBN;

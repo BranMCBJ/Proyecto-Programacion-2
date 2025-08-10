@@ -60,30 +60,6 @@ namespace Proyecto_Periodo_2.Controllers
             }
         }
 
-        // GET: UsuarioController/Details/5 - Ver detalles de un usuario
-        public ActionResult Details(int? id)
-        {
-            try
-            {
-                if (id == null || id == 0)
-                {
-                    return NotFound();
-                }
-
-                var usuario = _db.Usuarios.Find(id); //El método Find() busca una entidad por su clave primaria(id).
-                if (usuario == null || usuario.Activo != true)
-                {
-                    return NotFound();
-                }
-
-                return View(usuario);
-            }
-            catch (Exception)
-            {
-                return NotFound();
-            }
-        }
-
         // GET: UsuarioController/Create - Mostrar formulario de creación
         public ActionResult _PartialCrearUsuario()
         {
@@ -315,7 +291,6 @@ namespace Proyecto_Periodo_2.Controllers
 
                             if (!resultado.Succeeded)
                             {
-                                Debug.WriteLine("Error al cambiar la contraseña: " + string.Join(", ", resultado.Errors.Select(e => e.Description)));
                                 TempData["Error"] = "Error al cambiar la contraseña: " + string.Join(", ", resultado.Errors.Select(e => e.Description));
                                 return RedirectToAction(nameof(Index));
                             }
@@ -427,6 +402,13 @@ namespace Proyecto_Periodo_2.Controllers
 
                 await _db.SaveChangesAsync();
                 TempData["Exito"] = "Usuario eliminado correctamente.";
+
+                var idSession = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (idSession == usuario.Id)
+                {
+                    await _signInManager.SignOutAsync();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)

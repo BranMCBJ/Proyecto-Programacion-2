@@ -80,13 +80,8 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     nuevoPrestamo.cliente = cliente;
                     var libros = db.Libros
-                    .Where(l => l.Activo == true)
-                    .Include(l => l.Stock)
-                    .Select(l => new Models.ViewModels.PrestamoLibro(l)
-                    {
-                        Disponible = l.Stock != null && l.Stock.Cantidad > 0
-                    })
-                    .ToList();
+                    .Where(l => l.Activo == true &&
+                    l.Stock > 0).ToList();
                     return View(libros);
                 }
                 else

@@ -100,8 +100,8 @@
                                 <div class="d-flex align-items-center">
                                     <img src="https://via.placeholder.com/50" alt="Foto de perfil" class="profile-pic me-3">
                                     <div>
-                                        <p class="user-name">juan.perez</p>
-                                        <p class="user-fullname">Juan Pérez Gómez</p>
+                                        <p class="user-name">@usuario.usuario.NombreUsuario</p>
+                                        <p class="user-fullname">@usuario.usuario.Nombre @usuario.usuario.Apellido1 @usuario.usuario.Apellido2</p>
                                     </div>
                                 </div>
 
@@ -113,13 +113,13 @@
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownOpcionesUsuario-1">
                                         <li class="mb-2">
-                                            <button type="button" class="dropdown-item text-primary fs-5 btn-edit-user" data-id="1">
+                                            <button type="button" class="dropdown-item text-primary fs-5 btn-edit-user" data-id="@usuario.usuario.Id">
                                                 <i class="bi bi-pencil"></i> Editar
                                             </button>
                                         </li>
                                         <li><hr class="dropdown-divider" style="opacity: 40%;"></li>
                                         <li class="mt-2">
-                                            <button type="button" class="dropdown-item text-primary fs-5 btn-delete-user" data-id="1">
+                                            <button type="button" class="dropdown-item text-primary fs-5 btn-delete-user" data-id="@usuario.usuario.Id">
                                                 <i class="bi bi-trash"></i> Eliminar
                                             </button>
                                         </li>
@@ -130,10 +130,10 @@
                             <hr>
 
                             <!--Datos-->
-                            <p><span class="user-info-label">Cédula:</span> 123456789</p>
-                            <p><span class="user-info-label">Teléfono:</span> +506 8888-8888</p>
-                            <p><span class="user-info-label">Correo:</span> juan.perez@email.com</p>
-                            <p><span class="user-info-label">Rol:</span> Administrador</p>
+                            <p><span class="user-info-label">Cédula:</span> @usuario.usuario.Cedula</p>
+                            <p><span class="user-info-label">Teléfono:</span> @usuario.usuario.PhoneNumber</p>
+                            <p><span class="user-info-label">Correo:</span> @usuario.usuario.Email</p>
+                            <p><span class="user-info-label">Rol:</span> @usuario.rol</p>
                         </div>
                     </div>
                 </div>
@@ -253,6 +253,9 @@
               });
           });
         });
+    </script>
+    <script src="~/Clientes/main.js">
+        
     </script>
 
 
