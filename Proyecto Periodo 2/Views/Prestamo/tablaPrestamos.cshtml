@@ -106,7 +106,7 @@
                   <td>Libro prestado</td> <!-- Temporal hasta implementar la relación correcta -->
                   <td>
                     <span class="badge @(item.FechaLimite < DateTime.Now ? "bg-danger" : "bg-success")">
-                      @(item.FechaLimite < DateTime.Now ? "Vencido" : (item.estadoPrestamo?._Descripcion ?? "Activo"))
+                      @(item.FechaLimite < DateTime.Now ? "Vencido" : (item.estadoPrestamo?.Descripcion ?? "Activo"))
                     </span>
                   </td>
                   <td class="text-center">
