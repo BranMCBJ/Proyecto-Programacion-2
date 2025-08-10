@@ -47,6 +47,20 @@ namespace Data.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "e9c4d7aa-6723-4d8b-b49c-6b002367b635",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        },
+                        new
+                        {
+                            Id = "99708772-45ff-4e5a-b733-385a1155a1e8",
+                            Name = "Usuario",
+                            NormalizedName = "USUARIO"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -271,19 +285,21 @@ namespace Data.Migrations
 
             modelBuilder.Entity("Models.CopiaLibro", b =>
                 {
-                    b.Property<int>("IdCopiaLibro")
+                    b.Property<int?>("IdCopiaLibro")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdCopiaLibro"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("IdCopiaLibro"));
 
-                    b.Property<bool>("Activo")
+                    b.Property<bool?>("Activo")
                         .HasColumnType("bit");
 
-                    b.Property<int>("IdEstadoCopiaLibro")
+                    b.Property<int?>("IdEstadoCopiaLibro")
+                        .IsRequired()
                         .HasColumnType("int");
 
-                    b.Property<int>("IdLibro")
+                    b.Property<int?>("IdLibro")
+                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("IdCopiaLibro");
@@ -351,30 +367,69 @@ namespace Data.Migrations
                     b.HasKey("IdEstadoCopialibro");
 
                     b.ToTable("EstadoCopiaLibro", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            IdEstadoCopialibro = 1,
+                            Activo = true,
+                            Descripcion = "La copia del libro se puede prestar",
+                            Nombre = "Disponible"
+                        },
+                        new
+                        {
+                            IdEstadoCopialibro = 2,
+                            Activo = true,
+                            Descripcion = "La copia del libro esta en un prestamo",
+                            Nombre = "Prestado"
+                        },
+                        new
+                        {
+                            IdEstadoCopialibro = 3,
+                            Activo = true,
+                            Descripcion = "La copia del libro esta dañada",
+                            Nombre = "Dañado"
+                        });
                 });
 
             modelBuilder.Entity("Models.EstadoPrestamo", b =>
                 {
-                    b.Property<int?>("_IdEstado")
+                    b.Property<int?>("IdEstado")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("_IdEstado"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("IdEstado"));
 
-                    b.Property<bool?>("_Activo")
+                    b.Property<bool?>("Activo")
                         .HasColumnType("bit");
 
-                    b.Property<string>("_Descripcion")
+                    b.Property<string>("Descripcion")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("_Nombre")
+                    b.Property<string>("Nombre")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
-                    b.HasKey("_IdEstado");
+                    b.HasKey("IdEstado");
 
                     b.ToTable("EstadoPrestamo", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            IdEstado = 1,
+                            Activo = true,
+                            Descripcion = "El prestamo sigue en vigencia",
+                            Nombre = "Vigente"
+                        },
+                        new
+                        {
+                            IdEstado = 2,
+                            Activo = true,
+                            Descripcion = "El prestamo ya termino",
+                            Nombre = "Devuelto"
+                        });
                 });
 
             modelBuilder.Entity("Models.Libro", b =>

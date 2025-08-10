@@ -4,6 +4,7 @@
     {
         public const string AdminRole = "Admin";
         public const string UserRole = "Usuario";
+
         public static string ImagenUsuario = @"\Usuario\";
         public const string ImagenRutaLibros = @"\images\libros\";
 

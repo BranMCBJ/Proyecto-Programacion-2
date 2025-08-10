@@ -29,6 +29,22 @@ namespace Data
             modelBuilder.Entity<Prestamo>().ToTable("Prestamo");
             modelBuilder.Entity<EstadoCopiaLibro>().ToTable("EstadoCopiaLibro");
 
+            modelBuilder.Entity<EstadoCopiaLibro>().HasData(
+                new EstadoCopiaLibro { IdEstadoCopialibro = 1, Nombre = "Disponible", Activo = true, Descripcion = "La copia del libro se puede prestar" },
+                new EstadoCopiaLibro { IdEstadoCopialibro = 2, Nombre = "Prestado", Activo = true, Descripcion = "La copia del libro esta en un prestamo" },
+                new EstadoCopiaLibro { IdEstadoCopialibro = 3, Nombre = "Dañado", Activo = true, Descripcion = "La copia del libro esta dañada" }
+            );
+
+            modelBuilder.Entity<EstadoPrestamo>().HasData(
+                new EstadoPrestamo { IdEstado = 1, Nombre = "Vigente", Activo = true, Descripcion = "El prestamo sigue en vigencia" },
+                new EstadoPrestamo { IdEstado = 2, Nombre = "Devuelto", Activo = true, Descripcion = "El prestamo ya termino" }
+            );
+
+            modelBuilder.Entity<IdentityRole>().HasData(
+                new IdentityRole { Name = "Admin", NormalizedName = "ADMIN" },
+                new IdentityRole { Name = "Usuario", NormalizedName = "USUARIO" }
+            );
+
             base.OnModelCreating(modelBuilder);
         }
     }

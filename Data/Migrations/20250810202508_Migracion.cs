@@ -3,6 +3,8 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Data.Migrations
 {
     /// <inheritdoc />
@@ -90,29 +92,35 @@ namespace Data.Migrations
                 name: "EstadoPrestamo",
                 columns: table => new
                 {
-                    _IdEstado = table.Column<int>(type: "int", nullable: false)
+                    IdEstado = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    _Nombre = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
-                    _Descripcion = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
-                    _Activo = table.Column<bool>(type: "bit", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_EstadoPrestamo", x => x._IdEstado);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Stocks",
-                columns: table => new
-                {
-                    IdStock = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    Nombre = table.Column<string>(type: "nvarchar(20)", maxLength: 20, nullable: true),
+                    Descripcion = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
                     Activo = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Stocks", x => x.IdStock);
+                    table.PrimaryKey("PK_EstadoPrestamo", x => x.IdEstado);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Libros",
+                columns: table => new
+                {
+                    IdLibro = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    ClasificacionEdad = table.Column<int>(type: "int", nullable: false),
+                    FechaPublicacion = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ISBN = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
+                    Titulo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    Descripcion = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: false),
+                    ImagenUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Stock = table.Column<int>(type: "int", nullable: false),
+                    Activo = table.Column<bool>(type: "bit", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Libros", x => x.IdLibro);
                 });
 
             migrationBuilder.CreateTable(
@@ -246,28 +254,30 @@ namespace Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Libros",
+                name: "CopiaLibros",
                 columns: table => new
                 {
-                    IdLibro = table.Column<int>(type: "int", nullable: false)
+                    IdCopiaLibro = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IdStock = table.Column<int>(type: "int", nullable: true),
-                    ClasificacionEdad = table.Column<int>(type: "int", nullable: false),
-                    FechaPublicacion = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    ISBN = table.Column<string>(type: "nvarchar(13)", maxLength: 13, nullable: false),
-                    Titulo = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Descripcion = table.Column<string>(type: "nvarchar(400)", maxLength: 400, nullable: false),
-                    ImagenUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Activo = table.Column<bool>(type: "bit", nullable: false)
+                    IdLibro = table.Column<int>(type: "int", nullable: false),
+                    IdEstadoCopiaLibro = table.Column<int>(type: "int", nullable: false),
+                    Activo = table.Column<bool>(type: "bit", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Libros", x => x.IdLibro);
+                    table.PrimaryKey("PK_CopiaLibros", x => x.IdCopiaLibro);
                     table.ForeignKey(
-                        name: "FK_Libros_Stocks_IdStock",
-                        column: x => x.IdStock,
-                        principalTable: "Stocks",
-                        principalColumn: "IdStock");
+                        name: "FK_CopiaLibros_EstadoCopiaLibro_IdEstadoCopiaLibro",
+                        column: x => x.IdEstadoCopiaLibro,
+                        principalTable: "EstadoCopiaLibro",
+                        principalColumn: "IdEstadoCopialibro",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CopiaLibros_Libros_IdLibro",
+                        column: x => x.IdLibro,
+                        principalTable: "Libros",
+                        principalColumn: "IdLibro",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -295,39 +305,12 @@ namespace Data.Migrations
                         name: "FK_Prestamo_EstadoPrestamo_IdEstadoPrestamo",
                         column: x => x.IdEstadoPrestamo,
                         principalTable: "EstadoPrestamo",
-                        principalColumn: "_IdEstado");
+                        principalColumn: "IdEstado");
                     table.ForeignKey(
                         name: "FK_Prestamo_Usuarios_IdUsuario",
                         column: x => x.IdUsuario,
                         principalTable: "Usuarios",
                         principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "CopiaLibros",
-                columns: table => new
-                {
-                    IdCopiaLibro = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    IdLibro = table.Column<int>(type: "int", nullable: false),
-                    IdEstadoCopiaLibro = table.Column<int>(type: "int", nullable: false),
-                    Activo = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_CopiaLibros", x => x.IdCopiaLibro);
-                    table.ForeignKey(
-                        name: "FK_CopiaLibros_EstadoCopiaLibro_IdEstadoCopiaLibro",
-                        column: x => x.IdEstadoCopiaLibro,
-                        principalTable: "EstadoCopiaLibro",
-                        principalColumn: "IdEstadoCopialibro",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_CopiaLibros_Libros_IdLibro",
-                        column: x => x.IdLibro,
-                        principalTable: "Libros",
-                        principalColumn: "IdLibro",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -355,6 +338,34 @@ namespace Data.Migrations
                         column: x => x.PrestamoIdPrestamo,
                         principalTable: "Prestamo",
                         principalColumn: "IdPrestamo");
+                });
+
+            migrationBuilder.InsertData(
+                table: "AspNetRoles",
+                columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
+                values: new object[,]
+                {
+                    { "99708772-45ff-4e5a-b733-385a1155a1e8", null, "Usuario", "USUARIO" },
+                    { "e9c4d7aa-6723-4d8b-b49c-6b002367b635", null, "Admin", "ADMIN" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "EstadoCopiaLibro",
+                columns: new[] { "IdEstadoCopialibro", "Activo", "Descripcion", "Nombre" },
+                values: new object[,]
+                {
+                    { 1, true, "La copia del libro se puede prestar", "Disponible" },
+                    { 2, true, "La copia del libro esta en un prestamo", "Prestado" },
+                    { 3, true, "La copia del libro esta dañada", "Dañado" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "EstadoPrestamo",
+                columns: new[] { "IdEstado", "Activo", "Descripcion", "Nombre" },
+                values: new object[,]
+                {
+                    { 1, true, "El prestamo sigue en vigencia", "Vigente" },
+                    { 2, true, "El prestamo ya termino", "Devuelto" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -417,11 +428,6 @@ namespace Data.Migrations
                 column: "PrestamoIdPrestamo");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Libros_IdStock",
-                table: "Libros",
-                column: "IdStock");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Prestamo_IdCliente",
                 table: "Prestamo",
                 column: "IdCliente");
@@ -481,9 +487,6 @@ namespace Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "Usuarios");
-
-            migrationBuilder.DropTable(
-                name: "Stocks");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");

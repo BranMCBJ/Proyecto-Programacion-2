@@ -5,11 +5,11 @@ namespace Models
     public class EstadoPrestamo
     {
         [Key]
-        public int? _IdEstado { get; set; }
+        public int? IdEstado { get; set; }
         [StringLength(20)]
-        public string? _Nombre { get; set; }        
+        public string? Nombre { get; set; }        
         [StringLength(100)]
-        public string? _Descripcion { get; set; }
-        public bool? _Activo { get; set; }
+        public string? Descripcion { get; set; }
+        public bool? Activo { get; set; }
     }
 }

@@ -103,6 +103,8 @@ namespace Proyecto_Periodo_2.Controllers
                     }
                     libro.Activo = true; // Asegurarse de que el libro esté activo
                     _db.Libros.Add(libro);
+                    //Crea la cantidad de copias de libro correspondientes al stock
+                    CrearCopiasLibro(libro.Stock, libro.IdLibro);
                     _db.SaveChanges();
                     TempData["Success"] = "Libro creado exitosamente.";
                     return RedirectToAction(nameof(Index));
@@ -125,7 +127,8 @@ namespace Proyecto_Periodo_2.Controllers
             {
                 if (!ModelState.IsValid)
                 {
-                    return PartialView("_PartialVerMasLibro", libroVM);
+                    TempData["Error"] = "Por favor, corrija los errores en el formulario.";
+                    return RedirectToAction(nameof(Index));
                 }
 
                 var libroEnDb = _db.Libros.FirstOrDefault(x => x.IdLibro == libroVM.Libro.IdLibro);
@@ -162,6 +165,7 @@ namespace Proyecto_Periodo_2.Controllers
                     libroEnDb.ImagenUrl = $"/Libros/images/{fileName}";
                 }
 
+                _db.Libros.Update(libroEnDb);
                 _db.SaveChanges();
                 TempData["Success"] = "Libro actualizado exitosamente.";
                 return RedirectToAction(nameof(Index));
@@ -170,14 +174,14 @@ namespace Proyecto_Periodo_2.Controllers
             if (accion == "eliminar")
             {
                 var libroEnDb = _db.Libros.FirstOrDefault(x => x.IdLibro == libroVM.Libro.IdLibro);
-                if (libroEnDb == null)
+                if (libroEnDb == null || libroEnDb.Activo == false)
                 {
                     TempData["Error"] = "Libro no encontrado.";
                     return RedirectToAction(nameof(Index));
                 }
-
-                // Soft delete
                 libroEnDb.Activo = false;
+                _db.Libros.Update(libroEnDb);
+                EliminarCopiaLibro(false, libroEnDb.IdLibro);
                 _db.SaveChanges();
                 TempData["Success"] = "Libro eliminado exitosamente.";
                 return RedirectToAction(nameof(Index));
@@ -187,5 +191,31 @@ namespace Proyecto_Periodo_2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        public void CrearCopiasLibro(int? stock, int? id)
+        {
+            for (var i = 0; i < stock; i++)
+            {
+                var copiaLibro = new CopiaLibro
+                {
+                    IdLibro = id,
+                    IdEstadoCopiaLibro = 1,//Estado Disponible
+                    Activo = true
+                };
+                _db.CopiasLibros.Add(copiaLibro);
+            }
+        }
+
+        public void EliminarCopiaLibro(bool? activo, int? id)
+        {
+            var copias = _db.CopiasLibros.Where(c => c.IdLibro == id).ToList();
+            if (activo == false)
+            {
+                foreach (var item in copias)
+                {
+                    item.Activo = false;
+                    _db.CopiasLibros.Update(item);
+                }
+            }
+        }
     }
 }

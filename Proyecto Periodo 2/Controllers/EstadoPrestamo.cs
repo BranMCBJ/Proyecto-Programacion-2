@@ -22,7 +22,7 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                IEnumerable<EstadoPrestamo> listaEstados = _db.EstadoPrestamo.Where(e => e._Activo == true);
+                IEnumerable<EstadoPrestamo> listaEstados = _db.EstadoPrestamo.Where(e => e.Activo == true);
                 return View(listaEstados);
             }
             catch (Exception)
@@ -43,7 +43,7 @@ namespace Proyecto_Periodo_2.Controllers
                 }
 
                 var estado = _db.EstadoPrestamo.Find(id);
-                if (estado == null || estado._Activo != true)
+                if (estado == null || estado.Activo != true)
                 {
                     return NotFound();
                 }
@@ -73,7 +73,7 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     // Verificar si ya existe un estado con el mismo nombre
                     var estadoExistente = _db.EstadoPrestamo
-                        .FirstOrDefault(e => e._Nombre == estadoPrestamo._Nombre && e._Activo == true);
+                        .FirstOrDefault(e => e.Nombre == estadoPrestamo.Nombre && e.Activo == true);
 
                     if (estadoExistente != null)
                     {
@@ -82,7 +82,7 @@ namespace Proyecto_Periodo_2.Controllers
                     }
 
                     // Establecer estado como activo por defecto
-                    estadoPrestamo._Activo = true;
+                    estadoPrestamo.Activo = true;
 
                     _db.EstadoPrestamo.Add(estadoPrestamo);
                     _db.SaveChanges();
@@ -134,9 +134,9 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     // Verificar si ya existe otro estado con el mismo nombre
                     var estadoExistente = _db.EstadoPrestamo
-                        .FirstOrDefault(e => e._Nombre == estadoPrestamo._Nombre &&
-                                           e._IdEstado != estadoPrestamo._IdEstado &&
-                                           e._Activo == true);
+                        .FirstOrDefault(e => e.Nombre == estadoPrestamo.Nombre &&
+                                           e.IdEstado != estadoPrestamo.IdEstado &&
+                                           e.Activo == true);
 
                     if (estadoExistente != null)
                     {
@@ -193,7 +193,7 @@ namespace Proyecto_Periodo_2.Controllers
                 var estado = _db.EstadoPrestamo.Find(id);
                 if (estado != null)
                 {
-                    estado._Activo = false;
+                    estado.Activo = false;
                     _db.EstadoPrestamo.Update(estado);
                     _db.SaveChanges();
 

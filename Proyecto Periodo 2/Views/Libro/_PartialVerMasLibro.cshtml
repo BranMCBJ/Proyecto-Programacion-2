@@ -1,8 +1,8 @@
 ﻿@model Models.ViewModels.LibroVM
 
-<form asp-action="UpDelete" method="post" enctype="multipart/form-data">
+<form asp-action="UpDelete" asp-controller="Libro" method="post" enctype="multipart/form-data">
 	@Html.AntiForgeryToken()
-    <input asp-for="Libro.IdLibro" type="hidden" name="id" value="@Model.Libro.IdLibro" />
+    <input asp-for="Libro.IdLibro" type="hidden" name="Libro.IdLibro" value="@Model.Libro.IdLibro" />
 
     <div class="modal-header"
          style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
@@ -24,7 +24,7 @@
                     <input asp-for="Imagen" type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)" />
 
                     <!-- Área interactiva -->
-                    <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
+                    <div class="image-placeholder text-center border rounded p-4 w-100 h-75"
                          id="imagePreview"
                          onclick="document.getElementById('fileInput').click();"
                          style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
@@ -33,7 +33,7 @@
                         {
                             <img src="@Url.Content(Model.Libro.ImagenUrl)"
                                  class="img-fluid w-100 h-100 object-fit-cover rounded"
-                                 alt="Imagen actual" />
+                                 alt="Imagen libro" />
                         }
                         else
                         {
@@ -65,6 +65,7 @@
                     <div class="form-group mb-3">
                         <label asp-for="Libro.ISBN">ISBN</label>
                         <input asp-for="Libro.ISBN" class="form-control" />
+                        <span asp-validation-for="Libro.ISBN"></span>
                     </div>
                     <div class="form-group mb-3">
                         <label asp-for="Libro.FechaPublicacion"></label>
@@ -76,7 +77,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label asp-for="Libro.Stock"></label>
-                        <input asp-for="Libro.Stock" class="form-control" />
+                        <input asp-for="Libro.Stock" class="form-control" readonly />
                     </div>
                     <div class="form-group mb-3">
                         <label asp-for="Libro.Descripcion">Descripcion</label>
@@ -95,7 +96,7 @@
         if (file && file.type.startsWith("image/")) {
             const reader = new FileReader();
             reader.onload = function (e) {
-            preview.innerHTML = `<img src="${e.target.result}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="Imagen previa">`;
+            preview.innerHTML = `<img src="${e.target.result}" class="rounded" style="width: 300px; height: 400px; object-fit: cover;" alt="Imagen previa">`;
             };
             reader.readAsDataURL(file);
         }
