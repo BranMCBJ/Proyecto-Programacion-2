@@ -1,21 +1,26 @@
-    h1, h3 {
-      color: #8c2445;
-    }
+h1, h3 {
+  color: #8c2445;
+}
 
-    .card-title{
-        font-size: 20px;
-    }
-    
+.card-title {
+  font-size: 20px;
+}
 
-  .dropdown-item:hover {
-            color: #8C2445 !important;
-            background-color : #8c244510 !important;
-        }
+.dropdown-item:hover {
+  color: #8C2445 !important;
+  background-color: #8c244510 !important;
+}
+
 .border-graydark {
-        border-color: #cacaca !important;
-    }
+  border-color: #cacaca !important;
+}
 
 input:focus {
-    outline: none !important;
-    box-shadow: none !important;
-}  
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.btn-close:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}

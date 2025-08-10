@@ -1,96 +1,89 @@
-@model IEnumerable<Models.ViewModels.PrestamoLibro>
-  <link rel="stylesheet" href="Prestamos/styles.css">
-  <link rel="stylesheet" href="Prestamos/libros.css">
-  <h1 class="px-3 pt-3 mb-4">Préstamos</h1>
-  <div class="d-flex justify-content-end px-3">
+@model IEnumerable<Models.Libro>
+<link rel="stylesheet" href="/Prestamos/libros.css">
+<link rel="stylesheet" href="/Prestamos/styles.css">
+
+<h1 class="px-3 pt-3 mb-4">Préstamos</h1>
+<div class="d-flex justify-content-end px-3">
   <a asp-controller="Prestamo" asp-action="Index" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
     Volver
   </a>
 </div>
 
-  <!-- Filtros y búsqueda -->
-        <div class="row g-2 mb-4 justify-content-start">
-            <!-- Buscar -->
-            <div class="col-3">
-                <div class="input-group border-graydark border rounded d-flex align-items-center">
-                    <i class="bi bi-search me-1 text-secondary"></i>
-                    <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
-                </div>
-            </div>
-            <!-- Filtrar por -->
-            
-            <!-- Ordenar por -->
-            <div class="col-2 ms-auto">
-                <div class="dropdown border border-graydark rounded">
-                    <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="d-flex align-items-center text-secondary">
-                            <span>Ordenar por</span>
-                            <i class="bi bi-chevron-down ms-auto me-0"></i>
-                        </div>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
+<!-- Filtros y búsqueda -->
+<div class="row g-2 mb-4 justify-content-start">
+  <!-- Buscar -->
+  <div class="col-3">
+    <div class="input-group border-graydark border rounded d-flex align-items-center">
+      <i class="bi bi-search me-1 text-secondary"></i>
+      <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
+    </div>
+  </div>
+  <!-- Ordenar por -->
+  <div class="col-2 ms-auto">
+    <div class="dropdown border border-graydark rounded">
+      <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex align-items-center text-secondary">
+          <span>Ordenar por</span>
+          <i class="bi bi-chevron-down ms-auto me-0"></i>
         </div>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a></li>
+        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-  <h3 class="px-3 pt-3">
-    Seleccione un Libro...
-  </h3>
+<h3 class="px-3 pt-3">Seleccione un Libro...</h3>
 <div class="row">
-  <!-- Card 1 -->
-  @foreach(var libro in Model)
+  @if(Model != null && Model.Any())
   {
-    <div class="col-sm-6 col-lg-3 mt-4">
+    foreach(var item in Model)
+    {
+      <div class="col-sm-5 col-lg-3 mt-4">
         <div class="card shadow-sm text-center h-100 pt-3">
-            <div class="card-body pt-5">
-                <p class="card-title mb-1">@libro.Titulo</p>
-                <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "/images/no-image.png" : libro.ImagenUrl)"
-                     class="card-img-top mx-auto d-block mt-3 mb-3 rounded"
-                     style="width: 150px; height: 150px; object-fit: cover;"
-                     alt="Foto del libro">
-                @if (libro.Disponible)
-                {
-                    <button class="btn mt-2 shadow-sm"
-                            style="background-color: #8c2445; color: #ffffff; width: 150px;"
-                            data-bs-toggle="modal"
-                            data-bs-target="#confirmModal-@libro.IdLibro">
-                        Seleccionar
-                    </button>
-                }
-                else
-                {
-                    <button class="btn mt-2 shadow-sm"
-                            style="background-color: #ffffff; color: #dc3545; border: 2px solid #dc3545; width: 150px;"
-                            disabled>
-                        No disponible
-                    </button>
-                }
+          <div class="card-body pt-3">
+            <p class="card-title mb-1">@item.Titulo</p>
+            <img src="@item.ImagenUrl"
+              class="card-img-top mx-auto d-block mt-3 mb-3 rounded"
+              style="width: 150px; height: 150px; object-fit: cover;"
+              alt="Foto del cliente">
+            <button class="btn mt-4 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;" data-bs-toggle="modal" data-bs-target="#confirmModal-@item.IdLibro">
+              Seleccionar
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal-@item.IdLibro" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center p-4">
+                  <!-- Botón cerrar -->
+                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  <!-- Contenido -->
+                  <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA AGREGAR?</p>
+                  <p class="fw-semibold mb-2">@item.Titulo</p>
+                  <img src="@item.ImagenUrl"
+                    alt="Libro"
+                    class="img-fluid mx-auto mb-4"
+                    style="max-height: 180px;">
+                  <!-- Botones -->
+                  <div class="d-flex justify-content-center gap-3">
+                    <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
+                    <a asp-controller="Prestamo" asp-action="SeleccionarLibro" asp-route-idLibro="@item.IdLibro"
+                    type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">
+                      Confirmar</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-    <div class="modal fade" id="confirmModal-@libro.IdLibro" tabindex="-1" aria-labelledby="confirmModalLabel-@libro.IdLibro" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content text-center p-4">
-                <form asp-controller="Prestamo" asp-action="SeleccionarLibro" asp-route-idLibro="@libro.IdLibro" method="post">
-                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-                    <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA AGREGAR?</p>
-                    <p class="fw-semibold mb-2">@libro.Titulo</p>
-                    <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "/images/no-image.png" : libro.ImagenUrl)"
-                         alt="Libro"
-                         class="img-fluid mx-auto mb-4"
-                         style="max-height: 180px;">
-                    <div class="d-flex justify-content-center gap-3">
-                        <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Confirmar</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
+      </div>
+    }
   }
+  else
+  {
+    <h5>No hay libros registrados</h5>
+  }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>

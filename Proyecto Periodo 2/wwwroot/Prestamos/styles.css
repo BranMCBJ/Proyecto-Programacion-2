@@ -1,6 +1,51 @@
+.nav-link {
+      color: #791d35;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-link:hover {
+      color: #5a1226;
+    }
+
+    .navbar-divider {
+      height: 24px;
+      width: 1px;
+      background-color: #ccc;
+      margin: 0 12px;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      color: #791d35;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+    }
+
+    .login-button {
+      color: #791d35;
+      border: 1px solid #791d35;
+    }
+
+    .login-button:hover {
+      background-color: #791d35;
+      color: white;
+    }
+
+  
+
 .row{
     margin: 20px;
 }
+
+
 
 .row.align-items-stretch {
   height: 100%;
@@ -71,11 +116,67 @@
   color: #791d35;
 }
 
-.btn:hover{
+.btn-cliente:hover{
   background-color: #8c2445;
+  color: white !important;
+}
+
+.btn-cliente:hover i {
   color: white !important;
 }
 
 .dropdown-toggle::after{
   display: none !important;
+}
+
+.text-center img{
+  margin-bottom: -50px;
+}
+
+
+.bi-gear-fill{
+  color: #8c2445;
+  min-width: 20px;
+  min-height: 20px;
+}
+
+.btn:focus{
+  outline: none !important;
+  border: none;
+}
+
+.btn-cliente{
+  background-color: none;
+  border: none;
+  font-size: 40px;
+  color: #8c2445;
+}
+
+.btn-cliente i{
+  color: #8c2445;
+  font-size: 40px;
+}
+
+/* Estilos específicos para enlaces con clase btn-cliente */
+a.btn-cliente {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  color: #8c2445;
+  text-decoration: none !important;
+}
+
+a.btn-cliente:hover{
+  background-color: #8c2445;
+  color: white !important;
+  text-decoration: none !important;
+}
+
+a.btn-cliente:hover i {
+  color: white !important;
+}
+
+a.btn-cliente i{
+  color: #8c2445;
+  font-size: 40px;
 }
