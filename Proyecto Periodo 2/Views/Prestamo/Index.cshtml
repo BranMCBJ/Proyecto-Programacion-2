@@ -1,108 +1,117 @@
-@model Cliente
-
-<link rel="stylesheet" href="~/Prestamos/styles.css" asp-append-version="true" />
-  @if (TempData["DebugMessage"] != null)
-{
-    <div class="alert alert-info">@TempData["DebugMessage"]</div>
-}
-<div class="container-fluid px-4 ">
+@model Models.Cliente
+<link rel="stylesheet" href="Prestamos/styles.css">
+<div class="container-fluid">
   <div class="row align-items-stretch gy-4">
     <h1 style="color: #8c2445; margin-top: 80px; font-weight: normal; font-size: 60px;">Préstamos</h1>
     <!-- Columna izquierda -->
-    @if (Model != null)
-    {
-      <div class="col-md-4">
-        <div class="card p-3 h-100 shadow-sm">
-          <div class="text-center">
-            <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.URLImagen}")" alt="Perfil" class="rounded-square mt-2">
-            <h3>@($"{Model.Nombre} {Model.Apellido1} {Model.Apellido2}")</h3>
-            <h5 style="opacity: 60%;">@Model.Cedula</h5>
-            <p class="fw-bold my-3" style="font-size: 25px;">Préstamos Disponibles: @Model.CantidadPrestamosDisponibles</p>
-            <a class="btn btn-primary w-100 mb-3 align-items-center py-auto text-white" 
-                style="max-width: 300px; min-height: 70px;" 
-                asp-controller="Prestamo" asp-action="clientes"> 
-                <h4 class="my-3">Cambiar cliente</h4></a>            
+    <div class="col-md-4">
+      <div class="card p-3 h-100 shadow-sm">
+        @if(Model != null)
+        {        
+          <div class="d-flex justify-content-end">
+            <div class="dropdown">
+              <button class="btn btn-gear dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-gear-fill"></i>
+              </button>
+              <ul class="dropdown-menu">
+                <li class="dropdown-item">
+                  <a asp-controller="Prestamo" asp-action="clientes" style="text-decoration: none; color: #791d35;">Cambiar Cliente</a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </div>
-    }
-    else
-    {
-      <div class="col-4">
-        <div class="card p-3 h-100 shadow-sm">
           <div class="text-center">
-            <img src="/images/default-user.svg" class="rounded-square mb-1">
+            <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.URLImagen}")"  alt="Perfil" class="rounded-square ">
             <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
-            <a class="btn btn-outline-secondary w-100 mb-3" 
-                style="max-width: 300px; min-height: 70px;" 
-                asp-controller="Prestamo" asp-action="clientes"> Seleccione un cliente</a>
+            <p style="opacity: 60%;">@Model.Cedula</p>
+            <p style="font-size: 25px;">@Model.Nombre @Model.Apellido1 @Model.Apellido2</p>
+            <p style="opacity: 60%; font-size: 20px;">
+              Correo:  @Model.Correo<br>
+              Teléfono: @Model.Telefono
+            </p>
+            <p class="fw-bold text-success" style="font-size: 25px;">@Model.CantidadPrestamosDisponibles Préstamos Disponibles</p>
           </div>
+        }
+        else
+        {
+        <div class="text-center">          
+          <a asp-controller="Prestamo" asp-action="clientes" class="btn btn-cliente w-100 mb-3" style="min-width: 500px; min-height: 700px; text-decoration: none; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <i class="bi bi-person-fill-add"></i>
+            Seleccione un cliente
+          </a>
         </div>
+        }
       </div>
-    }    
-
+    </div>
+    
     <!-- Columna derecha -->
     <div class="col-md-8 d-flex flex-column justify-content-between">
       <div class="row gx-3 gy-3 flex-grow-1">
         <!-- Nuevo Préstamo ocupa fila completa -->
         <div class="col-12">
-  <a asp-controller="Prestamo" asp-action="libros" asp-route-idCliente="@(Model == null ? 0 : Model.IdCliente)" class="text-decoration-none h-100 d-block">
-    <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
-      <i class="bi bi-pencil-square  fs-1"></i>
-      <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
-    </div>
-  </a>
-</div>
+          @if(Model != null)
+          {
+            <a asp-controller="Prestamo" asp-action="libros" asp-route-idCliente="@Model.IdCliente" class="text-decoration-none h-100 d-block">
+              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                <i class="bi bi-pencil-square fs-1"></i>
+                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
+              </div>
+            </a>
+          }
+          else
+          {
+            <button class="btn text-decoration-none outline-0 border-0 h-100 w-100 d-block" disabled>
+              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                <i class="bi bi-pencil-square fs-1"></i>
+                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
+              </div>
+            </button>
+          }
+        </div>
+        <div class="col-12 d-flex">
+          <!-- Préstamos Activos y Suspender Usuario, mitad y mitad -->
+          <div class="col-5">
+            <a href="./tablaPrestamos.html" class="text-decoration-none h-100 d-block">
+              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                <i class="bi bi-pencil fs-1"></i>
 
-<div class="col-12 d-flex ">
-<!-- Préstamos Activos y Suspender Usuario, mitad y mitad -->
-        <div class="col-5">
-  <a href="./tablaPrestamos.html" class="text-decoration-none h-100 d-block">
-    <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
-      <i class="bi bi-pencil fs-1 "></i>
-      <h5 class="mt-2 fw-semibold text-dark">Préstamos activos</h5>
-    </div>
-  </a>
-</div>
-
-        <div class="col-5">
-  <a href="#" class="text-decoration-none h-100 d-block" data-bs-toggle="modal" data-bs-target="#confirmModal">
-    <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
-      <i class="bi bi-person-x fs-1 "></i>
-      <h5 class="mt-2 fw-semibold text-dark">Suspender Usuario</h5>
-    </div>
-  </a>
-
-  <!-- Modal -->
-<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content text-center p-4">
-      
-      <!-- Botón cerrar -->
-      <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-      
-      <!-- Contenido -->
-      <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA SUSPENDER A:?</p>
-      <p class="fw-semibold mb-2">Jose Pablo Araya</p>
-      <img src="https://randomuser.me/api/portraits/men/75.jpg" 
-           alt="Libro" 
-           class="img-fluid mx-auto mb-4" 
-           style="max-height: 180px;">
-      
-      <!-- Botones -->
-      <div class="d-flex justify-content-center gap-3">
-        <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;" onclick="">Confirmar</button>
+                <h5 class="mt-2 fw-semibold text-dark">Préstamos activos</h5>
+              </div>
+            </a>
+          </div>
+          <div class="col-5">
+            <a href="#" class="text-decoration-none h-100 d-block" data-bs-toggle="modal" data-bs-target="#confirmModal">
+              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                <i class="bi bi-person-x fs-1"></i>
+                <h5 class="mt-2 fw-semibold text-dark">Suspender Usuario</h5>
+              </div>
+            </a>
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center p-4">
+                  <!-- Botón cerrar -->
+                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  <!-- Contenido -->
+                  <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA SUSPENDER A:?</p>
+                  <p class="fw-semibold mb-2">Jose Pablo Araya</p>
+                  <img src="https://randomuser.me/api/portraits/men/75.jpg"
+                     alt="Libro"
+                     class="img-fluid mx-auto mb-4"
+                     style="max-height: 180px;">
+                  <!-- Botones -->
+                  <div class="d-flex justify-content-center gap-3">
+                    <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;" onclick="">Confirmar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-
     </div>
   </div>
 </div>
-</div>
-</div>
-        
-
-      </div>
     </div>
-  </div>
-</div>
+

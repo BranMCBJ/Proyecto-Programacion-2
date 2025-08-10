@@ -1,85 +1,103 @@
-@model IEnumerable<Cliente>
-<link rel="stylesheet" href="~/Prestamo/clientes.css">
-<div class="m-3" style="padding: 20px;">
-  <h1 class="px-3 pt-3">Préstamos</h1>
-  <div class="d-flex justify-content-end px-3">
+@model IEnumerable<Models.Cliente>
+<link rel="stylesheet" href="Prestamos/clientes.css">
+<link rel="stylesheet" href="Prestamos/styles.css">
+<h1 class="px-3 pt-3">Préstamos</h1>
+<div class="d-flex justify-content-end px-3">
   <a asp-controller="Prestamo" asp-action="Index" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
     Volver
   </a>
 </div>
 
-  <!-- Filtros y búsqueda -->
-        <div class="row g-2 mb-4 justify-content-start">
-            <!-- Buscar -->
-            <div class="col-3">
-                <div class="input-group border-graydark border rounded d-flex align-items-center">
-                    <i class="bi bi-search me-1 text-secondary"></i>
-                    <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
-                </div>
-            </div>
-            <!-- Filtrar por -->
-            <div class="col-2">
-                <div class="dropdown border border-graydark rounded">
-                    <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="d-flex align-items-center text-secondary">
-                            <span>Filtrar por</span>
-                            <i class="bi bi-chevron-down ms-auto me-0"></i>
-                        </div>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-envelope text-primary me-2"></i>Correo
-                                </a></li>
-                        <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-phone text-primary me-2"></i>Número de Teléfono
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
-            <!-- Ordenar por -->
-            <div class="col-2 ms-auto">
-                <div class="dropdown border border-graydark rounded">
-                    <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        <div class="d-flex align-items-center text-secondary">
-                            <span>Ordenar por</span>
-                            <i class="bi bi-chevron-down ms-auto me-0"></i>
-                        </div>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a>
-                        </li>
-                        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)
-                            </a></li>
-                    </ul>
-                </div>
-            </div>
+<!-- Filtros y búsqueda -->
+<div class="row g-2 mb-4 justify-content-start">
+  <!-- Buscar -->
+  <div class="col-3">
+    <div class="input-group border-graydark border rounded d-flex align-items-center">
+      <i class="bi bi-search me-1 text-secondary"></i>
+      <input type="text" class="form-control border-0 text-secondary" placeholder="Buscar">
+    </div>
+  </div>
+  <!-- Filtrar por -->
+  <div class="col-2">
+    <div class="dropdown border border-graydark rounded">
+      <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex align-items-center text-secondary">
+          <span>Filtrar por</span>
+          <i class="bi bi-chevron-down ms-auto me-0"></i>
         </div>
-
-  <h3 class="px-3 pt-3">
-    Seleccione un cliente...
-  </h3>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-id-card text-primary me-2"></i>Cédula</a></li>
+        <li><a class="dropdown-item" href="#"><i class="fa-regular fa-envelope text-primary me-2"></i>Correo</a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-fonts text-primary me-2"></i>Nombre</a></li>
+        <li><a class="dropdown-item" href="#"><i class="fa fa-phone text-primary me-2"></i>Número de Teléfono</a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- Ordenar por -->
+  <div class="col-2 ms-auto">
+    <div class="dropdown border border-graydark rounded">
+      <button class="btn text-start w-100" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <div class="d-flex align-items-center text-secondary">
+          <span>Ordenar por</span>
+          <i class="bi bi-chevron-down ms-auto me-0"></i>
+        </div>
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-up text-primary me-2"></i>Nombre(A-Z)</a></li>
+        <li><a class="dropdown-item" href="#"><i class="fa fa-arrow-down text-primary me-2"></i>Nombre(Z-A)</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<h3 class="px-3 pt-3">Seleccione un cliente...</h3>
 <div class="row">
-  @if(!Model.Any() || Model == null)
-  {
-    <h3 class="text-center my-3">No hay clientes registrados</h3>
-  }
-  else
-  {
-    foreach(var cliente in Model){
-      <div class="col-sm-6  col-lg-3 mt-4">
+  @if(Model != null && Model.Any())
+  { 
+    foreach(var item in Model)
+    {
+      <div class="col-sm-5 col-lg-3 mt-4">
         <div class="card shadow-sm text-center h-100 pt-3">
-          <img src="@(string.IsNullOrEmpty(cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{cliente.URLImagen}")"
-              class="card-img-top mx-auto d-block mt-2 rounded"
+          <div class="card-body pt-3">
+            <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{item.URLImagen}")" 
+              class="card-img-top mx-auto d-block mt-3 mb-3 rounded"
               style="width: 150px; height: 150px; object-fit: cover;"
               alt="Foto del cliente">
-          <div class="card-body">
-            <p class="card-text"><strong>Nombre:</strong> @($"{cliente.Nombre} {cliente.Apellido1} {cliente.Apellido2}")</p>
-            <p class="card-text mt-2"><strong>Cédula:</strong> @cliente.Cedula</p>
-            <a asp-controller="Prestamo" asp-action="Index" asp-route-id="@cliente.IdCliente" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">Seleccionar</a>
+            <p class="card-text mb-1"><strong>Nombre:</strong> @item.Nombre @item.Apellido1 @item.Apellido2</p>
+            <p class="card-text"><strong>Cédula:</strong> @item.Cedula</p>
+            <button class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;" data-bs-toggle="modal" data-bs-target="#confirmModal-@item.IdCliente">
+              Seleccionar
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="confirmModal-@item.IdCliente" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content text-center p-4">
+                  <!-- Botón cerrar -->
+                  <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                  <!-- Contenido -->
+                  <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA AGREGAR?</p>
+                  <p class="fw-semibold mb-2">@item.Nombre @item.Apellido1 @item.Apellido2</p>
+                  <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{item.URLImagen}")" 
+                    alt="Cliente"
+                    class="img-fluid mx-auto mb-4"
+                    style="max-height: 180px;">
+                  <!-- Botones -->
+                  <div class="d-flex justify-content-center gap-3">
+                    <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
+                    <a asp-controller="Prestamo" asp-action="Index" asp-route-id="@item.IdCliente"
+                    type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">                      
+                      Confirmar</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     }
-  }    
+  }
+  else
+  {
+    <h5>No hay clientes registrados</h5>
+  }
 </div>

@@ -1,7 +1,0 @@
-namespace Models.ViewModels
-{
-    public class PrestamoLibro : Libro
-    {
-        public bool disponible;
-    }
-}
