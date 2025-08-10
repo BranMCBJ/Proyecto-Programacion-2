@@ -33,10 +33,47 @@ namespace Proyecto_Periodo_2.Controllers
             return View(cliente);
         }
 
-        public ActionResult clientes()
+        public ActionResult clientes(string returnTo = "Index")
         {
+            ViewBag.ReturnTo = returnTo;
             IEnumerable<Models.Cliente> listaClientes = db.Clientes.Where(c => c.Activo == true).ToList();
             return View(listaClientes);
+        }
+
+        public ActionResult SeleccionarCliente(int id, string returnTo = "Index")
+        {
+            var cliente = db.Clientes.Find(id);
+            if (cliente != null)
+            {
+                // Guardar el cliente en JSON para uso posterior
+                nuevoPrestamo.cliente = cliente;
+                var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                nuevoPrestamo.usuario = db.Usuarios.FirstOrDefault(u => u.Id == userId);       
+                string json = JsonSerializer.Serialize(nuevoPrestamo);
+                
+                // Asegurar que el directorio existe
+                var directory = Path.GetDirectoryName(ruta);
+                if (!Directory.Exists(directory))
+                {
+                    Directory.CreateDirectory(directory);
+                }
+                
+                System.IO.File.WriteAllText(ruta, json);
+
+                // Redireccionar según el origen
+                switch (returnTo.ToLower())
+                {
+                    case "create":
+                        return RedirectToAction(nameof(Create));
+                    case "tablaprestamos":
+                        return RedirectToAction(nameof(tablaPrestamos), new { IdCliente = id });
+                    case "libros":
+                        return RedirectToAction(nameof(libros), new { idCliente = id });
+                    default:
+                        return RedirectToAction(nameof(Index), new { id = id });
+                }
+            }
+            return RedirectToAction(nameof(clientes), new { returnTo = returnTo });
         }
 
 
@@ -123,11 +160,23 @@ namespace Proyecto_Periodo_2.Controllers
                 
                 db.Prestamos.Add(prestamo);
                 db.SaveChanges();
+                foreach(var item in nuevoPrestamo.copiasLibro)
+                {
+                    var cpp = new CopiaLibroPrestamo
+                    {
+                        IdCopiaLibro = item.IdCopiaLibro,
+                        IdPrestamo = prestamo.IdPrestamo
+                    };
+                    db.CopiasLibrosPrestamos.Add(cpp);                    
+                }
+                nuevoPrestamo.cliente.CantidadPrestamosDisponibles--;
+                db.Clientes.Update(nuevoPrestamo.cliente);
+                db.SaveChanges();
                 
                 // Limpiar el archivo JSON después de crear el préstamo
                 System.IO.File.Delete(ruta);
                 
-                return RedirectToAction(nameof(clientes));
+                return RedirectToAction(nameof(Index));
             }
             catch (Exception ex)
             {
@@ -169,6 +218,19 @@ namespace Proyecto_Periodo_2.Controllers
             }            
         }
 
+        public ActionResult tablaPrestamos(int? IdCliente)
+        {
+            var vm = new Models.ViewModels.TablaPrestamo
+            {
+                cliente = db.Clientes.Find(IdCliente),
+                prestamos = db.Prestamos
+                    .Include(p => p.estadoPrestamo)
+                    .Where(p => p.IdCliente == IdCliente)
+                    .ToList()
+            };
+            return View(vm);
+        }
+
         public ActionResult libros(int? idCliente)
         {
             if (idCliente == null || idCliente == 0)
@@ -193,6 +255,85 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     return RedirectToAction(nameof(Index));
                 }
+            }
+        }
+
+        public ActionResult verPrestamo(int? id)
+        {
+            if (id == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            var prestamo = db.Prestamos
+                .Include(p => p.cliente)
+                .Include(p => p.usuario)
+                .Include(p => p.estadoPrestamo)
+                .FirstOrDefault(p => p.IdPrestamo == id);
+
+            if (prestamo == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+
+            // Obtener las copias de libros asociadas al préstamo
+            var copiasLibros = db.CopiasLibrosPrestamos
+                .Where(clp => clp.IdPrestamo == id && clp.Activo)
+                .Include(clp => clp.CopiaLibro)
+                .ThenInclude(cl => cl!.Libro)
+                .Select(clp => clp.CopiaLibro)
+                .Where(cl => cl != null)
+                .ToList();
+
+            // Crear un ViewModel o usar ViewBag para pasar la información adicional
+            ViewBag.CopiasLibros = copiasLibros;
+
+            return View(prestamo);
+        }
+
+        [HttpPost]
+        public ActionResult EliminarPrestamo(int id)
+        {
+            try
+            {
+                // Buscar el préstamo
+                var prestamo = db.Prestamos.Find(id);
+                if (prestamo == null)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+
+                // Obtener todas las copias de libros asociadas al préstamo
+                var copiasLibrosPrestamo = db.CopiasLibrosPrestamos
+                    .Where(clp => clp.IdPrestamo == id)
+                    .ToList();
+
+                // Eliminar todos los registros de CopiasLibrosPrestamos asociados
+                foreach (var copiaLibroPrestamo in copiasLibrosPrestamo)
+                {
+                    db.CopiasLibrosPrestamos.Remove(copiaLibroPrestamo);
+                }
+
+                // Eliminar el préstamo
+                db.Prestamos.Remove(prestamo);
+
+                // Guardar todos los cambios
+                db.SaveChanges();
+
+                // Redireccionar a la tabla de préstamos del cliente o a Index si no hay cliente
+                if (prestamo.IdCliente != null)
+                {
+                    return RedirectToAction(nameof(tablaPrestamos), new { IdCliente = prestamo.IdCliente });
+                }
+                else
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+            }
+            catch (Exception)
+            {
+                // En caso de error, redirigir de vuelta a la vista del préstamo
+                return RedirectToAction(nameof(verPrestamo), new { id = id });
             }
         }
     }
