@@ -3,8 +3,16 @@
 <link rel="stylesheet" href="Prestamos/styles.css">
 <h1 class="px-3 pt-3">Préstamos</h1>
 <div class="d-flex justify-content-end px-3">
-  <a asp-controller="Prestamo" asp-action="Index" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
-    Volver
+  @{
+    string returnAction = ViewBag.ReturnTo?.ToString() ?? "Index";
+    string returnText = returnAction switch {
+      "tablaPrestamos" => "Volver a Tabla de Préstamos",
+      "Create" => "Volver a Crear Préstamo",
+      _ => "Volver"
+    };
+  }
+  <a asp-controller="Prestamo" asp-action="@returnAction" class="btn mb-3" style="background-color: #8c2445; color: white; min-width: 150px;">
+    @returnText
   </a>
 </div>
 
@@ -84,7 +92,7 @@
                   <!-- Botones -->
                   <div class="d-flex justify-content-center gap-3">
                     <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
-                    <a asp-controller="Prestamo" asp-action="Index" asp-route-id="@item.IdCliente"
+                    <a asp-controller="Prestamo" asp-action="SeleccionarCliente" asp-route-id="@item.IdCliente" asp-route-returnTo="@ViewBag.ReturnTo"
                     type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">                      
                       Confirmar</a>
                   </div>

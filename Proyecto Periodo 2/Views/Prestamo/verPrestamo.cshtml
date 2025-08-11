@@ -1,172 +1,239 @@
-<link rel="stylesheet" href="Prestamos/verPrestamo.css">
+@model Models.Prestamo
+
+@{
+    ViewData["Title"] = "Ver Préstamo";
+    var copiasLibros = ViewBag.CopiasLibros as List<Models.CopiaLibro>;
+}
+
 <div class="container-fluid px-4">
-  <div class="row align-items-stretch gy-1">
-    <!-- Columna izquierda -->
-     
-
-     <h1 class="title">Nuevo Préstamo</h1>
-     <div class="d-flex justify-content-end px-3">
-  <a href="tablaPrestamos.html" class="btn mb-4" style="background-color: #8c2445; color: white; min-width: 150px;">
-    Volver
-  </a>
-</div>
-    <div class="carousel-container">
-  <div id="cardCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-    <div class="carousel-inner">
-
-      <!-- Primer ítem activo -->
-      <div class="carousel-item active">
-        <div class="card p-4 h-100 shadow-sm">
-          <div class="text-center">
-            <img src="./pasted-image (1).png" alt="Libro" class="rounded-square img-fluid">
-            <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
-            <p style="opacity: 60%;">ISBN: 123456789</p>
-            <div class="card-body text-center mt-3">
-              <h4 class="card-title fw-bold mb-4">Don Quijote de la Mancha</h4>
-              <p class="card-text text-start pt-5">
-                <strong>Idioma:</strong> Español<br>
-                <strong>Fecha de Pub:</strong> Dic, 20. 1605
-              </p>
+    <div class="row">
+        <div class="col-12">
+            <h1 class="mb-4">Detalles del Préstamo #@Model.IdPrestamo</h1>
+            <div class="d-flex justify-content-end mb-4">
+                <a asp-action="tablaPrestamos" asp-route-IdCliente="@Model.IdCliente" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left"></i> Volver
+                </a>
             </div>
-          </div>
         </div>
-      </div>
-
-      <!-- Segundo ítem -->
-      <div class="carousel-item">
-        <div class="card p-4 h-100 shadow-sm">
-          <div class="text-center">
-            <img src="./image.png" alt="Libro" class="rounded-square img-fluid">
-            <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
-            <p style="opacity: 60%;">ISBN: 123456789</p>
-            <div class="card-body text-center mt-3">
-              <h4 class="card-title fw-bold mb-4">Matar a Robotico</h4>
-              <p class="card-text text-start pt-5">
-                <strong>Idioma:</strong> Español<br>
-                <strong>Fecha de Pub:</strong> Dic, 20. 1605
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
 
-    <!-- Botones de control dentro del ancho -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#cardCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Anterior</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#cardCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Siguiente</span>
-    </button>
-  </div>
-</div>
-
-    <!-- Columna Derecha -->
-      <!-- Columna Derecha -->
-      <div class="col-md-6 right-section">
-        <!-- Usuario -->
-         <div class="row">
-          <div class="card-user ">
-          <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Usuario">
-          <div>
-            <h4><strong>Jose Pablo Araya</strong></h4>
-            <br>
-            <p style="opacity: 75%;">
-              Cédula: 190238421<br>
-              Correo: jparaya@gmail.com<br>
-              Teléfono: 1232-8762
-            </p>
-            
-          </div>
-        </div>
-        <div class="d-inline-block div-btn text-center border rounded shadow-sm"
-     style="width: 200px; padding: 40px !important; height: 200px; cursor: pointer;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            margin-left: -20px; border: 1px solid rgba(0, 0, 0, 0.2) !important;"
-     onclick="window.location.href='./libros.html'">
-  <i class="bi bi-plus" style="font-size: 2.5rem; color: #8A1F40;"></i>
-  <div class="mt-2" style="color: #8A1F40; font-weight: 500;">Agregar <br> Libros</div>
-</div>
-
-         </div>
-        <div class="row">
-            <!-- Fechas -->
-        <div class="date-inputs  align-items-center mt-4">
-          <label class="me-2">Plazo Vigente</label>
-          <div class="input d-flex mt-3">
-            <input type="text" class="form-control me-2" placeholder="DD/MM/YYYY" disabled>
-          <span class="arrow">&rarr;</span>
-          <input type="date" class="form-control"> 
-          <div class="d-flex align-items-center ms-3">
-            <button class="btn btn-sm d-flex flex-column align-items-center justify-content-center me-2 px-3 py-2" style="background-color: #8A1F40; color: white; min-width: 110px; font-size: 0.95rem; font-weight: 500; border-radius: 8px;">
-              <span style="line-height: 1;">Editar Estado</span>
-              <i class="bi bi-pencil-square" style="font-size: 1.5rem; color: white; margin-top: 2px;"></i>
-            </button>
-            <button class="btn btn-sm d-flex flex-column align-items-center justify-content-center px-3 py-2" style="background-color: #8c2445; color: white; min-width: 110px; font-size: 0.95rem; font-weight: 500; border-radius: 8px;">
-              <span style="line-height: 1;">Finalizar</span>
-              <i class="bi bi-check" style="font-size: 1.5rem; color: white; margin-top: 2px;"></i>
-            </button>
-          </div>
-          </div>
-          
-          
-        </div>
-        </div>
-
-        
-        <div class="row admin-row">
-          <div class="admin-label ">Efectuado por</div>
-        <!-- Admin + Boton -->
-         <div class="container-admin  mt-3">
-          
-            
-            <div class="card-admin">
-              
-              <img src="./resources/img_9279a55e5a_min.jpg" alt="Admin">
-              <div>
-                <h4 class="fw-normal">Isaac <br></h4>
-                <p style="opacity: 75%;">
-                  Usuario: fallingisaac_<br>
-                  Cédula: 123456789<br>
-                  Rol: Administrador<br>
-                  Correo: isaac@syc.cr
-                </p>
-                
-              </div>
-            </div>
-            <div class="d-inline-block text-center border rounded shadow-sm " style="width: 200px; padding: 40px !important; height: 200px; cursor: pointer;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
-            margin-left: -20px; border: 1px solid rgba(0, 0, 0, 0.2) !important;" data-bs-toggle="modal" data-bs-target="#prestamoModal">
-              <i class="bi bi-check2" style="font-size: 2.5rem; color: #8A1F40;"></i>
-              <div class="mt-2" style="color: #8A1F40; font-weight: 500;">Agregar Préstamo</div>
-            </div>
-
-
-          <div class="modal fade" id="prestamoModal" tabindex="-1" aria-labelledby="prestamoModalLabel" aria-hidden="true" >
-            <div class="modal-dialog modal-dialog-centered modal-md" style="max-width: 500px !important;" >
-              <div class="modal-content text-center p-5" style="height: 500px !important; padding-top: 80px !important;">
-                <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                <h3 class="fw-normal mb-3">Préstamo agregado<br>correctamente</h5>
-                <div class="my-3">
-                  <div class="position-relative d-inline-block mt-3">
-                    <svg width="100" height="100" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="45" stroke="#8A1F40" stroke-width="5" fill="none" stroke-dasharray="250" stroke-dashoffset="60"/>
-                    </svg>
-                    <i class="bi bi-check2 position-absolute top-50 start-50 translate-middle" style="font-size: 3rem; color: #8A1F40;"></i>
-                  </div>
+    <div class="row">
+        <!-- Información del Préstamo -->
+        <div class="col-lg-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Información del Préstamo</h5>
                 </div>
-                <button class="btn text-white mt-5" style="background-color: #8A1F40;" data-bs-dismiss="modal">Aceptar</button>
-              </div>
+                <div class="card-body">
+                    <div class="row mb-3">
+                        <div class="col-sm-4"><strong>ID Préstamo:</strong></div>
+                        <div class="col-sm-8">@Model.IdPrestamo</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-4"><strong>Fecha Inicio:</strong></div>
+                        <div class="col-sm-8">@Model.FechaInicio?.ToString("dd/MM/yyyy")</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-4"><strong>Fecha Límite:</strong></div>
+                        <div class="col-sm-8">@Model.FechaLimite?.ToString("dd/MM/yyyy")</div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-sm-4"><strong>Estado:</strong></div>
+                        <div class="col-sm-8">
+                            <span class="badge @(Model.FechaLimite < DateTime.Now ? "bg-danger" : "bg-success")">
+                                @(Model.FechaLimite < DateTime.Now ? "Vencido" : (Model.estadoPrestamo?.Descripcion ?? "Activo"))
+                            </span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4"><strong>Activo:</strong></div>
+                        <div class="col-sm-8">
+                            <span class="badge @(Model.Activo == true ? "bg-success" : "bg-secondary")">
+                                @(Model.Activo == true ? "Sí" : "No")
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-        </div>
-        
-        
 
-      </div>
-  </div>
+            <!-- Libros Prestados -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Libros Prestados</h5>
+                </div>
+                <div class="card-body">
+                    @if (copiasLibros != null && copiasLibros.Any())
+                    {
+                        @foreach (var copia in copiasLibros)
+                        {
+                            <div class="border rounded p-3 mb-3">
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <strong>Título:</strong>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        @(copia?.Libro?.Titulo ?? "Título no disponible")
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <strong>Descripción:</strong>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        @(copia?.Libro?.Descripcion ?? "Descripción no disponible")
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <strong>ISBN:</strong>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        @(copia?.Libro?.ISBN ?? "ISBN no disponible")
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <strong>Fecha Publicación:</strong>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        @(copia?.Libro?.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "Fecha no disponible")
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-4">
+                                        <strong>Copia #:</strong>
+                                    </div>
+                                    <div class="col-sm-8">
+                                        @copia?.IdCopiaLibro
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <p class="text-muted">No se encontraron libros asociados a este préstamo.</p>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Información del Cliente y Usuario -->
+        <div class="col-lg-6">
+            <!-- Cliente -->
+            @if (Model.cliente != null)
+            {
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">Información del Cliente</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
+                        {
+                            <img src="@Model.cliente.URLImagen" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <img src="~/fotoperfil.jpg" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        }
+                        <h4>@Model.cliente.Nombre @Model.cliente.Apellido1 @Model.cliente.Apellido2</h4>
+                        <div class="text-start mt-3">
+                            <div class="row mb-2">
+                                <div class="col-sm-4"><strong>Cédula:</strong></div>
+                                <div class="col-sm-8">@Model.cliente.Cedula</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-4"><strong>Correo:</strong></div>
+                                <div class="col-sm-8">@Model.cliente.Correo</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4"><strong>Teléfono:</strong></div>
+                                <div class="col-sm-8">@Model.cliente.Telefono</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Usuario -->
+            @if (Model.usuario != null)
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Efectuado por</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        @if (!string.IsNullOrEmpty(Model.usuario.UrlImagen))
+                        {
+                            <img src="@Model.usuario.UrlImagen" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        }
+                        else
+                        {
+                            <img src="~/fotoperfil.jpg" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                        }
+                        <h4>@Model.usuario.Nombre @Model.usuario.Apellido1 @Model.usuario.Apellido2</h4>
+                        <div class="text-start mt-3">
+                            <div class="row mb-2">
+                                <div class="col-sm-4"><strong>Usuario:</strong></div>
+                                <div class="col-sm-8">@Model.usuario.UserName</div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-sm-4"><strong>Email:</strong></div>
+                                <div class="col-sm-8">@Model.usuario.Email</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-4"><strong>Cédula:</strong></div>
+                                <div class="col-sm-8">@Model.usuario.Cedula</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <!-- Acciones -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Acciones</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-danger" onclick="confirmarEliminar(@Model.IdPrestamo)" data-bs-toggle="modal" data-bs-target="#eliminarModal">
+                            <i class="bi bi-trash"></i> Eliminar Préstamo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<!-- Modal de confirmación para eliminar -->
+<div class="modal fade" id="eliminarModal" tabindex="-1" aria-labelledby="eliminarModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="eliminarModalLabel">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="text-center">
+                    <i class="bi bi-exclamation-triangle-fill text-warning" style="font-size: 3rem;"></i>
+                    <h4 class="mt-3">¿Está seguro que desea eliminar este préstamo?</h4>
+                    <p class="text-muted">Esta acción eliminará el préstamo y todos los registros relacionados. Esta acción no se puede deshacer.</p>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                <form id="formEliminar" method="post" style="display: inline;">
+                    <button type="submit" class="btn btn-danger">Eliminar Préstamo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmarEliminar(idPrestamo) {
+        document.getElementById('formEliminar').action = '/Prestamo/EliminarPrestamo/' + idPrestamo;
+    }
+</script>

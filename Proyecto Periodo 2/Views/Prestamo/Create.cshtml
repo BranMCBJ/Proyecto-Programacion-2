@@ -60,6 +60,11 @@
                 Correo: @Model.cliente.Correo<br>
                 Teléfono: @Model.cliente.Telefono
               </p>
+              <p>
+                <a asp-controller="Prestamo" asp-action="clientes" asp-route-returnTo="Create" style="text-decoration: none; color: #791d35; font-size: 0.9rem;">
+                  <i class="bi bi-arrow-left-right me-1"></i>Cambiar Cliente
+                </a>
+              </p>
             </div>
           </div>
           <a asp-controller="Prestamo" asp-action="libros" asp-route-idCliente="@Model.cliente.IdCliente" class="d-inline-block div-btn text-center border rounded shadow-sm"
