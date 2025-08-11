@@ -1,6 +1,15 @@
 @using System.Security.Claims
 @{
-	var role = User.FindFirst(ClaimTypes.Role)?.Value;
+    var nombre = User.FindFirst("Nombre")?.Value;
+    var nombreUsuario = User.FindFirst("NombreUsuario")?.Value;
+    var apellido1 = User.FindFirst("Apellido1")?.Value;
+    var apellido2 = User.FindFirst("Apellido2")?.Value;
+    var cedula = User.FindFirst("Cedula")?.Value;
+    var urlImagen = User.FindFirst("UrlImagen")?.Value;
+    var rol = User.FindFirst(ClaimTypes.Role)?.Value ?? "Usuario";
+    var email = User.FindFirst(ClaimTypes.Email)?.Value;
+    var phone = User.FindFirst(ClaimTypes.MobilePhone)?.Value;
+
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -37,23 +46,16 @@
                             <a class="nav-link" aria-current="page" asp-controller="Prestamo" asp-action="Index"><i class="fa-solid fa-pen-to-square me-1"></i>
                                 PRÉSTAMOS</a>
                         </li>
-                        <li class="nav-item dropdown mx-2 nav-libros active">
-                            <a class="nav-link dropdown-toggle dropdown-libros" href="/Views/Libro/Index.cshtml" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                                <i class="fa-solid fa-book me-1"></i> LIBROS
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Copia Libro</a></li>
-                                <li><a class="dropdown-item" href="#">Estado Copia Libro</a></li>
-                            </ul>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" asp-controller="Libro" asp-action="Index"><i class="fa-solid fa-book me-1"></i> LIBROS</a>
                         </li>
                         <li class="nav-item mx-2">
                             <a class="nav-link" asp-controller="Cliente" asp-action="Index"><i class="fa-solid fa-user-group me-1"></i> CLIENTES</a>
                         </li>
-                        @if (@role == "Admin")
+                        @if (@rol == "Admin")
                         {
                             <li class="nav-item mx-2">
-                                <a class="nav-link" asp-controller="Usuario" asp-action="Index"><i class="fa-solid fa-user-group me-1"></i> Usuarios</a>
+                                <a class="nav-link" asp-controller="Usuario" asp-action="Index"><i class="fa-solid fa-user-group me-1"></i> USUARIOS</a>
                             </li>
                         }
                     </ul>
@@ -63,8 +65,8 @@
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa-solid fa-user" style="padding-right: 35px; width:20px"></i>
                         <div>
-                        <p class="profile-name mb-0">Yaret</p>
-                        <p class="profile-role mb-0">Administrador</p>
+                        <p class="profile-name mb-0">@nombreUsuario</p>
+                        <p class="profile-role mb-0">@rol</p>
                         </div>
                     </div>
 
@@ -77,16 +79,15 @@
                         <div class="profile-info px-3 py-3">
                         <div class="d-flex align-items-start mb-3">
                             <img src="~/fotoperfil.jpg" alt="avatar" class="profile-img me-3">
-
-                            <a href="#" class="edit-profile-link">
-                            <i class="fa-solid fa-pen-to-square me-1"></i> Editar Perfil
-                            </a>
                         </div>
-                        <p class="profile-nombre mb-0">Yaret</p>
-                        <p class="profile-email text-muted mb-2">yarethgc@gmail.com</p>
-                        <button class="btn btn-outline-secondary w-100">
-                            <i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar Sesión
-                        </button>
+                        <p class="profile-nombre mb-0">@nombreUsuario</p>
+                        <p class="profile-email text-muted mb-2">@email</p>
+                                <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="w-100">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-outline-secondary w-100">
+                                        <i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar Sesión
+                                    </button>
+                                </form>
                         </div>
                     </div>
                     </div>

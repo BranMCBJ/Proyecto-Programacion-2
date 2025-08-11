@@ -172,8 +172,8 @@ namespace Proyecto_Periodo_2.Controllers
                     // ========== Asignar rol ==========
                     if (!string.IsNullOrEmpty(usuarioVM.rol))
                     {
-                        if (!await _roleManager.RoleExistsAsync("Administrador"))
-                            await _roleManager.CreateAsync(new IdentityRole("Administrador"));
+                        if (!await _roleManager.RoleExistsAsync("Admin"))
+                            await _roleManager.CreateAsync(new IdentityRole("Admin"));
 
                         if (!await _roleManager.RoleExistsAsync("Usuario"))
                             await _roleManager.CreateAsync(new IdentityRole("Usuario"));

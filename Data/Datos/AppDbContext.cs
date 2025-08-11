@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using System.Security.Claims;
 
 namespace Data
 {
@@ -29,6 +30,8 @@ namespace Data
             modelBuilder.Entity<Prestamo>().ToTable("Prestamo");
             modelBuilder.Entity<EstadoCopiaLibro>().ToTable("EstadoCopiaLibro");
 
+            base.OnModelCreating(modelBuilder); // <- importante al inicio
+
             modelBuilder.Entity<EstadoCopiaLibro>().HasData(
                 new EstadoCopiaLibro { IdEstadoCopialibro = 1, Nombre = "Disponible", Activo = true, Descripcion = "La copia del libro se puede prestar" },
                 new EstadoCopiaLibro { IdEstadoCopialibro = 2, Nombre = "Prestado", Activo = true, Descripcion = "La copia del libro esta en un prestamo" },
@@ -39,8 +42,6 @@ namespace Data
                 new EstadoPrestamo { IdEstado = 1, Nombre = "Vigente", Activo = true, Descripcion = "El prestamo sigue en vigencia" },
                 new EstadoPrestamo { IdEstado = 2, Nombre = "Devuelto", Activo = true, Descripcion = "El prestamo ya termino" }
             );
-
-            base.OnModelCreating(modelBuilder); // <- importante al inicio
 
 
             // Roles
@@ -74,6 +75,58 @@ namespace Data
             usuarioSeed.PasswordHash = hasher.HashPassword(usuarioSeed, "123456");
 
             modelBuilder.Entity<Usuario>().HasData(usuarioSeed);
+
+            modelBuilder.Entity<IdentityUserClaim<string>>().HasData(
+                new IdentityUserClaim<string>
+                {
+                    Id = 1,
+                    UserId = "3",
+                    ClaimType = ClaimTypes.Role,
+                    ClaimValue = "Admin"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 2,
+                    UserId = "3",
+                    ClaimType = "Nombre",
+                    ClaimValue = "Julian"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 3,
+                    UserId = "3",
+                    ClaimType = "NombreUsuario",
+                    ClaimValue = "Julai"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 4,
+                    UserId = "3",
+                    ClaimType = "Apellido1",
+                    ClaimValue = "Ceciliano"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 5,
+                    UserId = "3",
+                    ClaimType = "Apellido2",
+                    ClaimValue = "Picado"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 6,
+                    UserId = "3",
+                    ClaimType = "Cedula",
+                    ClaimValue = "305760805"
+                },
+                new IdentityUserClaim<string>
+                {
+                    Id = 7,
+                    UserId = "3",
+                    ClaimType = "UrlImagen",
+                    ClaimValue = "/Usuario/Imagenes/Foto perfil.png"
+                }
+            );
 
             //Asigna rol al usuario
             modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
