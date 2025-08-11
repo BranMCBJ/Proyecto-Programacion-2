@@ -88,11 +88,27 @@ namespace Proyecto_Periodo_2.Controllers
 
                 if (imagen != null && imagen.Length > 0)
                 {
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "imagenes");
+                    // Validar extensiones permitidas
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                    var extension = Path.GetExtension(imagen.FileName).ToLowerInvariant();
+                    
+                    if (!allowedExtensions.Contains(extension))
+                    {
+                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    if (imagen.Length > 5 * 1024 * 1024)
+                    {
+                        TempData["Error"] = "El archivo no puede superar los 5MB.";
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
                     if (!Directory.Exists(uploadsFolder))
                         Directory.CreateDirectory(uploadsFolder);
 
-                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+                    var fileName = Guid.NewGuid().ToString() + extension;
                     var filePath = Path.Combine(uploadsFolder, fileName);
 
                     using (var stream = new FileStream(filePath, FileMode.Create))
@@ -100,7 +116,7 @@ namespace Proyecto_Periodo_2.Controllers
                         imagen.CopyTo(stream);
                     }
 
-                    libro.ImagenUrl = "/imagenes/" + fileName; // consistente con carpeta
+                    libro.ImagenUrl = fileName; // Solo guardar el nombre del archivo
                 }
 
                 libro.Activo = true;
@@ -159,20 +175,44 @@ namespace Proyecto_Periodo_2.Controllers
                 var imagen = libroVM.Imagen;
                 if (imagen != null && imagen.Length > 0)
                 {
-                    // Guarda en wwwroot/Libros/images para mantener consistencia con las URLs usadas
+                    // Validar extensiones permitidas
+                    var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                    var extension = Path.GetExtension(imagen.FileName).ToLowerInvariant();
+                    
+                    if (!allowedExtensions.Contains(extension))
+                    {
+                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                        return RedirectToAction(nameof(Index));
+                    }
+
+                    if (imagen.Length > 5 * 1024 * 1024)
+                    {
+                        TempData["Error"] = "El archivo no puede superar los 5MB.";
+                        return RedirectToAction(nameof(Index));
+                    }
+
                     var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
                     if (!Directory.Exists(uploadsFolder))
                         Directory.CreateDirectory(uploadsFolder);
 
-                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+                    // Eliminar imagen anterior si existe
+                    if (!string.IsNullOrEmpty(libroEnDb.ImagenUrl))
+                    {
+                        var oldImagePath = Path.Combine(uploadsFolder, libroEnDb.ImagenUrl);
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
+
+                    var fileName = Guid.NewGuid().ToString() + extension;
                     var filePath = Path.Combine(uploadsFolder, fileName);
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         imagen.CopyTo(stream);
                     }
 
-                    // Asigna la URL pública coherente con la carpeta anterior
-                    libroEnDb.ImagenUrl = $"/Libros/images/{fileName}";
+                    libroEnDb.ImagenUrl = fileName; // Solo guardar el nombre del archivo
                 }
 
                 _db.Libros.Update(libroEnDb);

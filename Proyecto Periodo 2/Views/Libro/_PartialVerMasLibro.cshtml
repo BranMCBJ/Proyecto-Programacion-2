@@ -2,7 +2,7 @@
 
 <form asp-action="UpDelete" asp-controller="Libro" method="post" enctype="multipart/form-data">
 	@Html.AntiForgeryToken()
-    <input asp-for="Libro.IdLibro" type="hidden" name="Libro.IdLibro" value="@Model.Libro.IdLibro" />
+    <input asp-for="Libro.IdLibro" type="hidden" name="Libro.IdLibro" value="@(Model?.Libro?.IdLibro ?? 0)" />
 
     <div class="modal-header"
          style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
@@ -29,9 +29,9 @@
                          onclick="document.getElementById('fileInput').click();"
                          style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
 
-                        @if (Model.Imagen != null)
+                        @if (!string.IsNullOrEmpty(Model?.Libro?.ImagenUrl))
                         {
-                            <img src="@Url.Content(Model.Libro.ImagenUrl)"
+                            <img src="~/Libros/images/@Model.Libro.ImagenUrl"
                                  class="img-fluid w-100 h-100 object-fit-cover rounded"
                                  alt="Imagen libro" />
                         }

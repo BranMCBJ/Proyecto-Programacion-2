@@ -28,9 +28,9 @@
                          onclick="document.getElementById('fileInput').click();"
                          style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
 
-                        @if (Model.Imagen != null)
+                        @if (!string.IsNullOrEmpty(Model?.Libro?.ImagenUrl))
                         {
-                            <img src="@Url.Content("~/" + Model.Libro.ImagenUrl)"
+                            <img src="~/Libros/images/@Model.Libro.ImagenUrl"
                                  class="img-fluid w-100 h-100 object-fit-cover rounded"
                                  alt="Imagen actual" />
                         }
