@@ -51,7 +51,14 @@
         <!-- Usuario -->
         <div class="row">
           <div class="card-user">
-            <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")"  alt="Usuario">
+            @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
+            {
+              <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")">
+            }
+            else
+            {
+              <img src="~/fotoperfil.jpg" alt="Cliente">
+            }
             <div>
               <h4><strong>@Model.cliente.Nombre @Model.cliente.Apellido1 @Model.cliente.Apellido2</strong></h4>
               <br>
@@ -89,7 +96,14 @@
           <!-- Admin + Boton -->
           <div class="container-admin mt-3">
             <div class="card-admin">
-              <img src="./resources/img_9279a55e5a_min.jpg" alt="Admin">
+              @if (!string.IsNullOrEmpty(Model.usuario.UrlImagen))
+              {
+                <img src="@Model.usuario.UrlImagen" alt="Foto de perfil" class="profile-pic me-3">
+              }
+              else
+              {
+                <img src="~/fotoperfil.jpg" alt="Foto de perfil" class="profile-pic me-3">
+              }
               <div>
                 <h4 class="fw-normal">@Model.usuario.Nombre <br></h4>
                 <p style="opacity: 75%;">
