@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250810202508_Migracion")]
+    [Migration("20250810220405_Migracion")]
     partial class Migracion
     {
         /// <inheritdoc />
@@ -54,13 +54,13 @@ namespace Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "e9c4d7aa-6723-4d8b-b49c-6b002367b635",
+                            Id = "1",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = "99708772-45ff-4e5a-b733-385a1155a1e8",
+                            Id = "2",
                             Name = "Usuario",
                             NormalizedName = "USUARIO"
                         });
@@ -218,6 +218,13 @@ namespace Data.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("AspNetUserRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            UserId = "1",
+                            RoleId = "1"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -548,6 +555,30 @@ namespace Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.ToTable("Usuarios", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "b5911177-5c30-4da4-b65d-ce2b6b7c14b5",
+                            Email = "cecilianojulian64@gmail.com",
+                            EmailConfirmed = false,
+                            LockoutEnabled = false,
+                            PasswordHash = "AQAAAAIAAYagAAAAEBGR+X53pT9PpC8ArEVzpaFsR6n5psbSifqnhL7knM1vO25ZUp1deAOkBV9+whHS2w==",
+                            PhoneNumber = "12345678",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "6fc6bbcc-2976-4df9-9051-1a90f3b11753",
+                            TwoFactorEnabled = false,
+                            UserName = "Julai",
+                            Activo = true,
+                            Apellido1 = "Ceciliano",
+                            Apellido2 = "Picado",
+                            Cedula = "305760805",
+                            Nombre = "Julian",
+                            NombreUsuario = "Julai",
+                            UrlImagen = "/Usuario/Imagenes/d724626d - b41f - 47d7 - acec - 8b85fe3f8de5.jpg"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

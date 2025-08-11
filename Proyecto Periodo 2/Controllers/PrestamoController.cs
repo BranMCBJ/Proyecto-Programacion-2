@@ -104,7 +104,7 @@ namespace Proyecto_Periodo_2.Controllers
                 }
 
                 // Obtener estado de préstamo de forma segura
-                var estadoPrestamo = db.EstadoPrestamo.FirstOrDefault(e => e._Activo == true);
+                var estadoPrestamo = db.EstadoPrestamo.FirstOrDefault(e => e.Activo == true);
                 if (estadoPrestamo == null)
                 {
                     // Si no hay estados disponibles, crear uno por defecto o manejar el error
@@ -115,7 +115,7 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     IdCliente = nuevoPrestamo.cliente.IdCliente,
                     IdUsuario = nuevoPrestamo.usuario.Id,
-                    IdEstadoPrestamo = estadoPrestamo._IdEstado,       
+                    IdEstadoPrestamo = estadoPrestamo.IdEstado,       
                     FechaInicio = DateTime.Now,
                     FechaLimite = fechaLimite,
                     Activo = true

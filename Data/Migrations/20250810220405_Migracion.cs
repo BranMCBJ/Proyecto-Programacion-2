@@ -345,9 +345,14 @@ namespace Data.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "99708772-45ff-4e5a-b733-385a1155a1e8", null, "Usuario", "USUARIO" },
-                    { "e9c4d7aa-6723-4d8b-b49c-6b002367b635", null, "Admin", "ADMIN" }
+                    { "1", null, "Admin", "ADMIN" },
+                    { "2", null, "Usuario", "USUARIO" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUsers",
+                columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
+                values: new object[] { "1", 0, "b5911177-5c30-4da4-b65d-ce2b6b7c14b5", "cecilianojulian64@gmail.com", false, false, null, null, null, "AQAAAAIAAYagAAAAEBGR+X53pT9PpC8ArEVzpaFsR6n5psbSifqnhL7knM1vO25ZUp1deAOkBV9+whHS2w==", "12345678", false, "6fc6bbcc-2976-4df9-9051-1a90f3b11753", false, "Julai" });
 
             migrationBuilder.InsertData(
                 table: "EstadoCopiaLibro",
@@ -367,6 +372,16 @@ namespace Data.Migrations
                     { 1, true, "El prestamo sigue en vigencia", "Vigente" },
                     { 2, true, "El prestamo ya termino", "Devuelto" }
                 });
+
+            migrationBuilder.InsertData(
+                table: "AspNetUserRoles",
+                columns: new[] { "RoleId", "UserId" },
+                values: new object[] { "1", "1" });
+
+            migrationBuilder.InsertData(
+                table: "Usuarios",
+                columns: new[] { "Id", "Activo", "Apellido1", "Apellido2", "Cedula", "Nombre", "NombreUsuario", "UrlImagen" },
+                values: new object[] { "1", true, "Ceciliano", "Picado", "305760805", "Julian", "Julai", "/Usuario/Imagenes/d724626d - b41f - 47d7 - acec - 8b85fe3f8de5.jpg" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

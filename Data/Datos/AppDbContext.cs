@@ -40,12 +40,48 @@ namespace Data
                 new EstadoPrestamo { IdEstado = 2, Nombre = "Devuelto", Activo = true, Descripcion = "El prestamo ya termino" }
             );
 
+            base.OnModelCreating(modelBuilder); // <- importante al inicio
+
+
+            // Roles
             modelBuilder.Entity<IdentityRole>().HasData(
-                new IdentityRole { Name = "Admin", NormalizedName = "ADMIN" },
-                new IdentityRole { Name = "Usuario", NormalizedName = "USUARIO" }
+                new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
+                new IdentityRole { Id = "2", Name = "Usuario", NormalizedName = "USUARIO" }
             );
 
-            base.OnModelCreating(modelBuilder);
+            // Usuario seed
+            var usuarioSeed = new Usuario
+            {
+                Id = "3",
+                Nombre = "Julian",
+                Apellido1 = "Ceciliano",
+                Apellido2 = "Picado",
+                Cedula = "305760805",
+                Email = "cecilianojulian64@gmail.com",
+                NormalizedEmail = "CECILIANOJULIAN64@GMAIL.COM",
+                UserName = "Julai",
+                NormalizedUserName = "JULAI",
+                NombreUsuario = "Julai",
+                PhoneNumber = "12345678",
+                UrlImagen = "/Usuario/Imagenes/d724626d-b41f-47d7-acec-8b85fe3f8de5.jpg",
+                Activo = true,
+                EmailConfirmed = true,
+                SecurityStamp = Guid.NewGuid().ToString(),
+                ConcurrencyStamp = Guid.NewGuid().ToString()
+            };
+
+            var hasher = new PasswordHasher<Usuario>();
+            usuarioSeed.PasswordHash = hasher.HashPassword(usuarioSeed, "123456");
+
+            modelBuilder.Entity<Usuario>().HasData(usuarioSeed);
+
+            //Asigna rol al usuario
+            modelBuilder.Entity<IdentityUserRole<string>>().HasData(new IdentityUserRole<string>
+            {
+                RoleId = "1",
+                UserId = "3"
+            });
         }
+
     }
 }

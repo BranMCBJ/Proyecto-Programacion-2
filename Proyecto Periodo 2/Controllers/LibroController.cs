@@ -78,46 +78,56 @@ namespace Proyecto_Periodo_2.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CrearLibro(LibroVM libroVM)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
+                return PartialView("_PartialCrearLibro", libroVM);
+
+            try
             {
-                try
-                {
-                    var imagen = libroVM.Imagen;
-                    var libro = libroVM.Libro;
+                var imagen = libroVM.Imagen;
+                var libro = libroVM.Libro;
 
-                    if (imagen != null && imagen.Length > 0)
+                if (imagen != null && imagen.Length > 0)
+                {
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "imagenes");
+                    if (!Directory.Exists(uploadsFolder))
+                        Directory.CreateDirectory(uploadsFolder);
+
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
+                    var filePath = Path.Combine(uploadsFolder, fileName);
+
+                    using (var stream = new FileStream(filePath, FileMode.Create))
                     {
-                        // Guardar la imagen en el servidor
-                        var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "imagenes");
-                        if (!Directory.Exists(uploadsFolder))
-                        {
-                            Directory.CreateDirectory(uploadsFolder);
-                        }
-                        var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imagen.FileName);
-                        var filePath = Path.Combine(uploadsFolder, fileName);
-                        using (var stream = new FileStream(filePath, FileMode.Create))
-                        {
-                            imagen.CopyTo(stream);
-                        }
-                        libroVM.Libro.ImagenUrl = "/Libros/images/" + fileName;
+                        imagen.CopyTo(stream);
                     }
-                    libro.Activo = true; // Asegurarse de que el libro esté activo
-                    _db.Libros.Add(libro);
-                    //Crea la cantidad de copias de libro correspondientes al stock
-                    CrearCopiasLibro(libro.Stock, libro.IdLibro);
-                    _db.SaveChanges();
-                    TempData["Success"] = "Libro creado exitosamente.";
-                    return RedirectToAction(nameof(Index));
-                }
-                catch (Exception ex)
-                {
-                    TempData["Error"] = "Error al crear el libro: " + ex.Message;
-                    return View(nameof(Index));
-                }
-            }
-            return PartialView("_PartialCrearLibro", libroVM);
 
+                    libro.ImagenUrl = "/imagenes/" + fileName; // consistente con carpeta
+                }
+
+                libro.Activo = true;
+
+                // 1) Agregar libro y persistir para obtener Id
+                _db.Libros.Add(libro);
+                _db.SaveChanges();
+
+                var libroId = libro.IdLibro;
+
+                // 2) Crear copias usando el Id recién generado
+                if (libro.Stock > 0)
+                {
+                    CrearCopiasLibro(libro.Stock, libroId);
+                    _db.SaveChanges(); 
+                }
+
+                TempData["Success"] = "Libro creado exitosamente.";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                TempData["Error"] = "Error al crear el libro: " + ex.Message;
+                return View(nameof(Index));
+            }
         }
+
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -181,8 +191,8 @@ namespace Proyecto_Periodo_2.Controllers
                 }
                 libroEnDb.Activo = false;
                 _db.Libros.Update(libroEnDb);
-                EliminarCopiaLibro(false, libroEnDb.IdLibro);
                 _db.SaveChanges();
+                EliminarCopiaLibro(libroEnDb.IdLibro);
                 TempData["Success"] = "Libro eliminado exitosamente.";
                 return RedirectToAction(nameof(Index));
             }
@@ -191,31 +201,33 @@ namespace Proyecto_Periodo_2.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        public void CrearCopiasLibro(int? stock, int? id)
+        public void CrearCopiasLibro(int? stock, int? idLibro)
         {
+            if (stock <= 0) return;
+
+            var lista = new List<CopiaLibro>();
             for (var i = 0; i < stock; i++)
             {
-                var copiaLibro = new CopiaLibro
+                lista.Add(new CopiaLibro
                 {
-                    IdLibro = id,
-                    IdEstadoCopiaLibro = 1,//Estado Disponible
+                    IdLibro = idLibro,
+                    IdEstadoCopiaLibro = 1, //Disponible
                     Activo = true
-                };
-                _db.CopiasLibros.Add(copiaLibro);
+                });
             }
+
+            _db.CopiasLibros.AddRange(lista);
         }
 
-        public void EliminarCopiaLibro(bool? activo, int? id)
+        public void EliminarCopiaLibro(int? id)
         {
             var copias = _db.CopiasLibros.Where(c => c.IdLibro == id).ToList();
-            if (activo == false)
+            foreach (var item in copias)
             {
-                foreach (var item in copias)
-                {
-                    item.Activo = false;
-                    _db.CopiasLibros.Update(item);
-                }
+                item.Activo = false;
             }
+            _db.CopiasLibros.UpdateRange(copias);
+            _db.SaveChanges();
         }
     }
 }
