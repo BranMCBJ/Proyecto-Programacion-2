@@ -15,9 +15,16 @@
     </div>
     <div class="custom-modal-body">
         <div class="profile-image-container">
-            <img src="Foto perfil.png" alt="Foto del usuario" class="profile-image">
+            @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
+            {
+                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Foto del usuario" class="profile-image">
+            }
+            else
+            {
+                <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto del usuario" class="profile-image">
+            }
             <label for="inputImagen" class="edit-camera"><i class="camera-icon fa-solid fa-camera"></i></label>
-            <input asp-for="usuario.UrlImagen" type="file" id="inputImagen" accept="image/*" hidden>
+            <input name="ImageFile" type="file" id="inputImagen" accept="image/*" hidden onchange="previewImageEdit(event)">
         </div>
 
         <!-- Fila 1 -->
@@ -113,5 +120,18 @@
                 }
             }
         }
+
+    function previewImageEdit(event) {
+        const file = event.target.files[0];
+        const profileImage = document.querySelector('.profile-image');
+
+        if (file && file.type.startsWith("image/")) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                profileImage.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    }
 </script>
 

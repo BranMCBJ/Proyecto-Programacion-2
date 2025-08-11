@@ -13,7 +13,14 @@
         <i class="bi bi-x-circle" style="color: #8C2445; font-size: 70px;"></i>
         <h2>Confirmar eliminación</h2>
         <div class="usuario">
-            <img src="Foto perfil.png" alt="Foto" />
+            @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
+            {
+                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Foto" />
+            }
+            else
+            {
+                <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto" />
+            }
             <span>@Model.usuario.NombreUsuario</span>
         </div>
         <p>¿Está seguro que desea eliminar a este usuario?</p>

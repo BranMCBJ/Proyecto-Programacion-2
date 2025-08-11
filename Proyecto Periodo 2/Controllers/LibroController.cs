@@ -217,6 +217,7 @@ namespace Proyecto_Periodo_2.Controllers
             }
 
             _db.CopiasLibros.AddRange(lista);
+            _db.SaveChanges();
         }
 
         public void EliminarCopiaLibro(int? id)

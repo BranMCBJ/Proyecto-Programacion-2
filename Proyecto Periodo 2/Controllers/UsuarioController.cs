@@ -69,7 +69,7 @@ namespace Proyecto_Periodo_2.Controllers
 
         // POST: UsuarioController/Create - Crear nuevo usuario
         [HttpPost]
-        public async Task<IActionResult> Create(UsuarioVM usuarioVM /*, IFormFile ImageFile*/)
+        public async Task<IActionResult> Create(UsuarioVM usuarioVM, IFormFile? ImageFile)
         {
             try
             {
@@ -96,7 +96,7 @@ namespace Proyecto_Periodo_2.Controllers
 
                     usuario.Activo = true;
 
-                    /*// ========== Manejo de Imagen ==========
+                    // ========== Manejo de Imagen ==========
                     if (ImageFile != null && ImageFile.Length > 0)
                     {
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
@@ -128,7 +128,7 @@ namespace Proyecto_Periodo_2.Controllers
                         }
 
                         usuario.UrlImagen = fileName;
-                    }*/
+                    }
 
                     //Agrego valores necesarios para Identity
                     var user = new Usuario
@@ -247,7 +247,7 @@ namespace Proyecto_Periodo_2.Controllers
         // POST: UsuarioController/Edit/5 - Actualizar usuario
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(UsuarioVM usuarioVM)
+        public async Task<ActionResult> Edit(UsuarioVM usuarioVM, IFormFile? ImageFile)
         {
             {
                 try
@@ -270,6 +270,50 @@ namespace Proyecto_Periodo_2.Controllers
                         {
                             TempData["Error"] = "Usuario no encontrado.";
                             return RedirectToAction(nameof(Index));
+                        }
+
+                        // ========== Manejo de Imagen ==========
+                        if (ImageFile != null && ImageFile.Length > 0)
+                        {
+                            var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                            var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
+
+                            if (!allowedExtensions.Contains(extension))
+                            {
+                                TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                                return RedirectToAction(nameof(Index));
+                            }
+
+                            if (ImageFile.Length > 5 * 1024 * 1024)
+                            {
+                                TempData["Error"] = "El archivo no puede superar los 5MB.";
+                                return RedirectToAction(nameof(Index));
+                            }
+
+                            string webRootPath = _webHostEnvironment.WebRootPath;
+                            string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+
+                            if (!Directory.Exists(upload))
+                                Directory.CreateDirectory(upload);
+
+                            // Eliminar imagen anterior si existe
+                            if (!string.IsNullOrEmpty(usuarioEnDb.UrlImagen))
+                            {
+                                var oldImagePath = Path.Combine(upload, usuarioEnDb.UrlImagen);
+                                if (System.IO.File.Exists(oldImagePath))
+                                {
+                                    System.IO.File.Delete(oldImagePath);
+                                }
+                            }
+
+                            string fileName = Guid.NewGuid().ToString() + extension;
+
+                            using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
+                            {
+                                await ImageFile.CopyToAsync(fileStream);
+                            }
+
+                            usuarioEnDb.UrlImagen = fileName;
                         }
 
                         // Actualizar datos

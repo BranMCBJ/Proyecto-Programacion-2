@@ -8,9 +8,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<AppDbContext>(options =>
-options.UseSqlServer(
-    builder.Configuration.GetConnectionString("DefaultConnection")));
+ builder.Services.AddDbContext<AppDbContext>(options =>
+     options.UseSqlServer(
+         builder.Configuration.GetConnectionString("Proyecto_Periodo_2ContextConnection")));
 
 //builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Proyecto_Periodo_2Context>();
 

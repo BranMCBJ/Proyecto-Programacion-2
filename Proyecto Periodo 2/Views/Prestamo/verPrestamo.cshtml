@@ -2,7 +2,7 @@
 
 @{
     ViewData["Title"] = "Ver Préstamo";
-    var copiasLibros = ViewBag.CopiasLibros as List<Models.CopiaLibro>;
+    var copiasLibros = ViewBag.CopiasLibros as List<Models.CopiaLibroPrestamo>;
 }
 
 <div class="container-fluid px-4">
@@ -72,7 +72,7 @@
                                         <strong>Título:</strong>
                                     </div>
                                     <div class="col-sm-8">
-                                        @(copia?.Libro?.Titulo ?? "Título no disponible")
+                                        @(copia?.CopiaLibro?.Libro?.Titulo ?? "Título no disponible")
                                     </div>
                                 </div>
                                 <div class="row">
@@ -80,7 +80,7 @@
                                         <strong>Descripción:</strong>
                                     </div>
                                     <div class="col-sm-8">
-                                        @(copia?.Libro?.Descripcion ?? "Descripción no disponible")
+                                        @(copia?.CopiaLibro?.Libro?.Descripcion ?? "Descripción no disponible")
                                     </div>
                                 </div>
                                 <div class="row">
@@ -88,7 +88,7 @@
                                         <strong>ISBN:</strong>
                                     </div>
                                     <div class="col-sm-8">
-                                        @(copia?.Libro?.ISBN ?? "ISBN no disponible")
+                                        @(copia?.CopiaLibro?.Libro?.ISBN ?? "ISBN no disponible")
                                     </div>
                                 </div>
                                 <div class="row">
@@ -96,7 +96,7 @@
                                         <strong>Fecha Publicación:</strong>
                                     </div>
                                     <div class="col-sm-8">
-                                        @(copia?.Libro?.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "Fecha no disponible")
+                                        @(copia?.CopiaLibro?.Libro?.FechaPublicacion?.ToString("dd/MM/yyyy") ?? "Fecha no disponible")
                                     </div>
                                 </div>
                                 <div class="row">
@@ -130,7 +130,7 @@
                     <div class="card-body text-center">
                         @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
                         {
-                            <img src="@Model.cliente.URLImagen" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="~/Clientes/images/@Model.cliente.URLImagen" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         else
                         {
@@ -165,7 +165,7 @@
                     <div class="card-body text-center">
                         @if (!string.IsNullOrEmpty(Model.usuario.UrlImagen))
                         {
-                            <img src="@Model.usuario.UrlImagen" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         else
                         {

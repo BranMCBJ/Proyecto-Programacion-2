@@ -92,6 +92,16 @@
             </div>
         </div>
 
+        <!--Modal IndexCopiaLibro Via AJAX-->
+        <!-- Modal principal -->
+        <div class="modal fade" id="ModalCopiasLibro" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content" id="ModalCopiasLibroContent">
+                    <!--Se carga la vista-->
+                </div>
+            </div>
+        </div>
+
         @if (Model == null || !Model.Any())
         {
             <p>No hay libros disponibles.</p>
@@ -102,7 +112,7 @@
                 <div class="row justify-content-center">
                     @foreach (var libro in Model)
                     {
-                        <div class="col-md-3 mb-4 g-4">
+                        <div class="col-md-3 mb-4 g-4 double-click-card" data-id="@libro.IdLibro">
                             <div class="card shadow-sm">
                                 <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "/images/6ed0780f-8e89-4687-85e8-eb4ff20e41fc.jpg" : $"/Libros/images/{libro.ImagenUrl}")"
                                      class="card-img-top" alt="foto del libro" />
@@ -172,5 +182,18 @@
             alert('No se pudo cargar el formulario de edición.');
           });
       });
+    });
+</script>
+<script>
+      $(document).on('dblclick', '.double-click-card', function () {
+        var libroId = $(this).data('id');
+        $.get('/CopiaLibro/Index/' + libroId)
+            .done(function (html) {
+                $('#ModalCopiasLibroContent').html(html);
+                $('#ModalCopiasLibro').modal('show');
+            })
+            .fail(function () {
+                alert('No se pudo cargar el formulario de edición.');
+            });
     });
 </script>

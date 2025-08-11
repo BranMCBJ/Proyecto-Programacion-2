@@ -1,0 +1,71 @@
+﻿
+<form asp-action="" >
+    <!-- Modal para agregar copia -->
+    <div class="modal fade" id="modalAgregarCopia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+
+                <div class="modal-header encabezado-modal justify-content-center">
+                    <h5 class="modal-title titulo-modal"></h5>
+                    <button type="button" class="btn-close btn-close-white ms-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <h5 class="titulo-modal2">Nueva copia del libro</h5>
+                    <h5 class="titulo-modal2">"El Principito"</h5>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <br />
+                            <br />
+                            <br />
+                            <div class="mb-3">
+                                <label for="nombreCopia" class="form-label">Número de ISBN del libro</label>
+                                <input type="text" class="form-control" id="nombreCopia" placeholder="Ej: copia 001" />
+                            </div>
+
+                            <br />
+
+                            <div class="mb-4">
+                                <div class="dropdown-left ">
+                                    <button class="btn btn-vino d-flex justify-content-between align-items-center text-truncate dropdown-toggle"
+                                            type="button"
+                                            data-bs-toggle="dropdown"
+                                            style="width: 300px; border: 1px solid #ced4da;">
+                                        Estado
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Disponible</a></li>
+                                        <li><a class="dropdown-item" href="#">Prestado</a></li>
+                                        <li><a class="dropdown-item" href="#">Reservado</a></li>
+                                        <li><a class="dropdown-item" href="#">Dañado</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+
+                            <div class="d-flex gap-3 justify-content-center">
+                                <!-- Botón Guardar -->
+                                <button class="btn btn-outline-custom">
+                                    <i class="bi bi-save"></i> Guardar
+                                </button>
+
+                                <!-- Botón Subir Imagen  -->
+                                <label class="btn btn-custom mb-0" for="inputImagenAgregar">
+                                    <i class="bi bi-upload-icono-Subir"></i> Subir Imagen
+                                </label>
+                                <input type="file" id="inputImagenAgregar" accept="image/*" style="display: none;" />
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 text-center">
+                            <img src="imagen.jpg" alt="El Principito" width="250" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

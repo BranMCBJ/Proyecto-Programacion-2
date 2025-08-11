@@ -13,7 +13,7 @@
             <div class="custom-modal-body">
 
         <!-- Input oculto para la imagen-->
-        <input asp-for="usuario.UrlImagen" type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)" />
+        <input name="ImageFile" type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)" />
 
         <!-- Área interactiva -->
         <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
@@ -21,9 +21,9 @@
              onclick="document.getElementById('fileInput').click();"
              style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
 
-            @if (!string.IsNullOrEmpty(Model.usuario?.UrlImagen))
+            @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
             {
-                <img src="@Url.Content("~/" + Model.usuario.UrlImagen)"
+                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen"
                      class="img-fluid w-100 h-100 object-fit-cover rounded"
                      alt="Imagen actual" />
             }

@@ -98,7 +98,14 @@
                             <div class="d-flex align-items-center justify-content-between mb-3">
                                 <!-- Info usuario -->
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/50" alt="Foto de perfil" class="profile-pic me-3">
+                                    @if (!string.IsNullOrEmpty(usuario.usuario.UrlImagen))
+                                    {
+                                        <img src="~/Usuario/Imagenes/@usuario.usuario.UrlImagen" alt="Foto de perfil" class="profile-pic me-3">
+                                    }
+                                    else
+                                    {
+                                        <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto de perfil" class="profile-pic me-3">
+                                    }
                                     <div>
                                         <p class="user-name">@usuario.usuario.NombreUsuario</p>
                                         <p class="user-fullname">@usuario.usuario.Nombre @usuario.usuario.Apellido1 @usuario.usuario.Apellido2</p>
