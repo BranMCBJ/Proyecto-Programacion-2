@@ -114,7 +114,7 @@
                     {
                         <div class="col-md-3 mb-4 g-4 double-click-card" data-id="@libro.IdLibro">
                             <div class="card shadow-sm">
-                                <img src="@(string.IsNullOrEmpty(libro.ImagenUrl) ? "~/images/default-book.svg" : $"~/Libros/images/{libro.ImagenUrl}")"
+                                <img src="~/Libros/images/@libro.ImagenUrl"
                                      class="card-img-top" alt="foto del libro" 
                                      onerror="this.src='/images/default-book.svg';" />
                                 <div class="card-body text-start">

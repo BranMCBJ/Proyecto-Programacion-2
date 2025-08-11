@@ -27,7 +27,7 @@
                     <div class="image-placeholder text-center border rounded p-4 w-100 h-75"
                          id="imagePreview"
                          onclick="document.getElementById('fileInput').click();"
-                         style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                         style="cursor: pointer; width: 300px; height: 400px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
 
                         @if (!string.IsNullOrEmpty(Model?.Libro?.ImagenUrl))
                         {
@@ -38,7 +38,7 @@
                         else
                         {
                             <div class="text-center">
-                                <i class="bi bi-plus-lg" style="font-size: 2rem;"></i>
+                                <i class="bi bi-plus-lg" style="font-size: 2rem; color: #8C2445;"></i>
                                 <label asp-for="Imagen" class="mt-2 text-muted d-block">Haz clic para subir una imagen</label>
                             </div>
                         }
@@ -94,11 +94,32 @@
         const preview = document.getElementById('imagePreview');
 
         if (file && file.type.startsWith("image/")) {
+            // Validar tamaño del archivo (5MB máximo)
+            if (file.size > 5 * 1024 * 1024) {
+                alert('El archivo no puede superar los 5MB.');
+                event.target.value = '';
+                return;
+            }
+
+            // Validar extensiones permitidas
+            const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp'];
+            const fileName = file.name.toLowerCase();
+            const isValidExtension = allowedExtensions.some(ext => fileName.endsWith(ext));
+            
+            if (!isValidExtension) {
+                alert('Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).');
+                event.target.value = '';
+                return;
+            }
+
             const reader = new FileReader();
             reader.onload = function (e) {
-            preview.innerHTML = `<img src="${e.target.result}" class="rounded" style="width: 300px; height: 400px; object-fit: cover;" alt="Imagen previa">`;
+                preview.innerHTML = `<img src="${e.target.result}" class="img-fluid w-100 h-100 object-fit-cover rounded" alt="Imagen previa">`;
             };
             reader.readAsDataURL(file);
+        } else {
+            alert('Por favor selecciona un archivo de imagen válido.');
+            event.target.value = '';
         }
     }
 </script>

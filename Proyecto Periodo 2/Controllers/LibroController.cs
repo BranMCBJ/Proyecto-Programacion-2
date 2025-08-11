@@ -53,15 +53,29 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
+                if (id == null)
+                {
+                    TempData["Error"] = "ID del libro no válido.";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 //saca el libro por el id
+                var libro = _db.Libros.FirstOrDefault(s =>
+                    s.IdLibro == id &&
+                    s.Activo == true);
+
+                if (libro == null)
+                {
+                    TempData["Error"] = "Libro no encontrado.";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 var libroVM = new LibroVM()
                 {
-                    Libro = _db.Libros.FirstOrDefault(s =>
-                s.IdLibro == id &&
-                s.Activo == true),
-
+                    Libro = libro,
                     Imagen = null
                 };
+
                 return PartialView("_PartialVerMasLibro", libroVM);
             }
             catch (Exception ex)
@@ -69,8 +83,7 @@ namespace Proyecto_Periodo_2.Controllers
                 // Manejo de errores
                 ViewBag.Error = ex.Message;
                 TempData["Error"] = "Error al cargar el libro.";
-                return View(nameof(Index));
-                throw;
+                return RedirectToAction(nameof(Index));
             }
         }
 
@@ -80,6 +93,12 @@ namespace Proyecto_Periodo_2.Controllers
         {
             if (!ModelState.IsValid)
                 return PartialView("_PartialCrearLibro", libroVM);
+
+            if (libroVM.Libro == null)
+            {
+                TempData["Error"] = "Datos del libro inválidos.";
+                return RedirectToAction(nameof(Index));
+            }
 
             try
             {
@@ -140,7 +159,7 @@ namespace Proyecto_Periodo_2.Controllers
             catch (Exception ex)
             {
                 TempData["Error"] = "Error al crear el libro: " + ex.Message;
-                return View(nameof(Index));
+                return RedirectToAction(nameof(Index));
             }
         }
 
@@ -149,6 +168,12 @@ namespace Proyecto_Periodo_2.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult UpDelete(LibroVM libroVM, string accion)
         {
+            if (libroVM?.Libro == null)
+            {
+                TempData["Error"] = "Datos del libro inválidos.";
+                return RedirectToAction(nameof(Index));
+            }
+
             if (accion == "actualizar")
             {
                 if (!ModelState.IsValid)
@@ -229,6 +254,18 @@ namespace Proyecto_Periodo_2.Controllers
                     TempData["Error"] = "Libro no encontrado.";
                     return RedirectToAction(nameof(Index));
                 }
+
+                // Eliminar la imagen física si existe
+                if (!string.IsNullOrEmpty(libroEnDb.ImagenUrl))
+                {
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
+                    var imagePath = Path.Combine(uploadsFolder, libroEnDb.ImagenUrl);
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+                }
+
                 libroEnDb.Activo = false;
                 _db.Libros.Update(libroEnDb);
                 _db.SaveChanges();
