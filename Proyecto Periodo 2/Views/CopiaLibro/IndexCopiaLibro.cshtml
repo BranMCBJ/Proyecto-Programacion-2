@@ -62,12 +62,14 @@
                              style="width:100px; height:170px; object-fit:cover;" />
 
                         <div class="texto-tarjeta">
-                            <div>Copia #@item.IdEstadoCopiaLibro</div>
-                            <div>Estado: <br>@item.EstadoCopiaLibro</div>
+                            <div>Copia #@item.IdCopiaLibro</div>
+                            <div>Estado: <br>@item.EstadoCopiaLibro.Nombre</div>
                         </div>
 
                         <div class="dropdown ms-auto">
-                            <i class="bi bi-gear-fill icono-ajustes" data-bs-toggle="dropdown"></i>
+                            <button class="btn btn-link p-0 icono-ajustes" data-bs-toggle="dropdown">
+                                <i class="bi bi-gear-fill"></i>
+                            </button>
                             <ul class="dropdown-menu">
                                 <li>
                                     <button class="dropdown-item text-danger text-primary fs-5" data-bs-toggle="modal" data-bs-target="#modalEditarCopia">
@@ -92,3 +94,9 @@
 
 <link rel="stylesheet" href="~/Libros/styleCopiaLibro.css" asp-append-version="true" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).on('click', '[data-bs-toggle="dropdown"]', function (e) {
+        e.preventDefault();
+        new bootstrap.Dropdown(this).toggle();
+    });
+</script>
