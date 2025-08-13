@@ -15,16 +15,27 @@
     </div>
     <div class="custom-modal-body">
         <div class="profile-image-container">
-            @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
-            {
-                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Foto del usuario" class="profile-image">
-            }
-            else
-            {
-                <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto del usuario" class="profile-image">
-            }
-            <label for="inputImagen" class="edit-camera"><i class="camera-icon fa-solid fa-camera"></i></label>
-            <input name="ImageFile" type="file" id="inputImagen" accept="image/*" hidden onchange="previewImageEdit(event)">
+            <input name="ImageFile" type="file" id="fileInputEdit" accept="image/*" hidden onchange="previewImageEdit(event)" />
+
+            <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
+                 id="imagePreview"
+                 onclick="document.getElementById('fileInputEdit').click();"
+                 style="cursor: pointer; width: 100px; height: 100px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+
+                @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
+                {
+                    <img src="~/images/usuarios/@Model.usuario.UrlImagen"
+                         class="profile-image img-fluid w-100 h-100 object-fit-cover rounded"
+                         alt="Imagen actual" />
+                }
+                else
+                {
+                    <div class="text-center">
+                        <i class="bi bi-plus-lg" style="font-size: 2rem;"></i>
+                        <label asp-for="usuario.UrlImagen" class="mt-2 text-muted d-block">Haz clic para subir una imagen</label>
+                    </div>
+                }
+            </div>
         </div>
 
         <!-- Fila 1 -->
@@ -99,39 +110,5 @@
     </div>
 </form>
 
-<script>
-        function seleccionarRol(rol) {
-        // Cambiar el texto visible
-        document.getElementById('rolSeleccionado').textContent = rol;
-
-        // Establecer el valor del input oculto
-        document.getElementById('rolInput').value = rol;
-
-        // Cerrar el dropdown
-        document.getElementById('dropdownContent').classList.remove('show');
-    }
-
-    // Cerrar el dropdown si se hace clic fuera
-    window.onclick = function(event) {
-        if (!event.target.matches('.dropdown-btn') && !event.target.closest('.dropdown-content')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            for (let i = 0; i < dropdowns.length; i++) {
-                dropdowns[i].classList.remove('show');
-                }
-            }
-        }
-
-    function previewImageEdit(event) {
-        const file = event.target.files[0];
-        const profileImage = document.querySelector('.profile-image');
-
-        if (file && file.type.startsWith("image/")) {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                profileImage.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-    }
-</script>
+<script src="~/js/usuario.js" asp-append-version="true"></script>
 
