@@ -34,9 +34,41 @@ namespace Proyecto_Periodo_2.Controllers
             return PartialView("IndexCopiaLibro", copias);
         }
 
+        [HttpGet]
         public ActionResult AgregarCopia()
         {
             return PartialView("_PartialCrearCopiaLibro");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CrearCopia(CopiaLibro copia)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    _db.CopiasLibros.Add(copia);
+                    _db.SaveChanges();
+                    TempData["Exito"] = "Se agrego una copia del libro";
+                    return RedirectToAction(nameof(Index));
+                }
+                TempData["Error"] = "Error al agregra la copia del libro";
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                var error = ex.ToString();
+                TempData["Error"] = error;
+                throw;
+            }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult e()
+        {
+            return View();
         }
     }
 }
