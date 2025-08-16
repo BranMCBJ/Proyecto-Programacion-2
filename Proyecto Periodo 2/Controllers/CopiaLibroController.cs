@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Data;
 using Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Models.ViewModels;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -32,6 +33,53 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction("Index", "Libro");
             }
             return PartialView("IndexCopiaLibro", copias);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult AgregarCopiaLibro(CopiaLibro copiaLibro)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.CopiasLibros.Add(copiaLibro);
+                _db.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+            TempData["Error"] = "Modelo de copia del libro invalido";
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult EliminarCopiaLibro(int id)
+        {
+            var copia = _db.CopiasLibros.Find(id);
+
+            if (copia == null)
+            {
+                TempData["Error"] = "Copia de libro no encontrada"
+                return RedirectToAction(nameof(Index));
+            }
+            copia.Activo = false;
+            _db.CopiasLibros.Update(copia);
+            _db.SaveChanges();
+            TempData["Exito"] = "Copia de libro Agregada con exito";
+            return RedirectToAction(nameof(Index));
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ActualizarCopiaLibro(CopiaLibro copiaLibro)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.CopiasLibros.Update(copiaLibro);
+                _db.SaveChanges();
+                TempData["Exito"] = "Copia del libro se actulizo con exito";
+                return RedirectToAction(nameof(Index));
+            }
+            TempData["Error"] = "Error al actualizar la copia del libro";
+            return RedirectToAction(nameof(Index));
         }
 
         public ActionResult AgregarCopia()
