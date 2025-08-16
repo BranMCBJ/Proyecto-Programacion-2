@@ -1,18 +1,15 @@
 ﻿@model Models.ViewModels.LibroVM
 
-<form asp-action="UpDelete" asp-controller="Libro" method="post" enctype="multipart/form-data">
-	@Html.AntiForgeryToken()
-    <input asp-for="Libro.IdLibro" type="hidden" name="Libro.IdLibro" value="@(Model?.Libro?.IdLibro ?? 0)" />
-
-    <div class="modal-header"
-         style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
-        <h1 class="modal-title fs-2" id="staticBackdropLabel"
-            style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
-			Agregar libro
+<form method="post" enctype="multipart/form-data" asp-action="EditarLibro">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Libro.IdLibro" />
+    
+    <div class="modal-header" style="background-color: #8C2445; color: white; font-weight: bold; height: 100px; position: relative;">
+        <h1 class="modal-title fs-2" id="staticBackdropLabel" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px;">
+            Ver más
         </h1>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
-                style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%);
-               width: 10px;">
+        <button type="reset" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"
+                style="position: absolute; top: 65%; left: 95%; transform: translate(-50%, -50%); width: 10px;">
         </button>
     </div>
     <div class="modal-body">
@@ -31,7 +28,7 @@
 
                         @if (!string.IsNullOrEmpty(Model?.Libro?.ImagenUrl))
                         {
-                            <img src="~/Libros/images/@Model.Libro.ImagenUrl"
+                            <img src="~/images/libros/@Model.Libro.ImagenUrl"
                                  class="img-fluid w-100 h-100 object-fit-cover rounded"
                                  alt="Imagen libro" />
                         }
@@ -88,6 +85,8 @@
         </div>
     </div>
 </form>
+
+<script src="~/js/libro.js" asp-append-version="true"></script>
 <script>
     function previewImage(event) {
         const file = event.target.files[0];

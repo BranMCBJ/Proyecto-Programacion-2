@@ -1,0 +1,43 @@
+/* Styles for tablaPrestamos.cshtml */
+body {
+    padding: 15px;
+}
+
+.tabla-wrapper {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+th {
+    background-color: #8c2445 !important;
+    color: white !important;
+    text-align: center;
+}
+
+.bi-gear {
+    font-size: 1.2rem;
+}
+
+.disponibles {
+    color: green;
+    font-weight: bold;
+}
+
+.rounded-square {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.btn-cliente {
+    border: 2px solid #8c2445;
+    color: #8c2445;
+    background-color: transparent;
+}
+
+.btn-cliente:hover {
+    background-color: #8c2445;
+    color: white;
+}

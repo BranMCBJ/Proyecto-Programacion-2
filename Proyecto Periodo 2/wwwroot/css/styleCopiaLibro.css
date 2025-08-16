@@ -1,17 +1,17 @@
 ﻿/*----------------------------------vista para ver las copias-------------------*/
-
-.encabezado-modal {
+.copia-libro-modal .encabezado-modal {
 	background: #811c3e;
 	color: white;
 }
 
-.titulo-modal {
+.copia-libro-modal .titulo-modal {
 	margin: auto;
 	color: #811;
 	font-family: 'Inter', sans-serif;
+	text-align: center;
 }
 
-.tarjeta-copia {
+.copia-libro-modal .tarjeta-copia {
 	border: 1px solid #ddd;
 	border-radius: 5px;
 	padding: 15px;
@@ -22,153 +22,147 @@
 	position: relative;
 }
 
-	.tarjeta-copia img {
+	.copia-libro-modal .tarjeta-copia img {
 		width: 60px;
 		height: 100px;
 	}
 
-.texto-tarjeta {
+.copia-libro-modal .texto-tarjeta {
 	margin-left: 10px;
 	font-size: 14px;
 }
 
-.icono-ajustes {
+.copia-libro-modal .icono-ajustes {
 	color: #811c3e;
 	font-size: 30px;
 	margin-left: auto;
 	cursor: pointer;
 	position: absolute;
-	top: -3rem; /* ajusta la distancia desde arriba */
-	right: 0.5rem; /* ajusta la distancia desde la derecha */
-	z-index: 1; /* por si se oculta detrás de otros elementos */
+	top: -3rem;
+	right: 0.5rem;
+	z-index: 1;
 }
 
-.dropdown-item:hover {
+.copia-libro-modal .dropdown-item:hover {
 	background-color: rgba(255, 0, 81, 0.06);
-	; /*cursor encima del menu*/
 	color: #811;
 }
 
-input.form-control:focus {
-	border-color: #811c3e; /*cambiar e color de la barra de busqueda */
+.copia-libro-modal input.form-control:focus {
+	border-color: #811c3e;
 	box-shadow: 0 0 5px #811c3e;
 	outline: none;
 }
 
-.btn-vino:hover,
-.btn-vino:focus {
+.copia-libro-modal .btn-vino:hover,
+.copia-libro-modal .btn-vino:focus {
 	border-color: #811c3e;
 	color: grey;
 	outline: grey;
 	box-shadow: none;
 }
 
-.dropdown-menu {
+.copia-libro-modal .dropdown-menu {
 	min-width: 170px;
 	border: grey;
 }
 
-.btn-close:focus {
-	outline: none; /*eliminar el cuadro de la x*/
+.copia-libro-modal .btn-close:focus {
+	outline: none;
 	box-shadow: none;
 }
 
 /*----------------------icono de herramienta---------------------------------*/
-.texto-editar {
+.copia-libro-modal .texto-editar {
 	color: #811c3e !important;
 }
 
-.texto-eliminar {
+.copia-libro-modal .texto-eliminar {
 	color: #000000 !important;
 }
 
-
-
 /*----------------------agregar copia---------------------------------*/
-
-.col-md-6 .text-center {
+.copia-libro-modal .col-md-6 .text-center {
 	width: 30px;
 	height: 30px;
 	border: 1px solid #ddd;
 	border-radius: 5px;
 }
 
-.boton-agregar {
+.copia-libro-modal .boton-agregar {
 	background-color: #811c3e;
 	border: 1px solid #811c3e;
 	color: white;
 }
 
-	.boton-agregar:hover,
-	.boton-agregar:focus,
-	.boton-agregar:active {
+	.copia-libro-modal .boton-agregar:hover,
+	.copia-libro-modal .boton-agregar:focus,
+	.copia-libro-modal .boton-agregar:active {
 		background-color: #811c3e;
 		color: white;
 		border-color: #811c3e;
 	}
 
-.btn-custom {
-	background-color: #811c3e; /* Botones de guardar y subir imagen */
+.copia-libro-modal .btn-custom {
+	background-color: #811c3e;
 	color: white;
 	border: 1px solid #811c3e;
 	border-radius: 10px;
 }
 
-	.btn-custom:hover {
-		background-color: #c13262; /* Hover del botón personalizado */
+	.copia-libro-modal .btn-custom:hover {
+		background-color: #c13262;
 		color: white;
 	}
 
-.btn-outline-custom {
+.copia-libro-modal .btn-outline-custom {
 	background-color: white;
 	color: #811c3e;
 	border: 1px solid #811c3e;
 	border-radius: 10px;
 }
 
-	.btn-outline-custom:hover {
+	.copia-libro-modal .btn-outline-custom:hover {
 		background-color: #c13262;
 		color: white;
 	}
 
-.titulo-modal2 {
+.copia-libro-modal .titulo-modal2 {
 	color: #811;
 	font-size: 2rem;
 }
 
-.form-select:focus {
+.copia-libro-modal .form-select:focus {
 	border-color: #800020;
 	box-shadow: 0 0 5px #800020;
 	outline: none;
 }
 
-.icono-Subir {
+.copia-libro-modal .icono-Subir {
 	color: white;
 }
 
 /*-----------------------Eliminar copia------------*/
-
-
-.modal-header {
+.copia-libro-modal .modal-header {
 	border-bottom: none;
 	justify-content: flex-end;
 }
 
-.modal-body {
+.copia-libro-modal .modal-body {
 	text-align: center;
 }
 
-	.modal-body i {
+	.copia-libro-modal .modal-body i {
 		font-size: 1rem;
-		color: #842029; /* icono */
+		color: #842029;
 	}
 
-	.modal-body h5 {
+	.copia-libro-modal .modal-body h5 {
 		margin-top: 10px;
 		color: #842029;
 	}
 
-.libro-box {
+.copia-libro-modal .libro-box {
 	display: inline-flex;
 	align-items: center;
 	gap: 10px;
@@ -179,104 +173,97 @@ input.form-control:focus {
 	background-color: #fff;
 }
 
-	.libro-box img {
+	.copia-libro-modal .libro-box img {
 		width: 40px;
 		height: 40px;
 		border-radius: 50%;
 	}
 
-.libro-info {
+.copia-libro-modal .libro-info {
 	text-align: left;
 	font-size: 0.9rem;
 }
 
-	.libro-info .titulo {
+	.copia-libro-modal .libro-info .titulo {
 		font-weight: 600;
 	}
 
-	.libro-info .codigo {
+	.copia-libro-modal .libro-info .codigo {
 		color: #000000;
 	}
 
-.btn-secondary {
+.copia-libro-modal .btn-secondary {
 	background-color: white;
 	color: #811c3e;
-	border: 1px solid #7e0930; /*cursor encima de los botones guardar y subir*/
+	border: 1px solid #7e0930;
 	border-radius: 10px;
 }
 
-.btn-danger {
-	background-color: #811c3e; /*botones de guardar y subir imagen*/
+.copia-libro-modal .btn-danger {
+	background-color: #811c3e;
 	color: white;
 	border: 1px solid #811c3e;
 	border-radius: 10px;
 }
 
-	.btn-danger:hover {
+	.copia-libro-modal .btn-danger:hover {
 		background-color: rgba(255, 0, 81, 0.06);
-		; /*cursor encima del menu*/
 		color: #811;
 	}
 
-.btn-secondary:hover {
-	background-color: #ff00510f; /*cursor encima del menu*/
+.copia-libro-modal .btn-secondary:hover {
+	background-color: #ff00510f;
 	color: #811;
 }
 
 /*-------modal exito-----------------*/
-.modal-header {
-	border-bottom: none;
-	justify-content: flex-end;
-}
-
-.modal-body1 {
+.copia-libro-modal .modal-body1 {
 	text-align: center;
 }
 
-	.modal-body1 i {
+	.copia-libro-modal .modal-body1 i {
 		font-size: 3rem;
-		color: #842029; /* icono*/
-	}
-
-	.modal-body1 h5 {
-		margin-top: 10px; /* titulo*/
 		color: #842029;
 	}
 
-.btn-primary {
+	.copia-libro-modal .modal-body1 h5 {
+		margin-top: 10px;
+		color: #842029;
+	}
+
+.copia-libro-modal .btn-primary {
 	background-color: #842029;
 	border-color: #811;
 }
 
-	.btn-primary:hover {
-		background-color: #c13262; /*mouse encima del boton*/
+	.copia-libro-modal .btn-primary:hover {
+		background-color: #c13262;
 		color: #811;
 	}
 
 /*-----------------------------Modal de Error---------------------*/
-.modal-header2 {
+.copia-libro-modal .modal-header2 {
 	border-bottom: none;
 	display: flex;
 	justify-content: flex-end;
 	padding: 1rem;
-	border-bottom: none;
 }
 
-.modal-body2 {
+.copia-libro-modal .modal-body2 {
 	text-align: center;
 }
 
-	.modal-body2 i {
+	.copia-libro-modal .modal-body2 i {
 		font-size: 3rem;
-		color: #842029; /* icono*/
-	}
-
-	.modal-body2 h5 {
-		margin-top: 10px; /* titulo*/
 		color: #842029;
 	}
 
-.btn-primary {
+	.copia-libro-modal .modal-body2 h5 {
+		margin-top: 10px;
+		color: #842029;
+	}
+
+.copia-libro-modal .btn-primary {
 	background-color: #842029;
 	border-color: #842029;
 }

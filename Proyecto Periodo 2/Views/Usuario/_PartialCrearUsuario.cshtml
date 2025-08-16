@@ -13,7 +13,7 @@
             <div class="custom-modal-body">
 
         <!-- Input oculto para la imagen-->
-        <input name="ImageFile" type="file" id="fileInput" accept="image/*" hidden onchange="previewImage(event)" />
+        <input name="ImageFile" type="file" id="fileInput" accept="image/*" hidden onchange="previewImageCreate(event)" />
 
         <!-- Área interactiva -->
         <div class="image-placeholder text-center border rounded p-4 w-100 h-100"
@@ -23,7 +23,7 @@
 
             @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
             {
-                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen"
+                <img src="~/images/usuarios/@Model.usuario.UrlImagen"
                      class="img-fluid w-100 h-100 object-fit-cover rounded"
                      alt="Imagen actual" />
             }
@@ -37,7 +37,6 @@
         </div>
 
         
-
                 <!-- Fila 1 -->
                 <div class="row-custom">
                     <div class="form-floating-custom">
@@ -89,17 +88,16 @@
                 <!-- Rol -->
                 <label class="mt-2">Rol:</label>
                 <div class="custom-dropdown">
-                    <button type="button" class="dropdown-btn" onclick="document.getElementById('dropdownContent').classList.toggle('show')">
+                    <button type="button" class="dropdown-btn" onclick="toggleDropdown()">
                         <span id="rolSeleccionado">Seleccionar Rol</span>
                         <i class="bi bi-chevron-down"></i>
                     </button>
                     <div class="dropdown-content" id="dropdownContent">
-                        <a href="#" onclick="seleccionarRol('Usuario'); return false;"><i class="fa-solid fa-user-group text-primary me-2"></i>Usuario</a>
-                        <a href="#" onclick="seleccionarRol('Administrador'); return false;"><i class="fa-solid fa-user text-primary me-2"></i>Administrador</a>
+                        <a href="#" onclick="selectRole('Usuario'); return false;"><i class="fa-solid fa-user-group text-primary me-2"></i>Usuario</a>
+                        <a href="#" onclick="selectRole('Administrador'); return false;"><i class="fa-solid fa-user text-primary me-2"></i>Administrador</a>
                     </div>
                 </div>
                 <input asp-for="rol" name="rol" type="hidden" id="rolInput" />
-
 
             </div>
 
@@ -113,42 +111,5 @@
             </div>
         </form>
 
-
-    <script>
-            function seleccionarRol(rol) {
-            // Cambiar el texto visible
-            document.getElementById('rolSeleccionado').textContent = rol;
-
-            // Establecer el valor del input oculto
-            document.getElementById('rolInput').value = rol;
-
-            // Cerrar el dropdown
-            document.getElementById('dropdownContent').classList.remove('show');
-        }
-
-        // Cerrar el dropdown si se hace clic fuera
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropdown-btn') && !event.target.closest('.dropdown-content')) {
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    dropdowns[i].classList.remove('show');
-                    }
-                }
-            }
-    </script>
-
-    <script>
-        function previewImage(event) {
-            const file = event.target.files[0];
-            const preview = document.getElementById('imagePreview');
-
-            if (file && file.type.startsWith("image/")) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                preview.innerHTML = `<img src="${e.target.result}" class="rounded" style="width: 100px; height: 100px; object-fit: cover;" alt="Imagen previa">`;
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-    </script>
+<script src="~/js/usuario.js" asp-append-version="true"></script>
 
