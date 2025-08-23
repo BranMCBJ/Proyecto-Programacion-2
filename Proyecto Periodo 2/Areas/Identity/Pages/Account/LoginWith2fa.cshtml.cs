@@ -9,9 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
-using Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Logging;
 using Models;
 
 namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account

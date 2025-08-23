@@ -21,7 +21,7 @@
             </div>
           </div>
           <div class="text-center">
-                        <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.URLImagen}")" alt="Perfil" class="rounded-square" style="max-height: 180px;" >
+                        <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{Model.URLImagen}")" alt="Perfil" class="rounded-square" style="max-height: 180px;" >
             <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
             <p style="opacity: 60%;">@Model.Cedula</p>
             <p style="font-size: 25px;">@Model.Nombre @Model.Apellido1 @Model.Apellido2</p>
@@ -120,7 +120,7 @@
                     <!-- Contenido -->
                     <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA SUSPENDER A?</p>
                     <p class="fw-semibold mb-2">@Model.Nombre @Model.Apellido1 @Model.Apellido2</p>
-                    <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.URLImagen}")"
+                    <img src="@(string.IsNullOrEmpty(Model.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{Model.URLImagen}")"
                        alt="Cliente"
                        class="img-fluid mx-auto mb-4"
                        style="max-height: 180px;">

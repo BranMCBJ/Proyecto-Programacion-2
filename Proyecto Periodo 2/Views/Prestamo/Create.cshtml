@@ -20,7 +20,7 @@
               <div class="carousel-item @(index == 0 ? "active" : "")">
                 <div class="card p-4 h-100 shadow-sm">
                   <div class="text-center">
-                  <img src="~/Libros/images/@item.Libro.ImagenUrl" alt="Libro" class="rounded-square img-fluid">
+                  <img src="~/images/libros/@item.Libro.ImagenUrl" alt="Libro" class="rounded-square img-fluid">
                     <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
                     <p style="opacity: 60%;">ISBN: @item.Libro.ISBN</p>
                     <div class="card-body text-center mt-3">
@@ -53,7 +53,7 @@
           <div class="card-user">
             @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
             {
-              <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")">
+              <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{Model.cliente.URLImagen}")">
             }
             else
             {

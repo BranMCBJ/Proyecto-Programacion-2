@@ -67,7 +67,7 @@
       <div class="col-sm-5 col-lg-3 mt-4">
         <div class="card shadow-sm text-center h-100 pt-3">
           <div class="card-body pt-3">
-            <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{item.URLImagen}")" 
+            <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{item.URLImagen}")" 
               class="card-img-top mx-auto d-block mt-3 mb-3 rounded"
               style="width: 150px; height: 150px; object-fit: cover;"
               alt="Foto del cliente">
@@ -85,7 +85,7 @@
                   <!-- Contenido -->
                   <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA AGREGAR?</p>
                   <p class="fw-semibold mb-2">@item.Nombre @item.Apellido1 @item.Apellido2</p>
-                  <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{item.URLImagen}")" 
+                  <img src="@(string.IsNullOrEmpty(item.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{item.URLImagen}")" 
                     alt="Cliente"
                     class="img-fluid mx-auto mb-4"
                     style="max-height: 180px;">

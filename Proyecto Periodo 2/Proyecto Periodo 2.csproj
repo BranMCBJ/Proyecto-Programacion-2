@@ -8,31 +8,38 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\Home\Imagenes\**" />
+    <Compile Remove="wwwroot\Clientes\**" />
+    <Compile Remove="wwwroot\HomeAministrador\**" />
+    <Compile Remove="wwwroot\Home\**" />
     <Compile Remove="wwwroot\imagenes\**" />
-    <Compile Remove="wwwroot\Libros\Imagenes\**" />
-    <Compile Remove="wwwroot\Login\Imagenes\**" />
-    <Compile Remove="wwwroot\Prestamos\Imagenes\**" />
-    <Content Remove="wwwroot\Home\Imagenes\**" />
+    <Compile Remove="wwwroot\Libros vistas\**" />
+    <Compile Remove="wwwroot\Libros\**" />
+    <Compile Remove="wwwroot\Login\**" />
+    <Compile Remove="wwwroot\Prestamos\**" />
+    <Content Remove="wwwroot\Clientes\**" />
+    <Content Remove="wwwroot\HomeAministrador\**" />
+    <Content Remove="wwwroot\Home\**" />
     <Content Remove="wwwroot\imagenes\**" />
-    <Content Remove="wwwroot\Libros\Imagenes\**" />
-    <Content Remove="wwwroot\Login\Imagenes\**" />
-    <Content Remove="wwwroot\Prestamos\Imagenes\**" />
-    <EmbeddedResource Remove="wwwroot\Home\Imagenes\**" />
+    <Content Remove="wwwroot\Libros vistas\**" />
+    <Content Remove="wwwroot\Libros\**" />
+    <Content Remove="wwwroot\Login\**" />
+    <Content Remove="wwwroot\Prestamos\**" />
+    <EmbeddedResource Remove="wwwroot\Clientes\**" />
+    <EmbeddedResource Remove="wwwroot\HomeAministrador\**" />
+    <EmbeddedResource Remove="wwwroot\Home\**" />
     <EmbeddedResource Remove="wwwroot\imagenes\**" />
-    <EmbeddedResource Remove="wwwroot\Libros\Imagenes\**" />
-    <EmbeddedResource Remove="wwwroot\Login\Imagenes\**" />
-    <EmbeddedResource Remove="wwwroot\Prestamos\Imagenes\**" />
-    <None Remove="wwwroot\Home\Imagenes\**" />
+    <EmbeddedResource Remove="wwwroot\Libros vistas\**" />
+    <EmbeddedResource Remove="wwwroot\Libros\**" />
+    <EmbeddedResource Remove="wwwroot\Login\**" />
+    <EmbeddedResource Remove="wwwroot\Prestamos\**" />
+    <None Remove="wwwroot\Clientes\**" />
+    <None Remove="wwwroot\HomeAministrador\**" />
+    <None Remove="wwwroot\Home\**" />
     <None Remove="wwwroot\imagenes\**" />
-    <None Remove="wwwroot\Libros\Imagenes\**" />
-    <None Remove="wwwroot\Login\Imagenes\**" />
-    <None Remove="wwwroot\Prestamos\Imagenes\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="wwwroot\Libros\resources\fotoperfil.jpg" />
-    <Content Remove="wwwroot\Libros\resources\logo.png" />
+    <None Remove="wwwroot\Libros vistas\**" />
+    <None Remove="wwwroot\Libros\**" />
+    <None Remove="wwwroot\Login\**" />
+    <None Remove="wwwroot\Prestamos\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -53,33 +60,6 @@
     <ProjectReference Include="..\Data\Data.csproj" />
     <ProjectReference Include="..\Models\Models.csproj" />
     <ProjectReference Include="..\Utilities\Utilities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Home\resources\ArbolHome.png" />
-    <None Include="wwwroot\Home\resources\fondoHomepage.png" />
-    <None Include="wwwroot\Home\resources\hoja.png" />
-    <None Include="wwwroot\Home\resources\Logo.png" />
-    <None Include="wwwroot\Home\stylesAdministrador.css" />
-    <None Include="wwwroot\Libros\styles.css" />
-    <None Include="wwwroot\fotoperfil.jpg" />
-    <None Include="wwwroot\Libros\resources\Frankenstein.webp" />
-    <None Include="wwwroot\Login\Imagenes\fondoHomepage.png" />
-    <None Include="wwwroot\logo.png" />
-    <None Include="wwwroot\Login\styles.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\Clientes\Imagenes\" />
-    <Folder Include="wwwroot\HomeAministrador\Imagenes\" />
-    <Folder Include="wwwroot\Home\Imagenes\" />
-    <Folder Include="wwwroot\Libros vistas\Imagenes\" />
-    <Folder Include="wwwroot\Prestamos\Imagenes\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\Login\Imagenes\Fondo-Login.jpg" />
-    <None Include="wwwroot\Login\Imagenes\Logo.png" />
   </ItemGroup>
 
 </Project>

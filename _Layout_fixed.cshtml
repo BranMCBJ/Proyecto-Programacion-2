@@ -14,24 +14,24 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Libros/styles.css" />
+    <link rel="stylesheet" href="~/css/libros.css" />
     @*switch (controlador)
     {
         case "Home":
             if(ViewContext.RouteData.Values["action"].ToString() == "Index")
             {
-                <link rel="stylesheet" href="~/Home/styles.css" asp-append-version="true" />
+                <link rel="stylesheet" href="~/css/homeIndex.css" asp-append-version="true" />
             }
             else
             {
-                <link rel="stylesheet" href="~/Home/stylesAdministrador.css" asp-append-version="true" />
+                <link rel="stylesheet" href="~/css/homeIndex.css" asp-append-version="true" />
             }
             break;
         case "Libro":
-            <link rel="stylesheet" href="~/Libros/styles.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/css/libros.css" asp-append-version="true" />
             break;
         case "Login":
-            <link rel="stylesheet" href="~/Login/styles.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/css/login.css" asp-append-version="true" />
             break;
         case "Prestamo":
             <link rel="stylesheet" href="~/Prestamos/styles.css" asp-append-version="true" />
@@ -86,7 +86,7 @@
                                 </div>
                                 <div class="profile-info px-3 py-3">
                                     <div class="d-flex align-items-start mb-3">
-                                        <img src="fotoperfil.jpg" alt="avatar" class="profile-img me-3" />
+                                        <img src="~/images/fotoperfil.jpg" alt="avatar" class="profile-img me-3" />
 
                                         <a href="#" class="edit-profile-link">
                                             <i class="fa-solid fa-pen-to-square me-1"></i> Editar Perfil

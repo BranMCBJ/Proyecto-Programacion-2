@@ -152,7 +152,7 @@
                     <div class="card-body text-center">
                         @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
                         {
-                            <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")"  alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "~/images/default-user.svg" : $"~/images/clientes/{Model.cliente.URLImagen}")"  alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         else
                         {

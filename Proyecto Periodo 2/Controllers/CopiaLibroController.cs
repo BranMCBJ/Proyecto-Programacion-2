@@ -57,7 +57,7 @@ namespace Proyecto_Periodo_2.Controllers
 
             if (copia == null)
             {
-                TempData["Error"] = "Copia de libro no encontrada"
+                TempData["Error"] = "Copia de libro no encontrada";
                 return RedirectToAction(nameof(Index));
             }
             copia.Activo = false;
