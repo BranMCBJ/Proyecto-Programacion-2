@@ -115,7 +115,7 @@ namespace Proyecto_Periodo_2.Controllers
                         }
 
                         string webRootPath = _webHostEnvironment.WebRootPath;
-                        string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+                        string upload = Path.Combine(webRootPath, "Images", "Usuario");
 
                         if (!Directory.Exists(upload))
                             Directory.CreateDirectory(upload);
@@ -291,7 +291,7 @@ namespace Proyecto_Periodo_2.Controllers
                             }
 
                             string webRootPath = _webHostEnvironment.WebRootPath;
-                            string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+                            string upload = Path.Combine(webRootPath, "Images", "Usuario");
 
                             if (!Directory.Exists(upload))
                                 Directory.CreateDirectory(upload);

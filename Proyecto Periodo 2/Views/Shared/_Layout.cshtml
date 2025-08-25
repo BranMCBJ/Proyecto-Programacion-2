@@ -1,5 +1,7 @@
+@* Layout principal de la aplicación *@
 @using System.Security.Claims
 @{
+    // Obtener datos del usuario autenticado desde los claims
     var nombre = User.FindFirst("Nombre")?.Value;
     var nombreUsuario = User.FindFirst("NombreUsuario")?.Value;
     var apellido1 = User.FindFirst("Apellido1")?.Value;
@@ -9,8 +11,8 @@
     var rol = User.FindFirst(ClaimTypes.Role)?.Value ?? "Usuario";
     var email = User.FindFirst(ClaimTypes.Email)?.Value;
     var phone = User.FindFirst(ClaimTypes.MobilePhone)?.Value;
-
 }
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +20,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Proyecto_Periodo_2</title>
 
+    @* Referencias a hojas de estilo CSS *@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Proyecto_Periodo_2.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@@fortawesome/fontawesome-free@6.5.2/css/all.min.css" />
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="~/Libros/styles.css" />
+    <link rel="stylesheet" href="~/CSS/LibroStyles.css" />
 </head>
 <body>
     <header>
@@ -37,7 +40,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <a class="navbar-brand" asp-controller="Home" asp-action="Index">
-                    <img src="~/logo.png" alt="Logo" width="auto" height="45">
+                    <img src="~/Images/Home/Logo.png" alt="Logo" width="auto" height="45">
                 </a>
 
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
@@ -78,7 +81,7 @@
                         </div>
                         <div class="profile-info px-3 py-3">
                         <div class="d-flex align-items-start mb-3">
-                            <img src="~/fotoperfil.jpg" alt="avatar" class="profile-img me-3">
+                            <img src="~/Images/Usuario/Foto perfil.png" alt="avatar" class="profile-img me-3">
                         </div>
                         <p class="profile-nombre mb-0">@nombreUsuario</p>
                         <p class="profile-email text-muted mb-2">@email</p>

@@ -17,11 +17,11 @@
         <div class="profile-image-container">
             @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
             {
-                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Foto del usuario" class="profile-image">
+                <img src="~/Images/Usuario/@Model.usuario.UrlImagen" alt="Foto del usuario" class="profile-image">
             }
             else
             {
-                <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto del usuario" class="profile-image">
+                <img src="~/Images/Usuario/Foto perfil.png" alt="Foto del usuario" class="profile-image">
             }
             <label for="inputImagen" class="edit-camera"><i class="camera-icon fa-solid fa-camera"></i></label>
             <input name="ImageFile" type="file" id="inputImagen" accept="image/*" hidden onchange="previewImageEdit(event)">

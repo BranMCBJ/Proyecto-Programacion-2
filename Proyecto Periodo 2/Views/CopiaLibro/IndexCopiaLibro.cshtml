@@ -37,27 +37,19 @@
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Disponible</a></li>
                     <li><a class="dropdown-item" href="#">Prestado</a></li>
-                    <li><a class="dropdown-item" href="#">Reservado</a></li>
                     <li><a class="dropdown-item" href="#">Dañado</a></li>
                 </ul>
             </div>
             <p class="modal-title titulo-modal" style="width: 1px;"></p>
-
-            <!-- Agregar -->
-            <div class="ms-3">
-                <button class="btn boton-agregar" data-bs-toggle="modal" data-bs-target="#modalAgregarCopia">
-                    + Agregar Copia
-                </button>
-            </div>
         </div>
 
         <!-- Estructura de las cards-->
         <div class="row g-3">
             @foreach (var item in Model)
             {
-                <div class="col-md-6">
+                <div class="col-md-3">
                     <div class="tarjeta-copia">
-                        <img src="~/Libros/images/@item.Libro.ImagenUrl"
+                        <img src="~/Images/Libros/@item.Libro.ImagenUrl"
                              alt="Imagen del libro"
                              style="width:100px; height:170px; object-fit:cover;" />
 
@@ -65,38 +57,12 @@
                             <div>Copia #@item.IdCopiaLibro</div>
                             <div>Estado: <br>@item.EstadoCopiaLibro.Nombre</div>
                         </div>
-
-                        <div class="dropdown ms-auto">
-                            <button class="btn btn-link p-0 icono-ajustes" data-bs-toggle="dropdown">
-                                <i class="bi bi-gear-fill"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li>
-                                    <button class="dropdown-item text-danger text-primary fs-5" data-bs-toggle="modal" data-bs-target="#modalEditarCopia">
-                                        <i class="bi bi-pencil me-2"></i><span class="texto-editar">Editar</span>
-                                    </button>
-                                </li>
-                                <li>
-                                    <button class="dropdown-item text-danger text-primary fs-5" data-bs-toggle="modal" data-bs-target="#modalEliminarCopia">
-                                        <i class="bi bi-trash me-2"></i><span class="texto-eliminar">Eliminar</span>
-                                    </button>
-                                </li>
-                            </ul>
-                        </div>
                     </div>
                 </div>
             }
         </div>
     </div>
-
-    <!-- Aquí pegas todos tus otros modales internos (eliminar, editar, éxito, error) -->
 </div>
 
-<link rel="stylesheet" href="~/Libros/styleCopiaLibro.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/CSS/CopiaLibroStyles.css" asp-append-version="true" />
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    $(document).on('click', '[data-bs-toggle="dropdown"]', function (e) {
-        e.preventDefault();
-        new bootstrap.Dropdown(this).toggle();
-    });
-</script>

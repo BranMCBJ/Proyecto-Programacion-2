@@ -1,17 +1,22 @@
-// Collapse cards
+/**
+ * Script para manejar la funcionalidad de los clientes
+ * Incluye: collapse de cards, dropdowns de Bootstrap, validaciones de formularios
+ */
+
+// Variable para mantener el estado de los botones de collapse
 const estadosBotones = {};
 
-// Esperar a que Bootstrap esté completamente cargado
+// Inicialización cuando el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
 
     setTimeout(() => {
-        // Verificar Bootstrap
+        // Verificar que Bootstrap esté disponible
         if (typeof bootstrap === 'undefined') {
             console.error('Bootstrap no está cargado correctamente');
             return;
         }
 
-        // Inicializar dropdowns
+        // Inicializar todos los elementos dropdown de Bootstrap
         const dropdownElements = document.querySelectorAll('[data-bs-toggle="dropdown"]');
 
         dropdownElements.forEach((element, index) => {
@@ -37,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        // Cerrar dropdowns al hacer click fuera
+        // Cerrar dropdowns al hacer click fuera de ellos
         document.addEventListener('click', function (e) {
             if (!e.target.closest('.dropdown')) {
                 document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
@@ -46,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Event listeners para los botones de collapse de cards
+        // Configurar event listeners para los botones de collapse de cards
         document.querySelectorAll(".btnCollapseCard").forEach(boton => {
             boton.addEventListener("click", function (event) {
                 event.preventDefault();
@@ -308,12 +313,12 @@ document.addEventListener("DOMContentLoaded", function () {
             // Actualizar la imagen del cliente
             const imgElement = document.getElementById('eliminarClienteImagen');
             if (imagenCliente && imagenCliente.trim() !== '') {
-                imgElement.src = `/Clientes/images/${imagenCliente}`;
+                imgElement.src = `/Images/Cliente/${imagenCliente}`;
             } else {
-                imgElement.src = '/images/default-user.svg';
+                imgElement.src = '/Images/default-user.svg';
             }
             imgElement.onerror = function() {
-                this.src = '/images/default-user.svg';
+                this.src = '/Images/default-user.svg';
             };
         });
     });

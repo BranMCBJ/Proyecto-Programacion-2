@@ -1,6 +1,6 @@
 @model IEnumerable<Models.Libro>
-<link rel="stylesheet" href="/Prestamos/libros.css">
-<link rel="stylesheet" href="/Prestamos/styles.css">
+<link rel="stylesheet" href="~/CSS/PrestamoLibroStyles.css">
+<link rel="stylesheet" href="~/CSS/PrestamoStyles.css">
 
 <h1 class="px-3 pt-3 mb-4">Préstamos</h1>
 <div class="d-flex justify-content-end px-3">
@@ -45,7 +45,7 @@
         <div class="card shadow-sm text-center h-100 pt-3">
           <div class="card-body pt-3">
             <p class="card-title mb-1">@item.Titulo</p>
-              <img src="~/Libros/images/@item.ImagenUrl"
+              <img src="~/Images/Libros/@item.ImagenUrl"
               class="card-img-top mx-auto d-block mt-3 mb-3 rounded"
               style="width: 150px; height: 150px; object-fit: cover;"
               alt="Foto del cliente">
@@ -61,7 +61,7 @@
                   <!-- Contenido -->
                   <p class="mb-3" style="font-size: 27px;">¿SEGURO QUE DESEA AGREGAR?</p>
                   <p class="fw-semibold mb-2">@item.Titulo</p>
-                    <img src="~/Libros/images/@item.ImagenUrl"
+                    <img src="~/Images/Libros/@item.ImagenUrl"
                     alt="Libro"
                     class="img-fluid mx-auto mb-4"
                     style="max-height: 180px;">

@@ -9,20 +9,30 @@ using Utilities;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    /// <summary>
+    /// Controlador para manejar operaciones CRUD de clientes
+    /// </summary>
     [Authorize] // Requiere autenticación para todo el controlador
     public class ClienteController : Controller
     {
         private readonly AppDbContext db;
         private readonly IWebHostEnvironment webHostEnvironment;
 
+        /// <summary>
+        /// Constructor del controlador Cliente
+        /// </summary>
         public ClienteController(AppDbContext _db, IWebHostEnvironment _webHostEnvironment)
         {
             db = _db;
             webHostEnvironment = _webHostEnvironment;
         }
 
+        /// <summary>
+        /// Muestra la lista de clientes activos
+        /// </summary>
         public ActionResult Index()
         {
+            // Obtener todos los clientes activos con sus datos principales
             IEnumerable<Models.ViewModels.Cliente> clientes = db.Clientes
                 .Where(c => c.Activo == true)
                 .Select(c => new Models.ViewModels.Cliente
@@ -42,6 +52,9 @@ namespace Proyecto_Periodo_2.Controllers
             return View(clientes);
         }
 
+        /// <summary>
+        /// Crea un nuevo cliente en el sistema
+        /// </summary>
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Cliente cliente, IFormFile ImageFile)
@@ -50,6 +63,7 @@ namespace Proyecto_Periodo_2.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    // Verificar si ya existe un cliente con el mismo nombre o cédula
                     var clienteExistente = db.Clientes
                         .FirstOrDefault(u => (u.Nombre == cliente.Nombre ||
                                              u.Cedula == cliente.Cedula) && u.Activo == true);
@@ -62,10 +76,10 @@ namespace Proyecto_Periodo_2.Controllers
 
                     cliente.Activo = true;
 
-                    // Manejo de la imagen
+                    // Procesamiento de imagen del cliente
                     if (ImageFile != null && ImageFile.Length > 0)
                     {
-                        // Validar tipo de archivo
+                        // Validar tipo de archivo permitido
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
                         var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
                         
@@ -75,23 +89,26 @@ namespace Proyecto_Periodo_2.Controllers
                             return RedirectToAction(nameof(Index));
                         }
 
-                        // Validar tamaño (máximo 5MB)
+                        // Validar tamaño máximo del archivo (5MB)
                         if (ImageFile.Length > 5 * 1024 * 1024)
                         {
                             TempData["Error"] = "El archivo de imagen no puede superar los 5MB.";
                             return RedirectToAction(nameof(Index));
                         }
 
+                        // Crear directorio si no existe
                         string webRootPath = webHostEnvironment.WebRootPath;
-                        string upload = Path.Combine(webRootPath, "Clientes", "images");
+                        string upload = Path.Combine(webRootPath, "Images", "Cliente");
                         
                         if (!Directory.Exists(upload))
                         {
                             Directory.CreateDirectory(upload);
                         }
                         
+                        // Generar nombre único para el archivo
                         string fileName = Guid.NewGuid().ToString() + extension;
 
+                        // Guardar archivo en el servidor
                         using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
                         {
                             ImageFile.CopyTo(fileStream);
@@ -173,7 +190,7 @@ namespace Proyecto_Periodo_2.Controllers
                     }
 
                     string webRootPath = webHostEnvironment.WebRootPath;
-                    string upload = Path.Combine(webRootPath, "Clientes", "images");
+                    string upload = Path.Combine(webRootPath, "Images", "Cliente");
                     
                     if (!Directory.Exists(upload))
                     {

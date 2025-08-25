@@ -15,11 +15,11 @@
         <div class="usuario">
             @if (!string.IsNullOrEmpty(Model?.usuario?.UrlImagen))
             {
-                <img src="~/Usuario/Imagenes/@Model.usuario.UrlImagen" alt="Foto" />
+                <img src="~/Images/Usuario/@Model.usuario.UrlImagen" alt="Foto" />
             }
             else
             {
-                <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto" />
+                <img src="~/Images/Usuario/Foto perfil.png" alt="Foto" />
             }
             <span>@Model.usuario.NombreUsuario</span>
         </div>

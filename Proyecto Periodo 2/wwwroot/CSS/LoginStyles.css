@@ -358,7 +358,7 @@ pero solo si comienzan por "col..." :) */
 
 /*body::before {
   content: "";
-  background-image: url('fondoHomepage.png'); 
+  background-image: url('/Images/Home/fondoHomepage.png'); 
   background-repeat: no-repeat;
   background-size: 100% auto;  
   background-position: top center;

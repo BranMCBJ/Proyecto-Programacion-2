@@ -1,25 +1,25 @@
+// Importación de namespaces necesarios
 using Microsoft.EntityFrameworkCore;
 using Data;
 using Microsoft.AspNetCore.Identity;
 using Models;
 
-
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Configuración de servicios para la aplicación
 builder.Services.AddControllersWithViews();
- builder.Services.AddDbContext<AppDbContext>(options =>
+
+// Configuración de la base de datos con SQL Server
+builder.Services.AddDbContext<AppDbContext>(options =>
      options.UseSqlServer(
-         builder.Configuration.GetConnectionString("Proyecto_Periodo_2ContextConnection")));
+         builder.Configuration.GetConnectionString("DefaultConnection")));
 
-//builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<Proyecto_Periodo_2Context>();
+// Configuración de Identity con el modelo de usuario personalizado
+builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = false)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<AppDbContext>();
 
-//Esta es la dependencia para el manejo del Identity
-builder.Services.AddIdentity<Usuario, IdentityRole>()
-    .AddDefaultTokenProviders().AddDefaultUI()
-        .AddEntityFrameworkStores<AppDbContext>();
-
-// Configurar las rutas de autenticación
+// Configuración de rutas de autenticación
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/Identity/Account/Login";
@@ -27,7 +27,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = "/Identity/Account/AccessDenied";
 });
 
-// Hace que la contraseña no tenga tantos requisitos
+// Configuración de políticas de contraseña más flexibles
 builder.Services.Configure<IdentityOptions>(options =>
 {
     options.Password.RequireDigit = false;
@@ -37,6 +37,7 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.Password.RequiredLength = 6;
 });
 
+// Configuración de sesiones
 builder.Services.AddHttpContextAccessor();
 builder.Services.AddSession(Options =>
 {
@@ -47,31 +48,37 @@ builder.Services.AddSession(Options =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configuración del pipeline de la aplicación
 if (!app.Environment.IsDevelopment())
 {
+    // Manejo de errores en producción
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
+// Middleware para redirección HTTPS
 app.UseHttpsRedirection();
 
-// Configuración de archivos estáticos
+// Configuración de archivos estáticos (CSS, JS, imágenes)
 app.UseStaticFiles();
 
+// Configuración de enrutamiento
 app.UseRouting();
 
+// Configuración de sesiones
 app.UseSession();
 
+// Middleware de autenticación y autorización
 app.UseAuthentication();
-
 app.UseAuthorization();
 
+// Mapeo de páginas Razor (para Identity)
 app.MapRazorPages();
 
+// Configuración de rutas por defecto
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+// Iniciar la aplicación
 app.Run();

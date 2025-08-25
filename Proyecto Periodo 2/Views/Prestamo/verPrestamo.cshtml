@@ -152,11 +152,11 @@
                     <div class="card-body text-center">
                         @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
                         {
-                            <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")"  alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/Images/default-user.svg" : $"/Images/Cliente/{Model.cliente.URLImagen}")"  alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         else
                         {
-                            <img src="~/fotoperfil.jpg" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="~/Images/Usuario/Foto perfil.png" alt="Cliente" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         <h4>@Model.cliente.Nombre @Model.cliente.Apellido1 @Model.cliente.Apellido2</h4>
                         <div class="text-start mt-3">
@@ -191,7 +191,7 @@
                         }
                         else
                         {
-                            <img src="~/fotoperfil.jpg" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
+                            <img src="~/Images/Usuario/Foto perfil.png" alt="Usuario" class="rounded-circle mb-3" style="width: 80px; height: 80px; object-fit: cover;">
                         }
                         <h4>@Model.usuario.Nombre @Model.usuario.Apellido1 @Model.usuario.Apellido2</h4>
                         <div class="text-start mt-3">

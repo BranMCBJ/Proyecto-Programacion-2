@@ -3,8 +3,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vista proyecto</title>
-    <link rel="stylesheet" href="~/Usuario/style.css" asp-append-version="true">
-    <link rel="stylesheet" href="~/Usuario/bootstrap.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/CSS/UsuarioStyle.css" asp-append-version="true">
+    <link rel="stylesheet" href="~/CSS/Usuariobootstrap.css" asp-append-version="true">
 
 
 
@@ -96,11 +96,11 @@
                                 <div class="d-flex align-items-center">
                                     @if (!string.IsNullOrEmpty(usuario.usuario.UrlImagen))
                                     {
-                                        <img src="~/Usuario/Imagenes/@usuario.usuario.UrlImagen" alt="Foto de perfil" class="profile-pic me-3">
+                                        <img src="~/Images/Usuario/@usuario.usuario.UrlImagen" alt="Foto de perfil" class="profile-pic me-3">
                                     }
                                     else
                                     {
-                                        <img src="~/Usuario/Imagenes/Foto perfil.png" alt="Foto de perfil" class="profile-pic me-3">
+                                        <img src="~/Images/Usuario/Foto perfil.png" alt="Foto de perfil" class="profile-pic me-3">
                                     }
                                     <div>
                                         <p class="user-name">@usuario.usuario.NombreUsuario</p>
@@ -257,9 +257,7 @@
           });
         });
     </script>
-    <script src="~/Clientes/main.js">
-        
-    </script>
+    <script src="~/JS/Cliente.js"></script>
 
 
 

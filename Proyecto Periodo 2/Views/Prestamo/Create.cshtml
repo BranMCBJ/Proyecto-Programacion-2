@@ -1,6 +1,6 @@
 @model Models.ViewModels.PrestamoCreate
-<link rel="stylesheet" href="/Prestamos/styles.css">
-<link rel="stylesheet" href="/Prestamos/agregarPrestamo.css">
+<link rel="stylesheet" href="~/CSS/PrestamoStyles.css">
+<link rel="stylesheet" href="~/CSS/AgregarPrestamoStyle.css">
 <form asp-controller="Prestamo" asp-action="Create" method="post">
   <div class="container-fluid px-4">
     <div class="row align-items-stretch gy-1">
@@ -20,7 +20,7 @@
               <div class="carousel-item @(index == 0 ? "active" : "")">
                 <div class="card p-4 h-100 shadow-sm">
                   <div class="text-center">
-                  <img src="~/Libros/images/@item.Libro.ImagenUrl" alt="Libro" class="rounded-square img-fluid">
+                  <img src="~/Images/Libros/@item.Libro.ImagenUrl" alt="Libro" class="rounded-square img-fluid">
                     <hr class="mx-auto my-2" style="width: 80%; border-top: 1px solid #ccc;">
                     <p style="opacity: 60%;">ISBN: @item.Libro.ISBN</p>
                     <div class="card-body text-center mt-3">
@@ -53,11 +53,11 @@
           <div class="card-user">
             @if (!string.IsNullOrEmpty(Model.cliente.URLImagen))
             {
-              <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/images/default-user.svg" : $"/Clientes/images/{Model.cliente.URLImagen}")">
+              <img src="@(string.IsNullOrEmpty(Model.cliente.URLImagen) ? "/Images/default-user.svg" : $"/Images/Cliente/{Model.cliente.URLImagen}")">
             }
             else
             {
-              <img src="~/fotoperfil.jpg" alt="Cliente">
+              <img src="~/Images/Usuario/Foto perfil.png" alt="Cliente">
             }
             <div>
               <h4><strong>@Model.cliente.Nombre @Model.cliente.Apellido1 @Model.cliente.Apellido2</strong></h4>
@@ -102,7 +102,7 @@
               }
               else
               {
-                <img src="~/fotoperfil.jpg" alt="Foto de perfil" class="profile-pic me-3">
+                <img src="~/Images/Usuario/Foto perfil.png" alt="Foto de perfil" class="profile-pic me-3">
               }
               <div>
                 <h4 class="fw-normal">@Model.usuario.Nombre <br></h4>

@@ -1,17 +1,15 @@
-﻿
-<form asp-action="" >
-    <!-- Modal para agregar copia -->
-    <div class="modal fade" id="modalAgregarCopia" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-
+﻿@model Models.CopiaLibro
+@{
+	ViewData["Title"] = "Agregar Copia";
+}
+<form asp-action="CrearCopia" asp-controller="CopiaLibro" method="post" enctype="multipart/form-data">
                 <div class="modal-header encabezado-modal justify-content-center">
                     <h5 class="modal-title titulo-modal"></h5>
                     <button type="button" class="btn-close btn-close-white ms-3" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                 </div>
                 <div class="modal-body text-center">
                     <h5 class="titulo-modal2">Nueva copia del libro</h5>
-                    <h5 class="titulo-modal2">"El Principito"</h5>
+                    <h5 class="titulo-modal2">"@Model.Libro.Titulo"</h5>
                     <br>
                     <div class="row">
                         <div class="col-md-6">
@@ -20,7 +18,7 @@
                             <br />
                             <div class="mb-3">
                                 <label for="nombreCopia" class="form-label">Número de ISBN del libro</label>
-                                <input type="text" class="form-control" id="nombreCopia" placeholder="Ej: copia 001" />
+                                <input type="text" class="form-control" id="nombreCopia" placeholder="Copia: @Model.IdCopiaLibro" />
                             </div>
 
                             <br />
@@ -65,7 +63,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
 </form>

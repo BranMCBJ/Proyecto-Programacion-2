@@ -123,7 +123,7 @@ namespace Proyecto_Periodo_2.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images", "Libros");
                     if (!Directory.Exists(uploadsFolder))
                         Directory.CreateDirectory(uploadsFolder);
 
@@ -216,7 +216,7 @@ namespace Proyecto_Periodo_2.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images", "Libros");
                     if (!Directory.Exists(uploadsFolder))
                         Directory.CreateDirectory(uploadsFolder);
 
@@ -258,7 +258,7 @@ namespace Proyecto_Periodo_2.Controllers
                 // Eliminar la imagen física si existe
                 if (!string.IsNullOrEmpty(libroEnDb.ImagenUrl))
                 {
-                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Libros", "images");
+                    var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images", "Libros");
                     var imagePath = Path.Combine(uploadsFolder, libroEnDb.ImagenUrl);
                     if (System.IO.File.Exists(imagePath))
                     {

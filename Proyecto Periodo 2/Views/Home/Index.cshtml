@@ -1,7 +1,7 @@
 @model Models.ViewModels.Home
 @using System.Security.Claims
 @{
-    var nombre = User.FindFirst("Nombre")?.Value;
+	var nombre = User.FindFirst("Nombre")?.Value;
     var nombreUsuario = User.FindFirst("NombreUsuario")?.Value;
     var apellido1 = User.FindFirst("Apellido1")?.Value;
     var apellido2 = User.FindFirst("Apellido2")?.Value;
@@ -11,12 +11,12 @@
 	var email = User.FindFirst(ClaimTypes.Email)?.Value;
 
 }
-<link rel="stylesheet" href="~/Home/styles.css" asp-append-version="true" />
-<div class="libros-fondo" style="background-image: url('/Home/resources/fondoHomepage.png');"></div>
+<link rel="stylesheet" href="~/CSS/HomeStyles.css" asp-append-version="true" />
+<div class="libros-fondo" style="background-image: url('/Images/Home/fondoHomepage.png');"></div>
 
 <header class="d-flex align-items-center gap-2 mt-5 ms-5 ">
     <!-- Logo -->
-    <img src="/Home/resources/Logo.png" alt="Logo" style="max-height: 50px;" />
+    <img src="/Images/Home/Logo.png" alt="Logo" style="max-height: 50px;" />
     <div class="d-flex flex-column lh-sm">
         <span style="font-family: 'Merriweather', serif; color: #8C2445; font-weight: bold;  font-size: 1rem;">SABER Y</span>
         <span style="font-family: 'Merriweather', serif; font-weight: 900; font-size: 1rem;">CULTURA</span>

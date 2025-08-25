@@ -6,11 +6,20 @@ using System.Security.Claims;
 
 namespace Data
 {
+    /// <summary>
+    /// Contexto de base de datos principal de la aplicación
+    /// Hereda de IdentityDbContext para incluir las tablas de Identity
+    /// </summary>
     public class AppDbContext : IdentityDbContext
     {
+        /// <summary>
+        /// Constructor del contexto de base de datos
+        /// </summary>
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
         }
+        
+        // Definición de las tablas de la base de datos
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<EstadoPrestamo> EstadoPrestamo { get; set; }
@@ -20,8 +29,12 @@ namespace Data
         public DbSet<Prestamo> Prestamos { get; set; }
         public DbSet<CopiaLibroPrestamo> CopiasLibrosPrestamos { get; set; }
 
+        /// <summary>
+        /// Configuración del modelo de base de datos y datos iniciales
+        /// </summary>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            // Configuración de nombres de tablas
             modelBuilder.Entity<Usuario>().ToTable("Usuarios");
             modelBuilder.Entity<Cliente>().ToTable("Clientes");
             modelBuilder.Entity<EstadoPrestamo>().ToTable("EstadoPrestamo");
@@ -30,21 +43,23 @@ namespace Data
             modelBuilder.Entity<Prestamo>().ToTable("Prestamo");
             modelBuilder.Entity<EstadoCopiaLibro>().ToTable("EstadoCopiaLibro");
 
-            base.OnModelCreating(modelBuilder); // <- importante al inicio
+            // Llamar al método base para configurar Identity
+            base.OnModelCreating(modelBuilder);
 
+            // Datos iniciales para estados de copia de libro
             modelBuilder.Entity<EstadoCopiaLibro>().HasData(
                 new EstadoCopiaLibro { IdEstadoCopialibro = 1, Nombre = "Disponible", Activo = true, Descripcion = "La copia del libro se puede prestar" },
                 new EstadoCopiaLibro { IdEstadoCopialibro = 2, Nombre = "Prestado", Activo = true, Descripcion = "La copia del libro esta en un prestamo" },
                 new EstadoCopiaLibro { IdEstadoCopialibro = 3, Nombre = "Dañado", Activo = true, Descripcion = "La copia del libro esta dañada" }
             );
 
+            // Datos iniciales para estados de préstamo
             modelBuilder.Entity<EstadoPrestamo>().HasData(
                 new EstadoPrestamo { IdEstado = 1, Nombre = "Vigente", Activo = true, Descripcion = "El prestamo sigue en vigencia" },
                 new EstadoPrestamo { IdEstado = 2, Nombre = "Devuelto", Activo = true, Descripcion = "El prestamo ya termino" }
             );
 
-
-            // Roles
+            // Configuración de roles del sistema
             modelBuilder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "1", Name = "Admin", NormalizedName = "ADMIN" },
                 new IdentityRole { Id = "2", Name = "Usuario", NormalizedName = "USUARIO" }

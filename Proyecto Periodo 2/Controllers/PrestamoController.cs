@@ -3,49 +3,68 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
 using Data;
-using AspNetCoreGeneratedDocument;
-using Models.ViewModels;
 using System.Text.Json;
+using System.Runtime.ExceptionServices;
 
 namespace Proyecto_Periodo_2.Controllers
 {
+    /// <summary>
+    /// Controlador para manejar operaciones de préstamos de libros
+    /// </summary>
     [Authorize] // Requiere autenticación para todo el controlador
     public class PrestamoController : Controller
     {
         private readonly AppDbContext db;
         private readonly IWebHostEnvironment webHostEnvironment;
         private string ruta;
+        
+        // Variable para mantener los datos del préstamo en proceso
         private Models.ViewModels.PrestamoCreate nuevoPrestamo = new Models.ViewModels.PrestamoCreate()
         {
             copiasLibro = new List<CopiaLibro>()
         };
 
+        /// <summary>
+        /// Constructor del controlador de préstamos
+        /// </summary>
         public PrestamoController(AppDbContext _db, IWebHostEnvironment _webHostEnvironment)
         {
             db = _db;
             webHostEnvironment = _webHostEnvironment;
+            // Ruta donde se guarda temporalmente la información del préstamo
             ruta = Path.Combine(webHostEnvironment.WebRootPath, "Prestamos", "nuevoPrestamo.json");
         }
 
+        /// <summary>
+        /// Página principal de préstamos - muestra información del cliente si se proporciona ID
+        /// </summary>
         public IActionResult Index(int? id)
         {
+            // Buscar cliente si se proporciona un ID
             Models.Cliente? cliente = id != null ? db.Clientes.FirstOrDefault(c => c.IdCliente == id && c.Activo == true) : null;
             return View(cliente);
         }
 
+        /// <summary>
+        /// Muestra la lista de clientes para seleccionar en un préstamo
+        /// </summary>
         public ActionResult clientes(string returnTo = "Index")
         {
             ViewBag.ReturnTo = returnTo;
+            // Obtener todos los clientes activos
             IEnumerable<Models.Cliente> listaClientes = db.Clientes.Where(c => c.Activo == true).ToList();
             return View(listaClientes);
         }
 
+        /// <summary>
+        /// Selecciona un cliente específico para el préstamo
+        /// </summary>
         public ActionResult SeleccionarCliente(int id, string returnTo = "Index")
         {
             var cliente = db.Clientes.Find(id);
             if (cliente != null)
             {
-                // Guardar el cliente en JSON para uso posterior
+                // Guardar el cliente seleccionado en la sesión del préstamo
                 nuevoPrestamo.cliente = cliente;
                 var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
                 nuevoPrestamo.usuario = db.Usuarios.FirstOrDefault(u => u.Id == userId);       
@@ -157,7 +176,20 @@ namespace Proyecto_Periodo_2.Controllers
                     FechaLimite = fechaLimite,
                     Activo = true
                 };
-                
+                var idlibro = nuevoPrestamo.copiasLibro.Select(c => c.IdLibro).FirstOrDefault();
+                var copia = db.CopiasLibros.FirstOrDefault(c => c.Libro.IdLibro == idlibro
+                 && c.EstadoCopiaLibro.IdEstadoCopialibro == 1 
+                 && c.Activo == true);
+                if (copia != null)
+                {
+                    copia.IdEstadoCopiaLibro = 2; // Cambiar el estado a "Prestado"
+                    db.CopiasLibros.Update(copia);
+                }
+                else
+                {
+                    TempData["Error"] = "No hay copias disponibles para uno de los libros seleccionados.";
+                    return RedirectToAction(nameof(Create));
+                }
                 db.Prestamos.Add(prestamo);
                 db.SaveChanges();
                 foreach(var item in nuevoPrestamo.copiasLibro)
