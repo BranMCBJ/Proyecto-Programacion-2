@@ -261,5 +261,24 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Suspender(Cliente cliente)
+        {
+            var clienteBD = db.Clientes.Find(cliente.IdCliente);
+            if (clienteBD == null)
+            {
+                return NotFound();
+            }
+
+            // Solo modificar lo necesario
+            clienteBD.CantidadPrestamosDisponibles = 0;
+
+            db.Clientes.Update(clienteBD);
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "Prestamo");
+        }
     }
 }

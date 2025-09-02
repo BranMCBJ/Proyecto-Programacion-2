@@ -79,7 +79,7 @@ namespace Data
                 NormalizedUserName = "JULAI",
                 NombreUsuario = "Julai",
                 PhoneNumber = "12345678",
-                UrlImagen = "/Usuario/Imagenes/d724626d-b41f-47d7-acec-8b85fe3f8de5.jpg",
+                UrlImagen = "Foto perfil.png",
                 Activo = true,
                 EmailConfirmed = true,
                 SecurityStamp = Guid.NewGuid().ToString(),

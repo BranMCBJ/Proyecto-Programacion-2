@@ -184,17 +184,17 @@ namespace Proyecto_Periodo_2.Areas.Identity.Pages.Account
                         return Page();
                     }
 
-                    // Ruta para guardar imagen dentro de wwwroot/Usuario/Imagenes
+                    // Ruta para guardar imagen dentro de wwwroot/Images/Usuario
                     string webRootPath = _webHostEnvironment.WebRootPath;
-                    string upload = Path.Combine(webRootPath, "Usuario", "Imagenes");
+                    string upload = Path.Combine(webRootPath, "Images", "Usuario");
 
                     if (!Directory.Exists(upload))
                     {
                         Directory.CreateDirectory(upload);
                     }
 
-                    string fileName = Guid.NewGuid().ToString() + extension;
-                    string filePath = Path.Combine(upload, fileName);
+                    string fileName = Guid.NewGuid().ToString() + extension; //Nombre del archivo
+                    string filePath = Path.Combine(upload, fileName);// direccionde las carpetas con la del archivo
 
                     using (var fileStream = new FileStream(filePath, FileMode.Create))
                     {

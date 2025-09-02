@@ -44,7 +44,7 @@
     <!-- CARD IZQUIERDA -->
     <div class="col-md-4">
       <div class="card p-3 h-100 shadow-sm">
-        @if(Model != null)
+                @if (Model != null && Model.cliente != null)
         {        
           <div class="d-flex justify-content-end">
             <div class="dropdown">

@@ -36,7 +36,7 @@ public class HomeController : Controller
             cantidadLibros = db.Libros.Where(p => p.Activo == true).Count(),
             cantidadPrestamos = db.Prestamos.Where(p => p.Activo == true).Count(),
             cantidadClientes = db.Clientes.Where(p => p.Activo == true).Count(),
-            cantidadUsuarios = db.Usuarios.Count()
+            cantidadUsuarios = db.Usuarios.Where(p => p.Activo == true).Count()
         };
         return View(home);
     }

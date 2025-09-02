@@ -234,10 +234,12 @@ namespace Data.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -281,10 +283,12 @@ namespace Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(128)
+                        .HasColumnType("nvarchar(128)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -609,16 +613,16 @@ namespace Data.Migrations
                         {
                             Id = "3",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "c6c96503-dc5c-4e64-ad6f-b03defb017ba",
+                            ConcurrencyStamp = "48e2229c-c84f-443f-8dad-0ca533b44ab1",
                             Email = "cecilianojulian64@gmail.com",
                             EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedEmail = "CECILIANOJULIAN64@GMAIL.COM",
                             NormalizedUserName = "JULAI",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGbc2KKWAgDn6j62+nWTmx70piySlO93ZbaECxN8o0qL0rj6/nx+l4ijxY2G1GeywQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEK0MJezy8imE7oLu+gz3X8yYqp9XNry2OPVFQbNXZOBEObk6dFBFQDyUvoDMOmS5Mg==",
                             PhoneNumber = "12345678",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "6d928c39-f975-4c7a-b181-8afa5e463376",
+                            SecurityStamp = "fb716ead-82e1-405f-99f0-37ed0602a5f7",
                             TwoFactorEnabled = false,
                             UserName = "Julai",
                             Activo = true,
@@ -627,7 +631,7 @@ namespace Data.Migrations
                             Cedula = "305760805",
                             Nombre = "Julian",
                             NombreUsuario = "Julai",
-                            UrlImagen = "/Usuario/Imagenes/d724626d-b41f-47d7-acec-8b85fe3f8de5.jpg"
+                            UrlImagen = "Foto perfil.png"
                         });
                 });
 

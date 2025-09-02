@@ -92,7 +92,7 @@ namespace Proyecto_Periodo_2.Controllers
         public IActionResult CrearLibro(LibroVM libroVM)
         {
             if (!ModelState.IsValid)
-                return PartialView("_PartialCrearLibro", libroVM);
+                return RedirectToAction(nameof(Index));
 
             if (libroVM.Libro == null)
             {

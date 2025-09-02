@@ -48,26 +48,27 @@
     <div class="col-md-8 d-flex flex-column justify-content-between">
       <div class="row gx-3 gy-3 flex-grow-1">
         <!-- Nuevo Préstamo ocupa fila completa -->
-        <div class="col-12">
-          @if(Model != null)
-          {
-            <a asp-controller="Prestamo" asp-action="libros" asp-route-idCliente="@Model.IdCliente" class="text-decoration-none h-100 d-block">
-              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
-                <i class="bi bi-pencil-square fs-1"></i>
-                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
-              </div>
-            </a>
-          }
-          else
-          {
-            <button class="btn text-decoration-none outline-0 border-0 h-100 w-100 d-block" disabled>
-              <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
-                <i class="bi bi-pencil-square fs-1"></i>
-                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
-              </div>
-            </button>
-          }
-        </div>
+                <!-- Nuevo Préstamo ocupa fila completa -->
+                <div class="col-12">
+                    @if (Model != null && Model.CantidadPrestamosDisponibles > 0)
+                    {
+                        <a asp-controller="Prestamo" asp-action="libros" asp-route-idCliente="@Model.IdCliente" class="text-decoration-none h-100 d-block">
+                            <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                                <i class="bi bi-pencil-square fs-1"></i>
+                                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
+                            </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <button class="btn text-decoration-none outline-0 border-0 h-100 w-100 d-block" disabled>
+                            <div class="card text-center p-4 h-100 shadow-sm d-flex justify-content-center align-items-center flex-column">
+                                <i class="bi bi-pencil-square fs-1"></i>
+                                <h5 class="mt-2 fw-semibold text-dark">Nuevo Préstamo</h5>
+                            </div>
+                        </button>
+                    }
+                </div>
         <div class="col-12 d-flex">
           <!-- Préstamos Activos y Suspender Usuario, mitad y mitad -->
           <div class="col-5">
@@ -124,11 +125,21 @@
                        alt="Cliente"
                        class="img-fluid mx-auto mb-4"
                        style="max-height: 180px;">
-                    <!-- Botones -->
-                    <div class="d-flex justify-content-center gap-3">
-                      <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">Cancelar</button>
-                      <button type="button" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;" onclick="">Confirmar</button>
-                    </div>
+                                        <!-- Botones -->
+                                        <div class="d-flex justify-content-center gap-3">
+                                            <form asp-action="Suspender" asp-controller="Cliente" method="post">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="IdCliente" value="@Model.IdCliente" />
+
+                                                <button type="button" class="btn mt-2 shadow-sm" style="width: 150px; color: black;" data-bs-dismiss="modal">
+                                                    Cancelar
+                                                </button>
+
+                                                <button type="submit" class="btn mt-2 shadow-sm" style="background-color: #8c2445; color: #ffffff; width: 150px;">
+                                                    Confirmar
+                                                </button>
+                                            </form>
+                                        </div>
                   </div>
                 </div>
               </div>
@@ -139,5 +150,3 @@
     </div>
   </div>
 </div>
-    </div>
-

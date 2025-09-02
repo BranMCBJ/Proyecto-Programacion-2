@@ -85,7 +85,7 @@
                         </div>
                         <p class="profile-nombre mb-0">@nombreUsuario</p>
                         <p class="profile-email text-muted mb-2">@email</p>
-                                <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="w-100">
+                                <form asp-controller ="Usuario" asp-action="CloseSession" method="post" class="w-100">
                                     @Html.AntiForgeryToken()
                                     <button type="submit" class="btn btn-outline-secondary w-100">
                                         <i class="fa-solid fa-right-from-bracket me-1"></i> Cerrar Sesión

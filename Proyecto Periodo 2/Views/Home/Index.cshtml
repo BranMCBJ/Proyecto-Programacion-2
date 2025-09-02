@@ -9,7 +9,6 @@
     var urlImagen = User.FindFirst("UrlImagen")?.Value;
 	var rol = User.FindFirst(ClaimTypes.Role)?.Value ?? "Usuario";
 	var email = User.FindFirst(ClaimTypes.Email)?.Value;
-
 }
 <link rel="stylesheet" href="~/CSS/HomeStyles.css" asp-append-version="true" />
 <div class="libros-fondo" style="background-image: url('/Images/Home/fondoHomepage.png');"></div>
@@ -36,7 +35,7 @@
         <div class="col-md-3 mb-4 ">
             <h6 class="mb-2 subtitulo">¿Qué necesitas hacer hoy?</h6>
 
-            <a class="btn w-100 mb-3 d-flex align-items-center gap-2 boton-custom " asp-controller="Prestamo" asp-action="Index">
+            <a class="btn w-100 mb-3 d-flex align-items-center gap-2 boton-custom" asp-controller="Prestamo" asp-action="Index">
                 <i class="bi  bi-journal-bookmark"></i> Gestión de Préstamos
             </a>
 
@@ -61,7 +60,7 @@
                 <button class="btn w-100 mb-2 d-flex align-items-center boton-custom" data-bs-toggle="modal" data-bs-target="#perfilModal">
                     <i class="bi bi-info-circle"></i> Ver Perfil
                 </button>
-                <form asp-area="Identity" asp-page="/Account/Logout" method="post" class="w-100">
+                <form asp-controller="Usuario" asp-action="CloseSession" method="post" class="w-100">
                     @Html.AntiForgeryToken()
                     <button class="btn w-100 d-flex align-items-center boton-custom">
                         <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
@@ -72,7 +71,7 @@
 
         <!-- Imagen -->
         <div class="col-md-6 text-center">
-            <img src="/Home/resources/ArbolHome.png" alt="Ilustración" class="imagen-arbol">
+            <img src="~/Images/Home/ArbolHome.png" alt="Ilustración" class="imagen-arbol">
         </div>
     </div>
 

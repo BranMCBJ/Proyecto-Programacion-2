@@ -14,6 +14,8 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.IdentityModel.Tokens;
 using System.Globalization;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 
 namespace Proyecto_Periodo_2.Controllers
 {
@@ -460,6 +462,15 @@ namespace Proyecto_Periodo_2.Controllers
                 TempData["Error"] = "Error al eliminar el usuario: " + ex.Message;
                 return RedirectToAction(nameof(Index));
             }
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> CloseSession()
+        {
+            // cierra la sesion del usuario logueado
+            await _signInManager.SignOutAsync();
+            return RedirectToPage("/Account/Login", new { area = "Identity" });
         }
     }
 }
