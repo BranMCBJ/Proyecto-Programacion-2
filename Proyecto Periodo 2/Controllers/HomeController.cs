@@ -13,6 +13,7 @@ namespace Proyecto_Periodo_2.Controllers;
 [Authorize] // Requiere autenticación para todo el controlador
 public class HomeController : Controller
 {
+    #region Propiedades y Constructor
     private readonly AppDbContext db;
     private readonly ILogger<HomeController> _logger;
 
@@ -24,7 +25,9 @@ public class HomeController : Controller
         _logger = logger;
         db = _db;
     }
+    #endregion
 
+    #region Acciones de Vista
     /// <summary>
     /// Acción para mostrar la página principal con estadísticas del sistema
     /// </summary>
@@ -40,7 +43,9 @@ public class HomeController : Controller
         };
         return View(home);
     }
+    #endregion
 
+    #region Manejo de Errores
     /// <summary>
     /// Página de error del sistema
     /// </summary>
@@ -50,4 +55,5 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
+    #endregion
 }

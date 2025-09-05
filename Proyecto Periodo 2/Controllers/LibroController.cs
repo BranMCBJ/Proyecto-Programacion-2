@@ -16,6 +16,7 @@ namespace Proyecto_Periodo_2.Controllers
 {
     public class LibroController : Controller
     {
+        #region Propiedades y Constructor
         private readonly AppDbContext _db;
         private readonly IWebHostEnvironment _webHostEnvironment;
 
@@ -24,7 +25,9 @@ namespace Proyecto_Periodo_2.Controllers
             _db = db;
             _webHostEnvironment = webHostEnvironment;
         }
+        #endregion
 
+        #region Acciones de Lectura
         // GET: Libro
         public IActionResult Index()
         {
@@ -39,6 +42,9 @@ namespace Proyecto_Periodo_2.Controllers
                 return View(new List<LibroVM>());
             }
         }
+        #endregion
+
+        #region Vistas Parciales
         // GET: Libro/Create
         [HttpGet]
         public ActionResult _PartialCrearLibro()
@@ -86,7 +92,9 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+        #endregion
 
+        #region Acciones de Creación
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult CrearLibro(LibroVM libroVM)
@@ -109,44 +117,54 @@ namespace Proyecto_Periodo_2.Controllers
                 {
                     // Validar extensiones permitidas
                     var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                    // Obtener extension del archivo en minusculas
                     var extension = Path.GetExtension(imagen.FileName).ToLowerInvariant();
                     
+                    // Verificar que la extension este en lista de permitidas
                     if (!allowedExtensions.Contains(extension))
                     {
-                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                        TempData["Error"] = "Solo se permiten archivos de imagen (jpg jpeg png gif bmp).";
                         return RedirectToAction(nameof(Index));
                     }
 
+                    // Validar tamano maximo de 5MB
                     if (imagen.Length > 5 * 1024 * 1024)
                     {
                         TempData["Error"] = "El archivo no puede superar los 5MB.";
                         return RedirectToAction(nameof(Index));
                     }
 
+                    // Construir ruta de carpeta para imagenes de libros
                     var uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "Images", "Libros");
+                    // Crear carpeta si no existe
                     if (!Directory.Exists(uploadsFolder))
                         Directory.CreateDirectory(uploadsFolder);
 
+                    // Generar nombre unico para evitar conflictos
                     var fileName = Guid.NewGuid().ToString() + extension;
                     var filePath = Path.Combine(uploadsFolder, fileName);
 
+                    // Crear stream y copiar archivo al servidor
                     using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         imagen.CopyTo(stream);
                     }
 
-                    libro.ImagenUrl = fileName; // Solo guardar el nombre del archivo
+                    // Guardar solo el nombre del archivo en la base de datos
+                    libro.ImagenUrl = fileName;
                 }
 
+                // Marcar libro como activo
                 libro.Activo = true;
 
-                // 1) Agregar libro y persistir para obtener Id
+                // Paso 1: Agregar libro a contexto y guardar para obtener ID generado
                 _db.Libros.Add(libro);
                 _db.SaveChanges();
 
+                // Obtener ID del libro recien insertado
                 var libroId = libro.IdLibro;
 
-                // 2) Crear copias usando el Id recién generado
+                // Paso 2: Crear copias fisicas del libro usando el ID obtenido
                 if (libro.Stock > 0)
                 {
                     CrearCopiasLibro(libro.Stock, libroId);
@@ -162,12 +180,14 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+        #endregion
 
-
+        #region Acciones de Edición y Eliminación
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult UpDelete(LibroVM libroVM, string accion)
         {
+            // Validar que el ViewModel y el libro no sean null
             if (libroVM?.Libro == null)
             {
                 TempData["Error"] = "Datos del libro inválidos.";
@@ -277,7 +297,9 @@ namespace Proyecto_Periodo_2.Controllers
             TempData["Error"] = "Acción no válida.";
             return RedirectToAction(nameof(Index));
         }
+        #endregion
 
+        #region Métodos de copias de libro
         public void CrearCopiasLibro(int? stock, int? idLibro)
         {
             if (stock <= 0) return;
@@ -307,5 +329,6 @@ namespace Proyecto_Periodo_2.Controllers
             _db.CopiasLibros.UpdateRange(copias);
             _db.SaveChanges();
         }
+        #endregion
     }
 }

@@ -11,13 +11,16 @@ namespace Proyecto_Periodo_2.Controllers
     [Authorize] // Requiere autenticación para todo el controlador
     public class CopiaLibroController : Controller
     {
+        #region Propiedades y Constructor
         private readonly AppDbContext _db;
 
         public CopiaLibroController(AppDbContext db)
         {
             _db = db;
         }
+        #endregion
 
+        #region Acciones de Vista
         // GET: CopiaLibro
         public ActionResult Index(int? id)
         {
@@ -63,12 +66,15 @@ namespace Proyecto_Periodo_2.Controllers
                 throw;
             }
         }
+        #endregion
 
+        #region Acciones de Edición
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult e()
         {
             return View();
         }
+        #endregion
     }
 }

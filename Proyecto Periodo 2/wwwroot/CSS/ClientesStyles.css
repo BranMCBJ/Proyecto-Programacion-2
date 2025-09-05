@@ -1,4 +1,8 @@
 /* ===========================
+   ESTILOS PARA CLIENTE
+=========================== */
+
+/* ===========================
    Tarjeta de cliente
 =========================== */
 .cliente-card {
@@ -11,7 +15,7 @@
     }
 
 /* ===========================
-   Proporción de imágenes
+   Proporciï¿½n de imï¿½genes
 =========================== */
 .ratio-1x1 {
     aspect-ratio: 1 / 1;
@@ -51,7 +55,7 @@ input:focus {
 }
 
 /* ===========================
-   Animación de tarjeta
+   Animaciï¿½n de tarjeta
 =========================== */
 .fade-card {
     opacity: 1;

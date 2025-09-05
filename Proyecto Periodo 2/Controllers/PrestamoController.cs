@@ -14,6 +14,7 @@ namespace Proyecto_Periodo_2.Controllers
     [Authorize] // Requiere autenticación para todo el controlador
     public class PrestamoController : Controller
     {
+        #region Propiedades y Constructor
         private readonly AppDbContext db;
         private readonly IWebHostEnvironment webHostEnvironment;
         private string ruta;
@@ -34,17 +35,22 @@ namespace Proyecto_Periodo_2.Controllers
             // Ruta donde se guarda temporalmente la información del préstamo
             ruta = Path.Combine(webHostEnvironment.WebRootPath, "Prestamos", "nuevoPrestamo.json");
         }
+        #endregion
+
+        #region Acciones de Vista Principal
 
         /// <summary>
         /// Página principal de préstamos - muestra información del cliente si se proporciona ID
         /// </summary>
         public IActionResult Index(int? id)
         {
-            // Buscar cliente si se proporciona un ID
+            // Operador ternario: si id tiene valor busca el cliente activo sino devuelve null
             Models.Cliente? cliente = id != null ? db.Clientes.FirstOrDefault(c => c.IdCliente == id && c.Activo == true) : null;
             return View(cliente);
         }
+        #endregion
 
+        #region Gestión de Clientes
         /// <summary>
         /// Muestra la lista de clientes para seleccionar en un préstamo
         /// </summary>
@@ -64,22 +70,27 @@ namespace Proyecto_Periodo_2.Controllers
             var cliente = db.Clientes.Find(id);
             if (cliente != null)
             {
-                // Guardar el cliente seleccionado en la sesión del préstamo
+                // Asignar cliente seleccionado al objeto de prestamo temporal
                 nuevoPrestamo.cliente = cliente;
+                // Obtener ID del usuario autenticado usando Claims
                 var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+                // Buscar usuario completo en base de datos usando el ID obtenido
                 nuevoPrestamo.usuario = db.Usuarios.FirstOrDefault(u => u.Id == userId);       
+                // Serializar objeto a JSON para guardarlo temporalmente
                 string json = JsonSerializer.Serialize(nuevoPrestamo);
                 
-                // Asegurar que el directorio existe
+                // Obtener directorio padre de la ruta del archivo
                 var directory = Path.GetDirectoryName(ruta);
+                // Crear directorio si no existe para evitar errores
                 if (!Directory.Exists(directory))
                 {
                     Directory.CreateDirectory(directory);
                 }
                 
+                // Escribir JSON al archivo temporal
                 System.IO.File.WriteAllText(ruta, json);
 
-                // Redireccionar según el origen
+                // Switch para redireccionar segun el parametro returnTo
                 switch (returnTo.ToLower())
                 {
                     case "create":
@@ -94,30 +105,36 @@ namespace Proyecto_Periodo_2.Controllers
             }
             return RedirectToAction(nameof(clientes), new { returnTo = returnTo });
         }
+        #endregion
 
-
+        #region Creación de Préstamos
         public ActionResult Create()
         {
             try
             {
+                // Verificar si existe el archivo JSON temporal con datos del prestamo
                 if (!System.IO.File.Exists(ruta))
                 {
                     return RedirectToAction(nameof(clientes));
                 }
 
+                // Leer contenido del archivo JSON
                 string json = System.IO.File.ReadAllText(ruta);
+                // Deserializar JSON a objeto PrestamoCreate
                 nuevoPrestamo = JsonSerializer.Deserialize<Models.ViewModels.PrestamoCreate>(json);
                 
+                // Validar que la deserializacion fue exitosa
                 if (nuevoPrestamo == null)
                 {
                     return RedirectToAction(nameof(clientes));
                 }
 
-                // Recargar referencias de Libro
+                // Rehidratar referencias de Libro que se perdieron en la serializacion
                 if (nuevoPrestamo.copiasLibro != null)
                 {
                     foreach (var copia in nuevoPrestamo.copiasLibro)
                     {
+                        // Si la referencia a Libro es null la buscamos en la base de datos
                         if (copia.Libro == null)
                         {
                             copia.Libro = db.Libros.FirstOrDefault(l => l.IdLibro == copia.IdLibro);
@@ -129,6 +146,7 @@ namespace Proyecto_Periodo_2.Controllers
             }
             catch
             {
+                // En caso de error volver a seleccion de clientes
                 return RedirectToAction(nameof(clientes));
             }
         }
@@ -138,35 +156,37 @@ namespace Proyecto_Periodo_2.Controllers
         {
             try
             {
-                // Verificar que el archivo exista
+                // Verificar que el archivo temporal con datos del prestamo exista
                 if (!System.IO.File.Exists(ruta))
                 {
                     return RedirectToAction(nameof(clientes));
                 }
 
+                // Leer y deserializar datos del prestamo desde archivo JSON
                 string json = System.IO.File.ReadAllText(ruta);
                 nuevoPrestamo = JsonSerializer.Deserialize<Models.ViewModels.PrestamoCreate>(json);
                 
-                // Verificar que el objeto y sus propiedades no sean null
+                // Validar que todos los objetos requeridos esten disponibles
                 if (nuevoPrestamo == null || nuevoPrestamo.cliente == null || nuevoPrestamo.usuario == null)
                 {
                     return RedirectToAction(nameof(clientes));
                 }
 
-                // Verificar que haya al menos una copia de libro
+                // Validar que exista al menos una copia de libro seleccionada
                 if (nuevoPrestamo.copiasLibro == null || !nuevoPrestamo.copiasLibro.Any())
                 {
                     return RedirectToAction(nameof(Create));
                 }
 
-                // Obtener estado de préstamo de forma segura
+                // Buscar estado de prestamo activo en la base de datos
                 var estadoPrestamo = db.EstadoPrestamo.FirstOrDefault(e => e.Activo == true);
                 if (estadoPrestamo == null)
                 {
-                    // Si no hay estados disponibles, crear uno por defecto o manejar el error
+                    // Si no hay estados disponibles regresar al formulario
                     return RedirectToAction(nameof(Create));
                 }
 
+                // Crear nuevo objeto Prestamo con los datos recolectados
                 Models.Prestamo prestamo = new Models.Prestamo
                 {
                     IdCliente = nuevoPrestamo.cliente.IdCliente,
@@ -176,13 +196,18 @@ namespace Proyecto_Periodo_2.Controllers
                     FechaLimite = fechaLimite,
                     Activo = true
                 };
+                
+                // Obtener ID del primer libro seleccionado
                 var idlibro = nuevoPrestamo.copiasLibro.Select(c => c.IdLibro).FirstOrDefault();
+                // Buscar copia disponible: debe estar activa y en estado "Disponible" (ID=1)
                 var copia = db.CopiasLibros.FirstOrDefault(c => c.Libro.IdLibro == idlibro
                  && c.EstadoCopiaLibro.IdEstadoCopialibro == 1 
                  && c.Activo == true);
+                
                 if (copia != null)
                 {
-                    copia.IdEstadoCopiaLibro = 2; // Cambiar el estado a "Prestado"
+                    // Cambiar estado de la copia a "Prestado" (ID=2)
+                    copia.IdEstadoCopiaLibro = 2;
                     db.CopiasLibros.Update(copia);
                 }
                 else
@@ -190,8 +215,12 @@ namespace Proyecto_Periodo_2.Controllers
                     TempData["Error"] = "No hay copias disponibles para uno de los libros seleccionados.";
                     return RedirectToAction(nameof(Create));
                 }
+                
+                // Guardar el prestamo en base de datos
                 db.Prestamos.Add(prestamo);
                 db.SaveChanges();
+                
+                // Crear relaciones entre copias de libros y el prestamo
                 foreach(var item in nuevoPrestamo.copiasLibro)
                 {
                     var cpp = new CopiaLibroPrestamo
@@ -201,11 +230,13 @@ namespace Proyecto_Periodo_2.Controllers
                     };
                     db.CopiasLibrosPrestamos.Add(cpp);                    
                 }
+                
+                // Decrementar cantidad de prestamos disponibles del cliente
                 nuevoPrestamo.cliente.CantidadPrestamosDisponibles--;
                 db.Clientes.Update(nuevoPrestamo.cliente);
                 db.SaveChanges();
                 
-                // Limpiar el archivo JSON después de crear el préstamo
+                // Eliminar archivo temporal ya que el prestamo fue creado exitosamente
                 System.IO.File.Delete(ruta);
                 
                 return RedirectToAction(nameof(Index));
@@ -216,7 +247,9 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Create));
             }
         }
+        #endregion
 
+        #region Gestión de Libros en Préstamos
         public ActionResult SeleccionarLibro(int? idLibro)
         {
             if (idLibro == null)
@@ -250,19 +283,6 @@ namespace Proyecto_Periodo_2.Controllers
             }            
         }
 
-        public ActionResult tablaPrestamos(int? IdCliente)
-        {
-            var vm = new Models.ViewModels.TablaPrestamo
-            {
-                cliente = db.Clientes.Find(IdCliente),
-                prestamos = db.Prestamos
-                    .Include(p => p.estadoPrestamo)
-                    .Where(p => p.IdCliente == IdCliente)
-                    .ToList()
-            };
-            return View(vm);
-        }
-
         public ActionResult libros(int? idCliente)
         {
             if (idCliente == null || idCliente == 0)
@@ -288,6 +308,21 @@ namespace Proyecto_Periodo_2.Controllers
                     return RedirectToAction(nameof(Index));
                 }
             }
+        }
+        #endregion
+
+        #region Visualización de Préstamos
+        public ActionResult tablaPrestamos(int? IdCliente)
+        {
+            var vm = new Models.ViewModels.TablaPrestamo
+            {
+                cliente = db.Clientes.Find(IdCliente),
+                prestamos = db.Prestamos
+                    .Include(p => p.estadoPrestamo)
+                    .Where(p => p.IdCliente == IdCliente)
+                    .ToList()
+            };
+            return View(vm);
         }
 
         public ActionResult verPrestamo(int? id)
@@ -322,7 +357,9 @@ namespace Proyecto_Periodo_2.Controllers
 
             return View(prestamo);
         }
+        #endregion
 
+        #region Eliminación de Préstamos
         [HttpPost]
         public ActionResult EliminarPrestamo(int id)
         {
@@ -368,5 +405,6 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(verPrestamo), new { id = id });
             }
         }
+        #endregion
     }
 }

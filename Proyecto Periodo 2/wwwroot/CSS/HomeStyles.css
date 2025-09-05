@@ -1,3 +1,10 @@
+/* ===========================
+   ESTILOS PARA HOME PAGE
+=========================== */
+
+/* ===========================
+   Fondo de la página
+=========================== */
 .libros-fondo {
   position: absolute;
   top: 0;
@@ -21,21 +28,25 @@ body > footer {
   z-index: 1;
 }
 
-
+/* ===========================
+   Estilos generales del body
+=========================== */
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f8f9fa;
   overflow-x: hidden;
 }
 
-
+/* ===========================
+   Texto y subtítulos
+=========================== */
 .subtitulo{
     color: rgba(0, 0, 0, 0.5);
-
 }
 
-
-
+/* ===========================
+   Imágenes y elementos gráficos
+=========================== */
 .imagen-arbol {
   position: absolute;
   max-height: 700px;
@@ -43,8 +54,6 @@ body {
   right: 15rem;
   bottom: 2rem;
   max-width: 100%;
-  
-  
 }
 
 

@@ -1,49 +1,61 @@
 /**
  * Script para manejar la funcionalidad de los clientes
- * Incluye: collapse de cards, dropdowns de Bootstrap, validaciones de formularios
+ * Incluye: collapse de cards dropdowns de Bootstrap validaciones de formularios
  */
 
-// Variable para mantener el estado de los botones de collapse
+/* ==========================================
+   Variables Globales
+========================================== */
+// Objeto para mantener el estado expandido/colapsado de cada card de cliente
 const estadosBotones = {};
 
-// Inicialización cuando el DOM esté completamente cargado
+/* ==========================================
+   Inicialización del DOM
+========================================== */
+// Ejecutar cuando el DOM este completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Timeout para asegurar que Bootstrap este completamente cargado
     setTimeout(() => {
-        // Verificar que Bootstrap esté disponible
+        // Verificar que la libreria Bootstrap este disponible globalmente
         if (typeof bootstrap === 'undefined') {
             console.error('Bootstrap no está cargado correctamente');
             return;
         }
 
-        // Inicializar todos los elementos dropdown de Bootstrap
+        // Buscar todos los elementos con atributo data-bs-toggle="dropdown"
         const dropdownElements = document.querySelectorAll('[data-bs-toggle="dropdown"]');
 
+        // Inicializar cada elemento dropdown encontrado
         dropdownElements.forEach((element, index) => {
-            // Verificar si ya tiene una instancia de Bootstrap
+            // Verificar si ya tiene una instancia de Bootstrap para evitar duplicados
             const existingInstance = bootstrap.Dropdown.getInstance(element);
             if (!existingInstance) {
                 try {
+                    // Crear nueva instancia de Bootstrap Dropdown
                     new bootstrap.Dropdown(element);
                 } catch (error) {
                     console.error(`Error inicializando dropdown ${index}:`, error);
                 }
             }
 
-            // Agregar event listener manual como backup
+            // Agregar event listener manual como respaldo por si Bootstrap falla
             element.addEventListener('click', function (e) {
+                // Prevenir que el evento se propague a elementos padre
                 e.stopPropagation();
 
-                // Obtener el menú dropdown
+                // Buscar el menu dropdown que sigue al boton trigger
                 const menu = this.nextElementSibling;
                 if (menu && menu.classList.contains('dropdown-menu')) {
+                    // Alternar visibilidad del menu
                     menu.classList.toggle('show');
                 }
             });
         });
 
-        // Cerrar dropdowns al hacer click fuera de ellos
+        // Cerrar todos los dropdowns cuando se hace click fuera de ellos
         document.addEventListener('click', function (e) {
+            // Si el click no fue dentro de un dropdown cerrar todos los menus abiertos
             if (!e.target.closest('.dropdown')) {
                 document.querySelectorAll('.dropdown-menu.show').forEach(menu => {
                     menu.classList.remove('show');
@@ -51,78 +63,92 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Configurar event listeners para los botones de collapse de cards
+        // Configurar event listeners para los botones de collapse de cards de clientes
         document.querySelectorAll(".btnCollapseCard").forEach(boton => {
             boton.addEventListener("click", function (event) {
+                // Prevenir comportamiento por defecto del link
                 event.preventDefault();
+                // Prevenir propagacion del evento
                 event.stopPropagation();
 
+                // Extraer ID del boton para identificar el cliente
                 const idBoton = this.id;
+                // Separar por guion y tomar la segunda parte que es el ID del cliente
                 const idCliente = idBoton.split("-")[1];
 
+                // Inicializar estado del boton si no existe
                 if (estadosBotones[idCliente] === undefined) {
                     estadosBotones[idCliente] = false;
                 }
 
+                // Invertir estado actual del boton
                 estadosBotones[idCliente] = !estadosBotones[idCliente];
 
                 if (estadosBotones[idCliente]) {
-                    // Colapsar todas las cards
+                    // Colapsar todas las cards expandidas antes de expandir la nueva
                     document.querySelectorAll('[id^="cardExpandida-"]').forEach(elem => {
                         elem.classList.replace('d-flex', 'd-none');
                     });
+                    // Mostrar todas las vistas preview
                     document.querySelectorAll('[id^="preview-"]').forEach(elem => {
                         elem.classList.replace('d-none', 'd-flex');
                     });
+                    // Cambiar todos los iconos a estado colapsado
                     document.querySelectorAll('[id^="collapseCardIcon-"]').forEach(elem => {
                         elem.classList.replace('bi-chevron-up', 'bi-chevron-down');
                     });
 
-                    // Expandir la card actual
+                    // Expandir la card del cliente actual
                     const previewElement = document.getElementById(`preview-${idCliente}`);
                     const cardElement = document.getElementById(`cardExpandida-${idCliente}`);
                     const iconElement = document.getElementById(`collapseCardIcon-${idCliente}`);
 
+                    // Verificar que todos los elementos existan antes de manipularlos
                     if (previewElement && cardElement && iconElement) {
                         previewElement.classList.replace('d-flex', 'd-none');
                         cardElement.classList.replace('d-none', 'd-flex');
                         iconElement.classList.replace('bi-chevron-down', 'bi-chevron-up');
                     }
                 } else {
-                    // Colapsar la card actual
+                    // Colapsar la card actual y mostrar el preview
                     const previewElement = document.getElementById(`preview-${idCliente}`);
                     const cardElement = document.getElementById(`cardExpandida-${idCliente}`);
                     const iconElement = document.getElementById(`collapseCardIcon-${idCliente}`);
 
+                    // Verificar existencia de elementos antes de manipularlos
                     if (previewElement && cardElement && iconElement) {
                         previewElement.classList.replace('d-none', 'd-flex');
                         cardElement.classList.replace('d-flex', 'd-none');
+                        // Cambiar icono a estado colapsado
                         iconElement.classList.replace('bi-chevron-up', 'bi-chevron-down');
                     }
                 }
             });
         });
 
-        // Función para cerrar modal completamente
+        /* ==========================================
+           Manejo de Modales
+        ========================================== */
+        // Funcion para cerrar modal de cliente completamente y limpiar backdrop
         function cerrarModalCompleto() {
             const modalElement = document.getElementById('clienteModal');
 
-            // Primero intentar cerrar con Bootstrap
+            // Intentar cerrar usando la instancia de Bootstrap
             const modal = bootstrap.Modal.getInstance(modalElement);
             if (modal) {
                 modal.hide();
             }
 
-            // Limpieza inmediata y agresiva
+            // Limpieza agresiva del backdrop modal que a veces queda colgado
             setTimeout(() => {
-                // Remover TODOS los backdrops posibles
+                // Buscar y eliminar todos los elementos backdrop residuales
                 document.querySelectorAll('.modal-backdrop').forEach(backdrop => {
                     backdrop.remove();
                 });
             }, 50);
         }
 
-        // Botón de cerrar (X)
+        // Event listener para boton de cerrar modal (icono X)
         const btnCerrarModal = document.getElementById('btnCerrarModal');
         if (btnCerrarModal) {
             btnCerrarModal.addEventListener('click', function (e) {
@@ -132,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Botón de cancelar
+        // Event listener para boton de cancelar en el modal
         const btnCancelarModal = document.getElementById('btnCancelarModal');
         if (btnCancelarModal) {
             btnCancelarModal.addEventListener('click', function (e) {
@@ -142,39 +168,51 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
 
-        // Cerrar modal con Escape
+        // Cerrar modal cuando se presiona la tecla Escape
         document.addEventListener('keydown', function (e) {
             if (e.key === 'Escape') {
                 const modalElement = document.getElementById('clienteModal');
+                // Verificar que el modal este visible antes de cerrarlo
                 if (modalElement && modalElement.classList.contains('show')) {
                     cerrarModalCompleto();
                 }
             }
         });
 
-    }, 300);
+    }, 300); // Timeout de 300ms para asegurar carga completa
 
+    /* ==========================================
+       Manejo de Vista Previa de Imagenes
+    ========================================== */
+    // Event listener para cambio en el input de archivo de foto
     document.getElementById('inputFoto').addEventListener('change', function (e) {
-        const file = e.target.files[0];
-        const img = document.getElementById('previewImg');
-        const placeholder = document.getElementById('imgPlaceholder');
+        const file = e.target.files[0]; // Obtener primer archivo seleccionado
+        const img = document.getElementById('previewImg'); // Elemento img para preview
+        const placeholder = document.getElementById('imgPlaceholder'); // Placeholder cuando no hay imagen
 
         if (file) {
+            // Crear FileReader para leer el archivo como Data URL
             const reader = new FileReader();
             reader.onload = function (ev) {
+                // Asignar resultado como src de la imagen
                 img.src = ev.target.result;
                 img.style.display = 'block';
                 placeholder.style.display = 'none';
             }
+            // Iniciar lectura del archivo como Data URL (base64)
             reader.readAsDataURL(file);
         } else {
+            // Si no hay archivo limpiar preview y mostrar placeholder
             img.src = '';
             img.style.display = 'none';
             placeholder.style.display = 'flex';
         }
     });
 
-    // Cambiar el texto del modal según el origen
+    /* ==========================================
+       Configuracion de Botones de Edicion
+    ========================================== */
+    // Configurar comportamiento de todos los botones de editar cliente
     document.querySelectorAll('.btn-editar-cliente').forEach(btn => {
         btn.addEventListener('click', function () {
             const idCliente = btn.getAttribute('data-id');

@@ -15,6 +15,7 @@ namespace Proyecto_Periodo_2.Controllers
     [Authorize] // Requiere autenticación para todo el controlador
     public class ClienteController : Controller
     {
+        #region Propiedades y Constructor
         private readonly AppDbContext db;
         private readonly IWebHostEnvironment webHostEnvironment;
 
@@ -26,6 +27,9 @@ namespace Proyecto_Periodo_2.Controllers
             db = _db;
             webHostEnvironment = _webHostEnvironment;
         }
+        #endregion
+
+        #region Acciones de Lectura
 
         /// <summary>
         /// Muestra la lista de clientes activos
@@ -51,7 +55,9 @@ namespace Proyecto_Periodo_2.Controllers
 
             return View(clientes);
         }
+        #endregion
 
+        #region Acciones de Creación
         /// <summary>
         /// Crea un nuevo cliente en el sistema
         /// </summary>
@@ -63,52 +69,58 @@ namespace Proyecto_Periodo_2.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    // Verificar si ya existe un cliente con el mismo nombre o cédula
+                    // Buscar en base de datos si ya existe cliente con mismo nombre o cedula
+                    // usando operador OR para verificar ambos campos y solo activos
                     var clienteExistente = db.Clientes
                         .FirstOrDefault(u => (u.Nombre == cliente.Nombre ||
                                              u.Cedula == cliente.Cedula) && u.Activo == true);
 
                     if (clienteExistente != null)
                     {
-                        TempData["Error"] = "Ya existe un Cliente con ese nombre o cédula.";
+                        TempData["Error"] = "Ya existe un Cliente con ese nombre o cedula.";
                         return RedirectToAction(nameof(Index));
                     }
 
+                    // Marcar cliente como activo por defecto
                     cliente.Activo = true;
 
-                    // Procesamiento de imagen del cliente
+                    // Procesar imagen del cliente si se proporciono un archivo
                     if (ImageFile != null && ImageFile.Length > 0)
                     {
-                        // Validar tipo de archivo permitido
+                        // Array de extensiones de archivo permitidas para imagenes
                         var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif", ".bmp" };
+                        // Obtener extension del archivo en minusculas para comparacion
                         var extension = Path.GetExtension(ImageFile.FileName).ToLowerInvariant();
                         
+                        // Verificar que la extension este en la lista de permitidas
                         if (!allowedExtensions.Contains(extension))
                         {
-                            TempData["Error"] = "Solo se permiten archivos de imagen (jpg, jpeg, png, gif, bmp).";
+                            TempData["Error"] = "Solo se permiten archivos de imagen (jpg jpeg png gif bmp).";
                             return RedirectToAction(nameof(Index));
                         }
 
-                        // Validar tamaño máximo del archivo (5MB)
+                        // Validar que el archivo no exceda 5MB (5 * 1024 * 1024 bytes)
                         if (ImageFile.Length > 5 * 1024 * 1024)
                         {
                             TempData["Error"] = "El archivo de imagen no puede superar los 5MB.";
                             return RedirectToAction(nameof(Index));
                         }
 
-                        // Crear directorio si no existe
+                        // Obtener ruta raiz del proyecto web
                         string webRootPath = webHostEnvironment.WebRootPath;
+                        // Construir ruta completa para carpeta de imagenes de clientes
                         string upload = Path.Combine(webRootPath, "Images", "Cliente");
                         
+                        // Crear directorio si no existe para evitar errores
                         if (!Directory.Exists(upload))
                         {
                             Directory.CreateDirectory(upload);
                         }
                         
-                        // Generar nombre único para el archivo
+                        // Generar nombre unico usando GUID para evitar conflictos
                         string fileName = Guid.NewGuid().ToString() + extension;
 
-                        // Guardar archivo en el servidor
+                        // Crear FileStream y copiar archivo subido al servidor
                         using (var fileStream = new FileStream(Path.Combine(upload, fileName), FileMode.Create))
                         {
                             ImageFile.CopyTo(fileStream);
@@ -135,7 +147,9 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+        #endregion
 
+        #region Acciones de Edición
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Cliente cliente, IFormFile ImageFile)
@@ -234,7 +248,9 @@ namespace Proyecto_Periodo_2.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+        #endregion
 
+        #region Acciones de Eliminación
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Delete(int id)
@@ -280,5 +296,6 @@ namespace Proyecto_Periodo_2.Controllers
 
             return RedirectToAction("Index", "Prestamo");
         }
+        #endregion
     }
 }

@@ -22,6 +22,7 @@ namespace Proyecto_Periodo_2.Controllers
     [Authorize] // Requiere autenticación para todo el controlador
     public class UsuarioController : Controller
     {
+        #region Propiedades y Constructor
         private readonly AppDbContext _db;
         private readonly UserManager<Usuario> _userManager;
         private readonly IWebHostEnvironment _webHostEnvironment;
@@ -41,16 +42,18 @@ namespace Proyecto_Periodo_2.Controllers
             _signInManager = signInManager;
         }
 
-        // GET: UsuarioController - Listar todos los usuarios activos
+        // GET: UsuarioController - Listar todos los usuarios activos del sistema
         public IActionResult Index()
         {
             try
             {
+                // Consulta LINQ compleja que une usuarios con sus roles usando async operations
                 IEnumerable<Models.ViewModels.UsuarioVM> usuarios = _db.Usuarios
-                 .Where(c => c.Activo == true)
+                 .Where(c => c.Activo == true) // Filtrar solo usuarios activos
                  .Select(c => new Models.ViewModels.UsuarioVM
                  {
-                     usuario = c, // Asigna el usuario completo
+                     usuario = c, // Asignar el objeto usuario completo
+                     // Obtener primer rol del usuario de forma asincrona usando Result
                      rol = _userManager.GetRolesAsync(c).Result.FirstOrDefault(),
                  }).ToList();
 
@@ -58,29 +61,32 @@ namespace Proyecto_Periodo_2.Controllers
             }
             catch (Exception)
             {
+                // En caso de error devolver lista vacia para evitar crash
                 return View(new List<UsuarioVM>());
             }
         }
 
-        // GET: UsuarioController/Create - Mostrar formulario de creación
+        // GET: UsuarioController/Create - Mostrar vista parcial para crear usuario
         public ActionResult _PartialCrearUsuario()
         {
             var usuarioVM = new UsuarioVM();
             return PartialView("_PartialCrearUsuario", usuarioVM);
         }
 
-        // POST: UsuarioController/Create - Crear nuevo usuario
+        // POST: UsuarioController/Create - Procesar creacion de nuevo usuario
         [HttpPost]
         public async Task<IActionResult> Create(UsuarioVM usuarioVM, IFormFile? ImageFile)
         {
             try
             {
+                // Extraer objeto usuario del ViewModel
                 var usuario = usuarioVM.usuario;
 
                 if (ModelState.IsValid)
                 {
                     Debug.WriteLine("Modelo valido");
-                    //Comprueba si el usuario existe
+                    // Verificar si ya existe usuario con datos similares en multiples campos
+                    // Usar operadores OR para verificar username email telefono y cedula
                     var usuarioExiste = _db.Usuarios
                         .FirstOrDefault(u =>
                             (u.NombreUsuario == usuario.NombreUsuario ||
@@ -96,6 +102,7 @@ namespace Proyecto_Periodo_2.Controllers
                         return RedirectToAction(nameof(Index));
                     }
 
+                    // Marcar usuario como activo
                     usuario.Activo = true;
 
                     // ========== Manejo de Imagen ==========
@@ -474,3 +481,4 @@ namespace Proyecto_Periodo_2.Controllers
         }
     }
 }
+#endregion

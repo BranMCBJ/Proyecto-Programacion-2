@@ -1,6 +1,14 @@
+@{
+    @* ==========================================
+       LAYOUT PRINCIPAL DE LA APLICACIÓN
+    ========================================== *@
+}
 @* Layout principal de la aplicación *@
 @using System.Security.Claims
 @{
+    @* ==========================================
+       OBTENER DATOS DEL USUARIO AUTENTICADO
+    ========================================== *@
     // Obtener datos del usuario autenticado desde los claims
     var nombre = User.FindFirst("Nombre")?.Value;
     var nombreUsuario = User.FindFirst("NombreUsuario")?.Value;
@@ -16,6 +24,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    @{
+        @* ==========================================
+           META DATOS Y REFERENCIAS CSS
+        ========================================== *@
+    }
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Proyecto_Periodo_2</title>
@@ -30,6 +43,11 @@
     <link rel="stylesheet" href="~/CSS/LibroStyles.css" />
 </head>
 <body>
+    @{
+        @* ==========================================
+           NAVEGACIÓN PRINCIPAL (NAVBAR)
+        ========================================== *@
+    }
     <header>
         <!--Navbar -->
         <nav class="navbar navbar-expand-lg bg-white">

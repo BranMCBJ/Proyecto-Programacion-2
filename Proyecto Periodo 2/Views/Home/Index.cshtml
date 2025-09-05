@@ -1,3 +1,8 @@
+@{
+    @* ==========================================
+       CONFIGURACIÓN DE LA VISTA Y CLAIMS
+    ========================================== *@
+}
 @model Models.ViewModels.Home
 @using System.Security.Claims
 @{
@@ -11,8 +16,19 @@
 	var email = User.FindFirst(ClaimTypes.Email)?.Value;
 }
 <link rel="stylesheet" href="~/CSS/HomeStyles.css" asp-append-version="true" />
+
+@{
+    @* ==========================================
+       FONDO DE LA PÁGINA
+    ========================================== *@
+}
 <div class="libros-fondo" style="background-image: url('/Images/Home/fondoHomepage.png');"></div>
 
+@{
+    @* ==========================================
+       ENCABEZADO CON LOGO
+    ========================================== *@
+}
 <header class="d-flex align-items-center gap-2 mt-5 ms-5 ">
     <!-- Logo -->
     <img src="/Images/Home/Logo.png" alt="Logo" style="max-height: 50px;" />
@@ -22,6 +38,11 @@
     </div>
 </header>
 
+@{
+    @* ==========================================
+       NAVEGACIÓN Y SALUDO DE BIENVENIDA
+    ========================================== *@
+}
 <nav class="mt-5 ms-5 mb-5 ps-2">
     <h2 class="mb-0" style="font-family: sans-serif; font-size: 2.5rem; font-weight: 200;">
         Bienvenido/a <br>
@@ -29,8 +50,18 @@
     </h2>
 </nav>
 
+@{
+    @* ==========================================
+       CONTENIDO PRINCIPAL
+    ========================================== *@
+}
 <main class="container-fluid mt-5 ms-5  pt-3">
     <div class="row">
+        @{
+            @* ==========================================
+               BOTONES DE NAVEGACIÓN PRINCIPAL
+            ========================================== *@
+        }
         <!-- Botones Principales -->
         <div class="col-md-3 mb-4 ">
             <h6 class="mb-2 subtitulo">¿Qué necesitas hacer hoy?</h6>
